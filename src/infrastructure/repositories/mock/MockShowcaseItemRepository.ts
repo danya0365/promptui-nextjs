@@ -142,6 +142,102 @@ const MOCK_SHOWCASE_ITEMS: ShowcaseItem[] = [
     createdAt: '2025-06-08T12:00:00.000Z',
     updatedAt: '2025-06-08T12:00:00.000Z',
   },
+  {
+    id: 'showcase-009',
+    title: 'Finance Banking Dashboard',
+    description:
+      'Dashboard สำหรับแอปธนาคารพร้อมยอดเงิน, กราฟรายรับ-รายจ่าย, การ์ดบัญชี และรายการธุรกรรมล่าสุด',
+    category: 'dashboard',
+    prompt:
+      'Create a premium finance/banking dashboard with a wallet balance hero card showing total balance with trend percentage, a mini area chart for income vs expenses over 6 months, credit/debit card carousel with 3D tilt effect, recent transactions list with category icons and color-coded amounts (green for income, red for expense), quick action buttons (transfer, pay, top-up, invest), and a spending breakdown donut chart. Use a sophisticated dark navy theme with gold and emerald accents. Add subtle glassmorphism on cards.',
+    thumbnailUrl: '/thumbnails/finance-dashboard.webp',
+    tags: ['dashboard', 'finance', 'banking', 'charts', 'dark-theme'],
+    difficulty: 'advanced',
+    isFeatured: true,
+    isActive: true,
+    createdAt: '2025-06-07T10:00:00.000Z',
+    updatedAt: '2025-06-07T10:00:00.000Z',
+  },
+  {
+    id: 'showcase-010',
+    title: 'Project Management Board',
+    description:
+      'Kanban board สำหรับจัดการโปรเจค พร้อม drag & drop, progress bars และ team member avatars',
+    category: 'dashboard',
+    prompt:
+      'Build a project management dashboard with a Kanban board layout (columns: To Do, In Progress, Review, Done) with task cards that show title, priority badge (low/medium/high/urgent), due date, assignee avatar, and subtask progress bar. Include a top bar with project selector dropdown, team member avatar stack with online indicators, a timeline Gantt chart mini-view, and sprint progress stats (completed, remaining, blocked). Use a clean white/light gray theme with vibrant colored priority badges. Add smooth hover lift animations on cards.',
+    thumbnailUrl: '/thumbnails/project-board.webp',
+    tags: ['dashboard', 'kanban', 'project-management', 'productivity'],
+    difficulty: 'advanced',
+    isFeatured: false,
+    isActive: true,
+    createdAt: '2025-06-06T09:00:00.000Z',
+    updatedAt: '2025-06-06T09:00:00.000Z',
+  },
+  {
+    id: 'showcase-011',
+    title: 'Health & Fitness Tracker',
+    description:
+      'Dashboard สุขภาพพร้อม step counter, heart rate monitor, calorie tracker และ sleep analysis',
+    category: 'dashboard',
+    prompt:
+      'Design a health and fitness tracker dashboard with a daily step counter radial progress ring with animated fill, heart rate monitor showing current BPM with a live pulse line chart, calorie intake vs burn bar comparison, sleep analysis showing duration and quality phases (deep, light, REM) in stacked bars, weekly activity heatmap calendar, workout log with exercise type icons, and hydration tracker with water glass fill animation. Use a fresh green and blue gradient theme on dark background. Add pulse animation on heart rate and smooth counting animations on numbers.',
+    thumbnailUrl: '/thumbnails/fitness-dashboard.webp',
+    tags: ['dashboard', 'health', 'fitness', 'charts', 'animation'],
+    difficulty: 'intermediate',
+    isFeatured: true,
+    isActive: true,
+    createdAt: '2025-06-05T11:00:00.000Z',
+    updatedAt: '2025-06-05T11:00:00.000Z',
+  },
+  {
+    id: 'showcase-012',
+    title: 'Social Media Analytics',
+    description:
+      'Dashboard วิเคราะห์โซเชียลมีเดียพร้อมกราฟ engagement, follower growth และ content performance',
+    category: 'dashboard',
+    prompt:
+      'Create a social media analytics dashboard with platform tabs (Instagram, Twitter, TikTok, YouTube) each with its brand color, a follower growth line chart with gradient fill showing 30-day trend, engagement rate gauge meter, top performing posts grid with thumbnail preview and engagement stats (likes, comments, shares), audience demographics pie chart (age groups, gender), best posting time heatmap, and a content calendar mini-view. Use a modern dark theme with each social platform accent color dynamically applied. Add counting animations on stats and smooth chart transitions when switching platforms.',
+    thumbnailUrl: '/thumbnails/social-analytics.webp',
+    tags: ['dashboard', 'social-media', 'analytics', 'charts'],
+    difficulty: 'advanced',
+    isFeatured: false,
+    isActive: true,
+    createdAt: '2025-06-04T14:00:00.000Z',
+    updatedAt: '2025-06-04T14:00:00.000Z',
+  },
+  {
+    id: 'showcase-013',
+    title: 'E-Commerce Admin Panel',
+    description:
+      'แผงควบคุม E-Commerce พร้อมยอดขาย, สถานะออร์เดอร์, สินค้าขายดี และ revenue chart',
+    category: 'dashboard',
+    prompt:
+      'Build an e-commerce admin dashboard with KPI stat cards at top (total revenue with sparkline, orders count, conversion rate, average order value) each with trend arrow indicators, a revenue vs orders dual-axis area/bar combo chart, order status pipeline (pending → processing → shipped → delivered) with counts, best-selling products table with rank numbers and mini product images and sales bars, recent orders list with status badges (processing=blue, shipped=amber, delivered=green, cancelled=red), and a world map showing sales by country with hover tooltips. Use a professional light theme with indigo as primary accent.',
+    thumbnailUrl: '/thumbnails/ecommerce-admin.webp',
+    tags: ['dashboard', 'ecommerce', 'admin', 'charts', 'table'],
+    difficulty: 'advanced',
+    isFeatured: true,
+    isActive: true,
+    createdAt: '2025-06-03T08:00:00.000Z',
+    updatedAt: '2025-06-03T08:00:00.000Z',
+  },
+  {
+    id: 'showcase-014',
+    title: 'IoT Smart Home Dashboard',
+    description:
+      'Dashboard สำหรับบ้านอัจฉริยะ พร้อมควบคุมอุปกรณ์ IoT, กราฟพลังงาน และ room controls',
+    category: 'dashboard',
+    prompt:
+      'Design a smart home IoT dashboard with a house floor plan overview showing room zones with device indicators, device control cards for lights (on/off toggle with brightness slider), thermostat (circular temperature dial with current vs target), security cameras (grid of live feed placeholders with status dot), energy consumption area chart showing daily usage over a week, quick scene buttons (Good Morning, Movie Night, Away Mode, Sleep) with relevant icons, weather widget showing current conditions and 5-day forecast, and a device status list with online/offline badges. Use a warm dark theme with amber and cyan accents. Add toggle switch animations and smooth slider interactions.',
+    thumbnailUrl: '/thumbnails/smart-home.webp',
+    tags: ['dashboard', 'iot', 'smart-home', 'controls', 'dark-theme'],
+    difficulty: 'intermediate',
+    isFeatured: false,
+    isActive: true,
+    createdAt: '2025-06-02T10:00:00.000Z',
+    updatedAt: '2025-06-02T10:00:00.000Z',
+  },
 ];
 
 export class MockShowcaseItemRepository implements IShowcaseItemRepository {
