@@ -4,6 +4,7 @@ import { siteConfig } from '@/src/config/site.config';
 import { GlassmorphismLoginDemo } from '@/src/presentation/components/demos/GlassmorphismLoginDemo';
 import { GlassmorphismLoginDemoGemini } from '@/src/presentation/components/demos/GlassmorphismLoginDemoGemini';
 import { ModernDashboardDemoGemini } from '@/src/presentation/components/demos/ModernDashboardDemoGemini';
+import { NeonDashboardWidgetsDemoGemini } from '@/src/presentation/components/demos/NeonDashboardWidgetsDemoGemini';
 import type { Metadata } from 'next';
 
 /**
@@ -17,6 +18,9 @@ const LIVE_PREVIEW_COMPONENTS: Record<string, Partial<Record<AiModel, React.Comp
   },
   'showcase-002': {
     'gemini-3-pro': ModernDashboardDemoGemini,
+  },
+  'showcase-008': {
+    'gemini-3-pro': NeonDashboardWidgetsDemoGemini,
   },
 };
 

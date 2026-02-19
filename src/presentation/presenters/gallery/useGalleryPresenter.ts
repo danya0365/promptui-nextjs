@@ -57,7 +57,9 @@ export function useGalleryPresenter(
   const [loading, setLoading] = useState(!initialViewModel);
   const [error, setError] = useState<string | null>(null);
   const [searchTerm, setSearchTermState] = useState('');
-  const [activeCategory, setActiveCategoryState] = useState('all');
+  const [activeCategory, setActiveCategoryState] = useState(
+    initialViewModel?.activeCategory || 'all'
+  );
   const [activeDifficulty, setActiveDifficultyState] = useState('all');
   const [activeAiModel, setActiveAiModelState] = useState('all');
   const [filteredItems, setFilteredItems] = useState<ShowcaseItem[]>(

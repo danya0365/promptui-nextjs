@@ -21,6 +21,7 @@ export interface GalleryViewModel {
   totalCount: number;
   page: number;
   perPage: number;
+  activeCategory?: string;
   /** Map of showcaseId → list of live previews */
   livePreviewMap: Record<string, ShowcaseLivePreview[]>;
 }
@@ -33,11 +34,12 @@ export class GalleryPresenter {
 
   async getViewModel(
     page: number = 1,
-    perPage: number = 12
+    perPage: number = 12,
+    category?: string
   ): Promise<GalleryViewModel> {
     try {
       const [paginatedResult, stats, allPreviews] = await Promise.all([
-        this.repository.getPaginated(page, perPage),
+        this.repository.getPaginated(page, perPage, category),
         this.repository.getStats(),
         this.livePreviewRepository.getAll(),
       ]);
@@ -55,6 +57,7 @@ export class GalleryPresenter {
         totalCount: paginatedResult.total,
         page,
         perPage,
+        activeCategory: category || 'all',
         livePreviewMap,
       };
     } catch (error) {

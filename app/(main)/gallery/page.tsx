@@ -11,14 +11,25 @@ export async function generateMetadata(): Promise<Metadata> {
   return presenter.generateMetadata();
 }
 
+interface GalleryPageProps {
+  searchParams: Promise<{
+    page?: string;
+    category?: string;
+  }>;
+}
+
 /**
  * Gallery page — Server Component for SEO optimization
  */
-export default async function GalleryPage() {
+export default async function GalleryPage({ searchParams }: GalleryPageProps) {
   const presenter = createServerGalleryPresenter();
+  
+  const resolvedParams = await searchParams;
+  const page = Number(resolvedParams.page) || 1;
+  const category = resolvedParams.category;
 
   try {
-    const viewModel = await presenter.getViewModel();
+    const viewModel = await presenter.getViewModel(page, 12, category);
     return <GalleryView initialViewModel={viewModel} />;
   } catch (error) {
     console.error('Error fetching gallery data:', error);

@@ -59,7 +59,7 @@ export interface PaginatedResult<T> {
 export interface IShowcaseItemRepository {
   getById(id: string): Promise<ShowcaseItem | null>;
   getAll(): Promise<ShowcaseItem[]>;
-  getPaginated(page: number, perPage: number): Promise<PaginatedResult<ShowcaseItem>>;
+  getPaginated(page: number, perPage: number, category?: string): Promise<PaginatedResult<ShowcaseItem>>;
   getByCategory(category: string): Promise<ShowcaseItem[]>;
   getFeatured(): Promise<ShowcaseItem[]>;
   create(data: CreateShowcaseItemData): Promise<ShowcaseItem>;

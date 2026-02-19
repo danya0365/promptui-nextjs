@@ -5,12 +5,12 @@
  */
 
 import {
-    CreateShowcaseItemData,
-    IShowcaseItemRepository,
-    PaginatedResult,
-    ShowcaseItem,
-    ShowcaseStats,
-    UpdateShowcaseItemData,
+  CreateShowcaseItemData,
+  IShowcaseItemRepository,
+  PaginatedResult,
+  ShowcaseItem,
+  ShowcaseStats,
+  UpdateShowcaseItemData,
 } from '@/src/application/repositories/IShowcaseItemRepository';
 
 const SHOWCASE_ITEMS: ShowcaseItem[] = [
@@ -255,10 +255,16 @@ export class StaticShowcaseItemRepository implements IShowcaseItemRepository {
 
   async getPaginated(
     page: number,
-    perPage: number
+    perPage: number,
+    category?: string
   ): Promise<PaginatedResult<ShowcaseItem>> {
     await this.delay(100);
-    const activeItems = this.items.filter((item) => item.isActive);
+    let activeItems = this.items.filter((item) => item.isActive);
+
+    if (category && category !== 'all') {
+      activeItems = activeItems.filter((item) => item.category === category);
+    }
+
     const start = (page - 1) * perPage;
     const end = start + perPage;
     return {
