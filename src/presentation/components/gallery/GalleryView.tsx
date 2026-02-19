@@ -1,0 +1,408 @@
+'use client';
+
+import { siteConfig } from '@/src/config/site.config';
+import { AnimatedButton } from '@/src/presentation/components/shared/AnimatedButton';
+import { AnimatedCard } from '@/src/presentation/components/shared/AnimatedCard';
+import { GlassPanel } from '@/src/presentation/components/shared/GlassPanel';
+import { ScrollReveal } from '@/src/presentation/components/shared/ScrollReveal';
+import { GalleryViewModel } from '@/src/presentation/presenters/gallery/GalleryPresenter';
+import { useGalleryPresenter } from '@/src/presentation/presenters/gallery/useGalleryPresenter';
+import Link from 'next/link';
+import { useState } from 'react';
+import { animated, useSpring } from 'react-spring';
+
+interface GalleryViewProps {
+  initialViewModel?: GalleryViewModel;
+}
+
+export function GalleryView({ initialViewModel }: GalleryViewProps) {
+  const [state, actions] = useGalleryPresenter(initialViewModel);
+  const viewModel = state.viewModel;
+
+  // ── Animated search bar ──
+  const [searchFocused, setSearchFocused] = useState(false);
+  const searchSpring = useSpring({
+    boxShadow: searchFocused
+      ? '0 0 0 3px rgba(124, 58, 237, 0.2), 0 4px 16px rgba(124, 58, 237, 0.1)'
+      : '0 0 0 0px transparent, 0 1px 3px rgba(0,0,0,0.04)',
+    borderColor: searchFocused ? 'var(--color-primary)' : 'var(--color-border)',
+    config: { tension: 300, friction: 20 },
+  });
+
+  // ── Loading ──
+  if (state.loading && !viewModel) {
+    return (
+      <div className="min-h-screen flex items-center justify-center">
+        <div className="text-center">
+          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-primary mx-auto mb-4" />
+          <p className="text-muted">กำลังโหลดแกลเลอรี...</p>
+        </div>
+      </div>
+    );
+  }
+
+  // ── Error ──
+  if (state.error && !viewModel) {
+    return (
+      <div className="min-h-screen flex items-center justify-center">
+        <GlassPanel className="p-8 text-center max-w-md">
+          <p className="text-4xl mb-4">⚠️</p>
+          <p className="text-red-500 font-medium mb-2">เกิดข้อผิดพลาด</p>
+          <p className="text-muted mb-4">{state.error}</p>
+          <AnimatedButton onClick={actions.loadData}>ลองใหม่</AnimatedButton>
+        </GlassPanel>
+      </div>
+    );
+  }
+
+  if (!viewModel) return null;
+
+  const difficultyOptions = [
+    { id: 'all', label: 'ทั้งหมด' },
+    ...siteConfig.difficulties.map((d) => ({ id: d.id, label: d.label })),
+  ];
+
+  return (
+    <div className="py-8 sm:py-12">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        {/* ═══ Page Header ═══ */}
+        <ScrollReveal>
+          <div className="text-center mb-10">
+            <h1 className="text-3xl sm:text-4xl font-extrabold text-foreground mb-3">
+              🎨 <span className="text-gradient">แกลเลอรี</span>
+            </h1>
+            <p className="text-muted max-w-xl mx-auto">
+              สำรวจ UI ตัวอย่างทั้งหมด เลือกที่ชอบแล้ว copy prompt ไปใช้กับ AI
+              ได้เลย
+            </p>
+          </div>
+        </ScrollReveal>
+
+        {/* ═══ Search & Filters Bar ═══ */}
+        <ScrollReveal delay={100}>
+          <GlassPanel className="p-4 sm:p-5 mb-8">
+            <div className="flex flex-col sm:flex-row gap-4">
+              {/* Search Input */}
+              <animated.div style={searchSpring} className="flex-1 rounded-xl">
+                <div className="relative">
+                  <span className="absolute left-3.5 top-1/2 -translate-y-1/2 text-muted">
+                    🔍
+                  </span>
+                  <input
+                    type="text"
+                    placeholder="ค้นหา UI ตัวอย่าง..."
+                    value={state.searchTerm}
+                    onChange={(e) => actions.setSearchTerm(e.target.value)}
+                    onFocus={() => setSearchFocused(true)}
+                    onBlur={() => setSearchFocused(false)}
+                    className="w-full pl-10 pr-4 py-2.5 rounded-xl bg-surface border border-border text-foreground text-sm placeholder:text-muted-light focus:outline-none"
+                  />
+                </div>
+              </animated.div>
+
+              {/* Difficulty filter */}
+              <div className="flex items-center gap-2 flex-wrap">
+                {difficultyOptions.map((opt) => (
+                  <button
+                    key={opt.id}
+                    onClick={() => actions.setActiveDifficulty(opt.id)}
+                    className={`px-3 py-1.5 rounded-full text-xs font-medium transition-colors cursor-pointer select-none ${
+                      state.activeDifficulty === opt.id
+                        ? 'bg-primary text-white shadow-sm'
+                        : 'bg-surface-alt text-muted border border-border hover:border-primary'
+                    }`}
+                  >
+                    {opt.label}
+                  </button>
+                ))}
+              </div>
+
+              {/* View Mode Toggle */}
+              <div className="flex items-center gap-1 bg-surface-alt rounded-lg p-1 border border-border">
+                <button
+                  onClick={() => actions.setViewMode('grid')}
+                  className={`p-2 rounded-md text-sm transition-colors cursor-pointer ${
+                    state.viewMode === 'grid'
+                      ? 'bg-primary text-white shadow-sm'
+                      : 'text-muted hover:text-foreground'
+                  }`}
+                  aria-label="Grid view"
+                >
+                  ▦
+                </button>
+                <button
+                  onClick={() => actions.setViewMode('list')}
+                  className={`p-2 rounded-md text-sm transition-colors cursor-pointer ${
+                    state.viewMode === 'list'
+                      ? 'bg-primary text-white shadow-sm'
+                      : 'text-muted hover:text-foreground'
+                  }`}
+                  aria-label="List view"
+                >
+                  ☰
+                </button>
+              </div>
+            </div>
+          </GlassPanel>
+        </ScrollReveal>
+
+        {/* ═══ Category Bar ═══ */}
+        <ScrollReveal delay={150}>
+          <div className="flex flex-wrap items-center justify-center gap-2 mb-8">
+            {siteConfig.categories.map((cat) => (
+              <CategoryPill
+                key={cat.id}
+                icon={cat.icon}
+                label={cat.label}
+                active={state.activeCategory === cat.id}
+                onClick={() => actions.setActiveCategory(cat.id)}
+              />
+            ))}
+          </div>
+        </ScrollReveal>
+
+        {/* ═══ Results Count ═══ */}
+        <div className="flex items-center justify-between mb-6">
+          <p className="text-sm text-muted">
+            แสดง <span className="font-semibold text-foreground">{state.filteredItems.length}</span> รายการ
+          </p>
+        </div>
+
+        {/* ═══ Showcase Grid / List ═══ */}
+        {state.viewMode === 'grid' ? (
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {state.filteredItems.map((item, index) => (
+              <ScrollReveal key={item.id} delay={index * 60}>
+                <ShowcaseGridCard
+                  item={item}
+                  onCopy={() => actions.copyPrompt(item)}
+                  copied={state.copiedId === item.id}
+                />
+              </ScrollReveal>
+            ))}
+          </div>
+        ) : (
+          <div className="flex flex-col gap-4">
+            {state.filteredItems.map((item, index) => (
+              <ScrollReveal key={item.id} delay={index * 40}>
+                <ShowcaseListCard
+                  item={item}
+                  onCopy={() => actions.copyPrompt(item)}
+                  copied={state.copiedId === item.id}
+                />
+              </ScrollReveal>
+            ))}
+          </div>
+        )}
+
+        {/* ═══ Empty ═══ */}
+        {state.filteredItems.length === 0 && (
+          <div className="text-center py-20">
+            <p className="text-5xl mb-4">🔍</p>
+            <p className="text-lg font-medium text-foreground mb-2">
+              ไม่พบ UI ที่ตรงกัน
+            </p>
+            <p className="text-muted mb-6">ลองเปลี่ยนคำค้นหาหรือตัวกรอง</p>
+            <AnimatedButton
+              variant="ghost"
+              onClick={() => {
+                actions.setSearchTerm('');
+                actions.setActiveCategory('all');
+                actions.setActiveDifficulty('all');
+              }}
+            >
+              ล้างตัวกรอง
+            </AnimatedButton>
+          </div>
+        )}
+      </div>
+    </div>
+  );
+}
+
+/* ─────────────────────────────────────────────
+   Sub-components
+   ───────────────────────────────────────────── */
+
+function CategoryPill({
+  icon,
+  label,
+  active,
+  onClick,
+}: {
+  icon: string;
+  label: string;
+  active: boolean;
+  onClick: () => void;
+}) {
+  const [hovered, setHovered] = useState(false);
+  const pillSpring = useSpring({
+    transform: hovered ? 'scale(1.05)' : 'scale(1)',
+    config: { tension: 350, friction: 18 },
+  });
+
+  return (
+    <animated.button
+      style={pillSpring}
+      onMouseEnter={() => setHovered(true)}
+      onMouseLeave={() => setHovered(false)}
+      onClick={onClick}
+      className={`inline-flex items-center gap-1.5 px-4 py-2 rounded-full text-sm font-medium transition-colors cursor-pointer select-none ${
+        active
+          ? 'bg-primary text-white shadow-md shadow-primary/25'
+          : 'bg-surface-alt text-muted border border-border hover:border-primary hover:text-primary'
+      }`}
+    >
+      <span>{icon}</span>
+      <span>{label}</span>
+    </animated.button>
+  );
+}
+
+const difficultyConfig: Record<string, { label: string; color: string }> = {
+  beginner: {
+    label: 'เริ่มต้น',
+    color: 'bg-emerald-500/10 text-emerald-600 dark:text-emerald-400',
+  },
+  intermediate: {
+    label: 'ปานกลาง',
+    color: 'bg-amber-500/10 text-amber-600 dark:text-amber-400',
+  },
+  advanced: {
+    label: 'ขั้นสูง',
+    color: 'bg-rose-500/10 text-rose-600 dark:text-rose-400',
+  },
+};
+
+function ShowcaseGridCard({
+  item,
+  onCopy,
+  copied,
+}: {
+  item: {
+    id: string;
+    title: string;
+    description: string;
+    category: string;
+    tags: string[];
+    difficulty: string;
+  };
+  onCopy: () => void;
+  copied: boolean;
+}) {
+  const diff = difficultyConfig[item.difficulty] || difficultyConfig.beginner;
+
+  return (
+    <AnimatedCard>
+      <Link href={`/gallery/${item.id}`} className="block">
+        {/* Thumbnail */}
+        <div className="relative h-44 bg-gradient-to-br from-primary/20 via-accent/10 to-primary/5 flex items-center justify-center overflow-hidden group">
+          <div className="text-5xl opacity-40 group-hover:opacity-60 transition-opacity group-hover:scale-110 transform duration-500">
+            {siteConfig.categories.find((c) => c.id === item.category)?.icon || '🎨'}
+          </div>
+          <button
+            onClick={(e) => {
+              e.preventDefault();
+              e.stopPropagation();
+              onCopy();
+            }}
+            className="absolute top-3 right-3 flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-semibold glass-panel opacity-0 group-hover:opacity-100 transition-opacity cursor-pointer hover:bg-primary hover:text-white"
+          >
+            {copied ? '✅ Copied!' : '📋 Copy'}
+          </button>
+          <span
+            className={`absolute bottom-3 left-3 px-2.5 py-1 rounded-full text-xs font-semibold ${diff.color}`}
+          >
+            {diff.label}
+          </span>
+        </div>
+
+        {/* Content */}
+        <div className="p-5">
+          <h3 className="text-base font-bold text-foreground mb-1.5 line-clamp-1">
+            {item.title}
+          </h3>
+          <p className="text-sm text-muted line-clamp-2 mb-4">
+            {item.description}
+          </p>
+          <div className="flex flex-wrap gap-1.5">
+            {item.tags.slice(0, 3).map((tag) => (
+              <span key={tag} className="tag text-[11px]">
+                #{tag}
+              </span>
+            ))}
+          </div>
+        </div>
+      </Link>
+    </AnimatedCard>
+  );
+}
+
+function ShowcaseListCard({
+  item,
+  onCopy,
+  copied,
+}: {
+  item: {
+    id: string;
+    title: string;
+    description: string;
+    category: string;
+    tags: string[];
+    difficulty: string;
+  };
+  onCopy: () => void;
+  copied: boolean;
+}) {
+  const diff = difficultyConfig[item.difficulty] || difficultyConfig.beginner;
+
+  return (
+    <AnimatedCard>
+      <Link
+        href={`/gallery/${item.id}`}
+        className="flex flex-col sm:flex-row items-stretch"
+      >
+        {/* Left Thumbnail */}
+        <div className="relative w-full sm:w-48 h-32 sm:h-auto bg-gradient-to-br from-primary/20 via-accent/10 to-primary/5 flex items-center justify-center flex-shrink-0 overflow-hidden rounded-t-xl sm:rounded-l-xl sm:rounded-tr-none">
+          <div className="text-4xl opacity-40">
+            {siteConfig.categories.find((c) => c.id === item.category)?.icon || '🎨'}
+          </div>
+          <span
+            className={`absolute bottom-2 left-2 px-2 py-0.5 rounded-full text-[11px] font-semibold ${diff.color}`}
+          >
+            {diff.label}
+          </span>
+        </div>
+
+        {/* Content */}
+        <div className="flex-1 p-4 sm:p-5 flex flex-col justify-center">
+          <h3 className="text-base font-bold text-foreground mb-1">
+            {item.title}
+          </h3>
+          <p className="text-sm text-muted line-clamp-1 mb-3">
+            {item.description}
+          </p>
+          <div className="flex items-center justify-between">
+            <div className="flex flex-wrap gap-1.5">
+              {item.tags.slice(0, 4).map((tag) => (
+                <span key={tag} className="tag text-[11px]">
+                  #{tag}
+                </span>
+              ))}
+            </div>
+            <button
+              onClick={(e) => {
+                e.preventDefault();
+                e.stopPropagation();
+                onCopy();
+              }}
+              className="flex-shrink-0 ml-4 px-3 py-1.5 rounded-full text-xs font-semibold bg-primary/10 text-primary hover:bg-primary hover:text-white transition-colors cursor-pointer"
+            >
+              {copied ? '✅ Copied!' : '📋 Copy'}
+            </button>
+          </div>
+        </div>
+      </Link>
+    </AnimatedCard>
+  );
+}
