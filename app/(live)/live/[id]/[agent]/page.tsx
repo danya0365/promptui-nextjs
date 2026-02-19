@@ -1,10 +1,21 @@
 
 import { AiModel } from '@/src/application/repositories/IShowcaseLivePreviewRepository';
 import { siteConfig } from '@/src/config/site.config';
+import { ECommerceAdminPanelDemoGemini } from '@/src/presentation/components/demos/ECommerceAdminPanelDemoGemini';
+import { FinanceBankingDashboardDemoGemini } from '@/src/presentation/components/demos/FinanceBankingDashboardDemoGemini';
 import { GlassmorphismLoginDemo } from '@/src/presentation/components/demos/GlassmorphismLoginDemo';
 import { GlassmorphismLoginDemoGemini } from '@/src/presentation/components/demos/GlassmorphismLoginDemoGemini';
+import { HealthFitnessTrackerDemoGemini } from '@/src/presentation/components/demos/HealthFitnessTrackerDemoGemini';
+import { IoTSmartHomeDashboardDemoGemini } from '@/src/presentation/components/demos/IoTSmartHomeDashboardDemoGemini';
+import { KanbanBoardDemoGemini } from '@/src/presentation/components/demos/KanbanBoardDemoGemini';
+import { MinimalBlogLandingDemoGemini } from '@/src/presentation/components/demos/MinimalBlogLandingDemoGemini';
 import { ModernDashboardDemoGemini } from '@/src/presentation/components/demos/ModernDashboardDemoGemini';
+import { MultiStepRegisterDemoGemini } from '@/src/presentation/components/demos/MultiStepRegisterDemoGemini';
 import { NeonDashboardWidgetsDemoGemini } from '@/src/presentation/components/demos/NeonDashboardWidgetsDemoGemini';
+import { ProductCardGridDemoGemini } from '@/src/presentation/components/demos/ProductCardGridDemoGemini';
+import { ProfileCardCollectionDemoGemini } from '@/src/presentation/components/demos/ProfileCardCollectionDemoGemini';
+import { SaaSLandingPageDemoGemini } from '@/src/presentation/components/demos/SaaSLandingPageDemoGemini';
+import { SocialMediaAnalyticsDemoGemini } from '@/src/presentation/components/demos/SocialMediaAnalyticsDemoGemini';
 import type { Metadata } from 'next';
 
 /**
@@ -22,6 +33,17 @@ const LIVE_PREVIEW_COMPONENTS: Record<string, Partial<Record<AiModel, React.Comp
   'showcase-008': {
     'gemini-3-pro': NeonDashboardWidgetsDemoGemini,
   },
+  'showcase-003': { 'gemini-3-pro': SaaSLandingPageDemoGemini },
+  'showcase-004': { 'gemini-3-pro': ProductCardGridDemoGemini },
+  'showcase-005': { 'gemini-3-pro': MultiStepRegisterDemoGemini },
+  'showcase-006': { 'gemini-3-pro': ProfileCardCollectionDemoGemini },
+  'showcase-007': { 'gemini-3-pro': MinimalBlogLandingDemoGemini },
+  'showcase-009': { 'gemini-3-pro': FinanceBankingDashboardDemoGemini },
+  'showcase-010': { 'gemini-3-pro': KanbanBoardDemoGemini },
+  'showcase-011': { 'gemini-3-pro': HealthFitnessTrackerDemoGemini },
+  'showcase-012': { 'gemini-3-pro': SocialMediaAnalyticsDemoGemini },
+  'showcase-013': { 'gemini-3-pro': ECommerceAdminPanelDemoGemini },
+  'showcase-014': { 'gemini-3-pro': IoTSmartHomeDashboardDemoGemini },
 };
 
 interface LivePreviewPageProps {
