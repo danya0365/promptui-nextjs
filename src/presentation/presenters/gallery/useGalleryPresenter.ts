@@ -233,7 +233,23 @@ export function useGalleryPresenter(
     });
   }, []);
 
-  // Load on mount
+  // Sync with initialViewModel updates (e.g. server-side pagination)
+  useEffect(() => {
+    if (initialViewModel) {
+      setViewModel(initialViewModel);
+      setAllItems(initialViewModel.items);
+      setFilteredItems(
+        applyFilters(
+          initialViewModel.items,
+          searchTerm,
+          activeDifficulty,
+          agentShowcaseIds
+        )
+      );
+    }
+  }, [initialViewModel, applyFilters, searchTerm, activeDifficulty, agentShowcaseIds]);
+
+  // Load on mount if no data
   useEffect(() => {
     if (!initialViewModel) loadData();
   }, [loadData, initialViewModel]);

@@ -240,6 +240,63 @@ export function GalleryView({ initialViewModel }: GalleryViewProps) {
             </AnimatedButton>
           </div>
         )}
+
+        {/* ═══ Pagination ═══ */}
+        {state.viewModel && state.viewModel.totalCount > state.viewModel.perPage && (
+          <div className="flex justify-center items-center gap-2 mt-12 mb-8">
+            {/* Prev Button */}
+            <Link
+              href={
+                    state.viewModel.page > 1
+                      ? `/gallery?page=${state.viewModel.page - 1}${
+                          state.activeCategory !== 'all'
+                            ? `&category=${state.activeCategory}`
+                            : ''
+                        }`
+                      : '#'
+                  }
+                  className={`px-4 py-2 rounded-lg border text-sm font-medium transition-colors ${
+                    state.viewModel.page > 1
+                      ? 'bg-surface border-border hover:border-primary hover:text-primary'
+                      : 'bg-surface-alt border-transparent text-muted cursor-not-allowed opacity-50 pointer-events-none'
+                  }`}
+                  aria-disabled={state.viewModel.page <= 1}
+                >
+                  ← ก่อนหน้า
+                </Link>
+
+                <div className="text-sm font-medium text-muted px-2">
+                  หน้า {state.viewModel.page} /{' '}
+                  {Math.ceil(state.viewModel.totalCount / state.viewModel.perPage)}
+                </div>
+
+                {/* Next Button */}
+                <Link
+                  href={
+                    state.viewModel.page <
+                    Math.ceil(state.viewModel.totalCount / state.viewModel.perPage)
+                      ? `/gallery?page=${state.viewModel.page + 1}${
+                          state.activeCategory !== 'all'
+                            ? `&category=${state.activeCategory}`
+                            : ''
+                        }`
+                      : '#'
+                  }
+                  className={`px-4 py-2 rounded-lg border text-sm font-medium transition-colors ${
+                    state.viewModel.page <
+                    Math.ceil(state.viewModel.totalCount / state.viewModel.perPage)
+                      ? 'bg-surface border-border hover:border-primary hover:text-primary'
+                      : 'bg-surface-alt border-transparent text-muted cursor-not-allowed opacity-50 pointer-events-none'
+                  }`}
+                  aria-disabled={
+                    state.viewModel.page >=
+                    Math.ceil(state.viewModel.totalCount / state.viewModel.perPage)
+                  }
+                >
+                  ถัดไป →
+                </Link>
+              </div>
+            )}
       </div>
     </div>
   );
