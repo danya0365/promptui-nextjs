@@ -1,20 +1,20 @@
 /**
  * StaticShowcaseLivePreviewRepository
- * Static data for live preview availability per showcase × AI agent
+ * Static data for live preview availability per showcase × AI model
  * Following Clean Architecture — Infrastructure Layer
  */
 
 import {
-    AiAgent,
-    IShowcaseLivePreviewRepository,
-    ShowcaseLivePreview,
+  AiModel,
+  IShowcaseLivePreviewRepository,
+  ShowcaseLivePreview,
 } from '@/src/application/repositories/IShowcaseLivePreviewRepository';
 
 const LIVE_PREVIEWS: ShowcaseLivePreview[] = [
   {
     id: 'lp-001',
     showcaseId: 'showcase-001',
-    aiAgent: 'antigravity',
+    aiModel: 'claude-4-sonnet',
     isActive: true,
     createdAt: '2025-06-15T10:30:00.000Z',
   },
@@ -31,10 +31,10 @@ export class StaticShowcaseLivePreviewRepository
     );
   }
 
-  async getByAiAgent(agent: AiAgent): Promise<ShowcaseLivePreview[]> {
-    if (agent === ('all' as string)) return this.getAll();
+  async getByAiModel(model: AiModel): Promise<ShowcaseLivePreview[]> {
+    if (model === ('all' as string)) return this.getAll();
     return this.previews.filter(
-      (p) => p.aiAgent === agent && p.isActive
+      (p) => p.aiModel === model && p.isActive
     );
   }
 

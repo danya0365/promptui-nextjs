@@ -166,12 +166,12 @@ export function GalleryView({ initialViewModel }: GalleryViewProps) {
         <ScrollReveal delay={180}>
           <div className="flex flex-wrap items-center justify-center gap-2 mb-8">
             <span className="text-xs font-semibold text-muted mr-1">🤖 Agent:</span>
-            {siteConfig.aiAgents.map((agent) => (
+            {siteConfig.aiModels.map((agent) => (
               <button
                 key={agent.id}
-                onClick={() => actions.setActiveAiAgent(agent.id)}
+                onClick={() => actions.setActiveAiModel(agent.id)}
                 className={`inline-flex items-center gap-1 px-3 py-1.5 rounded-full text-xs font-medium transition-all cursor-pointer select-none ${
-                  state.activeAiAgent === agent.id
+                  state.activeAiModel === agent.id
                     ? 'bg-primary text-white shadow-md shadow-primary/25'
                     : 'bg-surface-alt text-muted border border-border hover:border-primary hover:text-primary'
                 }`}
@@ -233,7 +233,7 @@ export function GalleryView({ initialViewModel }: GalleryViewProps) {
                 actions.setSearchTerm('');
                 actions.setActiveCategory('all');
                 actions.setActiveDifficulty('all');
-                actions.setActiveAiAgent('all');
+                actions.setActiveAiModel('all');
               }}
             >
               ล้างตัวกรอง
@@ -306,13 +306,13 @@ function AgentBadges({ previews }: { previews: ShowcaseLivePreview[] }) {
   return (
     <div className="flex items-center gap-1">
       {previews.map((preview) => {
-        const agentInfo = siteConfig.aiAgents.find(
-          (a) => a.id === preview.aiAgent
+        const agentInfo = siteConfig.aiModels.find(
+          (a) => a.id === preview.aiModel
         );
         return (
           <span
             key={preview.id}
-            title={`Live Preview by ${agentInfo?.label || preview.aiAgent}`}
+            title={`Live Preview by ${agentInfo?.label || preview.aiModel}`}
             className="text-xs cursor-default"
           >
             {agentInfo?.icon || '🤖'}

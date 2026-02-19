@@ -13,7 +13,7 @@ export interface GalleryPresenterState {
   searchTerm: string;
   activeCategory: string;
   activeDifficulty: string;
-  activeAiAgent: string;
+  activeAiModel: string;
   filteredItems: ShowcaseItem[];
   copiedId: string | null;
   viewMode: 'grid' | 'list';
@@ -26,7 +26,7 @@ export interface GalleryPresenterActions {
   setSearchTerm: (term: string) => void;
   setActiveCategory: (category: string) => void;
   setActiveDifficulty: (difficulty: string) => void;
-  setActiveAiAgent: (agent: string) => void;
+  setActiveAiModel: (agent: string) => void;
   copyPrompt: (item: ShowcaseItem) => void;
   setViewMode: (mode: 'grid' | 'list') => void;
   setError: (error: string | null) => void;
@@ -59,7 +59,7 @@ export function useGalleryPresenter(
   const [searchTerm, setSearchTermState] = useState('');
   const [activeCategory, setActiveCategoryState] = useState('all');
   const [activeDifficulty, setActiveDifficultyState] = useState('all');
-  const [activeAiAgent, setActiveAiAgentState] = useState('all');
+  const [activeAiModel, setActiveAiModelState] = useState('all');
   const [filteredItems, setFilteredItems] = useState<ShowcaseItem[]>(
     initialViewModel?.items || []
   );
@@ -192,9 +192,9 @@ export function useGalleryPresenter(
   /**
    * AI Agent filter — fetches showcase IDs with previews from this agent
    */
-  const setActiveAiAgent = useCallback(
+  const setActiveAiModel = useCallback(
     async (agent: string) => {
-      setActiveAiAgentState(agent);
+      setActiveAiModelState(agent);
 
       if (agent === 'all') {
         setAgentShowcaseIds(null);
@@ -205,7 +205,7 @@ export function useGalleryPresenter(
       }
 
       try {
-        const ids = await presenter.getShowcaseIdsByAgent(agent);
+        const ids = await presenter.getShowcaseIdsByModel(agent);
         if (isMountedRef.current) {
           setAgentShowcaseIds(ids);
           setFilteredItems(
@@ -253,7 +253,7 @@ export function useGalleryPresenter(
       searchTerm,
       activeCategory,
       activeDifficulty,
-      activeAiAgent,
+      activeAiModel,
       filteredItems,
       copiedId,
       viewMode,
@@ -264,7 +264,7 @@ export function useGalleryPresenter(
       setSearchTerm,
       setActiveCategory,
       setActiveDifficulty,
-      setActiveAiAgent,
+      setActiveAiModel,
       copyPrompt,
       setViewMode,
       setError,

@@ -90,17 +90,17 @@ export class GalleryPresenter {
     }
   }
 
-  async getShowcaseIdsByAgent(agent: string): Promise<string[]> {
+  async getShowcaseIdsByModel(model: string): Promise<string[]> {
     try {
-      if (agent === 'all') {
+      if (model === 'all') {
         return await this.livePreviewRepository.getShowcaseIdsWithPreviews();
       }
-      const previews = await this.livePreviewRepository.getByAiAgent(
-        agent as import('@/src/application/repositories/IShowcaseLivePreviewRepository').AiAgent
+      const previews = await this.livePreviewRepository.getByAiModel(
+        model as import('@/src/application/repositories/IShowcaseLivePreviewRepository').AiModel
       );
       return previews.map((p) => p.showcaseId);
     } catch (error) {
-      console.error('Error getting showcases by agent:', error);
+      console.error('Error getting showcases by model:', error);
       throw error;
     }
   }

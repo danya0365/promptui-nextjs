@@ -7,6 +7,7 @@ import { GlassPanel } from '@/src/presentation/components/shared/GlassPanel';
 import { ScrollReveal } from '@/src/presentation/components/shared/ScrollReveal';
 import { HomeViewModel } from '@/src/presentation/presenters/home/HomePresenter';
 import { useHomePresenter } from '@/src/presentation/presenters/home/useHomePresenter';
+import Link from 'next/link';
 import { useState } from 'react';
 import { animated, useSpring } from 'react-spring';
 
@@ -107,12 +108,16 @@ export function HomeView({ initialViewModel }: HomeViewProps) {
             style={ctaSpring}
             className="flex flex-col sm:flex-row items-center justify-center gap-4"
           >
-            <AnimatedButton variant="primary" className="px-8 py-3 text-base">
-              🎨 เริ่มดู Gallery
-            </AnimatedButton>
-            <AnimatedButton variant="ghost" className="px-8 py-3 text-base">
-              📖 วิธีใช้งาน
-            </AnimatedButton>
+            <Link href="/gallery">
+              <AnimatedButton variant="primary" className="px-8 py-3 text-base">
+                🎨 เริ่มดู Gallery
+              </AnimatedButton>
+            </Link>
+            <Link href="/how-to">
+              <AnimatedButton variant="ghost" className="px-8 py-3 text-base">
+                📖 วิธีใช้งาน
+              </AnimatedButton>
+            </Link>
           </animated.div>
 
           {/* Stats Row */}
@@ -194,6 +199,17 @@ export function HomeView({ initialViewModel }: HomeViewProps) {
               <p className="text-muted">ไม่พบ UI ในหมวดหมู่นี้</p>
             </div>
           )}
+
+          {/* View All link */}
+          {state.filteredItems.length > 0 && (
+            <div className="text-center mt-10">
+              <Link href="/gallery">
+                <AnimatedButton variant="ghost" className="px-8 py-3">
+                  ดูทั้งหมด →
+                </AnimatedButton>
+              </Link>
+            </div>
+          )}
         </div>
       </section>
 
@@ -211,9 +227,11 @@ export function HomeView({ initialViewModel }: HomeViewProps) {
                 เพียง copy prompt จาก PromptUI แล้ววางใน AI ที่คุณใช้ — ได้ UI
                 สวยพร้อมใช้งานทันที
               </p>
-              <AnimatedButton variant="primary" className="px-10 py-3.5 text-base">
-                🚀 เริ่มใช้งานฟรี
-              </AnimatedButton>
+              <Link href="/gallery">
+                <AnimatedButton variant="primary" className="px-10 py-3.5 text-base">
+                  🚀 เริ่มใช้งานฟรี
+                </AnimatedButton>
+              </Link>
             </GlassPanel>
           </div>
         </section>
@@ -308,50 +326,53 @@ function ShowcaseCard({
 
   return (
     <AnimatedCard>
-      {/* Thumbnail Placeholder */}
-      <div className="relative h-44 bg-gradient-to-br from-primary/20 via-accent/10 to-primary/5 flex items-center justify-center overflow-hidden group">
-        <div className="text-5xl opacity-40 group-hover:opacity-60 transition-opacity group-hover:scale-110 transition-transform duration-500">
-          {siteConfig.categories.find((c) => c.id === item.category)?.icon || '🎨'}
+      <Link href={`/gallery/${item.id}`} className="block">
+        {/* Thumbnail Placeholder */}
+        <div className="relative h-44 bg-gradient-to-br from-primary/20 via-accent/10 to-primary/5 flex items-center justify-center overflow-hidden group">
+          <div className="text-5xl opacity-40 group-hover:opacity-60 transition-opacity group-hover:scale-110 transition-transform duration-500">
+            {siteConfig.categories.find((c) => c.id === item.category)?.icon || '🎨'}
+          </div>
+          {/* Copy Button */}
+          <button
+            onClick={(e) => {
+              e.preventDefault();
+              e.stopPropagation();
+              onCopy();
+            }}
+            className="absolute top-3 right-3 flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-semibold glass-panel opacity-0 group-hover:opacity-100 transition-opacity cursor-pointer hover:bg-primary hover:text-white"
+          >
+            {copied ? '✅ Copied!' : '📋 Copy Prompt'}
+          </button>
+          {/* Difficulty Badge */}
+          <span
+            className={`absolute bottom-3 left-3 px-2.5 py-1 rounded-full text-xs font-semibold ${diff.color}`}
+          >
+            {diff.label}
+          </span>
         </div>
-        {/* Copy Button */}
-        <button
-          onClick={(e) => {
-            e.stopPropagation();
-            onCopy();
-          }}
-          className="absolute top-3 right-3 flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-semibold glass-panel opacity-0 group-hover:opacity-100 transition-opacity cursor-pointer hover:bg-primary hover:text-white"
-        >
-          {copied ? '✅ Copied!' : '📋 Copy Prompt'}
-        </button>
-        {/* Difficulty Badge */}
-        <span
-          className={`absolute bottom-3 left-3 px-2.5 py-1 rounded-full text-xs font-semibold ${diff.color}`}
-        >
-          {diff.label}
-        </span>
-      </div>
 
-      {/* Content */}
-      <div className="p-5">
-        <h3 className="text-base font-bold text-foreground mb-1.5 line-clamp-1">
-          {item.title}
-        </h3>
-        <p className="text-sm text-muted line-clamp-2 mb-4">
-          {item.description}
-        </p>
+        {/* Content */}
+        <div className="p-5">
+          <h3 className="text-base font-bold text-foreground mb-1.5 line-clamp-1">
+            {item.title}
+          </h3>
+          <p className="text-sm text-muted line-clamp-2 mb-4">
+            {item.description}
+          </p>
 
-        {/* Tags */}
-        <div className="flex flex-wrap gap-1.5">
-          {item.tags.slice(0, 3).map((tag) => (
-            <span key={tag} className="tag text-[11px]">
-              #{tag}
-            </span>
-          ))}
-          {item.tags.length > 3 && (
-            <span className="tag text-[11px]">+{item.tags.length - 3}</span>
-          )}
+          {/* Tags */}
+          <div className="flex flex-wrap gap-1.5">
+            {item.tags.slice(0, 3).map((tag) => (
+              <span key={tag} className="tag text-[11px]">
+                #{tag}
+              </span>
+            ))}
+            {item.tags.length > 3 && (
+              <span className="tag text-[11px]">+{item.tags.length - 3}</span>
+            )}
+          </div>
         </div>
-      </div>
+      </Link>
     </AnimatedCard>
   );
 }

@@ -31,7 +31,7 @@ const difficultyConfig: Record<string, { label: string; color: string }> = {
 };
 
 /** Agent badge color mapping */
-const agentBadgeColors: Record<string, string> = {
+const modelBadgeColors: Record<string, string> = {
   antigravity: 'bg-violet-500/15 text-violet-600 dark:text-violet-400 border-violet-500/25 hover:bg-violet-500/25',
   chatgpt:     'bg-emerald-500/15 text-emerald-600 dark:text-emerald-400 border-emerald-500/25 hover:bg-emerald-500/25',
   claude:      'bg-amber-500/15 text-amber-600 dark:text-amber-400 border-amber-500/25 hover:bg-amber-500/25',
@@ -170,27 +170,27 @@ export function ShowcaseDetailView({
               {hasLivePreviews && (
                 <div className="mt-6">
                   <p className="text-xs font-semibold text-muted mb-3 uppercase tracking-wider">
-                    🖥️ Live Preview จาก AI Agent
+                    🖥️ Live Preview จาก AI Model
                   </p>
                   <div className="flex flex-wrap gap-2">
                     {livePreviews.map((preview) => {
-                      const agentInfo = siteConfig.aiAgents.find(
-                        (a) => a.id === preview.aiAgent
+                      const agentInfo = siteConfig.aiModels.find(
+                        (a) => a.id === preview.aiModel
                       );
                       const badgeColor =
-                        agentBadgeColors[preview.aiAgent] ||
+                        modelBadgeColors[preview.aiModel] ||
                         'bg-slate-500/15 text-slate-400 border-slate-500/25';
                       return (
                         <Link
                           key={preview.id}
-                          href={`/live/${item.id}/${preview.aiAgent}`}
+                          href={`/live/${item.id}/${preview.aiModel}`}
                           target="_blank"
                         >
                           <span
                             className={`inline-flex items-center gap-1.5 px-4 py-2 rounded-xl text-sm font-semibold border cursor-pointer transition-all duration-200 ${badgeColor}`}
                           >
                             {agentInfo?.icon}{' '}
-                            {agentInfo?.label || preview.aiAgent}
+                            {agentInfo?.label || preview.aiModel}
                           </span>
                         </Link>
                       );

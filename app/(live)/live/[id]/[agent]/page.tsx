@@ -3,12 +3,12 @@ import { GlassmorphismLoginDemo } from '@/src/presentation/components/demos/Glas
 import type { Metadata } from 'next';
 
 /**
- * LivePreview lookup — maps [showcaseId][agentId] to its component
- * Each showcase can have multiple live previews from different AI agents
+ * LivePreview lookup — maps [showcaseId][aiModelId] to its component
+ * Each showcase can have multiple live previews from different AI models
  */
 const LIVE_PREVIEW_COMPONENTS: Record<string, Record<string, React.ComponentType>> = {
   'showcase-001': {
-    antigravity: GlassmorphismLoginDemo,
+    'claude-4-sonnet': GlassmorphismLoginDemo,
   },
 };
 
@@ -17,25 +17,25 @@ interface LivePreviewPageProps {
 }
 
 export async function generateMetadata({ params }: LivePreviewPageProps): Promise<Metadata> {
-  const { id, agent } = await params;
-  const agentInfo = siteConfig.aiAgents.find((a) => a.id === agent);
-  const agentLabel = agentInfo?.label || agent;
+  const { id, agent: modelId } = await params;
+  const modelInfo = siteConfig.aiModels.find((m) => m.id === modelId);
+  const modelLabel = modelInfo?.label || modelId;
   return {
-    title: `Live Preview — ${id} by ${agentLabel} | PromptUI`,
-    description: `Live preview ผลลัพธ์จาก ${agentLabel} สำหรับ ${id}`,
+    title: `Live Preview — ${id} by ${modelLabel} | PromptUI`,
+    description: `Live preview ผลลัพธ์จาก ${modelLabel} สำหรับ ${id}`,
   };
 }
 
 /**
  * LivePreview Page — /live/[id]/[agent]
- * Renders the standalone live preview for a specific showcase × AI agent
+ * Renders the standalone live preview for a specific showcase × AI model
  * NO shared layout, NO global CSS — completely isolated
  */
 export default async function LivePreviewPage({ params }: LivePreviewPageProps) {
-  const { id, agent } = await params;
+  const { id, agent: modelId } = await params;
   const showcaseComponents = LIVE_PREVIEW_COMPONENTS[id];
-  const PreviewComponent = showcaseComponents?.[agent];
-  const agentInfo = siteConfig.aiAgents.find((a) => a.id === agent);
+  const PreviewComponent = showcaseComponents?.[modelId];
+  const modelInfo = siteConfig.aiModels.find((m) => m.id === modelId);
 
   if (!PreviewComponent) {
     return (
@@ -55,7 +55,7 @@ export default async function LivePreviewPage({ params }: LivePreviewPageProps) 
           </h1>
           <p style={{ color: '#94a3b8', marginBottom: '0.5rem' }}>
             Preview สำหรับ <strong>{id}</strong> โดย{' '}
-            <strong>{agentInfo?.icon} {agentInfo?.label || agent}</strong>
+            <strong>{modelInfo?.icon} {modelInfo?.label || modelId}</strong>
           </p>
           <p style={{ color: '#64748b', marginBottom: '1.5rem', fontSize: '0.875rem' }}>
             กำลังอยู่ระหว่างการพัฒนา

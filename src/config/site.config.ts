@@ -53,20 +53,24 @@ export const siteConfig = {
     { id: 'advanced', label: 'ขั้นสูง', color: 'rose' },
   ] as const,
 
-  /** AI Agents that can generate live previews */
-  aiAgents: [
-    { id: 'all',          label: 'ทั้งหมด',       icon: '🤖', color: 'slate' },
-    { id: 'antigravity',  label: 'Antigravity',   icon: '🚀', color: 'violet' },
-    { id: 'chatgpt',      label: 'ChatGPT',       icon: '💚', color: 'emerald' },
-    { id: 'claude',       label: 'Claude',         icon: '🟠', color: 'amber' },
-    { id: 'gemini',       label: 'Gemini',         icon: '🔵', color: 'blue' },
-    { id: 'copilot',      label: 'Copilot',        icon: '🟣', color: 'indigo' },
-    { id: 'v0',           label: 'v0 by Vercel',   icon: '⚡', color: 'zinc' },
-    { id: 'bolt',         label: 'Bolt.new',       icon: '⚡', color: 'cyan' },
+  /** AI Models that can generate live previews */
+  aiModels: [
+    { id: 'all',                label: 'ทั้งหมด',             icon: '🤖', color: 'slate' },
+    { id: 'gpt-4o',             label: 'GPT-4o',             icon: '💚', color: 'emerald' },
+    { id: 'gpt-4.1',            label: 'GPT-4.1',            icon: '💚', color: 'green' },
+    { id: 'claude-3.7-sonnet',  label: 'Claude 3.7 Sonnet',  icon: '🟠', color: 'amber' },
+    { id: 'claude-4-sonnet',    label: 'Claude 4 Sonnet',    icon: '🟠', color: 'orange' },
+    { id: 'gemini-2.5-pro',     label: 'Gemini 2.5 Pro',     icon: '🔵', color: 'blue' },
+    { id: 'gemini-2.5-flash',   label: 'Gemini 2.5 Flash',   icon: '🔵', color: 'sky' },
+    { id: 'deepseek-v3',        label: 'DeepSeek V3',        icon: '🐋', color: 'indigo' },
+    { id: 'deepseek-r1',        label: 'DeepSeek R1',        icon: '🐋', color: 'violet' },
+    { id: 'grok-3',             label: 'Grok 3',             icon: '⚡', color: 'zinc' },
+    { id: 'llama-4',            label: 'Llama 4',            icon: '🦙', color: 'cyan' },
   ] as const,
 } as const;
 
 export type NavItem = (typeof siteConfig.navigation)[number];
 export type Category = (typeof siteConfig.categories)[number];
 export type Difficulty = (typeof siteConfig.difficulties)[number];
-export type AiAgentConfig = (typeof siteConfig.aiAgents)[number];
+export type AiModelConfig = (typeof siteConfig.aiModels)[number];
+
