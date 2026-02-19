@@ -1,7 +1,7 @@
 /**
  * GalleryPresenter
  * Handles business logic for the Gallery page
- * Receives repository via dependency injection
+ * Receives repositories via dependency injection
  */
 
 import {
@@ -9,6 +9,10 @@ import {
     ShowcaseItem,
     ShowcaseStats
 } from '@/src/application/repositories/IShowcaseItemRepository';
+import {
+    IShowcaseLivePreviewRepository,
+    ShowcaseLivePreview,
+} from '@/src/application/repositories/IShowcaseLivePreviewRepository';
 import { Metadata } from 'next';
 
 export interface GalleryViewModel {
@@ -17,20 +21,33 @@ export interface GalleryViewModel {
   totalCount: number;
   page: number;
   perPage: number;
+  /** Map of showcaseId → list of live previews */
+  livePreviewMap: Record<string, ShowcaseLivePreview[]>;
 }
 
 export class GalleryPresenter {
-  constructor(private readonly repository: IShowcaseItemRepository) {}
+  constructor(
+    private readonly repository: IShowcaseItemRepository,
+    private readonly livePreviewRepository: IShowcaseLivePreviewRepository
+  ) {}
 
   async getViewModel(
     page: number = 1,
     perPage: number = 12
   ): Promise<GalleryViewModel> {
     try {
-      const [paginatedResult, stats] = await Promise.all([
+      const [paginatedResult, stats, allPreviews] = await Promise.all([
         this.repository.getPaginated(page, perPage),
         this.repository.getStats(),
+        this.livePreviewRepository.getAll(),
       ]);
+
+      // Build lookup map: showcaseId → previews[]
+      const livePreviewMap: Record<string, ShowcaseLivePreview[]> = {};
+      allPreviews.forEach((p) => {
+        if (!livePreviewMap[p.showcaseId]) livePreviewMap[p.showcaseId] = [];
+        livePreviewMap[p.showcaseId].push(p);
+      });
 
       return {
         items: paginatedResult.data,
@@ -38,6 +55,7 @@ export class GalleryPresenter {
         totalCount: paginatedResult.total,
         page,
         perPage,
+        livePreviewMap,
       };
     } catch (error) {
       console.error('Error getting gallery view model:', error);
@@ -68,6 +86,21 @@ export class GalleryPresenter {
       return await this.repository.getById(id);
     } catch (error) {
       console.error('Error getting item by id:', error);
+      throw error;
+    }
+  }
+
+  async getShowcaseIdsByAgent(agent: string): Promise<string[]> {
+    try {
+      if (agent === 'all') {
+        return await this.livePreviewRepository.getShowcaseIdsWithPreviews();
+      }
+      const previews = await this.livePreviewRepository.getByAiAgent(
+        agent as import('@/src/application/repositories/IShowcaseLivePreviewRepository').AiAgent
+      );
+      return previews.map((p) => p.showcaseId);
+    } catch (error) {
+      console.error('Error getting showcases by agent:', error);
       throw error;
     }
   }

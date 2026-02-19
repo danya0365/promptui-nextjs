@@ -7,15 +7,23 @@ import {
     IShowcaseItemRepository,
     ShowcaseItem,
 } from '@/src/application/repositories/IShowcaseItemRepository';
+import {
+    IShowcaseLivePreviewRepository,
+    ShowcaseLivePreview,
+} from '@/src/application/repositories/IShowcaseLivePreviewRepository';
 import { Metadata } from 'next';
 
 export interface ShowcaseDetailViewModel {
   item: ShowcaseItem;
   relatedItems: ShowcaseItem[];
+  livePreviews: ShowcaseLivePreview[];
 }
 
 export class ShowcaseDetailPresenter {
-  constructor(private readonly repository: IShowcaseItemRepository) {}
+  constructor(
+    private readonly repository: IShowcaseItemRepository,
+    private readonly livePreviewRepository: IShowcaseLivePreviewRepository
+  ) {}
 
   async getViewModel(id: string): Promise<ShowcaseDetailViewModel | null> {
     try {
@@ -28,7 +36,11 @@ export class ShowcaseDetailPresenter {
         .filter((i) => i.id !== id)
         .slice(0, 3);
 
-      return { item, relatedItems };
+      // Get live previews for this showcase
+      const livePreviews =
+        await this.livePreviewRepository.getByShowcaseId(id);
+
+      return { item, relatedItems, livePreviews };
     } catch (error) {
       console.error('Error getting showcase detail:', error);
       throw error;

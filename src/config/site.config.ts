@@ -52,8 +52,21 @@ export const siteConfig = {
     { id: 'intermediate', label: 'ปานกลาง', color: 'amber' },
     { id: 'advanced', label: 'ขั้นสูง', color: 'rose' },
   ] as const,
+
+  /** AI Agents that can generate live previews */
+  aiAgents: [
+    { id: 'all',          label: 'ทั้งหมด',       icon: '🤖', color: 'slate' },
+    { id: 'antigravity',  label: 'Antigravity',   icon: '🚀', color: 'violet' },
+    { id: 'chatgpt',      label: 'ChatGPT',       icon: '💚', color: 'emerald' },
+    { id: 'claude',       label: 'Claude',         icon: '🟠', color: 'amber' },
+    { id: 'gemini',       label: 'Gemini',         icon: '🔵', color: 'blue' },
+    { id: 'copilot',      label: 'Copilot',        icon: '🟣', color: 'indigo' },
+    { id: 'v0',           label: 'v0 by Vercel',   icon: '⚡', color: 'zinc' },
+    { id: 'bolt',         label: 'Bolt.new',       icon: '⚡', color: 'cyan' },
+  ] as const,
 } as const;
 
 export type NavItem = (typeof siteConfig.navigation)[number];
 export type Category = (typeof siteConfig.categories)[number];
 export type Difficulty = (typeof siteConfig.difficulties)[number];
+export type AiAgentConfig = (typeof siteConfig.aiAgents)[number];

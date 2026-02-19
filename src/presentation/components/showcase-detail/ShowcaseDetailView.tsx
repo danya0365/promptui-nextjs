@@ -30,6 +30,17 @@ const difficultyConfig: Record<string, { label: string; color: string }> = {
   },
 };
 
+/** Agent badge color mapping */
+const agentBadgeColors: Record<string, string> = {
+  antigravity: 'bg-violet-500/15 text-violet-600 dark:text-violet-400 border-violet-500/25 hover:bg-violet-500/25',
+  chatgpt:     'bg-emerald-500/15 text-emerald-600 dark:text-emerald-400 border-emerald-500/25 hover:bg-emerald-500/25',
+  claude:      'bg-amber-500/15 text-amber-600 dark:text-amber-400 border-amber-500/25 hover:bg-amber-500/25',
+  gemini:      'bg-blue-500/15 text-blue-600 dark:text-blue-400 border-blue-500/25 hover:bg-blue-500/25',
+  copilot:     'bg-indigo-500/15 text-indigo-600 dark:text-indigo-400 border-indigo-500/25 hover:bg-indigo-500/25',
+  v0:          'bg-zinc-500/15 text-zinc-600 dark:text-zinc-400 border-zinc-500/25 hover:bg-zinc-500/25',
+  bolt:        'bg-cyan-500/15 text-cyan-600 dark:text-cyan-400 border-cyan-500/25 hover:bg-cyan-500/25',
+};
+
 export function ShowcaseDetailView({
   id,
   initialViewModel,
@@ -77,11 +88,12 @@ export function ShowcaseDetailView({
 
   if (!viewModel) return null;
 
-  const { item, relatedItems } = viewModel;
+  const { item, relatedItems, livePreviews } = viewModel;
   const diff = difficultyConfig[item.difficulty] || difficultyConfig.beginner;
   const categoryInfo = siteConfig.categories.find(
     (c) => c.id === item.category
   );
+  const hasLivePreviews = livePreviews.length > 0;
 
   return (
     <div className="py-8 sm:py-12">
@@ -154,14 +166,38 @@ export function ShowcaseDetailView({
                 ))}
               </div>
 
-              {/* Live Demo Button */}
-              <div className="mt-6">
-                <Link href={`/demo/${item.id}`} target="_blank">
-                  <AnimatedButton variant="primary" className="px-6 py-2.5 text-sm">
-                    🖥️ ดู Live Demo
-                  </AnimatedButton>
-                </Link>
-              </div>
+              {/* ═══ Live Preview Agent Badges ═══ */}
+              {hasLivePreviews && (
+                <div className="mt-6">
+                  <p className="text-xs font-semibold text-muted mb-3 uppercase tracking-wider">
+                    🖥️ Live Preview จาก AI Agent
+                  </p>
+                  <div className="flex flex-wrap gap-2">
+                    {livePreviews.map((preview) => {
+                      const agentInfo = siteConfig.aiAgents.find(
+                        (a) => a.id === preview.aiAgent
+                      );
+                      const badgeColor =
+                        agentBadgeColors[preview.aiAgent] ||
+                        'bg-slate-500/15 text-slate-400 border-slate-500/25';
+                      return (
+                        <Link
+                          key={preview.id}
+                          href={`/live/${item.id}/${preview.aiAgent}`}
+                          target="_blank"
+                        >
+                          <span
+                            className={`inline-flex items-center gap-1.5 px-4 py-2 rounded-xl text-sm font-semibold border cursor-pointer transition-all duration-200 ${badgeColor}`}
+                          >
+                            {agentInfo?.icon}{' '}
+                            {agentInfo?.label || preview.aiAgent}
+                          </span>
+                        </Link>
+                      );
+                    })}
+                  </div>
+                </div>
+              )}
             </div>
           </GlassPanel>
         </ScrollReveal>
@@ -173,22 +209,15 @@ export function ShowcaseDetailView({
               <h2 className="text-lg font-bold text-foreground">
                 📋 Prompt สำหรับ AI
               </h2>
-              <div className="flex items-center gap-2">
-                <Link href={`/demo/${item.id}`} target="_blank">
-                  <AnimatedButton variant="ghost" className="text-sm">
-                    🖥️ Live Demo
-                  </AnimatedButton>
-                </Link>
-                <animated.div style={copySpring}>
-                  <AnimatedButton
-                    variant={state.copied ? 'primary' : 'ghost'}
-                    onClick={actions.copyPrompt}
-                    className="text-sm"
-                  >
-                    {state.copied ? '✅ Copied!' : '📋 Copy Prompt'}
-                  </AnimatedButton>
-                </animated.div>
-              </div>
+              <animated.div style={copySpring}>
+                <AnimatedButton
+                  variant={state.copied ? 'primary' : 'ghost'}
+                  onClick={actions.copyPrompt}
+                  className="text-sm"
+                >
+                  {state.copied ? '✅ Copied!' : '📋 Copy Prompt'}
+                </AnimatedButton>
+              </animated.div>
             </div>
 
             <GlassPanel

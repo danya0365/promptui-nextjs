@@ -1,6 +1,7 @@
 'use client';
 
 import type { ShowcaseItem } from '@/src/application/repositories/IShowcaseItemRepository';
+import type { ShowcaseLivePreview } from '@/src/application/repositories/IShowcaseLivePreviewRepository';
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { GalleryPresenter, GalleryViewModel } from './GalleryPresenter';
 import { createClientGalleryPresenter } from './GalleryPresenterClientFactory';
@@ -12,9 +13,12 @@ export interface GalleryPresenterState {
   searchTerm: string;
   activeCategory: string;
   activeDifficulty: string;
+  activeAiAgent: string;
   filteredItems: ShowcaseItem[];
   copiedId: string | null;
   viewMode: 'grid' | 'list';
+  /** Map of showcaseId → live previews for badge rendering */
+  livePreviewMap: Record<string, ShowcaseLivePreview[]>;
 }
 
 export interface GalleryPresenterActions {
@@ -22,6 +26,7 @@ export interface GalleryPresenterActions {
   setSearchTerm: (term: string) => void;
   setActiveCategory: (category: string) => void;
   setActiveDifficulty: (difficulty: string) => void;
+  setActiveAiAgent: (agent: string) => void;
   copyPrompt: (item: ShowcaseItem) => void;
   setViewMode: (mode: 'grid' | 'list') => void;
   setError: (error: string | null) => void;
@@ -29,7 +34,7 @@ export interface GalleryPresenterActions {
 
 /**
  * Custom hook for Gallery presenter
- * Manages search, category/difficulty filters, view mode, and prompt copying
+ * Manages search, category/difficulty/ai-agent filters, view mode, and prompt copying
  */
 export function useGalleryPresenter(
   initialViewModel?: GalleryViewModel,
@@ -54,17 +59,30 @@ export function useGalleryPresenter(
   const [searchTerm, setSearchTermState] = useState('');
   const [activeCategory, setActiveCategoryState] = useState('all');
   const [activeDifficulty, setActiveDifficultyState] = useState('all');
+  const [activeAiAgent, setActiveAiAgentState] = useState('all');
   const [filteredItems, setFilteredItems] = useState<ShowcaseItem[]>(
     initialViewModel?.items || []
   );
   const [copiedId, setCopiedId] = useState<string | null>(null);
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
+  const [livePreviewMap, setLivePreviewMap] = useState<
+    Record<string, ShowcaseLivePreview[]>
+  >(initialViewModel?.livePreviewMap || {});
+  // Track agent-filtered showcase IDs (empty = show all)
+  const [agentShowcaseIds, setAgentShowcaseIds] = useState<string[] | null>(
+    null
+  );
 
   /**
-   * Apply search and difficulty filter client-side on the current items
+   * Apply search, difficulty, and agent filter client-side
    */
   const applyFilters = useCallback(
-    (items: ShowcaseItem[], search: string, difficulty: string) => {
+    (
+      items: ShowcaseItem[],
+      search: string,
+      difficulty: string,
+      agentIds: string[] | null
+    ) => {
       let result = items;
 
       if (search.trim()) {
@@ -79,6 +97,11 @@ export function useGalleryPresenter(
 
       if (difficulty !== 'all') {
         result = result.filter((item) => item.difficulty === difficulty);
+      }
+
+      // Agent filter: only show showcases that have a live preview from this agent
+      if (agentIds !== null) {
+        result = result.filter((item) => agentIds.includes(item.id));
       }
 
       return result;
@@ -104,8 +127,9 @@ export function useGalleryPresenter(
       if (isMountedRef.current) {
         setViewModel(vm);
         setAllItems(items);
+        setLivePreviewMap(vm.livePreviewMap);
         setFilteredItems(
-          applyFilters(items, searchTerm, activeDifficulty)
+          applyFilters(items, searchTerm, activeDifficulty, agentShowcaseIds)
         );
       }
     } catch (err) {
@@ -116,7 +140,7 @@ export function useGalleryPresenter(
     } finally {
       if (isMountedRef.current) setLoading(false);
     }
-  }, [presenter, applyFilters, searchTerm, activeDifficulty]);
+  }, [presenter, applyFilters, searchTerm, activeDifficulty, agentShowcaseIds]);
 
   /**
    * Category filter (uses repository)
@@ -129,14 +153,14 @@ export function useGalleryPresenter(
         if (isMountedRef.current) {
           setAllItems(items);
           setFilteredItems(
-            applyFilters(items, searchTerm, activeDifficulty)
+            applyFilters(items, searchTerm, activeDifficulty, agentShowcaseIds)
           );
         }
       } catch (err) {
         console.error('Error filtering:', err);
       }
     },
-    [presenter, applyFilters, searchTerm, activeDifficulty]
+    [presenter, applyFilters, searchTerm, activeDifficulty, agentShowcaseIds]
   );
 
   /**
@@ -145,9 +169,11 @@ export function useGalleryPresenter(
   const setSearchTerm = useCallback(
     (term: string) => {
       setSearchTermState(term);
-      setFilteredItems(applyFilters(allItems, term, activeDifficulty));
+      setFilteredItems(
+        applyFilters(allItems, term, activeDifficulty, agentShowcaseIds)
+      );
     },
-    [allItems, activeDifficulty, applyFilters]
+    [allItems, activeDifficulty, agentShowcaseIds, applyFilters]
   );
 
   /**
@@ -156,9 +182,41 @@ export function useGalleryPresenter(
   const setActiveDifficulty = useCallback(
     (difficulty: string) => {
       setActiveDifficultyState(difficulty);
-      setFilteredItems(applyFilters(allItems, searchTerm, difficulty));
+      setFilteredItems(
+        applyFilters(allItems, searchTerm, difficulty, agentShowcaseIds)
+      );
     },
-    [allItems, searchTerm, applyFilters]
+    [allItems, searchTerm, agentShowcaseIds, applyFilters]
+  );
+
+  /**
+   * AI Agent filter — fetches showcase IDs with previews from this agent
+   */
+  const setActiveAiAgent = useCallback(
+    async (agent: string) => {
+      setActiveAiAgentState(agent);
+
+      if (agent === 'all') {
+        setAgentShowcaseIds(null);
+        setFilteredItems(
+          applyFilters(allItems, searchTerm, activeDifficulty, null)
+        );
+        return;
+      }
+
+      try {
+        const ids = await presenter.getShowcaseIdsByAgent(agent);
+        if (isMountedRef.current) {
+          setAgentShowcaseIds(ids);
+          setFilteredItems(
+            applyFilters(allItems, searchTerm, activeDifficulty, ids)
+          );
+        }
+      } catch (err) {
+        console.error('Error filtering by agent:', err);
+      }
+    },
+    [presenter, allItems, searchTerm, activeDifficulty, applyFilters]
   );
 
   /**
@@ -195,15 +253,18 @@ export function useGalleryPresenter(
       searchTerm,
       activeCategory,
       activeDifficulty,
+      activeAiAgent,
       filteredItems,
       copiedId,
       viewMode,
+      livePreviewMap,
     },
     {
       loadData,
       setSearchTerm,
       setActiveCategory,
       setActiveDifficulty,
+      setActiveAiAgent,
       copyPrompt,
       setViewMode,
       setError,

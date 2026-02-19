@@ -1,5 +1,6 @@
 'use client';
 
+import type { ShowcaseLivePreview } from '@/src/application/repositories/IShowcaseLivePreviewRepository';
 import { siteConfig } from '@/src/config/site.config';
 import { AnimatedButton } from '@/src/presentation/components/shared/AnimatedButton';
 import { AnimatedCard } from '@/src/presentation/components/shared/AnimatedCard';
@@ -148,7 +149,7 @@ export function GalleryView({ initialViewModel }: GalleryViewProps) {
 
         {/* ═══ Category Bar ═══ */}
         <ScrollReveal delay={150}>
-          <div className="flex flex-wrap items-center justify-center gap-2 mb-8">
+          <div className="flex flex-wrap items-center justify-center gap-2 mb-4">
             {siteConfig.categories.map((cat) => (
               <CategoryPill
                 key={cat.id}
@@ -157,6 +158,27 @@ export function GalleryView({ initialViewModel }: GalleryViewProps) {
                 active={state.activeCategory === cat.id}
                 onClick={() => actions.setActiveCategory(cat.id)}
               />
+            ))}
+          </div>
+        </ScrollReveal>
+
+        {/* ═══ AI Agent Filter Bar ═══ */}
+        <ScrollReveal delay={180}>
+          <div className="flex flex-wrap items-center justify-center gap-2 mb-8">
+            <span className="text-xs font-semibold text-muted mr-1">🤖 Agent:</span>
+            {siteConfig.aiAgents.map((agent) => (
+              <button
+                key={agent.id}
+                onClick={() => actions.setActiveAiAgent(agent.id)}
+                className={`inline-flex items-center gap-1 px-3 py-1.5 rounded-full text-xs font-medium transition-all cursor-pointer select-none ${
+                  state.activeAiAgent === agent.id
+                    ? 'bg-primary text-white shadow-md shadow-primary/25'
+                    : 'bg-surface-alt text-muted border border-border hover:border-primary hover:text-primary'
+                }`}
+              >
+                <span>{agent.icon}</span>
+                <span>{agent.label}</span>
+              </button>
             ))}
           </div>
         </ScrollReveal>
@@ -177,6 +199,7 @@ export function GalleryView({ initialViewModel }: GalleryViewProps) {
                   item={item}
                   onCopy={() => actions.copyPrompt(item)}
                   copied={state.copiedId === item.id}
+                  livePreviews={state.livePreviewMap[item.id] || []}
                 />
               </ScrollReveal>
             ))}
@@ -189,6 +212,7 @@ export function GalleryView({ initialViewModel }: GalleryViewProps) {
                   item={item}
                   onCopy={() => actions.copyPrompt(item)}
                   copied={state.copiedId === item.id}
+                  livePreviews={state.livePreviewMap[item.id] || []}
                 />
               </ScrollReveal>
             ))}
@@ -209,6 +233,7 @@ export function GalleryView({ initialViewModel }: GalleryViewProps) {
                 actions.setSearchTerm('');
                 actions.setActiveCategory('all');
                 actions.setActiveDifficulty('all');
+                actions.setActiveAiAgent('all');
               }}
             >
               ล้างตัวกรอง
@@ -274,10 +299,35 @@ const difficultyConfig: Record<string, { label: string; color: string }> = {
   },
 };
 
+/** Tiny agent icon badges shown on cards */
+function AgentBadges({ previews }: { previews: ShowcaseLivePreview[] }) {
+  if (previews.length === 0) return null;
+
+  return (
+    <div className="flex items-center gap-1">
+      {previews.map((preview) => {
+        const agentInfo = siteConfig.aiAgents.find(
+          (a) => a.id === preview.aiAgent
+        );
+        return (
+          <span
+            key={preview.id}
+            title={`Live Preview by ${agentInfo?.label || preview.aiAgent}`}
+            className="text-xs cursor-default"
+          >
+            {agentInfo?.icon || '🤖'}
+          </span>
+        );
+      })}
+    </div>
+  );
+}
+
 function ShowcaseGridCard({
   item,
   onCopy,
   copied,
+  livePreviews,
 }: {
   item: {
     id: string;
@@ -289,6 +339,7 @@ function ShowcaseGridCard({
   };
   onCopy: () => void;
   copied: boolean;
+  livePreviews: ShowcaseLivePreview[];
 }) {
   const diff = difficultyConfig[item.difficulty] || difficultyConfig.beginner;
 
@@ -315,6 +366,12 @@ function ShowcaseGridCard({
           >
             {diff.label}
           </span>
+          {/* Agent icons — bottom right */}
+          {livePreviews.length > 0 && (
+            <span className="absolute bottom-3 right-3 inline-flex items-center gap-0.5 px-2 py-1 rounded-full bg-black/40 backdrop-blur-sm">
+              <AgentBadges previews={livePreviews} />
+            </span>
+          )}
         </div>
 
         {/* Content */}
@@ -342,6 +399,7 @@ function ShowcaseListCard({
   item,
   onCopy,
   copied,
+  livePreviews,
 }: {
   item: {
     id: string;
@@ -353,6 +411,7 @@ function ShowcaseListCard({
   };
   onCopy: () => void;
   copied: boolean;
+  livePreviews: ShowcaseLivePreview[];
 }) {
   const diff = difficultyConfig[item.difficulty] || difficultyConfig.beginner;
 
@@ -372,6 +431,11 @@ function ShowcaseListCard({
           >
             {diff.label}
           </span>
+          {livePreviews.length > 0 && (
+            <span className="absolute bottom-2 right-2 inline-flex items-center gap-0.5 px-2 py-0.5 rounded-full bg-black/40 backdrop-blur-sm">
+              <AgentBadges previews={livePreviews} />
+            </span>
+          )}
         </div>
 
         {/* Content */}
