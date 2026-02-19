@@ -1,14 +1,14 @@
 /**
  * GalleryPresenterServerFactory
- * Server-side factory injecting MockShowcaseItemRepository
+ * Server-side factory injecting StaticShowcaseItemRepository
  */
 
-import { MockShowcaseItemRepository } from '@/src/infrastructure/repositories/mock/MockShowcaseItemRepository';
+import { StaticShowcaseItemRepository } from '@/src/infrastructure/repositories/static/StaticShowcaseItemRepository';
 import { GalleryPresenter } from './GalleryPresenter';
 
 export class GalleryPresenterServerFactory {
   static create(): GalleryPresenter {
-    const repository = new MockShowcaseItemRepository();
+    const repository = new StaticShowcaseItemRepository();
     return new GalleryPresenter(repository);
   }
 }

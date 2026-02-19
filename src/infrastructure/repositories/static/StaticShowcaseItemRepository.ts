@@ -1,6 +1,6 @@
 /**
- * MockShowcaseItemRepository
- * Mock implementation for development and testing
+ * StaticShowcaseItemRepository
+ * Static data implementation — hardcoded showcase items
  * Following Clean Architecture — Infrastructure Layer
  */
 
@@ -13,7 +13,7 @@ import {
     UpdateShowcaseItemData,
 } from '@/src/application/repositories/IShowcaseItemRepository';
 
-const MOCK_SHOWCASE_ITEMS: ShowcaseItem[] = [
+const SHOWCASE_ITEMS: ShowcaseItem[] = [
   {
     id: 'showcase-001',
     title: 'Glassmorphism Login Form',
@@ -240,8 +240,8 @@ const MOCK_SHOWCASE_ITEMS: ShowcaseItem[] = [
   },
 ];
 
-export class MockShowcaseItemRepository implements IShowcaseItemRepository {
-  private items: ShowcaseItem[] = [...MOCK_SHOWCASE_ITEMS];
+export class StaticShowcaseItemRepository implements IShowcaseItemRepository {
+  private items: ShowcaseItem[] = [...SHOWCASE_ITEMS];
 
   async getById(id: string): Promise<ShowcaseItem | null> {
     await this.delay(100);
@@ -349,4 +349,4 @@ export class MockShowcaseItemRepository implements IShowcaseItemRepository {
   }
 }
 
-export const mockShowcaseItemRepository = new MockShowcaseItemRepository();
+export const staticShowcaseItemRepository = new StaticShowcaseItemRepository();

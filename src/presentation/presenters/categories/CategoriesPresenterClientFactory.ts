@@ -1,8 +1,8 @@
 'use client';
 
-import { MockShowcaseItemRepository } from '@/src/infrastructure/repositories/mock/MockShowcaseItemRepository';
+import { StaticShowcaseItemRepository } from '@/src/infrastructure/repositories/static/StaticShowcaseItemRepository';
 import { CategoriesPresenter } from './CategoriesPresenter';
 
 export function createClientCategoriesPresenter(): CategoriesPresenter {
-  return new CategoriesPresenter(new MockShowcaseItemRepository());
+  return new CategoriesPresenter(new StaticShowcaseItemRepository());
 }

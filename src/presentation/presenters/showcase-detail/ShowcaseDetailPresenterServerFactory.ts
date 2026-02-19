@@ -2,12 +2,12 @@
  * ShowcaseDetailPresenterServerFactory
  */
 
-import { MockShowcaseItemRepository } from '@/src/infrastructure/repositories/mock/MockShowcaseItemRepository';
+import { StaticShowcaseItemRepository } from '@/src/infrastructure/repositories/static/StaticShowcaseItemRepository';
 import { ShowcaseDetailPresenter } from './ShowcaseDetailPresenter';
 
 export class ShowcaseDetailPresenterServerFactory {
   static create(): ShowcaseDetailPresenter {
-    const repository = new MockShowcaseItemRepository();
+    const repository = new StaticShowcaseItemRepository();
     return new ShowcaseDetailPresenter(repository);
   }
 }

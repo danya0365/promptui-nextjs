@@ -6,13 +6,13 @@
 
 'use client';
 
-import { MockShowcaseItemRepository } from '@/src/infrastructure/repositories/mock/MockShowcaseItemRepository';
+import { StaticShowcaseItemRepository } from '@/src/infrastructure/repositories/static/StaticShowcaseItemRepository';
 import { HomePresenter } from './HomePresenter';
 
 export class HomePresenterClientFactory {
   static create(): HomePresenter {
     // ✅ Use Mock Repository for development
-    const repository = new MockShowcaseItemRepository();
+    const repository = new StaticShowcaseItemRepository();
     return new HomePresenter(repository);
   }
 }
