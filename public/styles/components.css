@@ -1,0 +1,154 @@
+/* ============================================
+   components.css — Glass, Buttons, Cards, Utilities
+   ============================================ */
+
+/* ── Glass Panel ── */
+.glass-panel {
+  background: var(--glass-bg);
+  backdrop-filter: blur(16px) saturate(1.5);
+  -webkit-backdrop-filter: blur(16px) saturate(1.5);
+  border: 1px solid var(--glass-border);
+  box-shadow: 0 8px 32px var(--glass-shadow);
+}
+
+.glass-panel-strong {
+  background: var(--glass-bg);
+  backdrop-filter: blur(24px) saturate(1.8);
+  -webkit-backdrop-filter: blur(24px) saturate(1.8);
+  border: 1px solid var(--glass-border);
+  box-shadow: 0 8px 32px var(--glass-shadow);
+}
+
+/* ── Primary Button ── */
+.btn-primary {
+  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-accent) 100%);
+  color: #ffffff;
+  padding: 0.625rem 1.5rem;
+  border-radius: var(--radius-md);
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px var(--color-primary-glow);
+}
+
+.btn-primary:active {
+  transform: translateY(0);
+}
+
+/* ── Ghost Button ── */
+.btn-ghost {
+  background: transparent;
+  color: var(--color-foreground);
+  padding: 0.625rem 1.5rem;
+  border-radius: var(--radius-md);
+  font-weight: 600;
+  border: 1px solid var(--color-border);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-ghost:hover {
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+  background: var(--color-primary-glow);
+}
+
+/* ── Card Hover ── */
+.card-hover {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-hover:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-xl);
+}
+
+/* ── Gradient Border ── */
+.gradient-border {
+  position: relative;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+}
+
+.gradient-border::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  padding: 1px;
+  border-radius: inherit;
+  background: linear-gradient(
+    135deg,
+    var(--color-gradient-start),
+    var(--color-gradient-mid),
+    var(--color-gradient-end)
+  );
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}
+
+/* ── Text Gradient ── */
+.text-gradient {
+  background: linear-gradient(
+    135deg,
+    var(--color-gradient-start),
+    var(--color-gradient-mid),
+    var(--color-gradient-end)
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* ── Tag / Badge ── */
+.tag {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.25rem 0.75rem;
+  border-radius: var(--radius-full);
+  font-size: 0.75rem;
+  font-weight: 500;
+  background: var(--color-surface-alt);
+  color: var(--color-muted);
+  border: 1px solid var(--color-border);
+  transition: all 0.2s ease;
+}
+
+.tag:hover {
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+}
+
+.tag-active {
+  background: var(--color-primary);
+  color: #ffffff;
+  border-color: var(--color-primary);
+}
+
+/* ── Grid Pattern Background ── */
+.bg-grid-pattern {
+  background-image: radial-gradient(circle, var(--grid-color) 1px, transparent 1px);
+  background-size: 32px 32px;
+}
+
+/* ── Gradient Orbs ── */
+.gradient-orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  opacity: 0.4;
+  pointer-events: none;
+}
+
+.dark .gradient-orb {
+  opacity: 0.2;
+}
