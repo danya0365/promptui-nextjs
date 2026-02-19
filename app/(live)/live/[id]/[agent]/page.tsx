@@ -1,6 +1,7 @@
 
 import { AiModel } from '@/src/application/repositories/IShowcaseLivePreviewRepository';
 import { siteConfig } from '@/src/config/site.config';
+import { AIChatInterfaceDemoGemini } from '@/src/presentation/components/demos/AIChatInterfaceDemoGemini';
 import { CalendarAppDemoGemini } from '@/src/presentation/components/demos/CalendarAppDemoGemini';
 import { ECommerceAdminPanelDemoGemini } from '@/src/presentation/components/demos/ECommerceAdminPanelDemoGemini';
 import { FileManagerDemoGemini } from '@/src/presentation/components/demos/FileManagerDemoGemini';
@@ -17,8 +18,10 @@ import { MusicPlayerDashboardDemoGemini } from '@/src/presentation/components/de
 import { NeonDashboardWidgetsDemoGemini } from '@/src/presentation/components/demos/NeonDashboardWidgetsDemoGemini';
 import { ProductCardGridDemoGemini } from '@/src/presentation/components/demos/ProductCardGridDemoGemini';
 import { ProfileCardCollectionDemoGemini } from '@/src/presentation/components/demos/ProfileCardCollectionDemoGemini';
+import { RecipeCookingAppDemoGemini } from '@/src/presentation/components/demos/RecipeCookingAppDemoGemini';
 import { SaaSLandingPageDemoGemini } from '@/src/presentation/components/demos/SaaSLandingPageDemoGemini';
 import { SocialMediaAnalyticsDemoGemini } from '@/src/presentation/components/demos/SocialMediaAnalyticsDemoGemini';
+import { TravelBookingAppDemoGemini } from '@/src/presentation/components/demos/TravelBookingAppDemoGemini';
 import type { Metadata } from 'next';
 
 /**
@@ -50,6 +53,9 @@ const LIVE_PREVIEW_COMPONENTS: Record<string, Partial<Record<AiModel, React.Comp
   'showcase-015': { 'gemini-3-pro': MusicPlayerDashboardDemoGemini },
   'showcase-016': { 'gemini-3-pro': CalendarAppDemoGemini },
   'showcase-017': { 'gemini-3-pro': FileManagerDemoGemini },
+  'showcase-018': { 'gemini-3-pro': AIChatInterfaceDemoGemini },
+  'showcase-019': { 'gemini-3-pro': TravelBookingAppDemoGemini },
+  'showcase-020': { 'gemini-3-pro': RecipeCookingAppDemoGemini },
 };
 
 interface LivePreviewPageProps {
