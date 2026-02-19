@@ -1,6 +1,3 @@
-import '@/public/styles/index.css';
-import { MainLayout } from '@/src/presentation/components/layout/MainLayout';
-import { ThemeProvider } from '@/src/presentation/components/providers/ThemeProvider';
 import type { Metadata } from 'next';
 import { Noto_Sans_Thai } from 'next/font/google';
 
@@ -15,9 +12,13 @@ export const metadata: Metadata = {
   title: 'PromptUI — UI Showcase Gallery',
   description:
     'ค้นพบ UI สวย ๆ พร้อม prompt ที่ใช้สร้าง — copy ไปใช้กับ AI ได้ทันที',
-  keywords: ['prompt', 'ui', 'showcase', 'gallery', 'ai', 'component'],
 };
 
+/**
+ * Root Layout — Bare minimum
+ * Only HTML/body/font. No ThemeProvider or MainLayout here.
+ * Route groups handle their own wrapping.
+ */
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -26,9 +27,7 @@ export default function RootLayout({
   return (
     <html lang="th" suppressHydrationWarning>
       <body className={`${notoSansThai.className} antialiased`}>
-        <ThemeProvider>
-          <MainLayout>{children}</MainLayout>
-        </ThemeProvider>
+        {children}
       </body>
     </html>
   );

@@ -153,6 +153,15 @@ export function ShowcaseDetailView({
                   </span>
                 ))}
               </div>
+
+              {/* Live Demo Button */}
+              <div className="mt-6">
+                <Link href={`/demo/${item.id}`} target="_blank">
+                  <AnimatedButton variant="primary" className="px-6 py-2.5 text-sm">
+                    🖥️ ดู Live Demo
+                  </AnimatedButton>
+                </Link>
+              </div>
             </div>
           </GlassPanel>
         </ScrollReveal>
@@ -164,15 +173,22 @@ export function ShowcaseDetailView({
               <h2 className="text-lg font-bold text-foreground">
                 📋 Prompt สำหรับ AI
               </h2>
-              <animated.div style={copySpring}>
-                <AnimatedButton
-                  variant={state.copied ? 'primary' : 'ghost'}
-                  onClick={actions.copyPrompt}
-                  className="text-sm"
-                >
-                  {state.copied ? '✅ Copied!' : '📋 Copy Prompt'}
-                </AnimatedButton>
-              </animated.div>
+              <div className="flex items-center gap-2">
+                <Link href={`/demo/${item.id}`} target="_blank">
+                  <AnimatedButton variant="ghost" className="text-sm">
+                    🖥️ Live Demo
+                  </AnimatedButton>
+                </Link>
+                <animated.div style={copySpring}>
+                  <AnimatedButton
+                    variant={state.copied ? 'primary' : 'ghost'}
+                    onClick={actions.copyPrompt}
+                    className="text-sm"
+                  >
+                    {state.copied ? '✅ Copied!' : '📋 Copy Prompt'}
+                  </AnimatedButton>
+                </animated.div>
+              </div>
             </div>
 
             <GlassPanel
