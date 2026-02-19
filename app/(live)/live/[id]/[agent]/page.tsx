@@ -3,6 +3,7 @@ import { AiModel } from '@/src/application/repositories/IShowcaseLivePreviewRepo
 import { siteConfig } from '@/src/config/site.config';
 import { GlassmorphismLoginDemo } from '@/src/presentation/components/demos/GlassmorphismLoginDemo';
 import { GlassmorphismLoginDemoGemini } from '@/src/presentation/components/demos/GlassmorphismLoginDemoGemini';
+import { ModernDashboardDemoGemini } from '@/src/presentation/components/demos/ModernDashboardDemoGemini';
 import type { Metadata } from 'next';
 
 /**
@@ -13,6 +14,9 @@ const LIVE_PREVIEW_COMPONENTS: Record<string, Partial<Record<AiModel, React.Comp
   'showcase-001': {
     'claude-4-sonnet': GlassmorphismLoginDemo,
     'gemini-3-pro': GlassmorphismLoginDemoGemini,
+  },
+  'showcase-002': {
+    'gemini-3-pro': ModernDashboardDemoGemini,
   },
 };
 
