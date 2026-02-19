@@ -1,14 +1,18 @@
+
+import { AiModel } from '@/src/application/repositories/IShowcaseLivePreviewRepository';
 import { siteConfig } from '@/src/config/site.config';
 import { GlassmorphismLoginDemo } from '@/src/presentation/components/demos/GlassmorphismLoginDemo';
+import { GlassmorphismLoginDemoGemini } from '@/src/presentation/components/demos/GlassmorphismLoginDemoGemini';
 import type { Metadata } from 'next';
 
 /**
  * LivePreview lookup — maps [showcaseId][aiModelId] to its component
  * Each showcase can have multiple live previews from different AI models
  */
-const LIVE_PREVIEW_COMPONENTS: Record<string, Record<string, React.ComponentType>> = {
+const LIVE_PREVIEW_COMPONENTS: Record<string, Partial<Record<AiModel, React.ComponentType>>> = {
   'showcase-001': {
     'claude-4-sonnet': GlassmorphismLoginDemo,
+    'gemini-3-pro': GlassmorphismLoginDemoGemini,
   },
 };
 
@@ -34,7 +38,7 @@ export async function generateMetadata({ params }: LivePreviewPageProps): Promis
 export default async function LivePreviewPage({ params }: LivePreviewPageProps) {
   const { id, agent: modelId } = await params;
   const showcaseComponents = LIVE_PREVIEW_COMPONENTS[id];
-  const PreviewComponent = showcaseComponents?.[modelId];
+  const PreviewComponent = showcaseComponents?.[modelId as AiModel];
   const modelInfo = siteConfig.aiModels.find((m) => m.id === modelId);
 
   if (!PreviewComponent) {

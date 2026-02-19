@@ -1,8 +1,3 @@
-/**
- * StaticShowcaseLivePreviewRepository
- * Static data for live preview availability per showcase × AI model
- * Following Clean Architecture — Infrastructure Layer
- */
 
 import {
   AiModel,
@@ -17,6 +12,13 @@ const LIVE_PREVIEWS: ShowcaseLivePreview[] = [
     aiModel: 'claude-4-sonnet',
     isActive: true,
     createdAt: '2025-06-15T10:30:00.000Z',
+  },
+  {
+    id: 'lp-002',
+    showcaseId: 'showcase-001',
+    aiModel: 'gemini-3-pro',
+    isActive: true,
+    createdAt: '2025-06-15T11:00:00.000Z',
   },
 ];
 

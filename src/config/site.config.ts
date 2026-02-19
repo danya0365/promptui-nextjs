@@ -60,6 +60,8 @@ export const siteConfig = {
     { id: 'gpt-4.1',            label: 'GPT-4.1',            icon: '💚', color: 'green' },
     { id: 'claude-3.7-sonnet',  label: 'Claude 3.7 Sonnet',  icon: '🟠', color: 'amber' },
     { id: 'claude-4-sonnet',    label: 'Claude 4 Sonnet',    icon: '🟠', color: 'orange' },
+    { id: 'gemini-3-preview',   label: 'Gemini 3 Preview',   icon: '✨', color: 'indigo' },
+    { id: 'gemini-3-pro',       label: 'Gemini 3 Pro',       icon: '✨', color: 'indigo' },
     { id: 'gemini-2.5-pro',     label: 'Gemini 2.5 Pro',     icon: '🔵', color: 'blue' },
     { id: 'gemini-2.5-flash',   label: 'Gemini 2.5 Flash',   icon: '🔵', color: 'sky' },
     { id: 'deepseek-v3',        label: 'DeepSeek V3',        icon: '🐋', color: 'indigo' },
