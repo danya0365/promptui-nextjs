@@ -1,7 +1,9 @@
 
 import { AiModel } from '@/src/application/repositories/IShowcaseLivePreviewRepository';
 import { siteConfig } from '@/src/config/site.config';
+import { CalendarAppDemoGemini } from '@/src/presentation/components/demos/CalendarAppDemoGemini';
 import { ECommerceAdminPanelDemoGemini } from '@/src/presentation/components/demos/ECommerceAdminPanelDemoGemini';
+import { FileManagerDemoGemini } from '@/src/presentation/components/demos/FileManagerDemoGemini';
 import { FinanceBankingDashboardDemoGemini } from '@/src/presentation/components/demos/FinanceBankingDashboardDemoGemini';
 import { GlassmorphismLoginDemo } from '@/src/presentation/components/demos/GlassmorphismLoginDemo';
 import { GlassmorphismLoginDemoGemini } from '@/src/presentation/components/demos/GlassmorphismLoginDemoGemini';
@@ -11,6 +13,7 @@ import { KanbanBoardDemoGemini } from '@/src/presentation/components/demos/Kanba
 import { MinimalBlogLandingDemoGemini } from '@/src/presentation/components/demos/MinimalBlogLandingDemoGemini';
 import { ModernDashboardDemoGemini } from '@/src/presentation/components/demos/ModernDashboardDemoGemini';
 import { MultiStepRegisterDemoGemini } from '@/src/presentation/components/demos/MultiStepRegisterDemoGemini';
+import { MusicPlayerDashboardDemoGemini } from '@/src/presentation/components/demos/MusicPlayerDashboardDemoGemini';
 import { NeonDashboardWidgetsDemoGemini } from '@/src/presentation/components/demos/NeonDashboardWidgetsDemoGemini';
 import { ProductCardGridDemoGemini } from '@/src/presentation/components/demos/ProductCardGridDemoGemini';
 import { ProfileCardCollectionDemoGemini } from '@/src/presentation/components/demos/ProfileCardCollectionDemoGemini';
@@ -44,6 +47,9 @@ const LIVE_PREVIEW_COMPONENTS: Record<string, Partial<Record<AiModel, React.Comp
   'showcase-012': { 'gemini-3-pro': SocialMediaAnalyticsDemoGemini },
   'showcase-013': { 'gemini-3-pro': ECommerceAdminPanelDemoGemini },
   'showcase-014': { 'gemini-3-pro': IoTSmartHomeDashboardDemoGemini },
+  'showcase-015': { 'gemini-3-pro': MusicPlayerDashboardDemoGemini },
+  'showcase-016': { 'gemini-3-pro': CalendarAppDemoGemini },
+  'showcase-017': { 'gemini-3-pro': FileManagerDemoGemini },
 };
 
 interface LivePreviewPageProps {
