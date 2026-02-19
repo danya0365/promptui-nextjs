@@ -166,20 +166,28 @@ export function GalleryView({ initialViewModel }: GalleryViewProps) {
         <ScrollReveal delay={180}>
           <div className="flex flex-wrap items-center justify-center gap-2 mb-8">
             <span className="text-xs font-semibold text-muted mr-1">🤖 Agent:</span>
-            {siteConfig.aiModels.map((agent) => (
-              <button
-                key={agent.id}
-                onClick={() => actions.setActiveAiModel(agent.id)}
-                className={`inline-flex items-center gap-1 px-3 py-1.5 rounded-full text-xs font-medium transition-all cursor-pointer select-none ${
-                  state.activeAiModel === agent.id
-                    ? 'bg-primary text-white shadow-md shadow-primary/25'
-                    : 'bg-surface-alt text-muted border border-border hover:border-primary hover:text-primary'
-                }`}
-              >
-                <span>{agent.icon}</span>
-                <span>{agent.label}</span>
-              </button>
-            ))}
+            {siteConfig.aiModels
+              .filter((agent) => {
+                if (agent.id === 'all') return true;
+                // Check if any showcase has a preview with this aiModel
+                return Object.values(state.livePreviewMap).some((previews) =>
+                  previews.some((p) => p.aiModel === agent.id)
+                );
+              })
+              .map((agent) => (
+                <button
+                  key={agent.id}
+                  onClick={() => actions.setActiveAiModel(agent.id)}
+                  className={`inline-flex items-center gap-1 px-3 py-1.5 rounded-full text-xs font-medium transition-all cursor-pointer select-none ${
+                    state.activeAiModel === agent.id
+                      ? 'bg-primary text-white shadow-md shadow-primary/25'
+                      : 'bg-surface-alt text-muted border border-border hover:border-primary hover:text-primary'
+                  }`}
+                >
+                  <span>{agent.icon}</span>
+                  <span>{agent.label}</span>
+                </button>
+              ))}
           </div>
         </ScrollReveal>
 
