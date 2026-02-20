@@ -2,6 +2,7 @@
 import { AiModel } from '@/src/application/repositories/IShowcaseLivePreviewRepository';
 import { siteConfig } from '@/src/config/site.config';
 import { AIChatInterfaceDemoGemini } from '@/src/presentation/components/demos/AIChatInterfaceDemoGemini';
+import { BoldAIStartupDirectoryDemoGemini } from '@/src/presentation/components/demos/BoldAIStartupDirectoryDemoGemini';
 import { CalendarAppDemoGemini } from '@/src/presentation/components/demos/CalendarAppDemoGemini';
 import { CalmOrganicWebDirectoryDemoGemini } from '@/src/presentation/components/demos/CalmOrganicWebDirectoryDemoGemini';
 import { CyberpunkDarkWebInterfaceDemoGemini } from '@/src/presentation/components/demos/CyberpunkDarkWebInterfaceDemoGemini';
@@ -70,6 +71,7 @@ const LIVE_PREVIEW_COMPONENTS: Record<string, Partial<Record<AiModel, React.Comp
   'showcase-025': { 'gemini-3.1-pro': CyberpunkDarkWebInterfaceDemoGemini },
   'showcase-026': { 'gemini-3.1-pro': CalmOrganicWebDirectoryDemoGemini },
   'showcase-027': { 'gemini-3.1-pro': SwissInspiredModernDirectoryDemoGemini },
+  'showcase-028': { 'gemini-3.1-pro': BoldAIStartupDirectoryDemoGemini },
 };
 
 interface LivePreviewPageProps {

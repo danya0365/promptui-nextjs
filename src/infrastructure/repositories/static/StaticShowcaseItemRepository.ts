@@ -420,6 +420,20 @@ const SHOWCASE_ITEMS: ShowcaseItem[] = [
     createdAt: '2025-06-02T16:00:00.000Z',
     updatedAt: '2025-06-02T16:00:00.000Z',
   },
+  {
+    id: 'showcase-028',
+    title: 'Bold AI Startup Web Directory',
+    description: 'แพลตฟอร์มไดเรกทอรีแอป AI แนว Startup สไตล์สีเข้ม (Dark gradient) ตัดด้วยแสง Electric blue',
+    category: 'dashboard',
+    prompt: 'Design a bold AI startup web directory interface.\n\nStructure:\n- 3 column responsive grid\n- Tall modern cards\n- Interactive header tabs\n- Animated counter badge\n- Highlight ribbon on featured cards\n\nStyle:\n- Dark gradient background (deep navy to black)\n- Electric blue accent\n- Subtle glow and light reflections\n- Smooth rounded corners (12px)\n- Soft layered shadows\n- Clean geometric sans-serif\n- Spacious, modern SaaS layout\n\nMood:\nInnovative, fast-growing tech startup, future-ready.',
+    thumbnailUrl: '/thumbnails/ai-startup-dir.webp', // We will generate an image or use a placeholder
+    tags: ['ai', 'startup', 'dark-mode', 'directory', 'grid'],
+    difficulty: 'advanced',
+    isFeatured: true,
+    isActive: true,
+    createdAt: '2025-06-02T17:00:00.000Z',
+    updatedAt: '2025-06-02T17:00:00.000Z',
+  },
 ];
 
 export class StaticShowcaseItemRepository implements IShowcaseItemRepository {
