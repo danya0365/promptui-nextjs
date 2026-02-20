@@ -364,6 +364,20 @@ const SHOWCASE_ITEMS: ShowcaseItem[] = [
     createdAt: '2025-06-02T12:00:00.000Z',
     updatedAt: '2025-06-02T12:00:00.000Z',
   },
+  {
+    id: 'showcase-024',
+    title: 'Luxury Minimal Editorial Directory',
+    description: 'แพลตฟอร์มบทความดีไซน์เรียบหรูระดับพรีเมียม โทนสีครีม-ถ่าน และตัวหนังสือแบบมีหัวเสา (Serif) สะอาดตา',
+    category: 'dashboard',
+    prompt: 'Create a luxury minimal editorial web directory.\n\nStructure:\n- 3 column grid\n- Tall elegant content cards\n- Refined header tabs\n- Subtle numeric counter badge\n- Discreet featured label\n\nStyle:\n- Neutral color palette (cream, charcoal, muted gold)\n- Thin serif headlines\n- Large white space\n- Ultra clean spacing\n- Very subtle shadows\n- Smooth rounded corners (8px)\n\nMood:\nPremium, calm, high-end publication.',
+    thumbnailUrl: '/thumbnails/luxury-editorial.webp',
+    tags: ['luxury', 'editorial', 'minimal', 'magazine'],
+    difficulty: 'intermediate',
+    isFeatured: true,
+    isActive: true,
+    createdAt: '2025-06-02T13:00:00.000Z',
+    updatedAt: '2025-06-02T13:00:00.000Z',
+  },
 ];
 
 export class StaticShowcaseItemRepository implements IShowcaseItemRepository {

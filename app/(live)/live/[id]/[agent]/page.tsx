@@ -12,6 +12,7 @@ import { GlassmorphismLoginDemoGemini } from '@/src/presentation/components/demo
 import { HealthFitnessTrackerDemoGemini } from '@/src/presentation/components/demos/HealthFitnessTrackerDemoGemini';
 import { IoTSmartHomeDashboardDemoGemini } from '@/src/presentation/components/demos/IoTSmartHomeDashboardDemoGemini';
 import { KanbanBoardDemoGemini } from '@/src/presentation/components/demos/KanbanBoardDemoGemini';
+import { LuxuryMinimalEditorialDirectoryDemoGemini } from '@/src/presentation/components/demos/LuxuryMinimalEditorialDirectoryDemoGemini';
 import { MinimalBlogLandingDemoGemini } from '@/src/presentation/components/demos/MinimalBlogLandingDemoGemini';
 import { ModernDashboardDemoGemini } from '@/src/presentation/components/demos/ModernDashboardDemoGemini';
 import { MultiStepRegisterDemoGemini } from '@/src/presentation/components/demos/MultiStepRegisterDemoGemini';
@@ -62,6 +63,7 @@ const LIVE_PREVIEW_COMPONENTS: Record<string, Partial<Record<AiModel, React.Comp
   'showcase-021': { 'gemini-3.1-pro': NeoBrutalistPromptGalleryDemoGemini },
   'showcase-022': { 'gemini-3.1-pro': FuturisticGlassmorphismDirectoryDemoGemini },
   'showcase-023': { 'gemini-3.1-pro': Retro90sTechMagazineDemoGemini },
+  'showcase-024': { 'gemini-3.1-pro': LuxuryMinimalEditorialDirectoryDemoGemini },
 };
 
 interface LivePreviewPageProps {
