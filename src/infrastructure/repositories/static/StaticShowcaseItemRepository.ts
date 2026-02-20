@@ -588,6 +588,20 @@ const SHOWCASE_ITEMS: ShowcaseItem[] = [
     createdAt: '2025-06-03T04:00:00.000Z',
     updatedAt: '2025-06-03T04:00:00.000Z',
   },
+  {
+    id: 'showcase-040',
+    title: 'Space-Inspired Tech Platform',
+    description: 'วิสัยทัศน์ล้ำหน้าอวกาศ ธีมการเดินทางข้ามห้วงอวกาศ เกรเดียนต์สีน้ำเงินกรมท่าลึกตัดด้วยเปเปอร์แกลสและป้ายไฟนีออนนุ่ม',
+    category: 'dashboard',
+    prompt: 'Design a futuristic space-inspired tech platform interface.\n\nStructure:\n- 3 column grid\n- Tall immersive cards with depth layering\n- Floating transparent tab navigation\n- Neon counter badge\n- Soft glowing featured marker\n\nStyle:\n- Deep navy cosmic gradient background\n- Neon cyan and purple highlights\n- Glass and blur effects\n- 12px rounded corners\n- Thin futuristic sans-serif typography\n- Layered spacing with visual depth\n- Soft ambient glow\n\nMood:\nVisionary, interstellar, cutting-edge innovation hub.',
+    thumbnailUrl: '/thumbnails/futuristic-space-platform.png',
+    tags: ['space', 'cosmic', 'glassmorphism', 'glow', 'interstellar'],
+    difficulty: 'advanced',
+    isFeatured: true,
+    isActive: true,
+    createdAt: '2025-06-03T05:00:00.000Z',
+    updatedAt: '2025-06-03T05:00:00.000Z',
+  },
 ];
 
 export class StaticShowcaseItemRepository implements IShowcaseItemRepository {

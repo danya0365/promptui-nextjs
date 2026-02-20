@@ -18,6 +18,7 @@ import { EliteTechFoundersDirectoryDemoGemini } from '@/src/presentation/compone
 import { FileManagerDemoGemini } from '@/src/presentation/components/demos/FileManagerDemoGemini';
 import { FinanceBankingDashboardDemoGemini } from '@/src/presentation/components/demos/FinanceBankingDashboardDemoGemini';
 import { FuturisticGlassmorphismDirectoryDemoGemini } from '@/src/presentation/components/demos/FuturisticGlassmorphismDirectoryDemoGemini';
+import { FuturisticSpacePlatformDemoGemini } from '@/src/presentation/components/demos/FuturisticSpacePlatformDemoGemini';
 import { GamingPlatformDirectoryDemoGemini } from '@/src/presentation/components/demos/GamingPlatformDirectoryDemoGemini';
 import { GlassmorphismLoginDemo } from '@/src/presentation/components/demos/GlassmorphismLoginDemo';
 import { GlassmorphismLoginDemoGemini } from '@/src/presentation/components/demos/GlassmorphismLoginDemoGemini';
@@ -94,6 +95,7 @@ const LIVE_PREVIEW_COMPONENTS: Record<string, Partial<Record<AiModel, React.Comp
   'showcase-037': { 'gemini-3.1-pro': AICommandCenterDemoGemini },
   'showcase-038': { 'gemini-3.1-pro': EliteTechFoundersDirectoryDemoGemini },
   'showcase-039': { 'gemini-3.1-pro': HighEnergyTechDirectoryDemoGemini },
+  'showcase-040': { 'gemini-3.1-pro': FuturisticSpacePlatformDemoGemini },
 };
 
 interface LivePreviewPageProps {
