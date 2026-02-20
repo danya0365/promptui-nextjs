@@ -518,6 +518,20 @@ const SHOWCASE_ITEMS: ShowcaseItem[] = [
     createdAt: '2025-06-02T23:00:00.000Z',
     updatedAt: '2025-06-02T23:00:00.000Z',
   },
+  {
+    id: 'showcase-035',
+    title: 'Cosmic-Inspired Web Directory',
+    description: 'ธีมมืดทรงอวกาศ (Cosmic) เกรเดียนต์สีม่วง-น้ำเงิน และประกายแสงนีออน',
+    category: 'dashboard',
+    prompt: 'Design a cosmic-inspired modern web directory layout.\n\nStructure:\n- 3 column grid\n- Tall immersive content cards\n- Tab navigation with glowing underline\n- Prominent counter badge\n- Highlight label with subtle rotation\n\nStyle:\n- Deep navy to purple gradient background\n- Neon accent highlights (electric blue or violet)\n- Soft outer glow effects\n- Rounded corners (12px)\n- Clean sans-serif typography\n- Layered spacing for depth\n\nMood:\nFuturistic, expansive, visionary, innovative.',
+    thumbnailUrl: '/thumbnails/cosmic-directory.png',
+    tags: ['cosmic', 'space', 'neon', 'dark-mode', 'glow'],
+    difficulty: 'advanced',
+    isFeatured: true,
+    isActive: true,
+    createdAt: '2025-06-03T00:00:00.000Z',
+    updatedAt: '2025-06-03T00:00:00.000Z',
+  },
 ];
 
 export class StaticShowcaseItemRepository implements IShowcaseItemRepository {

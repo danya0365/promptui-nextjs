@@ -8,6 +8,7 @@ import { CalendarAppDemoGemini } from '@/src/presentation/components/demos/Calen
 import { CalmOrganicWebDirectoryDemoGemini } from '@/src/presentation/components/demos/CalmOrganicWebDirectoryDemoGemini';
 import { ChromeInspiredWebDirectoryDemoGemini } from '@/src/presentation/components/demos/ChromeInspiredWebDirectoryDemoGemini';
 import { ClaymorphismDirectoryDemoGemini } from '@/src/presentation/components/demos/ClaymorphismDirectoryDemoGemini';
+import { CosmicInspiredWebDirectoryDemoGemini } from '@/src/presentation/components/demos/CosmicInspiredWebDirectoryDemoGemini';
 import { CyberpunkDarkWebInterfaceDemoGemini } from '@/src/presentation/components/demos/CyberpunkDarkWebInterfaceDemoGemini';
 import { DramaticFuturisticTechDirectoryDemoGemini } from '@/src/presentation/components/demos/DramaticFuturisticTechDirectoryDemoGemini';
 import { ECommerceAdminPanelDemoGemini } from '@/src/presentation/components/demos/ECommerceAdminPanelDemoGemini';
@@ -84,6 +85,7 @@ const LIVE_PREVIEW_COMPONENTS: Record<string, Partial<Record<AiModel, React.Comp
   'showcase-032': { 'gemini-3.1-pro': HighContrastEditorialDirectoryDemoGemini },
   'showcase-033': { 'gemini-3.1-pro': DramaticFuturisticTechDirectoryDemoGemini },
   'showcase-034': { 'gemini-3.1-pro': ChromeInspiredWebDirectoryDemoGemini },
+  'showcase-035': { 'gemini-3.1-pro': CosmicInspiredWebDirectoryDemoGemini },
 };
 
 interface LivePreviewPageProps {
