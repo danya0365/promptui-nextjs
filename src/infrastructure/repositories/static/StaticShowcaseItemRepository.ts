@@ -490,6 +490,20 @@ const SHOWCASE_ITEMS: ShowcaseItem[] = [
     createdAt: '2025-06-02T21:00:00.000Z',
     updatedAt: '2025-06-02T21:00:00.000Z',
   },
+  {
+    id: 'showcase-033',
+    title: 'Dramatic Futuristic Tech Directory',
+    description: 'ไดเรกทอรีสายเทคดุดัน โทนเข้มพร้อมแสงเงาสีไฟ (Fiery gradient) ให้ความรู้สึกทรงพลัง',
+    category: 'dashboard',
+    prompt: 'Design a dramatic futuristic tech directory interface.\n\nStructure:\n- 3 column structured grid\n- Tall layered content cards\n- Interactive tab navigation\n- Floating counter badge\n- Highlight tag for featured items\n\nStyle:\n- Dark base background\n- Fiery gradient accents (red to orange)\n- Subtle glow around important elements\n- Smooth rounded corners (14px)\n- Soft shadow layering\n- Modern geometric sans-serif typography\n- Strong visual hierarchy\n\nMood:\nHigh-energy, intense, powerful tech ecosystem.',
+    thumbnailUrl: '/thumbnails/dramatic-future-tech.webp',
+    tags: ['futuristic', 'dark-mode', 'tech', 'neon', 'intense'],
+    difficulty: 'advanced',
+    isFeatured: true,
+    isActive: true,
+    createdAt: '2025-06-02T22:00:00.000Z',
+    updatedAt: '2025-06-02T22:00:00.000Z',
+  },
 ];
 
 export class StaticShowcaseItemRepository implements IShowcaseItemRepository {
