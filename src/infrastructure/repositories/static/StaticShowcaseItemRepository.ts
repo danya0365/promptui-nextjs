@@ -504,6 +504,20 @@ const SHOWCASE_ITEMS: ShowcaseItem[] = [
     createdAt: '2025-06-02T22:00:00.000Z',
     updatedAt: '2025-06-02T22:00:00.000Z',
   },
+  {
+    id: 'showcase-034',
+    title: 'Chrome-Inspired Web Interface',
+    description: 'ดีไซน์ล้ำสมัยอารมณ์โลหะ Chrome สีเงินและเทา สะท้อนแสงดูพรีเมียม (Premium Tech)',
+    category: 'dashboard',
+    prompt: 'Create a chrome-inspired modern web interface.\n\nStructure:\n- 3 column grid system\n- Vertical reflective-style cards\n- Clean top tab navigation\n- Metallic counter badge\n- Premium featured label tag\n\nStyle:\n- Dark graphite background\n- Silver and chrome accents\n- Subtle reflections and gloss effects\n- Rounded corners (10px)\n- Clean bold typography\n- Balanced spacing\n- Futuristic product showcase layout\n\nMood:\nLuxury tech, premium, futuristic, bold presence.',
+    thumbnailUrl: '/thumbnails/chrome-interface.png',
+    tags: ['chrome', 'metallic', 'luxury', 'technology', 'premium'],
+    difficulty: 'advanced',
+    isFeatured: true,
+    isActive: true,
+    createdAt: '2025-06-02T23:00:00.000Z',
+    updatedAt: '2025-06-02T23:00:00.000Z',
+  },
 ];
 
 export class StaticShowcaseItemRepository implements IShowcaseItemRepository {
