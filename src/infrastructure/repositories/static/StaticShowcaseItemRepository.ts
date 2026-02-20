@@ -560,6 +560,20 @@ const SHOWCASE_ITEMS: ShowcaseItem[] = [
     createdAt: '2025-06-03T02:00:00.000Z',
     updatedAt: '2025-06-03T02:00:00.000Z',
   },
+  {
+    id: 'showcase-038',
+    title: 'Elite Tech Founders Directory',
+    description: 'หน้าทำเนียบผู้ก่อตั้งสายเทค โหดดุดัน สไตล์ Matte Black และกรีนสะท้อนแสง',
+    category: 'dashboard',
+    prompt: 'Design a bold elite tech founders directory interface.\n\nStructure:\n- 3 column strong grid\n- Tall spotlight profile cards\n- Solid tab navigation header\n- Massive counter badge\n- Diagonal highlight ribbon\n\nStyle:\n- Matte black background\n- Sharp white typography\n- Acid green accent color\n- Aggressive large headlines\n- Clean minimal spacing\n- Subtle depth shadows\n- No playful elements\n- Hard edge rectangular layout\n\nMood:\nExclusive, elite, underground tech power network.',
+    thumbnailUrl: '/thumbnails/elite-founders.png',
+    tags: ['brutalist', 'dark-mode', 'elite', 'neon-green', 'typography'],
+    difficulty: 'advanced',
+    isFeatured: true,
+    isActive: true,
+    createdAt: '2025-06-03T03:00:00.000Z',
+    updatedAt: '2025-06-03T03:00:00.000Z',
+  },
 ];
 
 export class StaticShowcaseItemRepository implements IShowcaseItemRepository {

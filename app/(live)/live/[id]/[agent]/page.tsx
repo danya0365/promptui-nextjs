@@ -14,6 +14,7 @@ import { CosmicInspiredWebDirectoryDemoGemini } from '@/src/presentation/compone
 import { CyberpunkDarkWebInterfaceDemoGemini } from '@/src/presentation/components/demos/CyberpunkDarkWebInterfaceDemoGemini';
 import { DramaticFuturisticTechDirectoryDemoGemini } from '@/src/presentation/components/demos/DramaticFuturisticTechDirectoryDemoGemini';
 import { ECommerceAdminPanelDemoGemini } from '@/src/presentation/components/demos/ECommerceAdminPanelDemoGemini';
+import { EliteTechFoundersDirectoryDemoGemini } from '@/src/presentation/components/demos/EliteTechFoundersDirectoryDemoGemini';
 import { FileManagerDemoGemini } from '@/src/presentation/components/demos/FileManagerDemoGemini';
 import { FinanceBankingDashboardDemoGemini } from '@/src/presentation/components/demos/FinanceBankingDashboardDemoGemini';
 import { FuturisticGlassmorphismDirectoryDemoGemini } from '@/src/presentation/components/demos/FuturisticGlassmorphismDirectoryDemoGemini';
@@ -90,6 +91,7 @@ const LIVE_PREVIEW_COMPONENTS: Record<string, Partial<Record<AiModel, React.Comp
   'showcase-035': { 'gemini-3.1-pro': CosmicInspiredWebDirectoryDemoGemini },
   'showcase-036': { 'gemini-3.1-pro': AwardStylePremiumDirectoryDemoGemini },
   'showcase-037': { 'gemini-3.1-pro': AICommandCenterDemoGemini },
+  'showcase-038': { 'gemini-3.1-pro': EliteTechFoundersDirectoryDemoGemini },
 };
 
 interface LivePreviewPageProps {
