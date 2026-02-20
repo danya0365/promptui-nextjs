@@ -3,6 +3,7 @@ import { AiModel } from '@/src/application/repositories/IShowcaseLivePreviewRepo
 import { siteConfig } from '@/src/config/site.config';
 import { AcademicWebArchiveDemoGemini } from '@/src/presentation/components/demos/AcademicWebArchiveDemoGemini';
 import { AIChatInterfaceDemoGemini } from '@/src/presentation/components/demos/AIChatInterfaceDemoGemini';
+import { AwardStylePremiumDirectoryDemoGemini } from '@/src/presentation/components/demos/AwardStylePremiumDirectoryDemoGemini';
 import { BoldAIStartupDirectoryDemoGemini } from '@/src/presentation/components/demos/BoldAIStartupDirectoryDemoGemini';
 import { CalendarAppDemoGemini } from '@/src/presentation/components/demos/CalendarAppDemoGemini';
 import { CalmOrganicWebDirectoryDemoGemini } from '@/src/presentation/components/demos/CalmOrganicWebDirectoryDemoGemini';
@@ -86,6 +87,7 @@ const LIVE_PREVIEW_COMPONENTS: Record<string, Partial<Record<AiModel, React.Comp
   'showcase-033': { 'gemini-3.1-pro': DramaticFuturisticTechDirectoryDemoGemini },
   'showcase-034': { 'gemini-3.1-pro': ChromeInspiredWebDirectoryDemoGemini },
   'showcase-035': { 'gemini-3.1-pro': CosmicInspiredWebDirectoryDemoGemini },
+  'showcase-036': { 'gemini-3.1-pro': AwardStylePremiumDirectoryDemoGemini },
 };
 
 interface LivePreviewPageProps {

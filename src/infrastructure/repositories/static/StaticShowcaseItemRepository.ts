@@ -532,6 +532,20 @@ const SHOWCASE_ITEMS: ShowcaseItem[] = [
     createdAt: '2025-06-03T00:00:00.000Z',
     updatedAt: '2025-06-03T00:00:00.000Z',
   },
+  {
+    id: 'showcase-036',
+    title: 'Award-Style Premium Directory',
+    description: 'หน้าประกาศรางวัลไฮเอนด์ ธีมดำตัดทอง หรูหราและทรงเกียรติ',
+    category: 'dashboard',
+    prompt: 'Create an award-style premium web directory interface.\n\nStructure:\n- 3 column editorial grid\n- Tall spotlight cards\n- Elegant tab navigation\n- Prominent counter badge with bold number\n- Featured ribbon element\n\nStyle:\n- Black background with gold accents\n- Subtle gradient overlays\n- Refined serif headlines mixed with modern sans-serif body\n- Moderate rounded corners (8px)\n- Balanced spacing and refined hierarchy\n- Minimal but luxurious presentation\n\nMood:\nPrestigious, exclusive, high-end tech recognition platform.',
+    thumbnailUrl: '/thumbnails/award-style.png',
+    tags: ['premium', 'award', 'luxury', 'gold', 'editorial'],
+    difficulty: 'advanced',
+    isFeatured: true,
+    isActive: true,
+    createdAt: '2025-06-03T01:00:00.000Z',
+    updatedAt: '2025-06-03T01:00:00.000Z',
+  },
 ];
 
 export class StaticShowcaseItemRepository implements IShowcaseItemRepository {
