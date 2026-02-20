@@ -574,6 +574,20 @@ const SHOWCASE_ITEMS: ShowcaseItem[] = [
     createdAt: '2025-06-03T03:00:00.000Z',
     updatedAt: '2025-06-03T03:00:00.000Z',
   },
+  {
+    id: 'showcase-039',
+    title: 'High-Energy Tech Directory',
+    description: 'เร้าใจขั้นสุด! ธีมเทคโนโลยีพลังงานเดือด พื้นหลังดำสนิทตัดแสงเทกเจอร์โกลว์สีลาวา/แดงเพลิง',
+    category: 'dashboard',
+    prompt: 'Create a dramatic high-energy tech directory layout.\n\nStructure:\n- 3 column editorial grid\n- Tall dynamic content cards\n- Tab navigation with underline animation\n- Glowing counter badge\n- Angular featured tag\n\nStyle:\n- Charcoal black background\n- Lava orange to red gradient highlights\n- Subtle particle glow texture\n- Rounded corners (10px)\n- Large heavy typography\n- High contrast layout\n- Strong layered spacing\n\nMood:\nExplosive innovation, intense, unstoppable energy.',
+    thumbnailUrl: '/thumbnails/high-energy-tech.png',
+    tags: ['energy', 'lava', 'gradient', 'dark-mode', 'dynamic'],
+    difficulty: 'advanced',
+    isFeatured: true,
+    isActive: true,
+    createdAt: '2025-06-03T04:00:00.000Z',
+    updatedAt: '2025-06-03T04:00:00.000Z',
+  },
 ];
 
 export class StaticShowcaseItemRepository implements IShowcaseItemRepository {
