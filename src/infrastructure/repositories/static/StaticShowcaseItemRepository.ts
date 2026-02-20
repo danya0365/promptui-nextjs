@@ -336,6 +336,20 @@ const SHOWCASE_ITEMS: ShowcaseItem[] = [
     createdAt: '2025-06-02T10:00:00.000Z',
     updatedAt: '2025-06-02T10:00:00.000Z',
   },
+  {
+    id: 'showcase-022',
+    title: 'Futuristic Glassmorphism Directory',
+    description: 'หน้า Directory รวมคอลเล็กชันรูปแบบ Glassmorphism แห่งอนาคต พร้อมเอฟเฟกต์เบลอและแสงตกกระทบ',
+    category: 'dashboard',
+    prompt: 'Create a futuristic glassmorphism web directory layout.\n\nStructure:\n- 3 column grid\n- Tall content cards\n- Header with tab navigation\n- Floating counter badge\n- Small label tag on featured cards\n\nStyle:\n- Frosted glass panels with backdrop blur\n- Soft gradient background (blue to purple)\n- Rounded corners (16px)\n- Subtle soft shadows\n- Light glow accents\n- Thin modern sans-serif typography\n- Airy spacing and smooth UI feel\n\nMood:\nElegant, futuristic, soft, premium SaaS aesthetic.',
+    thumbnailUrl: '/thumbnails/glass-dir.webp',
+    tags: ['glassmorphism', 'directory', 'futuristic', 'grid'],
+    difficulty: 'advanced',
+    isFeatured: true,
+    isActive: true,
+    createdAt: '2025-06-02T11:00:00.000Z',
+    updatedAt: '2025-06-02T11:00:00.000Z',
+  },
 ];
 
 export class StaticShowcaseItemRepository implements IShowcaseItemRepository {

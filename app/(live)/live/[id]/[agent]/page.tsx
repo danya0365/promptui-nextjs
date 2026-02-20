@@ -6,6 +6,7 @@ import { CalendarAppDemoGemini } from '@/src/presentation/components/demos/Calen
 import { ECommerceAdminPanelDemoGemini } from '@/src/presentation/components/demos/ECommerceAdminPanelDemoGemini';
 import { FileManagerDemoGemini } from '@/src/presentation/components/demos/FileManagerDemoGemini';
 import { FinanceBankingDashboardDemoGemini } from '@/src/presentation/components/demos/FinanceBankingDashboardDemoGemini';
+import { FuturisticGlassmorphismDirectoryDemoGemini } from '@/src/presentation/components/demos/FuturisticGlassmorphismDirectoryDemoGemini';
 import { GlassmorphismLoginDemo } from '@/src/presentation/components/demos/GlassmorphismLoginDemo';
 import { GlassmorphismLoginDemoGemini } from '@/src/presentation/components/demos/GlassmorphismLoginDemoGemini';
 import { HealthFitnessTrackerDemoGemini } from '@/src/presentation/components/demos/HealthFitnessTrackerDemoGemini';
@@ -58,6 +59,7 @@ const LIVE_PREVIEW_COMPONENTS: Record<string, Partial<Record<AiModel, React.Comp
   'showcase-019': { 'gemini-3-pro': TravelBookingAppDemoGemini },
   'showcase-020': { 'gemini-3-pro': RecipeCookingAppDemoGemini },
   'showcase-021': { 'gemini-3.1-pro': NeoBrutalistPromptGalleryDemoGemini },
+  'showcase-022': { 'gemini-3.1-pro': FuturisticGlassmorphismDirectoryDemoGemini },
 };
 
 interface LivePreviewPageProps {
