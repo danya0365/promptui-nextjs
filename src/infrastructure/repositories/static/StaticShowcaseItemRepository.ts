@@ -432,7 +432,9 @@ export class StaticShowcaseItemRepository implements IShowcaseItemRepository {
 
   async getAll(): Promise<ShowcaseItem[]> {
     await this.delay(100);
-    return [...this.items].filter((item) => item.isActive);
+    return [...this.items]
+      .filter((item) => item.isActive)
+      .sort((a, b) => b.id.localeCompare(a.id));
   }
 
   async getPaginated(
@@ -447,6 +449,9 @@ export class StaticShowcaseItemRepository implements IShowcaseItemRepository {
       activeItems = activeItems.filter((item) => item.category === category);
     }
 
+    // Order by id desc
+    activeItems.sort((a, b) => b.id.localeCompare(a.id));
+
     const start = (page - 1) * perPage;
     const end = start + perPage;
     return {
@@ -460,14 +465,16 @@ export class StaticShowcaseItemRepository implements IShowcaseItemRepository {
   async getByCategory(category: string): Promise<ShowcaseItem[]> {
     await this.delay(100);
     if (category === 'all') return this.getAll();
-    return this.items.filter(
-      (item) => item.category === category && item.isActive
-    );
+    return this.items
+      .filter((item) => item.category === category && item.isActive)
+      .sort((a, b) => b.id.localeCompare(a.id));
   }
 
   async getFeatured(): Promise<ShowcaseItem[]> {
     await this.delay(100);
-    return this.items.filter((item) => item.isFeatured && item.isActive);
+    return this.items
+      .filter((item) => item.isFeatured && item.isActive)
+      .sort((a, b) => b.id.localeCompare(a.id));
   }
 
   async create(data: CreateShowcaseItemData): Promise<ShowcaseItem> {
