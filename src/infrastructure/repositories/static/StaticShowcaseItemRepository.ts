@@ -406,6 +406,20 @@ const SHOWCASE_ITEMS: ShowcaseItem[] = [
     createdAt: '2025-06-02T15:00:00.000Z',
     updatedAt: '2025-06-02T15:00:00.000Z',
   },
+  {
+    id: 'showcase-027',
+    title: 'Swiss-Inspired Modern Directory',
+    description: 'แพลตฟอร์มแนวคิด Swiss Design เน้นความเป๊ะของ Grid พื้นหลังขาวเรียบสะอาดตา และตัวอักษรสีดำเด่นชัด (Helvetica-style)',
+    category: 'dashboard',
+    prompt: 'Create a Swiss-inspired modern web directory layout.\n\nStructure:\n- Strict 3-column grid system\n- Vertical content cards\n- Clean header with tab navigation\n- Minimal numeric counter badge\n- Small structured featured label\n\nStyle:\n- Pure white background\n- Black typography only\n- Accent color: muted red\n- Strict alignment and spacing system\n- Thin borders (1-2px)\n- Helvetica-style sans-serif\n- Large asymmetric headlines\n- Strong negative space\n\nMood:\nPrecise, intelligent, structured, timeless design.',
+    thumbnailUrl: '/thumbnails/swiss-dir.webp',
+    tags: ['swiss', 'modern', 'minimal', 'grid', 'typography'],
+    difficulty: 'advanced',
+    isFeatured: true,
+    isActive: true,
+    createdAt: '2025-06-02T16:00:00.000Z',
+    updatedAt: '2025-06-02T16:00:00.000Z',
+  },
 ];
 
 export class StaticShowcaseItemRepository implements IShowcaseItemRepository {

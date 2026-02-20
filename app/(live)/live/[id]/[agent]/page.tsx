@@ -27,6 +27,7 @@ import { RecipeCookingAppDemoGemini } from '@/src/presentation/components/demos/
 import { Retro90sTechMagazineDemoGemini } from '@/src/presentation/components/demos/Retro90sTechMagazineDemoGemini';
 import { SaaSLandingPageDemoGemini } from '@/src/presentation/components/demos/SaaSLandingPageDemoGemini';
 import { SocialMediaAnalyticsDemoGemini } from '@/src/presentation/components/demos/SocialMediaAnalyticsDemoGemini';
+import { SwissInspiredModernDirectoryDemoGemini } from '@/src/presentation/components/demos/SwissInspiredModernDirectoryDemoGemini';
 import { TravelBookingAppDemoGemini } from '@/src/presentation/components/demos/TravelBookingAppDemoGemini';
 import type { Metadata } from 'next';
 
@@ -68,6 +69,7 @@ const LIVE_PREVIEW_COMPONENTS: Record<string, Partial<Record<AiModel, React.Comp
   'showcase-024': { 'gemini-3.1-pro': LuxuryMinimalEditorialDirectoryDemoGemini },
   'showcase-025': { 'gemini-3.1-pro': CyberpunkDarkWebInterfaceDemoGemini },
   'showcase-026': { 'gemini-3.1-pro': CalmOrganicWebDirectoryDemoGemini },
+  'showcase-027': { 'gemini-3.1-pro': SwissInspiredModernDirectoryDemoGemini },
 };
 
 interface LivePreviewPageProps {
