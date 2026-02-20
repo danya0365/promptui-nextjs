@@ -602,6 +602,20 @@ const SHOWCASE_ITEMS: ShowcaseItem[] = [
     createdAt: '2025-06-03T05:00:00.000Z',
     updatedAt: '2025-06-03T05:00:00.000Z',
   },
+  {
+    id: 'showcase-041',
+    title: 'Cinematic Product Launch',
+    description: 'หน้ารวมข้อมูลเปิดตัวผลิตภัณฑ์สไตล์ Cinematic เหมือนงาน Keynote หรูหรา พื้นดำประกายทอง',
+    category: 'dashboard',
+    prompt: 'Create a cinematic product launch web directory interface.\n\nStructure:\n- 3 column grid system\n- Tall spotlight cards with strong imagery\n- Premium tab-style navigation\n- Large elegant numeric counter badge\n- Refined featured ribbon element\n\nStyle:\n- Jet black background\n- Metallic gold accent\n- Strong spotlight lighting effect\n- Large dramatic headlines\n- Minimal but luxurious spacing\n- Subtle depth and glow\n- 8px rounded corners\n\nMood:\nApple keynote meets billion-dollar IPO launch.',
+    thumbnailUrl: '/thumbnails/cinematic-product-launch.png',
+    tags: ['cinematic', 'launch', 'premium', 'gold', 'keynote'],
+    difficulty: 'advanced',
+    isFeatured: true,
+    isActive: true,
+    createdAt: '2025-06-03T06:00:00.000Z',
+    updatedAt: '2025-06-03T06:00:00.000Z',
+  },
 ];
 
 export class StaticShowcaseItemRepository implements IShowcaseItemRepository {

@@ -9,6 +9,7 @@ import { BoldAIStartupDirectoryDemoGemini } from '@/src/presentation/components/
 import { CalendarAppDemoGemini } from '@/src/presentation/components/demos/CalendarAppDemoGemini';
 import { CalmOrganicWebDirectoryDemoGemini } from '@/src/presentation/components/demos/CalmOrganicWebDirectoryDemoGemini';
 import { ChromeInspiredWebDirectoryDemoGemini } from '@/src/presentation/components/demos/ChromeInspiredWebDirectoryDemoGemini';
+import { CinematicProductLaunchDemoGemini } from '@/src/presentation/components/demos/CinematicProductLaunchDemoGemini';
 import { ClaymorphismDirectoryDemoGemini } from '@/src/presentation/components/demos/ClaymorphismDirectoryDemoGemini';
 import { CosmicInspiredWebDirectoryDemoGemini } from '@/src/presentation/components/demos/CosmicInspiredWebDirectoryDemoGemini';
 import { CyberpunkDarkWebInterfaceDemoGemini } from '@/src/presentation/components/demos/CyberpunkDarkWebInterfaceDemoGemini';
@@ -96,6 +97,7 @@ const LIVE_PREVIEW_COMPONENTS: Record<string, Partial<Record<AiModel, React.Comp
   'showcase-038': { 'gemini-3.1-pro': EliteTechFoundersDirectoryDemoGemini },
   'showcase-039': { 'gemini-3.1-pro': HighEnergyTechDirectoryDemoGemini },
   'showcase-040': { 'gemini-3.1-pro': FuturisticSpacePlatformDemoGemini },
+  'showcase-041': { 'gemini-3.1-pro': CinematicProductLaunchDemoGemini },
 };
 
 interface LivePreviewPageProps {
