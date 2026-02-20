@@ -630,6 +630,20 @@ const SHOWCASE_ITEMS: ShowcaseItem[] = [
     createdAt: '2025-06-03T07:00:00.000Z',
     updatedAt: '2025-06-03T07:00:00.000Z',
   },
+  {
+    id: 'showcase-043',
+    title: 'Hypercar Luxury Platform',
+    description: 'แพลตฟอร์มเทคโนโลยีระดับพรีเมียมทรงพลัง สไตล์แบรนด์ไฮเปอร์คาร์ พื้นกราไฟต์ตัดแดงและเงินเมทัลลิก',
+    category: 'dashboard',
+    prompt: 'Design a luxury high-performance tech platform inspired by hypercar branding.\n\nStyle:\n- Full-width immersive sections\n- Dark graphite background\n- Metallic silver and deep red accents\n- Sharp angled layout transitions\n- Cinematic lighting gradients\n- Ultra-premium serif headlines combined with modern sans-serif body\n- Smooth scroll reveal animations\n- Subtle reflection effects\n- Large dramatic product imagery\n\nSections:\n- Hero with oversized bold headline\n- Feature highlight blocks with angled cut layouts\n- Performance metrics section\n- Prestige testimonial showcase\n- Bold minimal footer\n\nMood:\nPowerful, elite, performance-driven, billionaire energy.',
+    thumbnailUrl: '/thumbnails/hypercar-luxury-platform.png',
+    tags: ['hypercar', 'luxury', 'performance', 'premium', 'red', 'silver'],
+    difficulty: 'advanced',
+    isFeatured: true,
+    isActive: true,
+    createdAt: '2025-06-03T08:00:00.000Z',
+    updatedAt: '2025-06-03T08:00:00.000Z',
+  },
 ];
 
 export class StaticShowcaseItemRepository implements IShowcaseItemRepository {

@@ -26,6 +26,7 @@ import { GlassmorphismLoginDemoGemini } from '@/src/presentation/components/demo
 import { HealthFitnessTrackerDemoGemini } from '@/src/presentation/components/demos/HealthFitnessTrackerDemoGemini';
 import { HighContrastEditorialDirectoryDemoGemini } from '@/src/presentation/components/demos/HighContrastEditorialDirectoryDemoGemini';
 import { HighEnergyTechDirectoryDemoGemini } from '@/src/presentation/components/demos/HighEnergyTechDirectoryDemoGemini';
+import { HypercarLuxuryPlatformDemoGemini } from '@/src/presentation/components/demos/HypercarLuxuryPlatformDemoGemini';
 import { IoTSmartHomeDashboardDemoGemini } from '@/src/presentation/components/demos/IoTSmartHomeDashboardDemoGemini';
 import { KanbanBoardDemoGemini } from '@/src/presentation/components/demos/KanbanBoardDemoGemini';
 import { LuxuryMinimalEditorialDirectoryDemoGemini } from '@/src/presentation/components/demos/LuxuryMinimalEditorialDirectoryDemoGemini';
@@ -100,6 +101,7 @@ const LIVE_PREVIEW_COMPONENTS: Record<string, Partial<Record<AiModel, React.Comp
   'showcase-040': { 'gemini-3.1-pro': FuturisticSpacePlatformDemoGemini },
   'showcase-041': { 'gemini-3.1-pro': CinematicProductLaunchDemoGemini },
   'showcase-042': { 'gemini-3.1-pro': SuperintelligenceLaunchDemoGemini },
+  'showcase-043': { 'gemini-3.1-pro': HypercarLuxuryPlatformDemoGemini },
 };
 
 interface LivePreviewPageProps {
