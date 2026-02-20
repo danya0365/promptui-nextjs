@@ -672,6 +672,20 @@ const SHOWCASE_ITEMS: ShowcaseItem[] = [
     createdAt: '2025-06-03T10:00:00.000Z',
     updatedAt: '2025-06-03T10:00:00.000Z',
   },
+  {
+    id: 'showcase-046',
+    title: 'Billion Dollar IPO Announcement',
+    description: 'เว็บประกาศเข้าตลาดหุ้น IPO สุดพรีเมียม พื้นหลังสีดำพร้อมแสง Spotlight ประดับจุดเด่นด้วยสีทองหรูหรา',
+    category: 'landing-page',
+    prompt: 'Create a cinematic billion-dollar IPO announcement website.\n\nStyle:\n- Jet black background with subtle spotlight gradients\n- Metallic gold accent highlights\n- Elegant serif headline typography\n- Clean modern sans-serif body text\n- Smooth fade and slide reveal animations\n- Large immersive image panels\n- Subtle depth shadows and lighting effects\n- Balanced spacing with luxury feel\n\nSections:\n- Dramatic hero statement\n- Vision timeline storytelling\n- Leadership spotlight\n- Innovation showcase grid\n- Confident premium call-to-action\n\nMood:\nPrestigious, powerful, globally dominant tech empire.',
+    thumbnailUrl: '/thumbnails/billion-dollar-ipo.png',
+    tags: ['ipo', 'premium', 'cinematic', 'gold', 'luxury', 'corporate'],
+    difficulty: 'advanced',
+    isFeatured: true,
+    isActive: true,
+    createdAt: '2025-06-03T11:00:00.000Z',
+    updatedAt: '2025-06-03T11:00:00.000Z',
+  },
 ];
 
 export class StaticShowcaseItemRepository implements IShowcaseItemRepository {

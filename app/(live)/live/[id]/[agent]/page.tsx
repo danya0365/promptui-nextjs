@@ -5,6 +5,7 @@ import { AcademicWebArchiveDemoGemini } from '@/src/presentation/components/demo
 import { AIChatInterfaceDemoGemini } from '@/src/presentation/components/demos/AIChatInterfaceDemoGemini';
 import { AICommandCenterDemoGemini } from '@/src/presentation/components/demos/AICommandCenterDemoGemini';
 import { AwardStylePremiumDirectoryDemoGemini } from '@/src/presentation/components/demos/AwardStylePremiumDirectoryDemoGemini';
+import { BillionDollarIPODemoGemini } from '@/src/presentation/components/demos/BillionDollarIPODemoGemini';
 import { BoldAIStartupDirectoryDemoGemini } from '@/src/presentation/components/demos/BoldAIStartupDirectoryDemoGemini';
 import { BoldStartupManifestoDemoGemini } from '@/src/presentation/components/demos/BoldStartupManifestoDemoGemini';
 import { CalendarAppDemoGemini } from '@/src/presentation/components/demos/CalendarAppDemoGemini';
@@ -106,6 +107,7 @@ const LIVE_PREVIEW_COMPONENTS: Record<string, Partial<Record<AiModel, React.Comp
   'showcase-043': { 'gemini-3.1-pro': HypercarLuxuryPlatformDemoGemini },
   'showcase-044': { 'gemini-3.1-pro': FuturisticOSWebExperienceDemoGemini },
   'showcase-045': { 'gemini-3.1-pro': BoldStartupManifestoDemoGemini },
+  'showcase-046': { 'gemini-3.1-pro': BillionDollarIPODemoGemini },
 };
 
 interface LivePreviewPageProps {
