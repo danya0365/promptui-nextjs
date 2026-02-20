@@ -350,6 +350,20 @@ const SHOWCASE_ITEMS: ShowcaseItem[] = [
     createdAt: '2025-06-02T11:00:00.000Z',
     updatedAt: '2025-06-02T11:00:00.000Z',
   },
+  {
+    id: 'showcase-023',
+    title: 'Retro 90s Tech Magazine',
+    description: 'เรโทร UI สไตล์นิตยสารไอทียุค 90 โทนสีจี๊ดจ๊าด (Cyan, Magenta, Lime) และการจัดวางช่องแบบอิสระ',
+    category: 'landing',
+    prompt: 'Design a retro 90s inspired tech magazine web layout.\n\nStructure:\n- 3 column editorial grid\n- Large vertical cards\n- Top navigation tabs\n- Highlight badge with bold numbers\n- Featured label sticker element\n\nStyle:\n- Vibrant color palette (cyan, magenta, lime)\n- Playful background patterns\n- Slight grain texture\n- Bold condensed typography\n- Mixed font sizes\n- Slightly exaggerated spacing\n- Fun and energetic composition\n\nMood:\nCreative, expressive, nostalgic, tech-zine inspired.',
+    thumbnailUrl: '/thumbnails/retro-mag.webp',
+    tags: ['retro', 'magazine', '90s', 'vibrant', 'grid'],
+    difficulty: 'advanced',
+    isFeatured: true,
+    isActive: true,
+    createdAt: '2025-06-02T12:00:00.000Z',
+    updatedAt: '2025-06-02T12:00:00.000Z',
+  },
 ];
 
 export class StaticShowcaseItemRepository implements IShowcaseItemRepository {

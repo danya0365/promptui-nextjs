@@ -21,6 +21,7 @@ import { NeonDashboardWidgetsDemoGemini } from '@/src/presentation/components/de
 import { ProductCardGridDemoGemini } from '@/src/presentation/components/demos/ProductCardGridDemoGemini';
 import { ProfileCardCollectionDemoGemini } from '@/src/presentation/components/demos/ProfileCardCollectionDemoGemini';
 import { RecipeCookingAppDemoGemini } from '@/src/presentation/components/demos/RecipeCookingAppDemoGemini';
+import { Retro90sTechMagazineDemoGemini } from '@/src/presentation/components/demos/Retro90sTechMagazineDemoGemini';
 import { SaaSLandingPageDemoGemini } from '@/src/presentation/components/demos/SaaSLandingPageDemoGemini';
 import { SocialMediaAnalyticsDemoGemini } from '@/src/presentation/components/demos/SocialMediaAnalyticsDemoGemini';
 import { TravelBookingAppDemoGemini } from '@/src/presentation/components/demos/TravelBookingAppDemoGemini';
@@ -60,6 +61,7 @@ const LIVE_PREVIEW_COMPONENTS: Record<string, Partial<Record<AiModel, React.Comp
   'showcase-020': { 'gemini-3-pro': RecipeCookingAppDemoGemini },
   'showcase-021': { 'gemini-3.1-pro': NeoBrutalistPromptGalleryDemoGemini },
   'showcase-022': { 'gemini-3.1-pro': FuturisticGlassmorphismDirectoryDemoGemini },
+  'showcase-023': { 'gemini-3.1-pro': Retro90sTechMagazineDemoGemini },
 };
 
 interface LivePreviewPageProps {
