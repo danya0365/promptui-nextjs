@@ -378,6 +378,20 @@ const SHOWCASE_ITEMS: ShowcaseItem[] = [
     createdAt: '2025-06-02T13:00:00.000Z',
     updatedAt: '2025-06-02T13:00:00.000Z',
   },
+  {
+    id: 'showcase-025',
+    title: 'Cyberpunk Dark Web Interface',
+    description: 'เทอร์มินัลสไตล์ Hacker โลกอนาคต โทนดำตัดกับแสงนีออน (Cyan/Pink) พร้อมเอฟเฟกต์ Glitch และ Monospace Font',
+    category: 'dashboard',
+    prompt: 'Design a cyberpunk dark web interface layout.\n\nStructure:\n- 3 column grid system\n- Tall glowing content panels\n- Neon-style header tabs\n- Bright counter badge\n- Digital-style label tag\n\nStyle:\n- Dark background (#0A0A0A)\n- Neon accents (cyan / pink)\n- Subtle glow effects\n- Futuristic monospace typography\n- Light grid overlay texture\n- Slight inner glow borders\n\nMood:\nFuturistic hacker terminal meets modern web platform.',
+    thumbnailUrl: '/thumbnails/cyberpunk-web.webp',
+    tags: ['cyberpunk', 'dark', 'neon', 'dashboard', 'terminal'],
+    difficulty: 'advanced',
+    isFeatured: true,
+    isActive: true,
+    createdAt: '2025-06-02T14:00:00.000Z',
+    updatedAt: '2025-06-02T14:00:00.000Z',
+  },
 ];
 
 export class StaticShowcaseItemRepository implements IShowcaseItemRepository {
