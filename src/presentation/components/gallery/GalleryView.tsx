@@ -194,7 +194,7 @@ export function GalleryView({ initialViewModel }: GalleryViewProps) {
         {/* ═══ Results Count ═══ */}
         <div className="flex items-center justify-between mb-6">
           <p className="text-sm text-muted">
-            แสดง <span className="font-semibold text-foreground">{state.isClientFilterActive ? state.totalFilteredCount : state.viewModel.totalCount}</span> รายการ
+            แสดง <span className="font-semibold text-foreground">{state.isClientFilterActive ? state.totalFilteredCount : state.viewModel?.totalCount || 0}</span> รายการ
           </p>
         </div>
 
