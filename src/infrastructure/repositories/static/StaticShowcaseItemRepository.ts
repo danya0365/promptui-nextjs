@@ -448,6 +448,20 @@ const SHOWCASE_ITEMS: ShowcaseItem[] = [
     createdAt: '2025-06-02T18:00:00.000Z',
     updatedAt: '2025-06-02T18:00:00.000Z',
   },
+  {
+    id: 'showcase-030',
+    title: 'Gaming Platform Directory',
+    description: 'หน้าไดเรกทอรีแพลตฟอร์มเกม โทนสีเข้มตัดนีออน ดุดัน มีพลัง (Gaming style)',
+    category: 'dashboard',
+    prompt: 'Design a gaming platform directory interface.\n\nStructure:\n- 3 column grid\n- Tall immersive content cards\n- Dynamic header navigation tabs\n- Bold animated counter badge\n- Featured glow tag\n\nStyle:\n- Dark charcoal background\n- Vibrant accent colors (orange or neon green)\n- Slight card elevation\n- Rounded corners (10px)\n- Bold gaming-style typography\n- Rich thumbnail emphasis\n- Subtle hover animation\n\nMood:\nEnergetic, immersive, competitive, engaging.',
+    thumbnailUrl: '/thumbnails/gaming-platform.webp',
+    tags: ['gaming', 'platform', 'neon', 'dark-mode', 'immersive'],
+    difficulty: 'advanced',
+    isFeatured: true,
+    isActive: true,
+    createdAt: '2025-06-02T19:00:00.000Z',
+    updatedAt: '2025-06-02T19:00:00.000Z',
+  },
 ];
 
 export class StaticShowcaseItemRepository implements IShowcaseItemRepository {

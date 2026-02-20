@@ -11,6 +11,7 @@ import { ECommerceAdminPanelDemoGemini } from '@/src/presentation/components/dem
 import { FileManagerDemoGemini } from '@/src/presentation/components/demos/FileManagerDemoGemini';
 import { FinanceBankingDashboardDemoGemini } from '@/src/presentation/components/demos/FinanceBankingDashboardDemoGemini';
 import { FuturisticGlassmorphismDirectoryDemoGemini } from '@/src/presentation/components/demos/FuturisticGlassmorphismDirectoryDemoGemini';
+import { GamingPlatformDirectoryDemoGemini } from '@/src/presentation/components/demos/GamingPlatformDirectoryDemoGemini';
 import { GlassmorphismLoginDemo } from '@/src/presentation/components/demos/GlassmorphismLoginDemo';
 import { GlassmorphismLoginDemoGemini } from '@/src/presentation/components/demos/GlassmorphismLoginDemoGemini';
 import { HealthFitnessTrackerDemoGemini } from '@/src/presentation/components/demos/HealthFitnessTrackerDemoGemini';
@@ -74,6 +75,7 @@ const LIVE_PREVIEW_COMPONENTS: Record<string, Partial<Record<AiModel, React.Comp
   'showcase-027': { 'gemini-3.1-pro': SwissInspiredModernDirectoryDemoGemini },
   'showcase-028': { 'gemini-3.1-pro': BoldAIStartupDirectoryDemoGemini },
   'showcase-029': { 'gemini-3.1-pro': AcademicWebArchiveDemoGemini },
+  'showcase-030': { 'gemini-3.1-pro': GamingPlatformDirectoryDemoGemini },
 };
 
 interface LivePreviewPageProps {
