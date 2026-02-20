@@ -476,6 +476,20 @@ const SHOWCASE_ITEMS: ShowcaseItem[] = [
     createdAt: '2025-06-02T20:00:00.000Z',
     updatedAt: '2025-06-02T20:00:00.000Z',
   },
+  {
+    id: 'showcase-032',
+    title: 'High-Contrast Editorial Web Directory',
+    description: 'แพลตฟอร์มแมกกาซีน ขาวดำดุดัน เส้นขอบหนา และฟอนต์ขนาดใหญ่',
+    category: 'dashboard',
+    prompt: 'Create a powerful high-contrast editorial web directory layout.\n\nStructure:\n- 3 column grid\n- Tall dominant content cards\n- Bold tab-style header navigation\n- Large numeric counter badge\n- Diagonal featured label ribbon\n\nStyle:\n- Pure black and white color scheme\n- Oversized typography headlines\n- Ultra thick borders (6px)\n- No rounded corners\n- Strong vertical rhythm\n- Large image blocks with sharp crops\n- Minimal but aggressive layout balance\n\nMood:\nCommanding, bold, fashion-magazine inspired, statement-driven.',
+    thumbnailUrl: '/thumbnails/high-contrast-ed.webp',
+    tags: ['editorial', 'black-and-white', 'brutalism', 'typography', 'bold'],
+    difficulty: 'advanced',
+    isFeatured: true,
+    isActive: true,
+    createdAt: '2025-06-02T21:00:00.000Z',
+    updatedAt: '2025-06-02T21:00:00.000Z',
+  },
 ];
 
 export class StaticShowcaseItemRepository implements IShowcaseItemRepository {
