@@ -630,7 +630,6 @@ const SHOWCASE_ITEMS: ShowcaseItem[] = [
     createdAt: '2025-06-03T07:00:00.000Z',
     updatedAt: '2025-06-03T07:00:00.000Z',
   },
-  {
     id: 'showcase-043',
     title: 'Hypercar Luxury Platform',
     description: 'แพลตฟอร์มเทคโนโลยีระดับพรีเมียมทรงพลัง สไตล์แบรนด์ไฮเปอร์คาร์ พื้นกราไฟต์ตัดแดงและเงินเมทัลลิก',
@@ -643,6 +642,20 @@ const SHOWCASE_ITEMS: ShowcaseItem[] = [
     isActive: true,
     createdAt: '2025-06-03T08:00:00.000Z',
     updatedAt: '2025-06-03T08:00:00.000Z',
+  },
+  {
+    id: 'showcase-044',
+    title: 'Futuristic OS Web Experience',
+    description: 'เว็บไซต์ที่จำลองประสบการณ์ระบบปฏิบัติการแห่งอนาคต พื้นหลังอวกาศมืด โมดูล UI ลอยตัว และแสงสะท้อนนีออน',
+    category: 'dashboard',
+    prompt: 'Create a futuristic operating system inspired web experience.\n\nStyle:\n- Immersive dark cosmic gradient background\n- Floating modular UI panels\n- Soft neon cyan and magenta accents\n- Subtle ambient glow effects\n- Blurred glass depth layers\n- Rounded 16px corners\n- Dynamic motion transitions\n- Oversized thin futuristic typography\n- Animated grid and starfield textures\n\nExperience:\n- Interactive dashboard-style homepage\n- Expandable floating modules\n- Smooth morphing UI components\n- Context-aware floating navigation\n\nMood:\n2035 next-generation digital ecosystem, visionary and immersive.',
+    thumbnailUrl: '/thumbnails/futuristic-os-web-experience.png',
+    tags: ['futuristic', 'os', 'glassmorphism', 'neon', 'cyberpunk', 'dashboard'],
+    difficulty: 'expert',
+    isFeatured: true,
+    isActive: true,
+    createdAt: '2025-06-03T09:00:00.000Z',
+    updatedAt: '2025-06-03T09:00:00.000Z',
   },
 ];
 
