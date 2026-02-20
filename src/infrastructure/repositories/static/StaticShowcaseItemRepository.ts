@@ -426,13 +426,27 @@ const SHOWCASE_ITEMS: ShowcaseItem[] = [
     description: 'แพลตฟอร์มไดเรกทอรีแอป AI แนว Startup สไตล์สีเข้ม (Dark gradient) ตัดด้วยแสง Electric blue',
     category: 'dashboard',
     prompt: 'Design a bold AI startup web directory interface.\n\nStructure:\n- 3 column responsive grid\n- Tall modern cards\n- Interactive header tabs\n- Animated counter badge\n- Highlight ribbon on featured cards\n\nStyle:\n- Dark gradient background (deep navy to black)\n- Electric blue accent\n- Subtle glow and light reflections\n- Smooth rounded corners (12px)\n- Soft layered shadows\n- Clean geometric sans-serif\n- Spacious, modern SaaS layout\n\nMood:\nInnovative, fast-growing tech startup, future-ready.',
-    thumbnailUrl: '/thumbnails/ai-startup-dir.webp', // We will generate an image or use a placeholder
+    thumbnailUrl: '/thumbnails/ai-startup-dir.webp',
     tags: ['ai', 'startup', 'dark-mode', 'directory', 'grid'],
     difficulty: 'advanced',
     isFeatured: true,
     isActive: true,
     createdAt: '2025-06-02T17:00:00.000Z',
     updatedAt: '2025-06-02T17:00:00.000Z',
+  },
+  {
+    id: 'showcase-029',
+    title: 'Academic Web Archive',
+    description: 'แพลตฟอร์มคลังข้อมูลวิชาการ โทนสีเบจ สบายตา ดูน่าเชื่อถือ และเป็นระเบียบ (Scholarly style)',
+    category: 'dashboard',
+    prompt: 'Create an academic-style web archive layout.\n\nStructure:\n- 3 column grid\n- Tall structured content cards\n- Simple top navigation tabs\n- Formal numeric counter\n- Small classification label tag\n\nStyle:\n- Soft beige background\n- Dark navy typography\n- Serif headline font\n- Subtle divider lines\n- Minimal decoration\n- Balanced margins\n- Organized metadata presentation\n\nMood:\nTrustworthy, scholarly, informative, archival.',
+    thumbnailUrl: '/thumbnails/academic-archive.webp',
+    tags: ['academic', 'scholarly', 'archive', 'serif', 'minimal'],
+    difficulty: 'intermediate',
+    isFeatured: true,
+    isActive: true,
+    createdAt: '2025-06-02T18:00:00.000Z',
+    updatedAt: '2025-06-02T18:00:00.000Z',
   },
 ];
 
