@@ -41,6 +41,7 @@ import { RecipeCookingAppDemoGemini } from '@/src/presentation/components/demos/
 import { Retro90sTechMagazineDemoGemini } from '@/src/presentation/components/demos/Retro90sTechMagazineDemoGemini';
 import { SaaSLandingPageDemoGemini } from '@/src/presentation/components/demos/SaaSLandingPageDemoGemini';
 import { SocialMediaAnalyticsDemoGemini } from '@/src/presentation/components/demos/SocialMediaAnalyticsDemoGemini';
+import { SuperintelligenceLaunchDemoGemini } from '@/src/presentation/components/demos/SuperintelligenceLaunchDemoGemini';
 import { SwissInspiredModernDirectoryDemoGemini } from '@/src/presentation/components/demos/SwissInspiredModernDirectoryDemoGemini';
 import { TravelBookingAppDemoGemini } from '@/src/presentation/components/demos/TravelBookingAppDemoGemini';
 import type { Metadata } from 'next';
@@ -98,6 +99,7 @@ const LIVE_PREVIEW_COMPONENTS: Record<string, Partial<Record<AiModel, React.Comp
   'showcase-039': { 'gemini-3.1-pro': HighEnergyTechDirectoryDemoGemini },
   'showcase-040': { 'gemini-3.1-pro': FuturisticSpacePlatformDemoGemini },
   'showcase-041': { 'gemini-3.1-pro': CinematicProductLaunchDemoGemini },
+  'showcase-042': { 'gemini-3.1-pro': SuperintelligenceLaunchDemoGemini },
 };
 
 interface LivePreviewPageProps {

@@ -616,6 +616,20 @@ const SHOWCASE_ITEMS: ShowcaseItem[] = [
     createdAt: '2025-06-03T06:00:00.000Z',
     updatedAt: '2025-06-03T06:00:00.000Z',
   },
+  {
+    id: 'showcase-042',
+    title: 'Artificial Superintelligence Launch',
+    description: 'งานประกาศตัวเปิดผลิตภัณฑ์ Superintelligence สุดล้ำ พื้นดำลึก ลำแสงอวกาศนีออนสีน้ำเงิน/ม่วง และอนุภาคเครือข่าย',
+    category: 'dashboard',
+    prompt: 'Create a next-generation Artificial Superintelligence product launch website.\n\nStyle:\n- Immersive full-screen hero section\n- Dynamic layered background with animated neural network particles\n- Deep black base (#040404)\n- Electric blue and violet light beams\n- Glassmorphism panels floating in 3D space\n- Massive cinematic typography\n- Smooth scroll storytelling transitions\n- Parallax depth effects\n- Subtle holographic UI components\n- Minimal but futuristic navigation\n\nSections:\n- Vision statement hero\n- Live AI metrics dashboard preview\n- Interactive demo preview panels\n- Founder manifesto section\n- Bold call-to-action with glowing button\n\nMood:\nCinematic, intelligent, world-changing technology announcement.',
+    thumbnailUrl: '/thumbnails/superintelligence-launch.png',
+    tags: ['cinematic', 'ai', 'superintelligence', 'glassmorphism', 'glow'],
+    difficulty: 'advanced',
+    isFeatured: true,
+    isActive: true,
+    createdAt: '2025-06-03T07:00:00.000Z',
+    updatedAt: '2025-06-03T07:00:00.000Z',
+  },
 ];
 
 export class StaticShowcaseItemRepository implements IShowcaseItemRepository {
