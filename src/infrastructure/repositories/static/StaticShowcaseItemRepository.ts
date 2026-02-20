@@ -630,6 +630,7 @@ const SHOWCASE_ITEMS: ShowcaseItem[] = [
     createdAt: '2025-06-03T07:00:00.000Z',
     updatedAt: '2025-06-03T07:00:00.000Z',
   },
+    {
     id: 'showcase-043',
     title: 'Hypercar Luxury Platform',
     description: 'แพลตฟอร์มเทคโนโลยีระดับพรีเมียมทรงพลัง สไตล์แบรนด์ไฮเปอร์คาร์ พื้นกราไฟต์ตัดแดงและเงินเมทัลลิก',
@@ -643,7 +644,7 @@ const SHOWCASE_ITEMS: ShowcaseItem[] = [
     createdAt: '2025-06-03T08:00:00.000Z',
     updatedAt: '2025-06-03T08:00:00.000Z',
   },
-  {
+    {
     id: 'showcase-044',
     title: 'Futuristic OS Web Experience',
     description: 'เว็บไซต์ที่จำลองประสบการณ์ระบบปฏิบัติการแห่งอนาคต พื้นหลังอวกาศมืด โมดูล UI ลอยตัว และแสงสะท้อนนีออน',
@@ -651,11 +652,25 @@ const SHOWCASE_ITEMS: ShowcaseItem[] = [
     prompt: 'Create a futuristic operating system inspired web experience.\n\nStyle:\n- Immersive dark cosmic gradient background\n- Floating modular UI panels\n- Soft neon cyan and magenta accents\n- Subtle ambient glow effects\n- Blurred glass depth layers\n- Rounded 16px corners\n- Dynamic motion transitions\n- Oversized thin futuristic typography\n- Animated grid and starfield textures\n\nExperience:\n- Interactive dashboard-style homepage\n- Expandable floating modules\n- Smooth morphing UI components\n- Context-aware floating navigation\n\nMood:\n2035 next-generation digital ecosystem, visionary and immersive.',
     thumbnailUrl: '/thumbnails/futuristic-os-web-experience.png',
     tags: ['futuristic', 'os', 'glassmorphism', 'neon', 'cyberpunk', 'dashboard'],
-    difficulty: 'expert',
+    difficulty: 'advanced',
     isFeatured: true,
     isActive: true,
     createdAt: '2025-06-03T09:00:00.000Z',
     updatedAt: '2025-06-03T09:00:00.000Z',
+  },
+  {
+    id: 'showcase-045',
+    title: 'Bold Startup Manifesto',
+    description: 'หน้าเว็บประกาศจุดยืนสตาร์ทอัพที่ดุดัน โดดเด่นด้วย Typography ขนาดใหญ่ พื้นขาวดำ ตัดด้วยสีเหลือง Acid Yellow',
+    category: 'landing-page',
+    prompt: 'Design a bold revolutionary startup manifesto website.\n\nStyle:\n- High contrast black and white base\n- Massive oversized typography (breaking grid intentionally)\n- Dynamic asymmetrical layout\n- Sharp rectangular elements\n- Bold accent color: acid yellow\n- Kinetic typography sections\n- Editorial-inspired long-scroll storytelling\n- Minimal imagery, typography-driven design\n- Strong brutal transitions between sections\n\nSections:\n- Manifesto headline hero\n- Philosophy section with bold quotes\n- Feature showcase grid\n- Data-driven impact statistics\n- Powerful final call-to-action\n\nMood:\nDisruptive, fearless, unapologetic, movement-driven.',
+    thumbnailUrl: '/thumbnails/bold-startup-manifesto.png',
+    tags: ['bold', 'startup', 'manifesto', 'typography', 'brutalism', 'yellow'],
+    difficulty: 'advanced',
+    isFeatured: true,
+    isActive: true,
+    createdAt: '2025-06-03T10:00:00.000Z',
+    updatedAt: '2025-06-03T10:00:00.000Z',
   },
 ];
 
