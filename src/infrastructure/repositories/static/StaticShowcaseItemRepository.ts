@@ -546,6 +546,20 @@ const SHOWCASE_ITEMS: ShowcaseItem[] = [
     createdAt: '2025-06-03T01:00:00.000Z',
     updatedAt: '2025-06-03T01:00:00.000Z',
   },
+  {
+    id: 'showcase-037',
+    title: 'Futuristic AI Command Center',
+    description: 'หน้าแรกของ AI Platform ขั้นสูง ธีมดำตัดน้ำเงินล้ำอนาคต (Neon Holographic)',
+    category: 'dashboard',
+    prompt: 'Create an ultra-premium futuristic AI command center web interface.\n\nStructure:\n- 3 column grid layout\n- Tall immersive data cards\n- Floating header with tab navigation\n- Holographic numeric counter badge\n- Angular featured label marker\n\nStyle:\n- Deep black background (#050505)\n- Electric blue and ultraviolet accents\n- Subtle holographic glow effects\n- Glass layered panels with depth\n- Smooth 14px rounded corners\n- Oversized bold geometric typography\n- Micro-interactions and hover glow\n- Subtle animated grid background\n\nMood:\nNext-generation AI platform, powerful, intelligent, cinematic tech reveal.',
+    thumbnailUrl: '/thumbnails/ai-command-center.png',
+    tags: ['ai', 'futuristic', 'neon', 'command-center', 'holographic'],
+    difficulty: 'advanced',
+    isFeatured: true,
+    isActive: true,
+    createdAt: '2025-06-03T02:00:00.000Z',
+    updatedAt: '2025-06-03T02:00:00.000Z',
+  },
 ];
 
 export class StaticShowcaseItemRepository implements IShowcaseItemRepository {
