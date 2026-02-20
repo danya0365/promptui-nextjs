@@ -15,6 +15,7 @@ import { MinimalBlogLandingDemoGemini } from '@/src/presentation/components/demo
 import { ModernDashboardDemoGemini } from '@/src/presentation/components/demos/ModernDashboardDemoGemini';
 import { MultiStepRegisterDemoGemini } from '@/src/presentation/components/demos/MultiStepRegisterDemoGemini';
 import { MusicPlayerDashboardDemoGemini } from '@/src/presentation/components/demos/MusicPlayerDashboardDemoGemini';
+import { NeoBrutalistPromptGalleryDemoGemini } from '@/src/presentation/components/demos/NeoBrutalistPromptGalleryDemoGemini';
 import { NeonDashboardWidgetsDemoGemini } from '@/src/presentation/components/demos/NeonDashboardWidgetsDemoGemini';
 import { ProductCardGridDemoGemini } from '@/src/presentation/components/demos/ProductCardGridDemoGemini';
 import { ProfileCardCollectionDemoGemini } from '@/src/presentation/components/demos/ProfileCardCollectionDemoGemini';
@@ -56,6 +57,7 @@ const LIVE_PREVIEW_COMPONENTS: Record<string, Partial<Record<AiModel, React.Comp
   'showcase-018': { 'gemini-3-pro': AIChatInterfaceDemoGemini },
   'showcase-019': { 'gemini-3-pro': TravelBookingAppDemoGemini },
   'showcase-020': { 'gemini-3-pro': RecipeCookingAppDemoGemini },
+  'showcase-021': { 'gemini-3.1-pro': NeoBrutalistPromptGalleryDemoGemini },
 };
 
 interface LivePreviewPageProps {

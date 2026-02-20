@@ -322,6 +322,20 @@ const SHOWCASE_ITEMS: ShowcaseItem[] = [
     createdAt: '2025-06-01T20:00:00.000Z',
     updatedAt: '2025-06-01T20:00:00.000Z',
   },
+  {
+    id: 'showcase-021',
+    title: 'Neo-Brutalism Prompt Gallery',
+    description: 'แกลเลอรี Prompt ดีไซน์ Neo-Brutalism ขอบดำหนา สีสันสดใสป๊อปๆ จัดเรียงซ้อนกันสไตล์คอมิกส์',
+    category: 'card',
+    prompt: 'Create a neo-brutalist prompt gallery interface. Use thick black borders, flat vibrant yellow accents, and hard offset shadows. Each card should have an author handle, publish date, a bold typography headline, a thumbnail image with a gradient overlay, a prompt description, a dark monolith container for the underlying prompt text with a monospace font and a "copy" button, and a footer with a "Try it out" button and share icons. Add a header with a search bar and tag count filters styled in the same bold brutalist aesthetic.',
+    thumbnailUrl: '/thumbnails/neo-brutalism.webp',
+    tags: ['brutalism', 'neo-brutalism', 'gallery', 'prompt'],
+    difficulty: 'advanced',
+    isFeatured: true,
+    isActive: true,
+    createdAt: '2025-06-02T10:00:00.000Z',
+    updatedAt: '2025-06-02T10:00:00.000Z',
+  },
 ];
 
 export class StaticShowcaseItemRepository implements IShowcaseItemRepository {

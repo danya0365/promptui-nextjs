@@ -194,14 +194,14 @@ export function GalleryView({ initialViewModel }: GalleryViewProps) {
         {/* ═══ Results Count ═══ */}
         <div className="flex items-center justify-between mb-6">
           <p className="text-sm text-muted">
-            แสดง <span className="font-semibold text-foreground">{state.filteredItems.length}</span> รายการ
+            แสดง <span className="font-semibold text-foreground">{state.isClientFilterActive ? state.totalFilteredCount : state.viewModel.totalCount}</span> รายการ
           </p>
         </div>
 
         {/* ═══ Showcase Grid / List ═══ */}
         {state.viewMode === 'grid' ? (
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {state.filteredItems.map((item, index) => (
+            {state.displayedItems.map((item, index) => (
               <ScrollReveal key={item.id} delay={index * 60}>
                 <ShowcaseGridCard
                   item={item}
@@ -214,7 +214,7 @@ export function GalleryView({ initialViewModel }: GalleryViewProps) {
           </div>
         ) : (
           <div className="flex flex-col gap-4">
-            {state.filteredItems.map((item, index) => (
+            {state.displayedItems.map((item, index) => (
               <ScrollReveal key={item.id} delay={index * 40}>
                 <ShowcaseListCard
                   item={item}
@@ -228,7 +228,7 @@ export function GalleryView({ initialViewModel }: GalleryViewProps) {
         )}
 
         {/* ═══ Empty ═══ */}
-        {state.filteredItems.length === 0 && (
+        {state.displayedItems.length === 0 && (
           <div className="text-center py-20">
             <p className="text-5xl mb-4">🔍</p>
             <p className="text-lg font-medium text-foreground mb-2">
@@ -250,61 +250,93 @@ export function GalleryView({ initialViewModel }: GalleryViewProps) {
         )}
 
         {/* ═══ Pagination ═══ */}
-        {state.viewModel && state.viewModel.totalCount > state.viewModel.perPage && (
-          <div className="flex justify-center items-center gap-2 mt-12 mb-8">
-            {/* Prev Button */}
-            <Link
-              href={
-                    state.viewModel.page > 1
-                      ? `/gallery?page=${state.viewModel.page - 1}${
-                          state.activeCategory !== 'all'
-                            ? `&category=${state.activeCategory}`
-                            : ''
+        {(() => {
+          if (!state.viewModel) return null;
+          
+          const totalPages = state.isClientFilterActive 
+            ? Math.ceil(state.totalFilteredCount / state.viewModel.perPage)
+            : Math.ceil(state.viewModel.totalCount / state.viewModel.perPage);
+            
+          if (totalPages <= 1) return null;
+          
+          const currentPage = state.isClientFilterActive ? state.clientPage : state.viewModel.page;
+          const hasPrev = currentPage > 1;
+          const hasNext = currentPage < totalPages;
+          
+          return (
+            <div className="flex justify-center items-center gap-2 mt-12 mb-8">
+              {/* Prev Button */}
+              {state.isClientFilterActive ? (
+                <button
+                  onClick={() => actions.setClientPage(currentPage - 1)}
+                  disabled={!hasPrev}
+                  className={`px-4 py-2 rounded-lg border text-sm font-medium transition-colors ${
+                    hasPrev
+                      ? 'bg-surface border-border hover:border-primary hover:text-primary cursor-pointer'
+                      : 'bg-surface-alt border-transparent text-muted cursor-not-allowed opacity-50'
+                  }`}
+                >
+                  ← ก่อนหน้า
+                </button>
+              ) : (
+                <Link
+                  href={
+                    hasPrev
+                      ? `/gallery?page=${currentPage - 1}${
+                          state.activeCategory !== 'all' ? `&category=${state.activeCategory}` : ''
                         }`
                       : '#'
                   }
                   className={`px-4 py-2 rounded-lg border text-sm font-medium transition-colors ${
-                    state.viewModel.page > 1
+                    hasPrev
                       ? 'bg-surface border-border hover:border-primary hover:text-primary'
                       : 'bg-surface-alt border-transparent text-muted cursor-not-allowed opacity-50 pointer-events-none'
                   }`}
-                  aria-disabled={state.viewModel.page <= 1}
+                  aria-disabled={!hasPrev}
                 >
                   ← ก่อนหน้า
                 </Link>
+              )}
 
-                <div className="text-sm font-medium text-muted px-2">
-                  หน้า {state.viewModel.page} /{' '}
-                  {Math.ceil(state.viewModel.totalCount / state.viewModel.perPage)}
-                </div>
+              <div className="text-sm font-medium text-muted px-2">
+                หน้า {currentPage} / {totalPages}
+              </div>
 
-                {/* Next Button */}
+              {/* Next Button */}
+              {state.isClientFilterActive ? (
+                <button
+                  onClick={() => actions.setClientPage(currentPage + 1)}
+                  disabled={!hasNext}
+                  className={`px-4 py-2 rounded-lg border text-sm font-medium transition-colors ${
+                    hasNext
+                      ? 'bg-surface border-border hover:border-primary hover:text-primary cursor-pointer'
+                      : 'bg-surface-alt border-transparent text-muted cursor-not-allowed opacity-50'
+                  }`}
+                >
+                  ถัดไป →
+                </button>
+              ) : (
                 <Link
                   href={
-                    state.viewModel.page <
-                    Math.ceil(state.viewModel.totalCount / state.viewModel.perPage)
-                      ? `/gallery?page=${state.viewModel.page + 1}${
-                          state.activeCategory !== 'all'
-                            ? `&category=${state.activeCategory}`
-                            : ''
+                    hasNext
+                      ? `/gallery?page=${currentPage + 1}${
+                          state.activeCategory !== 'all' ? `&category=${state.activeCategory}` : ''
                         }`
                       : '#'
                   }
                   className={`px-4 py-2 rounded-lg border text-sm font-medium transition-colors ${
-                    state.viewModel.page <
-                    Math.ceil(state.viewModel.totalCount / state.viewModel.perPage)
+                    hasNext
                       ? 'bg-surface border-border hover:border-primary hover:text-primary'
                       : 'bg-surface-alt border-transparent text-muted cursor-not-allowed opacity-50 pointer-events-none'
                   }`}
-                  aria-disabled={
-                    state.viewModel.page >=
-                    Math.ceil(state.viewModel.totalCount / state.viewModel.perPage)
-                  }
+                  aria-disabled={!hasNext}
                 >
                   ถัดไป →
                 </Link>
-              </div>
-            )}
+              )}
+            </div>
+          );
+        })()}
       </div>
     </div>
   );

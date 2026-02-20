@@ -16,6 +16,7 @@ export type AiModel =
   | 'claude-4-sonnet'
   | 'gemini-3-preview'
   | 'gemini-3-pro'
+  | 'gemini-3.1-pro'
   | 'gemini-2.5-pro'
   | 'gemini-2.5-flash'
   | 'deepseek-v3'

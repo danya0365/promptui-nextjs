@@ -15,6 +15,10 @@ export interface GalleryPresenterState {
   activeDifficulty: string;
   activeAiModel: string;
   filteredItems: ShowcaseItem[];
+  displayedItems: ShowcaseItem[];
+  totalFilteredCount: number;
+  clientPage: number;
+  isClientFilterActive: boolean;
   copiedId: string | null;
   viewMode: 'grid' | 'list';
   /** Map of showcaseId → live previews for badge rendering */
@@ -27,6 +31,7 @@ export interface GalleryPresenterActions {
   setActiveCategory: (category: string) => void;
   setActiveDifficulty: (difficulty: string) => void;
   setActiveAiModel: (agent: string) => void;
+  setClientPage: (page: number) => void;
   copyPrompt: (item: ShowcaseItem) => void;
   setViewMode: (mode: 'grid' | 'list') => void;
   setError: (error: string | null) => void;
@@ -51,7 +56,8 @@ export function useGalleryPresenter(
   const [viewModel, setViewModel] = useState<GalleryViewModel | null>(
     initialViewModel || null
   );
-  const [allItems, setAllItems] = useState<ShowcaseItem[]>(
+  
+  const [fullCategoryItems, setFullCategoryItems] = useState<ShowcaseItem[]>(
     initialViewModel?.items || []
   );
   const [loading, setLoading] = useState(!initialViewModel);
@@ -62,54 +68,67 @@ export function useGalleryPresenter(
   );
   const [activeDifficulty, setActiveDifficultyState] = useState('all');
   const [activeAiModel, setActiveAiModelState] = useState('all');
-  const [filteredItems, setFilteredItems] = useState<ShowcaseItem[]>(
-    initialViewModel?.items || []
-  );
   const [copiedId, setCopiedId] = useState<string | null>(null);
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
+  const [clientPage, setClientPage] = useState(1);
   const [livePreviewMap, setLivePreviewMap] = useState<
     Record<string, ShowcaseLivePreview[]>
   >(initialViewModel?.livePreviewMap || {});
+  
   // Track agent-filtered showcase IDs (empty = show all)
-  const [agentShowcaseIds, setAgentShowcaseIds] = useState<string[] | null>(
-    null
-  );
+  const [agentShowcaseIds, setAgentShowcaseIds] = useState<string[] | null>(null);
 
-  /**
-   * Apply search, difficulty, and agent filter client-side
-   */
-  const applyFilters = useCallback(
-    (
-      items: ShowcaseItem[],
-      search: string,
-      difficulty: string,
-      agentIds: string[] | null
-    ) => {
-      let result = items;
-
-      if (search.trim()) {
-        const q = search.toLowerCase();
-        result = result.filter(
-          (item) =>
-            item.title.toLowerCase().includes(q) ||
-            item.description.toLowerCase().includes(q) ||
-            item.tags.some((t) => t.toLowerCase().includes(q))
-        );
+  // Fetch full category items to allow accurate client-side filtering cross-pages
+  useEffect(() => {
+    const category = viewModel?.activeCategory || 'all';
+    presenter.getItemsByCategory(category).then(items => {
+      if (isMountedRef.current) {
+        setFullCategoryItems(items);
       }
+    }).catch(console.error);
+  }, [presenter, viewModel?.activeCategory]);
 
-      if (difficulty !== 'all') {
-        result = result.filter((item) => item.difficulty === difficulty);
-      }
+  const isClientFilterActive = !(!searchTerm.trim() && activeDifficulty === 'all' && agentShowcaseIds === null && activeCategory === (viewModel?.activeCategory || 'all'));
 
-      // Agent filter: only show showcases that have a live preview from this agent
-      if (agentIds !== null) {
-        result = result.filter((item) => agentIds.includes(item.id));
-      }
+  const filteredItems = useMemo(() => {
+    // If no client-side filters are active, show the paginated items from server
+    if (!isClientFilterActive) {
+      return viewModel?.items || [];
+    }
 
-      return result;
-    },
-    []
-  );
+    let result = fullCategoryItems;
+
+    if (searchTerm.trim()) {
+      const q = searchTerm.toLowerCase();
+      result = result.filter(
+        (item) =>
+          item.title.toLowerCase().includes(q) ||
+          item.description.toLowerCase().includes(q) ||
+          item.tags.some((t) => t.toLowerCase().includes(q))
+      );
+    }
+
+    if (activeDifficulty !== 'all') {
+      result = result.filter((item) => item.difficulty === activeDifficulty);
+    }
+
+    if (agentShowcaseIds !== null) {
+      result = result.filter((item) => agentShowcaseIds.includes(item.id));
+    }
+
+    return result;
+  }, [isClientFilterActive, fullCategoryItems, viewModel?.items, searchTerm, activeDifficulty, agentShowcaseIds, activeCategory, viewModel?.activeCategory]);
+
+  const displayedItems = useMemo(() => {
+    if (!isClientFilterActive) return filteredItems;
+    const perPage = viewModel?.perPage || 12;
+    return filteredItems.slice((clientPage - 1) * perPage, clientPage * perPage);
+  }, [isClientFilterActive, filteredItems, clientPage, viewModel?.perPage]);
+
+  // Reset page when filters change
+  useEffect(() => {
+    setClientPage(1);
+  }, [searchTerm, activeDifficulty, agentShowcaseIds, activeCategory]);
 
   /**
    * Load initial data
@@ -128,11 +147,8 @@ export function useGalleryPresenter(
       ]);
       if (isMountedRef.current) {
         setViewModel(vm);
-        setAllItems(items);
+        setFullCategoryItems(items);
         setLivePreviewMap(vm.livePreviewMap);
-        setFilteredItems(
-          applyFilters(items, searchTerm, activeDifficulty, agentShowcaseIds)
-        );
       }
     } catch (err) {
       if (err instanceof Error && err.name === 'AbortError') return;
@@ -142,7 +158,7 @@ export function useGalleryPresenter(
     } finally {
       if (isMountedRef.current) setLoading(false);
     }
-  }, [presenter, applyFilters, searchTerm, activeDifficulty, agentShowcaseIds]);
+  }, [presenter]);
 
   /**
    * Category filter (uses repository)
@@ -153,43 +169,28 @@ export function useGalleryPresenter(
       try {
         const items = await presenter.getItemsByCategory(category);
         if (isMountedRef.current) {
-          setAllItems(items);
-          setFilteredItems(
-            applyFilters(items, searchTerm, activeDifficulty, agentShowcaseIds)
-          );
+          setFullCategoryItems(items);
         }
       } catch (err) {
         console.error('Error filtering:', err);
       }
     },
-    [presenter, applyFilters, searchTerm, activeDifficulty, agentShowcaseIds]
+    [presenter]
   );
 
   /**
    * Search filter (client-side)
    */
-  const setSearchTerm = useCallback(
-    (term: string) => {
-      setSearchTermState(term);
-      setFilteredItems(
-        applyFilters(allItems, term, activeDifficulty, agentShowcaseIds)
-      );
-    },
-    [allItems, activeDifficulty, agentShowcaseIds, applyFilters]
-  );
+  const setSearchTerm = useCallback((term: string) => {
+    setSearchTermState(term);
+  }, []);
 
   /**
    * Difficulty filter (client-side)
    */
-  const setActiveDifficulty = useCallback(
-    (difficulty: string) => {
-      setActiveDifficultyState(difficulty);
-      setFilteredItems(
-        applyFilters(allItems, searchTerm, difficulty, agentShowcaseIds)
-      );
-    },
-    [allItems, searchTerm, agentShowcaseIds, applyFilters]
-  );
+  const setActiveDifficulty = useCallback((difficulty: string) => {
+    setActiveDifficultyState(difficulty);
+  }, []);
 
   /**
    * AI Agent filter — fetches showcase IDs with previews from this agent
@@ -200,9 +201,6 @@ export function useGalleryPresenter(
 
       if (agent === 'all') {
         setAgentShowcaseIds(null);
-        setFilteredItems(
-          applyFilters(allItems, searchTerm, activeDifficulty, null)
-        );
         return;
       }
 
@@ -210,15 +208,12 @@ export function useGalleryPresenter(
         const ids = await presenter.getShowcaseIdsByModel(agent);
         if (isMountedRef.current) {
           setAgentShowcaseIds(ids);
-          setFilteredItems(
-            applyFilters(allItems, searchTerm, activeDifficulty, ids)
-          );
         }
       } catch (err) {
         console.error('Error filtering by agent:', err);
       }
     },
-    [presenter, allItems, searchTerm, activeDifficulty, applyFilters]
+    [presenter]
   );
 
   /**
@@ -237,17 +232,8 @@ export function useGalleryPresenter(
   useEffect(() => {
     if (initialViewModel) {
       setViewModel(initialViewModel);
-      setAllItems(initialViewModel.items);
-      setFilteredItems(
-        applyFilters(
-          initialViewModel.items,
-          searchTerm,
-          activeDifficulty,
-          agentShowcaseIds
-        )
-      );
     }
-  }, [initialViewModel, applyFilters, searchTerm, activeDifficulty, agentShowcaseIds]);
+  }, [initialViewModel]);
 
   // Load on mount if no data
   useEffect(() => {
@@ -273,6 +259,10 @@ export function useGalleryPresenter(
       activeDifficulty,
       activeAiModel,
       filteredItems,
+      displayedItems,
+      totalFilteredCount: filteredItems.length,
+      clientPage,
+      isClientFilterActive,
       copiedId,
       viewMode,
       livePreviewMap,
@@ -283,6 +273,7 @@ export function useGalleryPresenter(
       setActiveCategory,
       setActiveDifficulty,
       setActiveAiModel,
+      setClientPage,
       copyPrompt,
       setViewMode,
       setError,
