@@ -462,6 +462,20 @@ const SHOWCASE_ITEMS: ShowcaseItem[] = [
     createdAt: '2025-06-02T19:00:00.000Z',
     updatedAt: '2025-06-02T19:00:00.000Z',
   },
+  {
+    id: 'showcase-031',
+    title: 'Claymorphism Web Directory',
+    description: 'หน้าไดเรกทอรีสีพาสเทลและมิติแบบนุ่มนิ่ม (Claymorphism) โค้งมน เป็นมิตร',
+    category: 'dashboard',
+    prompt: 'Create a claymorphism-inspired web directory layout.\n\nStructure:\n- 3 column grid\n- Vertical soft 3D cards\n- Rounded tab navigation\n- Bubble-style counter badge\n- Soft floating featured label\n\nStyle:\n- Pastel background\n- Soft shadows with depth\n- Large rounded corners (24px)\n- Subtle embossed effects\n- Friendly rounded typography\n- Smooth spacing and layered surfaces\n\nMood:\nPlayful, friendly, modern digital product.',
+    thumbnailUrl: '/thumbnails/claymorphism-dir.webp',
+    tags: ['claymorphism', 'pastel', 'soft', '3d', 'friendly'],
+    difficulty: 'intermediate',
+    isFeatured: true,
+    isActive: true,
+    createdAt: '2025-06-02T20:00:00.000Z',
+    updatedAt: '2025-06-02T20:00:00.000Z',
+  },
 ];
 
 export class StaticShowcaseItemRepository implements IShowcaseItemRepository {

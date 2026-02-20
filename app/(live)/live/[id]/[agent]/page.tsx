@@ -6,6 +6,7 @@ import { AIChatInterfaceDemoGemini } from '@/src/presentation/components/demos/A
 import { BoldAIStartupDirectoryDemoGemini } from '@/src/presentation/components/demos/BoldAIStartupDirectoryDemoGemini';
 import { CalendarAppDemoGemini } from '@/src/presentation/components/demos/CalendarAppDemoGemini';
 import { CalmOrganicWebDirectoryDemoGemini } from '@/src/presentation/components/demos/CalmOrganicWebDirectoryDemoGemini';
+import { ClaymorphismDirectoryDemoGemini } from '@/src/presentation/components/demos/ClaymorphismDirectoryDemoGemini';
 import { CyberpunkDarkWebInterfaceDemoGemini } from '@/src/presentation/components/demos/CyberpunkDarkWebInterfaceDemoGemini';
 import { ECommerceAdminPanelDemoGemini } from '@/src/presentation/components/demos/ECommerceAdminPanelDemoGemini';
 import { FileManagerDemoGemini } from '@/src/presentation/components/demos/FileManagerDemoGemini';
@@ -76,6 +77,7 @@ const LIVE_PREVIEW_COMPONENTS: Record<string, Partial<Record<AiModel, React.Comp
   'showcase-028': { 'gemini-3.1-pro': BoldAIStartupDirectoryDemoGemini },
   'showcase-029': { 'gemini-3.1-pro': AcademicWebArchiveDemoGemini },
   'showcase-030': { 'gemini-3.1-pro': GamingPlatformDirectoryDemoGemini },
+  'showcase-031': { 'gemini-3.1-pro': ClaymorphismDirectoryDemoGemini },
 };
 
 interface LivePreviewPageProps {
