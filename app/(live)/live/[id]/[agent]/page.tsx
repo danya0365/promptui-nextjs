@@ -69,6 +69,7 @@ import { SaaSLandingPageDemoGemini } from '@/src/presentation/components/demos/S
 import { SelfEvolvingInterfaceDemoGemini } from '@/src/presentation/components/demos/SelfEvolvingInterfaceDemoGemini';
 import { SocialMediaAnalyticsDemoGemini } from '@/src/presentation/components/demos/SocialMediaAnalyticsDemoGemini';
 import { SpatialComputingDemoGemini } from '@/src/presentation/components/demos/SpatialComputingDemoGemini';
+import { SpatialDepthUIDemoGemini } from '@/src/presentation/components/demos/SpatialDepthUIDemoGemini';
 import { SuperintelligenceLaunchDemoGemini } from '@/src/presentation/components/demos/SuperintelligenceLaunchDemoGemini';
 import { SwissInspiredModernDirectoryDemoGemini } from '@/src/presentation/components/demos/SwissInspiredModernDirectoryDemoGemini';
 import { TacticalSimulationDemoGemini } from '@/src/presentation/components/demos/TacticalSimulationDemoGemini';
@@ -160,6 +161,7 @@ const LIVE_PREVIEW_COMPONENTS: Record<string, Partial<Record<AiModel, React.Comp
   'showcase-070': { 'gemini-3.1-pro': LivingAdaptiveCardsDemoGemini },
   'showcase-071': { 'gemini-3.1-pro': GodModeCreatorConsoleDemoGemini },
   'showcase-072': { 'gemini-3.1-pro': SpatialComputingDemoGemini },
+  'showcase-073': { 'gemini-3.1-pro': SpatialDepthUIDemoGemini },
 };
 
 interface LivePreviewPageProps {

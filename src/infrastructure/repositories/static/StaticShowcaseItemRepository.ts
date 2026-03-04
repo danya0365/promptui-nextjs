@@ -1050,6 +1050,20 @@ const SHOWCASE_ITEMS: ShowcaseItem[] = [
     createdAt: '2025-06-04T13:00:00.000Z',
     updatedAt: '2025-06-04T13:00:00.000Z',
   },
+  {
+    id: 'showcase-073',
+    title: 'Spatial Depth UI Experience',
+    description: 'จำลองเลเยอร์หน้าต่างแบบมีแกนความลึก (Z-Axis Depth Layers) กระจกฝ้ามีความโค้งเว้ามากพิเศษ (28px corner) พร้อมซ้อนผิวสัมผัส Texture แบบ Noise ให้ความรู้สึกเป็นวัสดุในโลกความจริง เมื่อไถ Scroll หน้าจอ กล้องจะเลื่อนเดินหน้า/ถอยหลังทะลุมิติแทนการเลื่อนหน้าเว็บ',
+    category: 'innovative',
+    prompt: 'Design a spatial UI system composed of floating layered panels.\n\nConcept:\nCards exist at different depth layers in a virtual room.\n\nVisual System:\n- Soft neutral background with ambient gradient\n- Semi-transparent layered glass panels\n- Realistic soft shadows\n- Smooth motion transitions\n- Subtle depth-of-field blur\n- White and silver color palette\n\nCard Design:\n- Large rounded corners (28px)\n- Glass blur surface with light noise texture\n- Thin soft border\n- Minimal typography hierarchy\n- Clean iconography\n\nInteraction:\n- Scroll shifts camera depth slightly\n- Hover gently rotates card in 3D\n- Active card floats closer to user\n\nMood:\nVisionOS-style spatial workspace.\nElegant and immersive.',
+    thumbnailUrl: '/thumbnails/spatial-depth-ui.png',
+    tags: ['spatial-ui', 'visionos', 'depth', '3d', 'scroll-driven', 'glassmorphism'],
+    difficulty: 'advanced',
+    isFeatured: true,
+    isActive: true,
+    createdAt: '2025-06-04T14:00:00.000Z',
+    updatedAt: '2025-06-04T14:00:00.000Z',
+  },
 ];
 
 export class StaticShowcaseItemRepository implements IShowcaseItemRepository {
