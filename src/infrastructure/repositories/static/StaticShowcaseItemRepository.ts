@@ -1106,6 +1106,20 @@ const SHOWCASE_ITEMS: ShowcaseItem[] = [
     createdAt: '2025-06-04T17:00:00.000Z',
     updatedAt: '2025-06-04T17:00:00.000Z',
   },
+  {
+    id: 'showcase-077',
+    title: 'Cyberpunk Hacker Terminal',
+    description: 'จำลองหน้าจอแฮกเกอร์ใต้ดินแบบดิบเถื่อนทลายกรอบความสวยงามเดิมๆ (Raw Terminal Aesthetic) ใช้พื้นหลังดำด้านตัดกับไฟขอบสีเขียวนีออน (Neon Edge) ดีไซน์ไร้ส่วนโค้งเว้า (0px Radius Sharp Edges) พ่วงด้วยฟิลเตอร์สัญญาณรบกวน Scanlines เมื่อเอาเมาส์จ่อ จะมีเซนเซอร์สแกนหาข้อมูลวิ่งขึ้นลง และเมื่อคลิกเจาะระบบ แผงนั้นจะขยายเป็นหน้าจอพิมพ์คำสั่ง Terminal ขนาดใหญ่',
+    category: 'dashboard',
+    prompt: 'Create a cyberpunk hacker-style card interface.\n\nConcept:\nA dark tactical dashboard built from sharp modular cards.\n\nVisual System:\n- Deep black background (#0B0F14)\n- Subtle grid overlay texture\n- Neon green accent lines\n- Monospaced typography\n- Flickering scanline effect\n\nCard Design:\n- Sharp rectangular edges (0px radius)\n- Thin glowing neon borders\n- Black matte panel surface\n- Small status indicators (online/offline)\n- Data ticker line inside cards\n- Expandable full-width terminal mode\n\nInteraction:\n- Hover triggers green data scan animation\n- Cards snap into rigid grid alignment\n- Clicking expands card into command console\n\nMood:\nUnderground terminal interface.\nClean but dangerous.',
+    thumbnailUrl: '/thumbnails/cyberpunk-hacker.png',
+    tags: ['cyberpunk', 'terminal', 'hacker', 'neon', 'dashboard', 'monospace'],
+    difficulty: 'intermediate',
+    isFeatured: true,
+    isActive: true,
+    createdAt: '2025-06-04T18:00:00.000Z',
+    updatedAt: '2025-06-04T18:00:00.000Z',
+  },
 ];
 
 export class StaticShowcaseItemRepository implements IShowcaseItemRepository {
