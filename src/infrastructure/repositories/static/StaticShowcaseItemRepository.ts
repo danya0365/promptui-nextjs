@@ -728,6 +728,20 @@ const SHOWCASE_ITEMS: ShowcaseItem[] = [
     createdAt: '2025-06-03T14:00:00.000Z',
     updatedAt: '2025-06-03T14:00:00.000Z',
   },
+  {
+    id: 'showcase-050',
+    title: 'Experimental Physics-Based UI',
+    description: 'ท้าทายกฎเกณฑ์ UI แบบดั้งเดิม เลย์เอาต์อิสระอิงฟิสิกส์ ลากวางกล่องโต้ตอบแบบมีน้ำหนัก แรงดึงดูด และแบ็กกราวด์ขยับได้',
+    category: 'landing-page',
+    prompt: 'Create an experimental web interface that breaks traditional UI rules.\n\nConcept:\nThe layout is fluid and physics-based.\n\nVisual System:\n- Floating elements that react to gravity and cursor movement\n- Magnetic snapping interactions\n- Soft glass textures with dynamic reflections\n- Gradient mesh background that shifts in real-time\n- Oversized kinetic typography\n- Unexpected layout shifts that feel intentional\n\nInteraction:\n- Scroll distorts perspective depth\n- UI elements stretch and compress subtly\n- Navigation appears contextually\n- Cards expand into immersive worlds\n\nMood:\nAvant-garde, visionary, art-meets-technology.\nFeels like the future of the web.',
+    thumbnailUrl: '/thumbnails/physics-ui.png',
+    tags: ['experimental', 'physics', 'interactive', 'gradient-mesh', 'avant-garde', 'draggable'],
+    difficulty: 'advanced',
+    isFeatured: true,
+    isActive: true,
+    createdAt: '2025-06-03T15:00:00.000Z',
+    updatedAt: '2025-06-03T15:00:00.000Z',
+  },
 ];
 
 export class StaticShowcaseItemRepository implements IShowcaseItemRepository {
