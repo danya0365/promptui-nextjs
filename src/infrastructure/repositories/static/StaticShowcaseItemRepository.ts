@@ -994,6 +994,20 @@ const SHOWCASE_ITEMS: ShowcaseItem[] = [
     createdAt: '2025-06-04T09:00:00.000Z',
     updatedAt: '2025-06-04T09:00:00.000Z',
   },
+  {
+    id: 'showcase-069',
+    title: '3D Digital Tile Physics',
+    description: 'สภาพแวดล้อมดิจิทัลลอยตัว 3 มิติ (3D Physics Environment) เมื่อไถเมาส์ (Scroll) มุมกล้องจะพุ่งทะลุอวกาศ ขยับเมาส์แล้วการ์ดข้อมูลจะโต้ตอบเอียงไปตามทิศทางเหมือนมีมวลและน้ำหนัก เมื่อคลิกการ์ด ฉากหลังจะเบลอแบบหน้าชัดหลังเบลอ (Depth-of-Field)',
+    category: 'experimental',
+    prompt: 'Create a 3D physics-based interface where cards exist as physical objects.\n\nConcept:\nCards float in space like digital tiles in a game engine.\n\nVisual System:\n- Deep space background\n- Soft global illumination lighting\n- Cards with realistic thickness\n- Subtle reflection and shadow\n- Depth-of-field camera focus\n\nCard Design:\n- 12px rounded corners\n- Soft layered surface texture\n- Strong image-based hero cards\n- Hover tilt effect\n- Cards slightly react to cursor force\n\nInteraction:\n- Scroll moves camera through floating card clusters\n- Clicking pulls card forward into focus\n- Background panels blur when one card expands\n\nMood:\nImmersive digital environment.\nGame-engine realism with modular UI.',
+    thumbnailUrl: '/thumbnails/digital-physics.png',
+    tags: ['3d', 'physics', 'parallax', 'glassmorphism', 'experimental', 'depth-of-field'],
+    difficulty: 'advanced',
+    isFeatured: true,
+    isActive: true,
+    createdAt: '2025-06-04T10:00:00.000Z',
+    updatedAt: '2025-06-04T10:00:00.000Z',
+  },
 ];
 
 export class StaticShowcaseItemRepository implements IShowcaseItemRepository {

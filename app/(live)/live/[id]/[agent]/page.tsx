@@ -21,6 +21,7 @@ import { ClaymorphismDirectoryDemoGemini } from '@/src/presentation/components/d
 import { CosmicInspiredWebDirectoryDemoGemini } from '@/src/presentation/components/demos/CosmicInspiredWebDirectoryDemoGemini';
 import { CyberpunkCityPlatformDemoGemini } from '@/src/presentation/components/demos/CyberpunkCityPlatformDemoGemini';
 import { CyberpunkDarkWebInterfaceDemoGemini } from '@/src/presentation/components/demos/CyberpunkDarkWebInterfaceDemoGemini';
+import { DigitalTilePhysicsDemoGemini } from '@/src/presentation/components/demos/DigitalTilePhysicsDemoGemini';
 import { DramaticFuturisticTechDirectoryDemoGemini } from '@/src/presentation/components/demos/DramaticFuturisticTechDirectoryDemoGemini';
 import { ECommerceAdminPanelDemoGemini } from '@/src/presentation/components/demos/ECommerceAdminPanelDemoGemini';
 import { EliteTechFoundersDirectoryDemoGemini } from '@/src/presentation/components/demos/EliteTechFoundersDirectoryDemoGemini';
@@ -152,6 +153,7 @@ const LIVE_PREVIEW_COMPONENTS: Record<string, Partial<Record<AiModel, React.Comp
   'showcase-066': { 'gemini-3.1-pro': RealityFractureDemoGemini },
   'showcase-067': { 'gemini-3.1-pro': FuturisticNeuralNetworkDemoGemini },
   'showcase-068': { 'gemini-3.1-pro': TacticalSimulationDemoGemini },
+  'showcase-069': { 'gemini-3.1-pro': DigitalTilePhysicsDemoGemini },
 };
 
 interface LivePreviewPageProps {
