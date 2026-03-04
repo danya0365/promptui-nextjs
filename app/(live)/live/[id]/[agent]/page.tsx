@@ -24,6 +24,7 @@ import { CyberpunkDarkWebInterfaceDemoGemini } from '@/src/presentation/componen
 import { DramaticFuturisticTechDirectoryDemoGemini } from '@/src/presentation/components/demos/DramaticFuturisticTechDirectoryDemoGemini';
 import { ECommerceAdminPanelDemoGemini } from '@/src/presentation/components/demos/ECommerceAdminPanelDemoGemini';
 import { EliteTechFoundersDirectoryDemoGemini } from '@/src/presentation/components/demos/EliteTechFoundersDirectoryDemoGemini';
+import { EvolvingAIPersonaDemoGemini } from '@/src/presentation/components/demos/EvolvingAIPersonaDemoGemini';
 import { ExperimentalPhysicsUIDemoGemini } from '@/src/presentation/components/demos/ExperimentalPhysicsUIDemoGemini';
 import { FileManagerDemoGemini } from '@/src/presentation/components/demos/FileManagerDemoGemini';
 import { FinanceBankingDashboardDemoGemini } from '@/src/presentation/components/demos/FinanceBankingDashboardDemoGemini';
@@ -140,6 +141,7 @@ const LIVE_PREVIEW_COMPONENTS: Record<string, Partial<Record<AiModel, React.Comp
   'showcase-060': { 'gemini-3.1-pro': BlackMirrorPsychologicalDemoGemini },
   'showcase-061': { 'gemini-3.1-pro': PostHumanTranscendenceDemoGemini },
   'showcase-062': { 'gemini-3.1-pro': LiveSimulationMatrixDemoGemini },
+  'showcase-063': { 'gemini-3.1-pro': EvolvingAIPersonaDemoGemini },
 };
 
 interface LivePreviewPageProps {

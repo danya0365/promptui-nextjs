@@ -910,6 +910,20 @@ const SHOWCASE_ITEMS: ShowcaseItem[] = [
     createdAt: '2025-06-04T03:00:00.000Z',
     updatedAt: '2025-06-04T03:00:00.000Z',
   },
+  {
+    id: 'showcase-063',
+    title: 'Evolving AI Persona',
+    description: 'เว็บที่ไม่ใช่แค่แอพ แต่เป็นสิ่งมีชีวิตดิจิทัล! AI จะทักทายคุณแบบค่อยๆ พิมพ์ โดยฉากหลัง (Neural Orb) จะเปลี่ยนสีและรูปแบบตามสถานะการณ์ (กำลังคิด, กำลังฟัง, ซ่อนตัว)',
+    category: 'landing-page',
+    prompt: 'Design a web platform that behaves like an evolving AI persona.\n\nConcept:\nThe interface talks back and adapts to the user.\n\nVisual System:\n- Minimal dark UI\n- Floating conversational modules\n- Soft glow highlights\n- Dynamic subtle gradient background\n- Calm futuristic typography\n\nInteraction:\n- AI greets user with contextual message\n- Layout rearranges based on interaction patterns\n- Sections appear conversationally instead of navigation-based\n- Visual tone shifts depending on engagement\n\nMood:\nPersonal, intelligent, slightly uncanny.\nFeels like interacting with a digital being.',
+    thumbnailUrl: '/thumbnails/ai-persona.png',
+    tags: ['ai', 'conversational', 'adaptive', 'dynamic-bg', 'minimalism'],
+    difficulty: 'advanced',
+    isFeatured: true,
+    isActive: true,
+    createdAt: '2025-06-04T04:00:00.000Z',
+    updatedAt: '2025-06-04T04:00:00.000Z',
+  },
 ];
 
 export class StaticShowcaseItemRepository implements IShowcaseItemRepository {
