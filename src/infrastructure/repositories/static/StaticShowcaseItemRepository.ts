@@ -1064,6 +1064,20 @@ const SHOWCASE_ITEMS: ShowcaseItem[] = [
     createdAt: '2025-06-04T14:00:00.000Z',
     updatedAt: '2025-06-04T14:00:00.000Z',
   },
+  {
+    id: 'showcase-074',
+    title: 'Minimal Spatial Dashboard',
+    description: 'แดชบอร์ดล่องหน สไตล์ Minimalist บนพื้นที่สีขาวไร้ขอบเขต (Infinite White Space) ตัวการ์ดเป็นกระจกฝ้าทรงโค้งมนใหญ่ (32px radius) แฝงความพรีเมียมด้วยดรอปชาโดว์ (Ambient shadows) และฟอนต์บางเฉียบ (Ultra-light typography) เมื่อกดดูรายละเอียด การ์ดจะขยายร่างผลักข้อมูลเส้นกราฟอื่นๆ ให้ถอยหลบไปด้านหลังอย่างนุ่มนวล',
+    category: 'dashboard',
+    prompt: 'Create a minimal spatial dashboard floating in infinite white space.\n\nConcept:\nCards float in a clean, endless environment.\n\nVisual System:\n- Pure white or very light gray space\n- Subtle soft ambient shadows\n- Clean glass material panels\n- Ultra-light typography\n- Minimal color accents (soft blue)\n\nCard Design:\n- 32px rounded corners\n- Frosted translucent material\n- Layered sub-cards within main cards\n- Smooth expansion animation\n- Spacious internal padding\n\nInteraction:\n- Cards reposition smoothly in 3D grid\n- Focus mode isolates selected card\n- Smooth physics-based transitions\n\nMood:\nFuture of productivity computing.\nLight. Airy. Intelligent.',
+    thumbnailUrl: '/thumbnails/minimal-spatial-dashboard.png',
+    tags: ['minimal', 'spatial', 'dashboard', 'white-space', 'clean', 'airy'],
+    difficulty: 'intermediate',
+    isFeatured: true,
+    isActive: true,
+    createdAt: '2025-06-04T15:00:00.000Z',
+    updatedAt: '2025-06-04T15:00:00.000Z',
+  },
 ];
 
 export class StaticShowcaseItemRepository implements IShowcaseItemRepository {

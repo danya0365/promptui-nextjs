@@ -52,6 +52,7 @@ import { LivingAdaptiveCardsDemoGemini } from '@/src/presentation/components/dem
 import { LuxuryMinimalEditorialDirectoryDemoGemini } from '@/src/presentation/components/demos/LuxuryMinimalEditorialDirectoryDemoGemini';
 import { MetaversePortalDemoGemini } from '@/src/presentation/components/demos/MetaversePortalDemoGemini';
 import { MinimalBlogLandingDemoGemini } from '@/src/presentation/components/demos/MinimalBlogLandingDemoGemini';
+import { MinimalSpatialDashboardDemoGemini } from '@/src/presentation/components/demos/MinimalSpatialDashboardDemoGemini';
 import { ModernDashboardDemoGemini } from '@/src/presentation/components/demos/ModernDashboardDemoGemini';
 import { MultiStepRegisterDemoGemini } from '@/src/presentation/components/demos/MultiStepRegisterDemoGemini';
 import { MusicPlayerDashboardDemoGemini } from '@/src/presentation/components/demos/MusicPlayerDashboardDemoGemini';
@@ -162,6 +163,7 @@ const LIVE_PREVIEW_COMPONENTS: Record<string, Partial<Record<AiModel, React.Comp
   'showcase-071': { 'gemini-3.1-pro': GodModeCreatorConsoleDemoGemini },
   'showcase-072': { 'gemini-3.1-pro': SpatialComputingDemoGemini },
   'showcase-073': { 'gemini-3.1-pro': SpatialDepthUIDemoGemini },
+  'showcase-074': { 'gemini-3.1-pro': MinimalSpatialDashboardDemoGemini },
 };
 
 interface LivePreviewPageProps {
