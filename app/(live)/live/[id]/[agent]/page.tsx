@@ -24,6 +24,7 @@ import { CosmicInspiredWebDirectoryDemoGemini } from '@/src/presentation/compone
 import { CyberpunkCityPlatformDemoGemini } from '@/src/presentation/components/demos/CyberpunkCityPlatformDemoGemini';
 import { CyberpunkDarkWebInterfaceDemoGemini } from '@/src/presentation/components/demos/CyberpunkDarkWebInterfaceDemoGemini';
 import { CyberpunkHackerTerminalDemoGemini } from '@/src/presentation/components/demos/CyberpunkHackerTerminalDemoGemini';
+import { CyberWarfareDashboardDemoGemini } from '@/src/presentation/components/demos/CyberWarfareDashboardDemoGemini';
 import { DigitalTilePhysicsDemoGemini } from '@/src/presentation/components/demos/DigitalTilePhysicsDemoGemini';
 import { DramaticFuturisticTechDirectoryDemoGemini } from '@/src/presentation/components/demos/DramaticFuturisticTechDirectoryDemoGemini';
 import { ECommerceAdminPanelDemoGemini } from '@/src/presentation/components/demos/ECommerceAdminPanelDemoGemini';
@@ -172,6 +173,7 @@ const LIVE_PREVIEW_COMPONENTS: Record<string, Partial<Record<AiModel, React.Comp
   'showcase-076': { 'gemini-3.1-pro': NextGenSpatialOSDemoGemini },
   'showcase-077': { 'gemini-3.1-pro': CyberpunkHackerTerminalDemoGemini },
   'showcase-078': { 'gemini-3.1-pro': AdvancedCyberpunkNeonDemoGemini },
+  'showcase-079': { 'gemini-3.1-pro': CyberWarfareDashboardDemoGemini },
 };
 
 interface LivePreviewPageProps {

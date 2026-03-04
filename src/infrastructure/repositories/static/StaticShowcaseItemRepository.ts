@@ -1134,6 +1134,20 @@ const SHOWCASE_ITEMS: ShowcaseItem[] = [
     createdAt: '2025-06-04T19:00:00.000Z',
     updatedAt: '2025-06-04T19:00:00.000Z',
   },
+  {
+    id: 'showcase-079',
+    title: 'Cyber Warfare Command Center',
+    description: 'เข้าสู่โหมดหน้าจอสั่งการสงครามไซเบอร์ (Cyber Warfare Dashboard) ที่ให้กลิ่นอายห้องบัญชาการทหาร ใช้เท็กซ์เจอร์ผิวโลหะ (Dark Steel) ตัดกับสีแดงแจ้งเตือนอันตราย (Red Alert) ฉากหลังมีเส้นแกนเรดาร์ขนาดใหญ่วิ่งกวาดหาสัญญาณศัตรู แอนิเมชันเปิดหน้าจอจำลองการ "ล็อกสลัก" ของแผ่นเหล็กกล้าเจาะระบบ และเมื่อโฮเวอร์จะมีหน้าต่าง Diagnostics แอบสไลด์ลงมาจากใต้การ์ด',
+    category: 'dashboard',
+    prompt: 'Create a high-risk cyber warfare dashboard built from modular cards.\n\nConcept:\nA military-grade hacker command center interface.\n\nVisual System:\n- Dark steel background\n- Red alert accent highlights\n- Subtle radar sweep animation\n- Horizontal data scan lines\n- Sharp industrial typography\n\nCard Design:\n- Heavy framed panels\n- Glowing red borders on active cards\n- Status bars and loading indicators\n- Terminal-style code blocks\n- Sliding mechanical panel expansion\n\nInteraction:\n- Cards lock into place with mechanical slide\n- Hover reveals hidden diagnostic layers\n- Clicking triggers alert animation\n\nMood:\nHigh-stakes cyber operation.\nTense, precise, mission-critical.',
+    thumbnailUrl: '/thumbnails/cyber-warfare.png',
+    tags: ['military', 'hacking', 'red-alert', 'radar', 'dashboard', 'industrial'],
+    difficulty: 'advanced',
+    isFeatured: true,
+    isActive: true,
+    createdAt: '2025-06-04T20:00:00.000Z',
+    updatedAt: '2025-06-04T20:00:00.000Z',
+  },
 ];
 
 export class StaticShowcaseItemRepository implements IShowcaseItemRepository {
