@@ -208,7 +208,7 @@ export const FuturisticSpacePlatformDemoGemini: React.FC = () => {
         }
 
         /* Cosmic Background Effects */
-        .ambinet-nebula-blue, .ambient-nebula-purple {
+        .ambient-nebula-blue, .ambient-nebula-purple {
           position: fixed;
           border-radius: 50%;
           filter: blur(120px);
