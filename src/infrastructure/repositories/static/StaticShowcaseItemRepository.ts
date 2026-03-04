@@ -5,12 +5,12 @@
  */
 
 import {
-    CreateShowcaseItemData,
-    IShowcaseItemRepository,
-    PaginatedResult,
-    ShowcaseItem,
-    ShowcaseStats,
-    UpdateShowcaseItemData,
+  CreateShowcaseItemData,
+  IShowcaseItemRepository,
+  PaginatedResult,
+  ShowcaseItem,
+  ShowcaseStats,
+  UpdateShowcaseItemData,
 } from '@/src/application/repositories/IShowcaseItemRepository';
 
 const SHOWCASE_ITEMS: ShowcaseItem[] = [
@@ -685,6 +685,20 @@ const SHOWCASE_ITEMS: ShowcaseItem[] = [
     isActive: true,
     createdAt: '2025-06-03T11:00:00.000Z',
     updatedAt: '2025-06-03T11:00:00.000Z',
+  },
+  {
+    id: 'showcase-047',
+    title: 'Immersive AI Consciousness Experience',
+    description: 'แพลตฟอร์มประสบการณ์เว็บไซต์ AI ระดับ Superintelligence ให้ความรู้สึกเหมือนกำลังสื่อสารกับสิ่งมีชีวิตที่คิดได้เอง',
+    category: 'landing-page',
+    prompt: 'Create a fully immersive AI consciousness web experience.\n\nConcept:\nThe website feels alive. It reacts to the user\'s cursor, scroll behavior, and time on page.\n\nVisual System:\n- Infinite dark space background with animated neural constellations\n- Real-time particle simulations forming abstract intelligence patterns\n- Floating glass UI fragments that assemble dynamically\n- Subtle volumetric light beams\n- Electric blue, ultraviolet, and white light accents\n- Dynamic typography that subtly shifts weight and spacing\n\nInteraction:\n- Cursor creates ripple effects in space\n- Sections morph instead of traditional scrolling\n- AI voice-like text animation\n- UI elements fade into existence as if “thinking”\n\nMood:\nThe user feels like entering a living superintelligence.\nCinematic, mysterious, transcendent.',
+    thumbnailUrl: '/thumbnails/immersive-ai-consciousness.png',
+    tags: ['ai', 'immersive', 'consciousness', 'particles', 'animated', 'cinematic'],
+    difficulty: 'advanced',
+    isFeatured: true,
+    isActive: true,
+    createdAt: '2025-06-03T12:00:00.000Z',
+    updatedAt: '2025-06-03T12:00:00.000Z',
   },
 ];
 
