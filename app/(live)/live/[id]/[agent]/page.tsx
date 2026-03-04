@@ -59,6 +59,7 @@ import { MultiStepRegisterDemoGemini } from '@/src/presentation/components/demos
 import { MusicPlayerDashboardDemoGemini } from '@/src/presentation/components/demos/MusicPlayerDashboardDemoGemini';
 import { NeoBrutalistPromptGalleryDemoGemini } from '@/src/presentation/components/demos/NeoBrutalistPromptGalleryDemoGemini';
 import { NeonDashboardWidgetsDemoGemini } from '@/src/presentation/components/demos/NeonDashboardWidgetsDemoGemini';
+import { NextGenSpatialOSDemoGemini } from '@/src/presentation/components/demos/NextGenSpatialOSDemoGemini';
 import { PhysicsDrivenWebWorldDemoGemini } from '@/src/presentation/components/demos/PhysicsDrivenWebWorldDemoGemini';
 import { PostHumanInterfaceDemoGemini } from '@/src/presentation/components/demos/PostHumanInterfaceDemoGemini';
 import { PostHumanTranscendenceDemoGemini } from '@/src/presentation/components/demos/PostHumanTranscendenceDemoGemini';
@@ -166,6 +167,7 @@ const LIVE_PREVIEW_COMPONENTS: Record<string, Partial<Record<AiModel, React.Comp
   'showcase-073': { 'gemini-3.1-pro': SpatialDepthUIDemoGemini },
   'showcase-074': { 'gemini-3.1-pro': MinimalSpatialDashboardDemoGemini },
   'showcase-075': { 'gemini-3.1-pro': CinematicSpatialDemoGemini },
+  'showcase-076': { 'gemini-3.1-pro': NextGenSpatialOSDemoGemini },
 };
 
 interface LivePreviewPageProps {

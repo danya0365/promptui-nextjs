@@ -1092,6 +1092,20 @@ const SHOWCASE_ITEMS: ShowcaseItem[] = [
     createdAt: '2025-06-04T16:00:00.000Z',
     updatedAt: '2025-06-04T16:00:00.000Z',
   },
+  {
+    id: 'showcase-076',
+    title: 'Next-Gen Spatial OS Interface',
+    description: 'ระบบปฏิบัติการยุคถัดไป (Post-desktop OS) แกรนด์วอลล์ 3D Grid ที่หันตามเมาส์ของคุณ (Magnetic Spatial Grid) ภายในหน้าต่างกระจก 30px มีหน้าต่างเลเยอร์ซ้อนกันแบบ Multi-layer panel แสดงความลึกจริง (True Z-Axis Depth) เมื่อคลิกดูรายละเอียด แผงควบคุมจะพุ่งเข้าหาคุณเป็น Immersive Window ดันเลเยอร์อื่นๆ ให้ถอยกลืนหายไปในความมืด',
+    category: 'innovative',
+    prompt: 'Design a next-generation spatial OS interface composed of floating control cards.\n\nConcept:\nA futuristic operating system where cards behave like spatial objects.\n\nVisual System:\n- Infinite depth environment\n- Layered transparent glass surfaces\n- Dynamic light refraction\n- Subtle ambient particles\n- Neutral palette with soft blue accents\n- Ultra-refined typography\n\nCard Design:\n- 30px rounded corners\n- Multi-layer glass depth\n- Floating metric panels\n- Expandable nested cards\n- Smooth magnetic alignment animations\n\nInteraction:\n- Cards magnetically snap into spatial grid\n- Hover introduces slight tilt and light shift\n- Active card expands into immersive spatial window\n- Background depth increases subtly during focus\n\nMood:\nPost-desktop computing.\nPure spatial intelligence.',
+    thumbnailUrl: '/thumbnails/nextgen-spatial-os.png',
+    tags: ['spatial-os', '3d-grid', 'post-desktop', 'glassmorphism', 'nested-cards', 'futuristic'],
+    difficulty: 'advanced',
+    isFeatured: true,
+    isActive: true,
+    createdAt: '2025-06-04T17:00:00.000Z',
+    updatedAt: '2025-06-04T17:00:00.000Z',
+  },
 ];
 
 export class StaticShowcaseItemRepository implements IShowcaseItemRepository {
