@@ -41,6 +41,7 @@ import { FuturisticSpacePlatformDemoGemini } from '@/src/presentation/components
 import { GalacticLaunchSystemDemoGemini } from '@/src/presentation/components/demos/GalacticLaunchSystemDemoGemini';
 import { GamingPlatformDirectoryDemoGemini } from '@/src/presentation/components/demos/GamingPlatformDirectoryDemoGemini';
 import { GenerativeAIVisualsDemoGemini } from '@/src/presentation/components/demos/GenerativeAIVisualsDemoGemini';
+import { GestureDrivenHolographicUIDemoGemini } from '@/src/presentation/components/demos/GestureDrivenHolographicUIDemoGemini';
 import { GlassmorphismLoginDemo } from '@/src/presentation/components/demos/GlassmorphismLoginDemo';
 import { GlassmorphismLoginDemoGemini } from '@/src/presentation/components/demos/GlassmorphismLoginDemoGemini';
 import { GlobalEventPlatformDemoGemini } from '@/src/presentation/components/demos/GlobalEventPlatformDemoGemini';
@@ -182,6 +183,7 @@ const LIVE_PREVIEW_COMPONENTS: Record<string, Partial<Record<AiModel, React.Comp
   'showcase-081': { 'gemini-3.1-pro': GodLevelCyberpunkHackerDemoGemini },
   'showcase-082': { 'gemini-3.1-pro': MinorityReportHologramDemoGemini },
   'showcase-083': { 'gemini-3.1-pro': PredictiveAnalysisHologramDemoGemini },
+  'showcase-084': { 'gemini-3.1-pro': GestureDrivenHolographicUIDemoGemini },
 };
 
 interface LivePreviewPageProps {

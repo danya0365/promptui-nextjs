@@ -1204,6 +1204,20 @@ const SHOWCASE_ITEMS: ShowcaseItem[] = [
     createdAt: '2025-06-05T00:00:00.000Z',
     updatedAt: '2025-06-05T00:00:00.000Z',
   },
+  {
+    id: 'showcase-084',
+    title: 'Gesture-Driven Hologram UI',
+    description: 'จำลองหน้าจอโฮโลแกรมที่ควบคุมด้วยท่าทาง (Gesture-Driven Interface) โดดเด่นด้วยโทนสีม่วง-กรมท่าเข้ม (Violet/Slate tones) การ์ดโปร่งแสงเนื้อละเอียดพร้อม Typography เปล่งแสง (Light-based typography) คีย์หลักของ Interaction นี้คือเมื่อ "คลิก" แทนที่การ์ดจะขยายใหญ่แบบปกติ การ์ดจะดันตัวเองไปข้างๆ และทำการ "แยกส่วน (Splits)" เปิดพาเนลย่อยๆ ออกมาด้านข้าง ราวกับคุณใช้มือปัดแบะข้อมูลออกกลางอากาศ',
+    category: 'space',
+    prompt: 'Create a gesture-driven holographic UI made of floating spatial cards.\n\nConcept:\nThe interface feels like it responds to hand gestures.\n\nVisual System:\n- Dark atmospheric background\n- Floating translucent panels in multiple depth layers\n- Light-based typography\n- Subtle glow pulse animation\n- Minimal UI chrome\n\nCard Design:\n- Rounded transparent light frames\n- Floating header bars\n- Expandable holographic detail layers\n- Semi-transparent content blocks\n- Smooth fade-in/out transitions\n\nInteraction:\n- Cards slide smoothly in 3D space\n- Hover adds subtle lift and glow\n- Clicking splits card into layered sub-panels\n- Scroll gently repositions spatial layout\n\nMood:\nHuman-computer gesture interaction.\nElegant and advanced.',
+    thumbnailUrl: '/thumbnails/gesture-driven-hologram.png',
+    tags: ['hologram', 'gesture', 'spatial-ui', 'transparent', 'futuristic', 'interaction'],
+    difficulty: 'advanced',
+    isFeatured: true,
+    isActive: true,
+    createdAt: '2025-06-05T01:00:00.000Z',
+    updatedAt: '2025-06-05T01:00:00.000Z',
+  },
 ];
 
 export class StaticShowcaseItemRepository implements IShowcaseItemRepository {
