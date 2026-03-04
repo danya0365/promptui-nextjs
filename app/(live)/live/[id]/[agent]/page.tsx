@@ -43,6 +43,7 @@ import { HypercarLuxuryPlatformDemoGemini } from '@/src/presentation/components/
 import { ImmersiveAIConsciousnessDemoGemini } from '@/src/presentation/components/demos/ImmersiveAIConsciousnessDemoGemini';
 import { IoTSmartHomeDashboardDemoGemini } from '@/src/presentation/components/demos/IoTSmartHomeDashboardDemoGemini';
 import { KanbanBoardDemoGemini } from '@/src/presentation/components/demos/KanbanBoardDemoGemini';
+import { LiveSimulationMatrixDemoGemini } from '@/src/presentation/components/demos/LiveSimulationMatrixDemoGemini';
 import { LuxuryMinimalEditorialDirectoryDemoGemini } from '@/src/presentation/components/demos/LuxuryMinimalEditorialDirectoryDemoGemini';
 import { MetaversePortalDemoGemini } from '@/src/presentation/components/demos/MetaversePortalDemoGemini';
 import { MinimalBlogLandingDemoGemini } from '@/src/presentation/components/demos/MinimalBlogLandingDemoGemini';
@@ -138,6 +139,7 @@ const LIVE_PREVIEW_COMPONENTS: Record<string, Partial<Record<AiModel, React.Comp
   'showcase-059': { 'gemini-3.1-pro': CyberpunkCityPlatformDemoGemini },
   'showcase-060': { 'gemini-3.1-pro': BlackMirrorPsychologicalDemoGemini },
   'showcase-061': { 'gemini-3.1-pro': PostHumanTranscendenceDemoGemini },
+  'showcase-062': { 'gemini-3.1-pro': LiveSimulationMatrixDemoGemini },
 };
 
 interface LivePreviewPageProps {

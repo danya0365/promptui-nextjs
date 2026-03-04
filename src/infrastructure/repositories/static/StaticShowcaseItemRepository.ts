@@ -896,6 +896,20 @@ const SHOWCASE_ITEMS: ShowcaseItem[] = [
     createdAt: '2025-06-04T02:00:00.000Z',
     updatedAt: '2025-06-04T02:00:00.000Z',
   },
+  {
+    id: 'showcase-062',
+    title: 'Live Simulation Matrix',
+    description: 'จำลองการแฮกเข้าสู่โลกเดอะเมทริกซ์ เริ่มต้นด้วยหน้าพิมโค้ด Boot ระบบ ตามด้วยฝนดิจิทัลสีเขียวร่วงหล่น (Canvas) และเอฟเฟคถอดรหัสลับเมื่อนำเมาส์ไปชี้',
+    category: 'landing-page',
+    prompt: 'Create a web experience that feels like entering a live simulation.\n\nConcept:\nThe interface boots up like a classified system connecting to reality.\n\nVisual System:\n- Black background with cascading green code rain\n- Subtle CRT scanline texture\n- Monospaced terminal typography\n- Flickering status diagnostics\n- Glitch-based transitions\n- Minimal UI panels emerging from code\n\nInteraction:\n- Page loads with system boot sequence\n- Scroll reveals deeper simulation layers\n- Hover triggers data decryption animation\n- Sections labeled as "Layer 01", "Layer 02", "Access Node"\n\nMood:\nSecretive, powerful, forbidden knowledge.\nFeels like accessing the core of the Matrix.',
+    thumbnailUrl: '/thumbnails/matrix.png',
+    tags: ['canvas', 'matrix', 'terminal', 'glitch', 'hacker', 'code-rain'],
+    difficulty: 'advanced',
+    isFeatured: true,
+    isActive: true,
+    createdAt: '2025-06-04T03:00:00.000Z',
+    updatedAt: '2025-06-04T03:00:00.000Z',
+  },
 ];
 
 export class StaticShowcaseItemRepository implements IShowcaseItemRepository {
