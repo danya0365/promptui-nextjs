@@ -444,28 +444,45 @@ function ShowcaseGridCard({
     <AnimatedCard>
       <Link href={`/gallery/${item.id}`} className="block">
         {/* Thumbnail */}
-        <div className="relative h-44 bg-gradient-to-br from-primary/20 via-accent/10 to-primary/5 flex items-center justify-center overflow-hidden group">
-          <div className="text-5xl opacity-40 group-hover:opacity-60 transition-opacity group-hover:scale-110 transform duration-500">
-            {siteConfig.categories.find((c) => c.id === item.category)?.icon || '🎨'}
-          </div>
+        <div className="relative h-44 bg-surface flex items-center justify-center overflow-hidden group">
+          {livePreviews.length > 0 ? (
+            <div className="absolute top-0 left-0 w-[400%] h-[400%] origin-top-left scale-[0.25] pointer-events-none opacity-90 group-hover:opacity-100 transition-opacity duration-500">
+              <iframe
+                src={`/live/${item.id}/${livePreviews[0].aiModel}`}
+                className="w-full h-full border-0 bg-background"
+                loading="lazy"
+                tabIndex={-1}
+              />
+            </div>
+          ) : (
+            <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-accent/10 to-primary/5 flex items-center justify-center">
+              <div className="text-5xl opacity-40 group-hover:opacity-60 transition-opacity group-hover:scale-110 transform duration-500">
+                {siteConfig.categories.find((c) => c.id === item.category)?.icon || '🎨'}
+              </div>
+            </div>
+          )}
+
+          {/* Overlay gradient to make text readable and ensure card acts as a link */}
+          <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent pointer-events-none z-10" />
+
           <button
             onClick={(e) => {
               e.preventDefault();
               e.stopPropagation();
               onCopy();
             }}
-            className="absolute top-3 right-3 flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-semibold glass-panel opacity-0 group-hover:opacity-100 transition-opacity cursor-pointer hover:bg-primary hover:text-white"
+            className="absolute top-3 right-3 z-20 flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-semibold glass-panel opacity-0 group-hover:opacity-100 transition-opacity cursor-pointer hover:bg-primary hover:text-white"
           >
             {copied ? '✅ Copied!' : '📋 Copy'}
           </button>
           <span
-            className={`absolute bottom-3 left-3 px-2.5 py-1 rounded-full text-xs font-semibold ${diff.color}`}
+            className={`absolute bottom-3 left-3 z-20 px-2.5 py-1 rounded-full text-xs font-semibold backdrop-blur-md ${diff.color}`}
           >
             {diff.label}
           </span>
           {/* Agent icons — bottom right */}
           {livePreviews.length > 0 && (
-            <span className="absolute bottom-3 right-3 inline-flex items-center gap-0.5 px-2 py-1 rounded-full bg-black/40 backdrop-blur-sm">
+            <span className="absolute bottom-3 right-3 z-20 inline-flex items-center gap-0.5 px-2 py-1 rounded-full bg-black/40 backdrop-blur-sm">
               <AgentBadges previews={livePreviews} />
             </span>
           )}
@@ -519,17 +536,34 @@ function ShowcaseListCard({
         className="flex flex-col sm:flex-row items-stretch"
       >
         {/* Left Thumbnail */}
-        <div className="relative w-full sm:w-48 h-32 sm:h-auto bg-gradient-to-br from-primary/20 via-accent/10 to-primary/5 flex items-center justify-center flex-shrink-0 overflow-hidden rounded-t-xl sm:rounded-l-xl sm:rounded-tr-none">
-          <div className="text-4xl opacity-40">
-            {siteConfig.categories.find((c) => c.id === item.category)?.icon || '🎨'}
-          </div>
+        <div className="relative w-full sm:w-48 h-32 sm:h-auto bg-surface flex items-center justify-center flex-shrink-0 overflow-hidden rounded-t-xl sm:rounded-l-xl sm:rounded-tr-none group">
+          {livePreviews.length > 0 ? (
+            <div className="absolute top-0 left-0 w-[400%] h-[400%] origin-top-left scale-[0.25] pointer-events-none opacity-90 group-hover:opacity-100 transition-opacity duration-500">
+              <iframe
+                src={`/live/${item.id}/${livePreviews[0].aiModel}`}
+                className="w-full h-full border-0 bg-background"
+                loading="lazy"
+                tabIndex={-1}
+              />
+            </div>
+          ) : (
+            <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-accent/10 to-primary/5 flex items-center justify-center">
+              <div className="text-4xl opacity-40">
+                {siteConfig.categories.find((c) => c.id === item.category)?.icon || '🎨'}
+              </div>
+            </div>
+          )}
+
+          {/* Overlay gradient */}
+          <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent pointer-events-none z-10" />
+
           <span
-            className={`absolute bottom-2 left-2 px-2 py-0.5 rounded-full text-[11px] font-semibold ${diff.color}`}
+            className={`absolute bottom-2 left-2 z-20 px-2 py-0.5 rounded-full text-[11px] font-semibold backdrop-blur-md ${diff.color}`}
           >
             {diff.label}
           </span>
           {livePreviews.length > 0 && (
-            <span className="absolute bottom-2 right-2 inline-flex items-center gap-0.5 px-2 py-0.5 rounded-full bg-black/40 backdrop-blur-sm">
+            <span className="absolute bottom-2 right-2 z-20 inline-flex items-center gap-0.5 px-2 py-0.5 rounded-full bg-black/40 backdrop-blur-sm">
               <AgentBadges previews={livePreviews} />
             </span>
           )}

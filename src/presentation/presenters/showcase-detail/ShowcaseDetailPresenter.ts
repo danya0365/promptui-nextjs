@@ -17,6 +17,7 @@ export interface ShowcaseDetailViewModel {
   item: ShowcaseItem;
   relatedItems: ShowcaseItem[];
   livePreviews: ShowcaseLivePreview[];
+  relatedLivePreviews: Record<string, ShowcaseLivePreview[]>;
 }
 
 export class ShowcaseDetailPresenter {
@@ -40,7 +41,16 @@ export class ShowcaseDetailPresenter {
       const livePreviews =
         await this.livePreviewRepository.getByShowcaseId(id);
 
-      return { item, relatedItems, livePreviews };
+      // Get live previews for related items
+      const relatedLivePreviews: Record<string, ShowcaseLivePreview[]> = {};
+      for (const relatedItem of relatedItems) {
+        const previews = await this.livePreviewRepository.getByShowcaseId(
+          relatedItem.id
+        );
+        relatedLivePreviews[relatedItem.id] = previews;
+      }
+
+      return { item, relatedItems, livePreviews, relatedLivePreviews };
     } catch (error) {
       console.error('Error getting showcase detail:', error);
       throw error;

@@ -88,7 +88,7 @@ export function ShowcaseDetailView({
 
   if (!viewModel) return null;
 
-  const { item, relatedItems, livePreviews } = viewModel;
+  const { item, relatedItems, livePreviews, relatedLivePreviews } = viewModel;
   const diff = difficultyConfig[item.difficulty] || difficultyConfig.beginner;
   const categoryInfo = siteConfig.categories.find(
     (c) => c.id === item.category
@@ -125,13 +125,30 @@ export function ShowcaseDetailView({
         <ScrollReveal>
           <GlassPanel strong className="overflow-hidden mb-8">
             {/* Thumbnail */}
-            <div className="relative h-56 sm:h-72 bg-gradient-to-br from-primary/20 via-accent/10 to-primary/5 flex items-center justify-center">
-              <div className="text-7xl sm:text-8xl opacity-30">
-                {categoryInfo?.icon || '🎨'}
-              </div>
+            <div className="relative h-56 sm:h-72 bg-surface flex items-center justify-center overflow-hidden">
+              {hasLivePreviews ? (
+                <div className="absolute top-0 left-0 w-[400%] h-[400%] origin-top-left scale-[0.25] pointer-events-none opacity-90 transition-opacity duration-500">
+                  <iframe
+                    src={`/live/${item.id}/${livePreviews[0].aiModel}`}
+                    className="w-full h-full border-0 bg-background"
+                    loading="lazy"
+                    tabIndex={-1}
+                  />
+                </div>
+              ) : (
+                <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-accent/10 to-primary/5 flex items-center justify-center">
+                  <div className="text-7xl sm:text-8xl opacity-30">
+                    {categoryInfo?.icon || '🎨'}
+                  </div>
+                </div>
+              )}
+
+              {/* Overlay gradient */}
+              <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent pointer-events-none z-10" />
+
               {/* Featured badge */}
               {item.isFeatured && (
-                <span className="absolute top-4 right-4 px-3 py-1 rounded-full text-xs font-bold bg-amber-500/20 text-amber-600 dark:text-amber-400 border border-amber-500/20">
+                <span className="absolute top-4 right-4 z-20 px-3 py-1 rounded-full text-xs font-bold bg-amber-500/20 text-amber-600 dark:text-amber-400 border border-amber-500/20 backdrop-blur-md">
                   ⭐ แนะนำ
                 </span>
               )}
@@ -252,14 +269,33 @@ export function ShowcaseDetailView({
                     (c) => c.id === related.category
                   );
 
+                  const relLivePreviews = relatedLivePreviews[related.id] || [];
+                  const hasRelLivePreviews = relLivePreviews.length > 0;
+
                   return (
                     <ScrollReveal key={related.id} delay={i * 80}>
                       <AnimatedCard>
                         <Link href={`/gallery/${related.id}`} className="block">
-                          <div className="h-32 bg-gradient-to-br from-primary/15 via-accent/10 to-primary/5 flex items-center justify-center">
-                            <span className="text-4xl opacity-40">
-                              {relCat?.icon || '🎨'}
-                            </span>
+                          <div className="relative h-32 bg-surface flex items-center justify-center overflow-hidden group">
+                            {hasRelLivePreviews ? (
+                              <div className="absolute top-0 left-0 w-[400%] h-[400%] origin-top-left scale-[0.25] pointer-events-none opacity-90 group-hover:opacity-100 transition-opacity duration-500">
+                                <iframe
+                                  src={`/live/${related.id}/${relLivePreviews[0].aiModel}`}
+                                  className="w-full h-full border-0 bg-background"
+                                  loading="lazy"
+                                  tabIndex={-1}
+                                />
+                              </div>
+                            ) : (
+                              <div className="absolute inset-0 bg-gradient-to-br from-primary/15 via-accent/10 to-primary/5 flex items-center justify-center">
+                                <span className="text-4xl opacity-40">
+                                  {relCat?.icon || '🎨'}
+                                </span>
+                              </div>
+                            )}
+                            
+                            {/* Overlay gradient */}
+                            <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent pointer-events-none z-10" />
                           </div>
                           <div className="p-4">
                             <span
