@@ -980,6 +980,20 @@ const SHOWCASE_ITEMS: ShowcaseItem[] = [
     createdAt: '2025-06-04T08:00:00.000Z',
     updatedAt: '2025-06-04T08:00:00.000Z',
   },
+  {
+    id: 'showcase-068',
+    title: 'Tactical Command Center',
+    description: 'จำลองหน้าจอศูนย์บัญชาการรบ (Tactical Simulation) สไตล์ Brutalist สีดำตัดเส้นขอบเขียวนีออนคมกริบ (0px radius) บนฉากหลังตารางทหาร เมื่อเปิดเว็บ การ์ดข้อมูลจะสไลด์เข้าล็อกอย่างดุดัน มีแสงสแกนเวลาชี้เมาส์ และหน้าจอ Terminal แบบ Hacker',
+    category: 'dashboard',
+    prompt: 'Design a tactical simulation interface composed of dynamic data panels.\n\nConcept:\nA command center made entirely of rectangular cards and layered system panels.\n\nVisual System:\n- Matte black background\n- Neon green accent borders\n- Sharp rectangular card edges (0px radius)\n- Thin grid overlay in background\n- Monospaced diagnostic typography\n\nCard Design:\n- Solid black panels with glowing border\n- Status indicator bars\n- Live data ticker inside cards\n- Expandable sliding panels\n- Stackable modular layout\n\nInteraction:\n- Panels slide mechanically into place\n- Cards snap into grid with animated transitions\n- Hover triggers data scan animation\n- Expanded card becomes dashboard view\n\nMood:\nHigh-security simulation control room.\nPrecise and powerful.',
+    thumbnailUrl: '/thumbnails/tactical-command.png',
+    tags: ['dashboard', 'tactical', 'brutalist', 'military', 'hacker', 'neon'],
+    difficulty: 'intermediate',
+    isFeatured: true,
+    isActive: true,
+    createdAt: '2025-06-04T09:00:00.000Z',
+    updatedAt: '2025-06-04T09:00:00.000Z',
+  },
 ];
 
 export class StaticShowcaseItemRepository implements IShowcaseItemRepository {

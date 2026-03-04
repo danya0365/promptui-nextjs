@@ -67,6 +67,7 @@ import { SelfEvolvingInterfaceDemoGemini } from '@/src/presentation/components/d
 import { SocialMediaAnalyticsDemoGemini } from '@/src/presentation/components/demos/SocialMediaAnalyticsDemoGemini';
 import { SuperintelligenceLaunchDemoGemini } from '@/src/presentation/components/demos/SuperintelligenceLaunchDemoGemini';
 import { SwissInspiredModernDirectoryDemoGemini } from '@/src/presentation/components/demos/SwissInspiredModernDirectoryDemoGemini';
+import { TacticalSimulationDemoGemini } from '@/src/presentation/components/demos/TacticalSimulationDemoGemini';
 import { TravelBookingAppDemoGemini } from '@/src/presentation/components/demos/TravelBookingAppDemoGemini';
 import { UnrealEngineCinematicDemoGemini } from '@/src/presentation/components/demos/UnrealEngineCinematicDemoGemini';
 import type { Metadata } from 'next';
@@ -150,6 +151,7 @@ const LIVE_PREVIEW_COMPONENTS: Record<string, Partial<Record<AiModel, React.Comp
   'showcase-065': { 'gemini-3.1-pro': SelfEvolvingInterfaceDemoGemini },
   'showcase-066': { 'gemini-3.1-pro': RealityFractureDemoGemini },
   'showcase-067': { 'gemini-3.1-pro': FuturisticNeuralNetworkDemoGemini },
+  'showcase-068': { 'gemini-3.1-pro': TacticalSimulationDemoGemini },
 };
 
 interface LivePreviewPageProps {
