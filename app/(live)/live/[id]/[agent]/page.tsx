@@ -53,6 +53,7 @@ import { SocialMediaAnalyticsDemoGemini } from '@/src/presentation/components/de
 import { SuperintelligenceLaunchDemoGemini } from '@/src/presentation/components/demos/SuperintelligenceLaunchDemoGemini';
 import { SwissInspiredModernDirectoryDemoGemini } from '@/src/presentation/components/demos/SwissInspiredModernDirectoryDemoGemini';
 import { TravelBookingAppDemoGemini } from '@/src/presentation/components/demos/TravelBookingAppDemoGemini';
+import { UnrealEngineCinematicDemoGemini } from '@/src/presentation/components/demos/UnrealEngineCinematicDemoGemini';
 import type { Metadata } from 'next';
 
 /**
@@ -118,6 +119,7 @@ const LIVE_PREVIEW_COMPONENTS: Record<string, Partial<Record<AiModel, React.Comp
   'showcase-049': { 'gemini-3.1-pro': CinematicHollywoodTrailerDemoGemini },
   'showcase-050': { 'gemini-3.1-pro': ExperimentalPhysicsUIDemoGemini },
   'showcase-051': { 'gemini-3.1-pro': GalacticLaunchSystemDemoGemini },
+  'showcase-052': { 'gemini-3.1-pro': UnrealEngineCinematicDemoGemini },
 };
 
 interface LivePreviewPageProps {

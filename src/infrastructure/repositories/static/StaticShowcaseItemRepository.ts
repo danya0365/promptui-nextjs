@@ -756,6 +756,20 @@ const SHOWCASE_ITEMS: ShowcaseItem[] = [
     createdAt: '2025-06-03T16:00:00.000Z',
     updatedAt: '2025-06-03T16:00:00.000Z',
   },
+  {
+    id: 'showcase-052',
+    title: 'Unreal Engine Cinematic World',
+    description: 'จำลองโลก 3 มิติบนเว็บแบบ AAA Game นำทางด้วย WASD UI โฮโลแกรมฝังในฉาก แสงเงาเงียบคมแบบเทพ',
+    category: 'landing-page',
+    prompt: 'Create a web experience that feels like a real-time Unreal Engine cinematic world.\n\nConcept:\nThe homepage is a fully explorable 3D environment rendered in real time.\n\nVisual System:\n- Hyper-real lighting with dynamic shadows\n- Volumetric fog and god rays\n- Ultra-detailed 3D environment (futuristic tech temple)\n- Reflective surfaces and realistic materials\n- Subtle environmental particles in the air\n- Cinematic camera depth of field\n\nInteraction:\n- WASD or scroll to navigate space\n- Hover reveals floating holographic UI panels\n- UI feels embedded in the world, not layered on top\n- Real-time lighting shifts based on user movement\n\nMood:\nAAA game intro meets billion-dollar tech reveal.\nEpic. Immersive. Unreal.',
+    thumbnailUrl: '/thumbnails/unreal-engine.png',
+    tags: ['3d', 'cinematic', 'unreal', 'wasd', 'immersive', 'particles', 'hologram'],
+    difficulty: 'advanced',
+    isFeatured: true,
+    isActive: true,
+    createdAt: '2025-06-03T17:00:00.000Z',
+    updatedAt: '2025-06-03T17:00:00.000Z',
+  },
 ];
 
 export class StaticShowcaseItemRepository implements IShowcaseItemRepository {
