@@ -812,6 +812,20 @@ const SHOWCASE_ITEMS: ShowcaseItem[] = [
     createdAt: '2025-06-03T20:00:00.000Z',
     updatedAt: '2025-06-03T20:00:00.000Z',
   },
+  {
+    id: 'showcase-056',
+    title: 'Post-Human Digital Interface',
+    description: 'หลุดกรอบ UI แบบเดิม ไม่มีปุ่ม ไม่มีเมนู ใช้ระยะห่างของเมาส์ดึงเนื้อหาขึ้นมา และ Scroll เพื่อบิดรูปทรง (Morph Geometry)',
+    category: 'landing-page',
+    prompt: 'Create a post-human digital interface that transcends traditional web UI.\n\nConcept:\nNo visible navigation. The interface responds intuitively.\n\nVisual System:\n- Minimal UI chrome\n- Abstract dimensional gradients\n- Floating semi-transparent panels\n- Subtle morphing geometry\n- Ultra-clean futuristic typography\n\nInteraction:\n- Gesture-based navigation (simulated)\n- Scroll reshapes environment\n- Elements magnetically rearrange around cursor\n- Context-aware content reveals\n\nMood:\nBeyond web. Beyond apps.\nFeels like interacting with future digital consciousness.',
+    thumbnailUrl: '/thumbnails/post-human.png',
+    tags: ['experimental', 'morphism', 'magnetic-ui', 'minimal', 'futuristic', 'gesture'],
+    difficulty: 'advanced',
+    isFeatured: true,
+    isActive: true,
+    createdAt: '2025-06-03T21:00:00.000Z',
+    updatedAt: '2025-06-03T21:00:00.000Z',
+  },
 ];
 
 export class StaticShowcaseItemRepository implements IShowcaseItemRepository {

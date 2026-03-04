@@ -47,6 +47,7 @@ import { MultiStepRegisterDemoGemini } from '@/src/presentation/components/demos
 import { MusicPlayerDashboardDemoGemini } from '@/src/presentation/components/demos/MusicPlayerDashboardDemoGemini';
 import { NeoBrutalistPromptGalleryDemoGemini } from '@/src/presentation/components/demos/NeoBrutalistPromptGalleryDemoGemini';
 import { NeonDashboardWidgetsDemoGemini } from '@/src/presentation/components/demos/NeonDashboardWidgetsDemoGemini';
+import { PostHumanInterfaceDemoGemini } from '@/src/presentation/components/demos/PostHumanInterfaceDemoGemini';
 import { ProductCardGridDemoGemini } from '@/src/presentation/components/demos/ProductCardGridDemoGemini';
 import { ProfileCardCollectionDemoGemini } from '@/src/presentation/components/demos/ProfileCardCollectionDemoGemini';
 import { RecipeCookingAppDemoGemini } from '@/src/presentation/components/demos/RecipeCookingAppDemoGemini';
@@ -126,6 +127,7 @@ const LIVE_PREVIEW_COMPONENTS: Record<string, Partial<Record<AiModel, React.Comp
   'showcase-053': { 'gemini-3.1-pro': GenerativeAIVisualsDemoGemini },
   'showcase-054': { 'gemini-3.1-pro': GlobalEventPlatformDemoGemini },
   'showcase-055': { 'gemini-3.1-pro': MetaversePortalDemoGemini },
+  'showcase-056': { 'gemini-3.1-pro': PostHumanInterfaceDemoGemini },
 };
 
 interface LivePreviewPageProps {
