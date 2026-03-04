@@ -1232,6 +1232,20 @@ const SHOWCASE_ITEMS: ShowcaseItem[] = [
     createdAt: '2025-06-05T02:00:00.000Z',
     updatedAt: '2025-06-05T02:00:00.000Z',
   },
+  {
+    id: 'showcase-086',
+    title: 'God-Level Hologram Matrix',
+    description: 'จำลองระบบศูนย์รวมปัญญาประดิษฐ์ระดับสูง (God-Level AI Matrix) บนพื้นหลังความมืดอนันต์ไร้ขอบเขต (Infinite dark void) การ์ดข้อมูลถูกเรียงซ้อนกันแบบมีความลึกที่ต่างกันชัดเจน ทีเด็ดคือระบบ Scroll! เมื่อคุณหมุนลูกกลิ้งเมาส์ หน้าจอจะไม่เลื่อนขึ้นลงปกติ แต่จะเป็นการ Zoom (TranslateZ) ทะลุทะลวงความลึกผ่านเลเยอร์ต่างๆ เข้าไปเรื่อยๆ พร้อมเอฟเฟกต์เบลอขณะเอาเมาส์วางการ์ดแผ่นอื่นที่ไม่ได้ถูกเลือก (Ripple wave) และการขยายหน้าจอแบบ Immersive projection',
+    category: 'space',
+    prompt: 'Create a god-level holographic intelligence interface composed of layered floating cards.\n\nConcept:\nA massive AI intelligence matrix visualized through glowing hologram panels.\n\nVisual System:\n- Infinite dark void\n- Floating light panels at varying depths\n- Interconnected glowing data lines\n- Real-time animated metric overlays\n- Subtle volumetric atmospheric glow\n- White, cyan, and soft violet accents\n\nCard Design:\n- Transparent luminous panels\n- Multi-layer expandable structure\n- Animated border light scan\n- Floating micro-data blocks\n- Seamless morphing expansion animation\n\nInteraction:\n- Hover causes ripple wave through connected cards\n- Scroll moves through layered depth levels\n- Clicking transforms card into immersive intelligence projection\n- Entire system subtly breathes with ambient light pulse\n\nMood:\nAI-driven future intelligence system.\nElegant. Advanced. Cinematic.',
+    thumbnailUrl: '/thumbnails/god-level-matrix.png',
+    tags: ['hologram', 'matrix', 'god-level', 'parallax', 'depth-scroll', 'ai'],
+    difficulty: 'advanced',
+    isFeatured: true,
+    isActive: true,
+    createdAt: '2025-06-05T03:00:00.000Z',
+    updatedAt: '2025-06-05T03:00:00.000Z',
+  },
 ];
 
 export class StaticShowcaseItemRepository implements IShowcaseItemRepository {
