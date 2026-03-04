@@ -714,6 +714,20 @@ const SHOWCASE_ITEMS: ShowcaseItem[] = [
     createdAt: '2025-06-03T13:00:00.000Z',
     updatedAt: '2025-06-03T13:00:00.000Z',
   },
+  {
+    id: 'showcase-049',
+    title: 'Cinematic Hollywood Trailer Experience',
+    description: 'เว็บโปรโมตโปรดักต์สไตล์ Trailer หนังฮอลลีวูด เน้นเลื่อนเมาส์เพื่อเปิดซีน ตัวหนังสือยักษ์ และเอฟเฟกต์เฟดดำอลังการ',
+    category: 'landing-page',
+    prompt: 'Create a cinematic web experience that feels like a Hollywood trailer for a revolutionary product.\n\nVisual Language:\n- Full-screen cinematic video backgrounds\n- Dramatic lighting transitions\n- Ultra-bold typography appearing in timed sequences\n- Black-to-light reveal animations\n- Particle bursts and slow-motion effects\n- Minimal UI, immersive storytelling\n\nStructure:\n- Opening dramatic statement\n- Slow reveal of product power\n- High-intensity feature montage\n- Emotional human connection segment\n- Massive final call-to-action\n\nMood:\nEpic, emotional, transformational.\nThe product feels world-changing.',
+    thumbnailUrl: '/thumbnails/hollywood-trailer.png',
+    tags: ['cinematic', 'trailer', 'scroll-story', 'typography', 'epic'],
+    difficulty: 'advanced',
+    isFeatured: true,
+    isActive: true,
+    createdAt: '2025-06-03T14:00:00.000Z',
+    updatedAt: '2025-06-03T14:00:00.000Z',
+  },
 ];
 
 export class StaticShowcaseItemRepository implements IShowcaseItemRepository {
