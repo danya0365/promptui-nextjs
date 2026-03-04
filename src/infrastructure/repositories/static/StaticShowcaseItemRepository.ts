@@ -938,6 +938,20 @@ const SHOWCASE_ITEMS: ShowcaseItem[] = [
     createdAt: '2025-06-04T05:00:00.000Z',
     updatedAt: '2025-06-04T05:00:00.000Z',
   },
+  {
+    id: 'showcase-065',
+    title: 'Self-Evolving Interface',
+    description: 'หน้าเว็บที่กลายพันธุ์ได้เอง! กล่องข้อมูลไหนถูกคลิกบ่อย จะขยายใหญ่ขึ้นและเปลี่ยนรูปทรงให้โค้งมน ส่วนกล่องที่ไม่ค่อยถูกสนใจจะถูกดันลงล่างและเบลอจางหายไป พร้อมเปลี่ยนโทนสีรวมของเว็บ',
+    category: 'dashboard',
+    prompt: 'Create a self-evolving web interface that changes over time.\n\nConcept:\nThe platform evolves based on usage and simulated intelligence.\n\nVisual System:\n- Clean futuristic base\n- Subtle morphing shapes\n- Dynamic color palette shifts\n- Layered translucent UI panels\n- Soft glow and motion transitions\n\nInteraction:\n- Frequently accessed sections grow visually\n- Rarely used elements fade subtly\n- Layout reorganizes over sessions\n- Background visuals adapt gradually\n\nMood:\nAlive, adaptive, organic digital intelligence.',
+    thumbnailUrl: '/thumbnails/self-evolving.png',
+    tags: ['adaptive', 'ai', 'dynamic-layout', 'morphing', 'glassmorphism'],
+    difficulty: 'advanced',
+    isFeatured: true,
+    isActive: true,
+    createdAt: '2025-06-04T06:00:00.000Z',
+    updatedAt: '2025-06-04T06:00:00.000Z',
+  },
 ];
 
 export class StaticShowcaseItemRepository implements IShowcaseItemRepository {

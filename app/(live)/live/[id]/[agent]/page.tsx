@@ -61,6 +61,7 @@ import { ProfileCardCollectionDemoGemini } from '@/src/presentation/components/d
 import { RecipeCookingAppDemoGemini } from '@/src/presentation/components/demos/RecipeCookingAppDemoGemini';
 import { Retro90sTechMagazineDemoGemini } from '@/src/presentation/components/demos/Retro90sTechMagazineDemoGemini';
 import { SaaSLandingPageDemoGemini } from '@/src/presentation/components/demos/SaaSLandingPageDemoGemini';
+import { SelfEvolvingInterfaceDemoGemini } from '@/src/presentation/components/demos/SelfEvolvingInterfaceDemoGemini';
 import { SocialMediaAnalyticsDemoGemini } from '@/src/presentation/components/demos/SocialMediaAnalyticsDemoGemini';
 import { SuperintelligenceLaunchDemoGemini } from '@/src/presentation/components/demos/SuperintelligenceLaunchDemoGemini';
 import { SwissInspiredModernDirectoryDemoGemini } from '@/src/presentation/components/demos/SwissInspiredModernDirectoryDemoGemini';
@@ -144,6 +145,7 @@ const LIVE_PREVIEW_COMPONENTS: Record<string, Partial<Record<AiModel, React.Comp
   'showcase-062': { 'gemini-3.1-pro': LiveSimulationMatrixDemoGemini },
   'showcase-063': { 'gemini-3.1-pro': EvolvingAIPersonaDemoGemini },
   'showcase-064': { 'gemini-3.1-pro': PhysicsDrivenWebWorldDemoGemini },
+  'showcase-065': { 'gemini-3.1-pro': SelfEvolvingInterfaceDemoGemini },
 };
 
 interface LivePreviewPageProps {
