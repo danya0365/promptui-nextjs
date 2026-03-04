@@ -69,6 +69,7 @@ import { NextGenSpatialOSDemoGemini } from '@/src/presentation/components/demos/
 import { PhysicsDrivenWebWorldDemoGemini } from '@/src/presentation/components/demos/PhysicsDrivenWebWorldDemoGemini';
 import { PostHumanInterfaceDemoGemini } from '@/src/presentation/components/demos/PostHumanInterfaceDemoGemini';
 import { PostHumanTranscendenceDemoGemini } from '@/src/presentation/components/demos/PostHumanTranscendenceDemoGemini';
+import { PredictiveAnalysisHologramDemoGemini } from '@/src/presentation/components/demos/PredictiveAnalysisHologramDemoGemini';
 import { ProductCardGridDemoGemini } from '@/src/presentation/components/demos/ProductCardGridDemoGemini';
 import { ProfileCardCollectionDemoGemini } from '@/src/presentation/components/demos/ProfileCardCollectionDemoGemini';
 import { RealityFractureDemoGemini } from '@/src/presentation/components/demos/RealityFractureDemoGemini';
@@ -180,6 +181,7 @@ const LIVE_PREVIEW_COMPONENTS: Record<string, Partial<Record<AiModel, React.Comp
   'showcase-080': { 'gemini-3.1-pro': FragmentedGlitchCyberpunkDemoGemini },
   'showcase-081': { 'gemini-3.1-pro': GodLevelCyberpunkHackerDemoGemini },
   'showcase-082': { 'gemini-3.1-pro': MinorityReportHologramDemoGemini },
+  'showcase-083': { 'gemini-3.1-pro': PredictiveAnalysisHologramDemoGemini },
 };
 
 interface LivePreviewPageProps {

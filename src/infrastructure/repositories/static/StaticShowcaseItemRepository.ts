@@ -1190,6 +1190,20 @@ const SHOWCASE_ITEMS: ShowcaseItem[] = [
     createdAt: '2025-06-04T23:00:00.000Z',
     updatedAt: '2025-06-04T23:00:00.000Z',
   },
+  {
+    id: 'showcase-083',
+    title: 'Predictive Analysis Hologram',
+    description: 'หน้าจอวิเคราะห์ทำนายอนาคต (Predictive Analysis) สไตล์สืบสวนคดีไซไฟ ตัวการ์ดเป็นกระจกใสขอบสว่าง (Edge-lit) ตั้งอยู่ท่ามกลางฉากหลังสีน้ำเงิน-ดำ ที่มี "เรดาร์" หมุนกราด และลำแสง Volumetric Light ด้านหน้า เมื่อ Scroll เลื่อนหน้าจอ จะให้ความรู้สึกมีความลึกต่างระดับ (Spatial Depth) และสามารถเห็นกราฟ Animated Data Streams แอบซ่อนอยู่ใต้การ์ดแต่ละใบได้',
+    category: 'dashboard',
+    prompt: 'Design a predictive analysis interface composed of holographic data cards.\n\nConcept:\nA floating crime-analysis style dashboard made of translucent panels.\n\nVisual System:\n- Deep blue-black environment\n- Cyan glowing lines\n- Animated data streams flowing between cards\n- Subtle radar sweep effects\n- Soft volumetric light beams\n\nCard Design:\n- Transparent layered cards\n- Floating metric blocks\n- Animated graph overlays\n- Expandable stacked sub-panels\n- Edge-lit frame effect\n\nInteraction:\n- Hover reveals predictive overlays\n- Cards connect with glowing light lines\n- Scroll shifts spatial depth perspective\n- Active card projects expanded data layer\n\nMood:\nAdvanced predictive AI command system.\nPrecise and intelligent.',
+    thumbnailUrl: '/thumbnails/predictive-analysis.png',
+    tags: ['hologram', 'analysis', 'radar', 'investigation', 'data-streaming', 'dashboard'],
+    difficulty: 'advanced',
+    isFeatured: true,
+    isActive: true,
+    createdAt: '2025-06-05T00:00:00.000Z',
+    updatedAt: '2025-06-05T00:00:00.000Z',
+  },
 ];
 
 export class StaticShowcaseItemRepository implements IShowcaseItemRepository {
