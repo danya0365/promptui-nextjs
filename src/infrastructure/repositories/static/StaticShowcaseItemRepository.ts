@@ -1022,6 +1022,20 @@ const SHOWCASE_ITEMS: ShowcaseItem[] = [
     createdAt: '2025-06-04T11:00:00.000Z',
     updatedAt: '2025-06-04T11:00:00.000Z',
   },
+  {
+    id: 'showcase-071',
+    title: 'God Mode Creator Console',
+    description: 'จำลองแผงควบคุมระดับพระเจ้าผู้สร้างจักรวาล (God-mode Creator)! สไตล์โครงสร้างสถาปัตยกรรม (Architectural) โทนเหล็กสีเงินชาร์โคล ตัดเส้นแสงขอบทอง (Gold highlights) วางเลย์เอาต์สมมาตร (Symmetrical) เมื่อกางแผงหลักออก การ์ดย่อยจะค่อยๆ สไลด์พับกางเรียงกันเหมือนหุ่นยนต์ประกอบร่าง',
+    category: 'dashboard',
+    prompt: 'Create a god-mode creator console interface built entirely from massive layered panels.\n\nConcept:\nA universal control interface made of structured control cards.\n\nVisual System:\n- Deep charcoal background\n- Metallic silver panel frames\n- Subtle gold highlight accents\n- Dramatic lighting from above\n- Structured symmetrical layout\n\nCard Design:\n- Large framed control panels\n- Modular sub-card sections inside main panels\n- Soft shadow depth layering\n- Refined typography hierarchy\n- Expandable multi-level panel system\n\nInteraction:\n- Panels unfold vertically\n- Sub-cards cascade open\n- Hover reveals control toggles\n- Cards lock into structured grid when activated\n\nMood:\nUltimate authority.\nArchitect of digital universe.',
+    thumbnailUrl: '/thumbnails/god-mode-console.png',
+    tags: ['dashboard', 'architectural', 'god-mode', 'symmetrical', 'luxury'],
+    difficulty: 'advanced',
+    isFeatured: true,
+    isActive: true,
+    createdAt: '2025-06-04T12:00:00.000Z',
+    updatedAt: '2025-06-04T12:00:00.000Z',
+  },
 ];
 
 export class StaticShowcaseItemRepository implements IShowcaseItemRepository {

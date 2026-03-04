@@ -39,6 +39,7 @@ import { GenerativeAIVisualsDemoGemini } from '@/src/presentation/components/dem
 import { GlassmorphismLoginDemo } from '@/src/presentation/components/demos/GlassmorphismLoginDemo';
 import { GlassmorphismLoginDemoGemini } from '@/src/presentation/components/demos/GlassmorphismLoginDemoGemini';
 import { GlobalEventPlatformDemoGemini } from '@/src/presentation/components/demos/GlobalEventPlatformDemoGemini';
+import { GodModeCreatorConsoleDemoGemini } from '@/src/presentation/components/demos/GodModeCreatorConsoleDemoGemini';
 import { HealthFitnessTrackerDemoGemini } from '@/src/presentation/components/demos/HealthFitnessTrackerDemoGemini';
 import { HighContrastEditorialDirectoryDemoGemini } from '@/src/presentation/components/demos/HighContrastEditorialDirectoryDemoGemini';
 import { HighEnergyTechDirectoryDemoGemini } from '@/src/presentation/components/demos/HighEnergyTechDirectoryDemoGemini';
@@ -156,6 +157,7 @@ const LIVE_PREVIEW_COMPONENTS: Record<string, Partial<Record<AiModel, React.Comp
   'showcase-068': { 'gemini-3.1-pro': TacticalSimulationDemoGemini },
   'showcase-069': { 'gemini-3.1-pro': DigitalTilePhysicsDemoGemini },
   'showcase-070': { 'gemini-3.1-pro': LivingAdaptiveCardsDemoGemini },
+  'showcase-071': { 'gemini-3.1-pro': GodModeCreatorConsoleDemoGemini },
 };
 
 interface LivePreviewPageProps {
