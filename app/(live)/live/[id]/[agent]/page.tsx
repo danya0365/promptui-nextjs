@@ -68,6 +68,7 @@ import { Retro90sTechMagazineDemoGemini } from '@/src/presentation/components/de
 import { SaaSLandingPageDemoGemini } from '@/src/presentation/components/demos/SaaSLandingPageDemoGemini';
 import { SelfEvolvingInterfaceDemoGemini } from '@/src/presentation/components/demos/SelfEvolvingInterfaceDemoGemini';
 import { SocialMediaAnalyticsDemoGemini } from '@/src/presentation/components/demos/SocialMediaAnalyticsDemoGemini';
+import { SpatialComputingDemoGemini } from '@/src/presentation/components/demos/SpatialComputingDemoGemini';
 import { SuperintelligenceLaunchDemoGemini } from '@/src/presentation/components/demos/SuperintelligenceLaunchDemoGemini';
 import { SwissInspiredModernDirectoryDemoGemini } from '@/src/presentation/components/demos/SwissInspiredModernDirectoryDemoGemini';
 import { TacticalSimulationDemoGemini } from '@/src/presentation/components/demos/TacticalSimulationDemoGemini';
@@ -158,6 +159,7 @@ const LIVE_PREVIEW_COMPONENTS: Record<string, Partial<Record<AiModel, React.Comp
   'showcase-069': { 'gemini-3.1-pro': DigitalTilePhysicsDemoGemini },
   'showcase-070': { 'gemini-3.1-pro': LivingAdaptiveCardsDemoGemini },
   'showcase-071': { 'gemini-3.1-pro': GodModeCreatorConsoleDemoGemini },
+  'showcase-072': { 'gemini-3.1-pro': SpatialComputingDemoGemini },
 };
 
 interface LivePreviewPageProps {

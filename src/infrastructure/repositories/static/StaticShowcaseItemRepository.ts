@@ -1036,6 +1036,20 @@ const SHOWCASE_ITEMS: ShowcaseItem[] = [
     createdAt: '2025-06-04T12:00:00.000Z',
     updatedAt: '2025-06-04T12:00:00.000Z',
   },
+  {
+    id: 'showcase-072',
+    title: 'Spatial Computing Interface',
+    description: 'ประสบการณ์ Spatial Computing (สไตล์ Vision Pro) แพลตฟอร์มกระจกฝ้า (Frosted Glass) ล่องหนที่ลอยละมุนอยู่ในมิติ 3D (3D Depth) เมื่อขยับเมาส์หน้าต่างจะเอียงตามมุมมองของสายตา เมื่อรันแอปพลิเคชัน ฉากหลังจะถูกเบลอทิ้งอย่างพรีเมียม (Ambient Blur)',
+    category: 'innovative',
+    prompt: 'Create a spatial computing interface inspired by Apple Vision Pro.\n\nConcept:\nCards float in 3D space with subtle depth and glass transparency.\n\nVisual System:\n- Soft light gradient background (white to subtle blue)\n- Floating glass panels with depth layering\n- Smooth blur and translucency\n- Soft ambient lighting\n- Clean ultra-thin sans-serif typography\n- Subtle drop shadows for depth separation\n\nCard Design:\n- 24px rounded corners\n- Frosted glass background\n- Light inner highlight edge\n- Minimal icons\n- Soft hover elevation\n- Expandable immersive card animation\n\nInteraction:\n- Cards gently shift in parallax with cursor movement\n- Clicking expands card forward in 3D space\n- Background softly blurs when focused\n\nMood:\nCalm, premium, spatial, Apple-level refinement.',
+    thumbnailUrl: '/thumbnails/spatial-computing.png',
+    tags: ['spatial-computing', 'vision-pro', 'glassmorphism', '3d', 'premium', 'clean'],
+    difficulty: 'advanced',
+    isFeatured: true,
+    isActive: true,
+    createdAt: '2025-06-04T13:00:00.000Z',
+    updatedAt: '2025-06-04T13:00:00.000Z',
+  },
 ];
 
 export class StaticShowcaseItemRepository implements IShowcaseItemRepository {
