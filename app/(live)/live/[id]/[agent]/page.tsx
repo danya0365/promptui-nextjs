@@ -18,6 +18,7 @@ import { CinematicProductLaunchDemoGemini } from '@/src/presentation/components/
 import { CivilizationSimulationDemoGemini } from '@/src/presentation/components/demos/CivilizationSimulationDemoGemini';
 import { ClaymorphismDirectoryDemoGemini } from '@/src/presentation/components/demos/ClaymorphismDirectoryDemoGemini';
 import { CosmicInspiredWebDirectoryDemoGemini } from '@/src/presentation/components/demos/CosmicInspiredWebDirectoryDemoGemini';
+import { CyberpunkCityPlatformDemoGemini } from '@/src/presentation/components/demos/CyberpunkCityPlatformDemoGemini';
 import { CyberpunkDarkWebInterfaceDemoGemini } from '@/src/presentation/components/demos/CyberpunkDarkWebInterfaceDemoGemini';
 import { DramaticFuturisticTechDirectoryDemoGemini } from '@/src/presentation/components/demos/DramaticFuturisticTechDirectoryDemoGemini';
 import { ECommerceAdminPanelDemoGemini } from '@/src/presentation/components/demos/ECommerceAdminPanelDemoGemini';
@@ -132,6 +133,7 @@ const LIVE_PREVIEW_COMPONENTS: Record<string, Partial<Record<AiModel, React.Comp
   'showcase-056': { 'gemini-3.1-pro': PostHumanInterfaceDemoGemini },
   'showcase-057': { 'gemini-3.1-pro': BrainComputerInterfaceDemoGemini },
   'showcase-058': { 'gemini-3.1-pro': AIDeityAwakeningDemoGemini },
+  'showcase-059': { 'gemini-3.1-pro': CyberpunkCityPlatformDemoGemini },
 };
 
 interface LivePreviewPageProps {

@@ -854,6 +854,20 @@ const SHOWCASE_ITEMS: ShowcaseItem[] = [
     createdAt: '2025-06-03T23:00:00.000Z',
     updatedAt: '2025-06-03T23:00:00.000Z',
   },
+  {
+    id: 'showcase-059',
+    title: 'Cyberpunk Megacity Platform',
+    description: 'ผลักกล้องผ่านถนนโลกไซเบอร์พังก์ 3 มิติ ด้วย Scroll พบตึกระฟ้า ป้ายโฮโลแกรมลอยฟ้า และรถบินสุดล้ำ',
+    category: 'landing-page',
+    prompt: 'Create a fully explorable cyberpunk city web platform.\n\nConcept:\nThe homepage is a 3D neon megacity at night.\n\nVisual System:\n- Rain-soaked reflective streets\n- Neon holographic billboards\n- Flying digital traffic trails\n- Ambient fog and city glow\n- Massive skyscrapers with animated windows\n- Deep purple, cyan, and hot pink palette\n\nInteraction:\n- Scroll moves camera through city streets\n- Clicking buildings opens immersive content zones\n- Hovering billboards trigger animated UI overlays\n- Subtle ambient city particle effects\n\nMood:\nHigh-tech dystopia. Electric. Alive.\nFeels like entering Blade Runner 2049.',
+    thumbnailUrl: '/thumbnails/cyberpunk.png',
+    tags: ['3d', 'cyberpunk', 'neon', 'scroll-zoom', 'city', 'dystopia', 'hologram'],
+    difficulty: 'advanced',
+    isFeatured: true,
+    isActive: true,
+    createdAt: '2025-06-04T00:00:00.000Z',
+    updatedAt: '2025-06-04T00:00:00.000Z',
+  },
 ];
 
 export class StaticShowcaseItemRepository implements IShowcaseItemRepository {
