@@ -784,6 +784,20 @@ const SHOWCASE_ITEMS: ShowcaseItem[] = [
     createdAt: '2025-06-03T18:00:00.000Z',
     updatedAt: '2025-06-03T18:00:00.000Z',
   },
+  {
+    id: 'showcase-054',
+    title: 'Global Event Platform',
+    description: 'แพลตฟอร์มวิเคราะห์ข้อมูลระดับโลก เปลี่ยนสีพื้นหลังตามเวลาจริง (เช้า/สาย/เย็น/มืด) พร้อม World Clocks',
+    category: 'dashboard',
+    prompt: 'Design a web platform that changes based on real-world time and global data.\n\nConcept:\nThe website visually adapts to global time zones and real-world events.\n\nVisual System:\n- Dynamic sky simulation (sunrise, sunset, night)\n- Real-time global light map\n- Subtle weather-based animation overlays\n- Ambient background sound visualization\n- Data-driven animated particles\n\nInteraction:\n- Sections unlock based on local time\n- UI glow intensity changes at night\n- Real-world data subtly influences motion\n- Live world clock integrated into layout\n\nMood:\nConnected. Planetary. Intelligent global network.',
+    thumbnailUrl: '/thumbnails/global-event.png',
+    tags: ['dashboard', 'time-based', 'global', 'data-viz', 'clocks', 'dynamic-theme'],
+    difficulty: 'intermediate',
+    isFeatured: true,
+    isActive: true,
+    createdAt: '2025-06-03T19:00:00.000Z',
+    updatedAt: '2025-06-03T19:00:00.000Z',
+  },
 ];
 
 export class StaticShowcaseItemRepository implements IShowcaseItemRepository {
