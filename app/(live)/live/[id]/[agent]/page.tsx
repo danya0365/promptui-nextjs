@@ -28,6 +28,7 @@ import { FuturisticOSWebExperienceDemoGemini } from '@/src/presentation/componen
 import { FuturisticSpacePlatformDemoGemini } from '@/src/presentation/components/demos/FuturisticSpacePlatformDemoGemini';
 import { GalacticLaunchSystemDemoGemini } from '@/src/presentation/components/demos/GalacticLaunchSystemDemoGemini';
 import { GamingPlatformDirectoryDemoGemini } from '@/src/presentation/components/demos/GamingPlatformDirectoryDemoGemini';
+import { GenerativeAIVisualsDemoGemini } from '@/src/presentation/components/demos/GenerativeAIVisualsDemoGemini';
 import { GlassmorphismLoginDemo } from '@/src/presentation/components/demos/GlassmorphismLoginDemo';
 import { GlassmorphismLoginDemoGemini } from '@/src/presentation/components/demos/GlassmorphismLoginDemoGemini';
 import { HealthFitnessTrackerDemoGemini } from '@/src/presentation/components/demos/HealthFitnessTrackerDemoGemini';
@@ -120,6 +121,7 @@ const LIVE_PREVIEW_COMPONENTS: Record<string, Partial<Record<AiModel, React.Comp
   'showcase-050': { 'gemini-3.1-pro': ExperimentalPhysicsUIDemoGemini },
   'showcase-051': { 'gemini-3.1-pro': GalacticLaunchSystemDemoGemini },
   'showcase-052': { 'gemini-3.1-pro': UnrealEngineCinematicDemoGemini },
+  'showcase-053': { 'gemini-3.1-pro': GenerativeAIVisualsDemoGemini },
 };
 
 interface LivePreviewPageProps {
