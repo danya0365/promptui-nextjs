@@ -700,6 +700,20 @@ const SHOWCASE_ITEMS: ShowcaseItem[] = [
     createdAt: '2025-06-03T12:00:00.000Z',
     updatedAt: '2025-06-03T12:00:00.000Z',
   },
+  {
+    id: 'showcase-048',
+    title: '3D Civilization Simulation Interface',
+    description: 'จำลองหน้าจอ Dashboard ควบคุมระดับอารยธรรมแบบแผนที่เมือง 3 มิติแสงนีออน เลื่อนกล้องและซูมดูข้อมูลได้',
+    category: 'dashboard',
+    prompt: 'Design a web experience that feels like a 3D civilization simulation interface.\n\nConcept:\nUsers navigate through floating digital cities representing features or products.\n\nVisual System:\n- Full 3D environment with dynamic lighting\n- Futuristic cityscape made of glowing structures\n- Each building represents a section\n- Neon cyan and amber light trails connecting nodes\n- Atmospheric fog and depth layering\n- Smooth cinematic camera transitions\n\nInteraction:\n- Scroll controls camera movement\n- Hovering over buildings reveals floating holographic panels\n- Click transitions feel like flying into structures\n- Background ambient sound visualization\n\nMood:\nMassive scale, advanced civilization, technological dominance.',
+    thumbnailUrl: '/thumbnails/civ-simulation.png',
+    tags: ['3d', 'cityscape', 'simulation', 'futuristic', 'cyberpunk', 'interactive', 'dashboard'],
+    difficulty: 'advanced',
+    isFeatured: true,
+    isActive: true,
+    createdAt: '2025-06-03T13:00:00.000Z',
+    updatedAt: '2025-06-03T13:00:00.000Z',
+  },
 ];
 
 export class StaticShowcaseItemRepository implements IShowcaseItemRepository {

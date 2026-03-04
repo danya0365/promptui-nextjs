@@ -12,6 +12,7 @@ import { CalendarAppDemoGemini } from '@/src/presentation/components/demos/Calen
 import { CalmOrganicWebDirectoryDemoGemini } from '@/src/presentation/components/demos/CalmOrganicWebDirectoryDemoGemini';
 import { ChromeInspiredWebDirectoryDemoGemini } from '@/src/presentation/components/demos/ChromeInspiredWebDirectoryDemoGemini';
 import { CinematicProductLaunchDemoGemini } from '@/src/presentation/components/demos/CinematicProductLaunchDemoGemini';
+import { CivilizationSimulationDemoGemini } from '@/src/presentation/components/demos/CivilizationSimulationDemoGemini';
 import { ClaymorphismDirectoryDemoGemini } from '@/src/presentation/components/demos/ClaymorphismDirectoryDemoGemini';
 import { CosmicInspiredWebDirectoryDemoGemini } from '@/src/presentation/components/demos/CosmicInspiredWebDirectoryDemoGemini';
 import { CyberpunkDarkWebInterfaceDemoGemini } from '@/src/presentation/components/demos/CyberpunkDarkWebInterfaceDemoGemini';
@@ -110,6 +111,7 @@ const LIVE_PREVIEW_COMPONENTS: Record<string, Partial<Record<AiModel, React.Comp
   'showcase-045': { 'gemini-3.1-pro': BoldStartupManifestoDemoGemini },
   'showcase-046': { 'gemini-3.1-pro': BillionDollarIPODemoGemini },
   'showcase-047': { 'gemini-3.1-pro': ImmersiveAIConsciousnessDemoGemini },
+  'showcase-048': { 'gemini-3.1-pro': CivilizationSimulationDemoGemini },
 };
 
 interface LivePreviewPageProps {
