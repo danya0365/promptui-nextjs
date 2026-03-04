@@ -58,6 +58,7 @@ import { PostHumanInterfaceDemoGemini } from '@/src/presentation/components/demo
 import { PostHumanTranscendenceDemoGemini } from '@/src/presentation/components/demos/PostHumanTranscendenceDemoGemini';
 import { ProductCardGridDemoGemini } from '@/src/presentation/components/demos/ProductCardGridDemoGemini';
 import { ProfileCardCollectionDemoGemini } from '@/src/presentation/components/demos/ProfileCardCollectionDemoGemini';
+import { RealityFractureDemoGemini } from '@/src/presentation/components/demos/RealityFractureDemoGemini';
 import { RecipeCookingAppDemoGemini } from '@/src/presentation/components/demos/RecipeCookingAppDemoGemini';
 import { Retro90sTechMagazineDemoGemini } from '@/src/presentation/components/demos/Retro90sTechMagazineDemoGemini';
 import { SaaSLandingPageDemoGemini } from '@/src/presentation/components/demos/SaaSLandingPageDemoGemini';
@@ -146,6 +147,7 @@ const LIVE_PREVIEW_COMPONENTS: Record<string, Partial<Record<AiModel, React.Comp
   'showcase-063': { 'gemini-3.1-pro': EvolvingAIPersonaDemoGemini },
   'showcase-064': { 'gemini-3.1-pro': PhysicsDrivenWebWorldDemoGemini },
   'showcase-065': { 'gemini-3.1-pro': SelfEvolvingInterfaceDemoGemini },
+  'showcase-066': { 'gemini-3.1-pro': RealityFractureDemoGemini },
 };
 
 interface LivePreviewPageProps {

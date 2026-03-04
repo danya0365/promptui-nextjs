@@ -952,6 +952,20 @@ const SHOWCASE_ITEMS: ShowcaseItem[] = [
     createdAt: '2025-06-04T06:00:00.000Z',
     updatedAt: '2025-06-04T06:00:00.000Z',
   },
+  {
+    id: 'showcase-066',
+    title: 'Reality Fracture Experience',
+    description: 'ความจริงกำลังปริแตก! หน้าเว็บที่เป็นดั่ง Simulation ที่ขาดความเสถียร ยิ่งเลื่อนดูมาก โลกจะยิ่งบิดเบี้ยว ตัวหนังสือกระตุกหลอน (Glitch) เมื่อชี้ที่กล่องข้อมูลจะเผยข้อความลับที่ซ่อนอยู่ และมีปุ่มกดปิดจบเพื่อให้จักรวาลสูญสลายกลายเป็นความว่างเปล่า',
+    category: 'landing-page',
+    prompt: 'Design a reality-fracture digital experience.\n\nConcept:\nThe interface feels like reality is breaking.\n\nVisual System:\n- Clean minimal base layout\n- Sudden glitch overlays\n- Pixel fragmentation transitions\n- Distortion wave effects\n- Color channel separation moments\n- Subtle soundwave visualization aesthetic\n\nInteraction:\n- Scroll creates perspective bending\n- Hover reveals hidden fractured layers\n- Certain sections flicker into alternate versions\n- Final section collapses into pure minimalism\n\nMood:\nUnstable simulation.\nHigh-tech dystopian.\nReality bending.',
+    thumbnailUrl: '/thumbnails/reality-fracture.png',
+    tags: ['glitch', 'dystopian', 'experimental', 'animation', 'distortion'],
+    difficulty: 'advanced',
+    isFeatured: true,
+    isActive: true,
+    createdAt: '2025-06-04T07:00:00.000Z',
+    updatedAt: '2025-06-04T07:00:00.000Z',
+  },
 ];
 
 export class StaticShowcaseItemRepository implements IShowcaseItemRepository {
