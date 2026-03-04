@@ -1148,6 +1148,20 @@ const SHOWCASE_ITEMS: ShowcaseItem[] = [
     createdAt: '2025-06-04T20:00:00.000Z',
     updatedAt: '2025-06-04T20:00:00.000Z',
   },
+  {
+    id: 'showcase-080',
+    title: 'Fragmented Cyberpunk Glitch',
+    description: 'จำลองสภาพระบบล่มสลาย (Corrupted System) ด้วยเอฟเฟกต์ Glitch สุดจัดจ้าน! การ์ดจะโดนบิดองศาเอียงเล็กน้อย (Skew) และมีเส้นขอบสีแปลกๆ ซ้อนทับกัน (RGB Split) หากคุณลอง Scroll เมาส์ กริทหน้าจอจะถูกบิด Perspective ไหลตาม (Warp effect) และเมื่อนำเมาส์ไปชี้ที่การ์ด ระบบจะกระชากภาพขาดด้วยแอนิเมชัน Violent Glitch ให้ความรู้สึกเหวอและรุนแรงแบบโลกดิสโทเปีย',
+    category: 'innovative',
+    prompt: 'Design a fragmented cyberpunk card interface with glitch distortion effects.\n\nConcept:\nCards feel unstable, like a corrupted system.\n\nVisual System:\n- Black base with RGB split glitch overlays\n- Purple and cyan light leaks\n- Pixel fragmentation transitions\n- Digital interference noise\n\nCard Design:\n- Sharp cards with slight misalignment\n- Neon edge glow\n- Flickering headings\n- Data blocks with glitch distortion\n- Expandable broken grid layout\n\nInteraction:\n- Hover distorts card briefly\n- Scroll causes perspective warp\n- Clicking card reassembles fragments into full-screen mode\n\nMood:\nCorrupted digital reality.\nUnstable but powerful.',
+    thumbnailUrl: '/thumbnails/fragmented-glitch.png',
+    tags: ['cyberpunk', 'glitch', 'corrupted', 'rgb-split', 'sci-fi', 'distortion'],
+    difficulty: 'advanced',
+    isFeatured: true,
+    isActive: true,
+    createdAt: '2025-06-04T21:00:00.000Z',
+    updatedAt: '2025-06-04T21:00:00.000Z',
+  },
 ];
 
 export class StaticShowcaseItemRepository implements IShowcaseItemRepository {

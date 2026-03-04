@@ -33,6 +33,7 @@ import { EvolvingAIPersonaDemoGemini } from '@/src/presentation/components/demos
 import { ExperimentalPhysicsUIDemoGemini } from '@/src/presentation/components/demos/ExperimentalPhysicsUIDemoGemini';
 import { FileManagerDemoGemini } from '@/src/presentation/components/demos/FileManagerDemoGemini';
 import { FinanceBankingDashboardDemoGemini } from '@/src/presentation/components/demos/FinanceBankingDashboardDemoGemini';
+import { FragmentedGlitchCyberpunkDemoGemini } from '@/src/presentation/components/demos/FragmentedGlitchCyberpunkDemoGemini';
 import { FuturisticGlassmorphismDirectoryDemoGemini } from '@/src/presentation/components/demos/FuturisticGlassmorphismDirectoryDemoGemini';
 import { FuturisticNeuralNetworkDemoGemini } from '@/src/presentation/components/demos/FuturisticNeuralNetworkDemoGemini';
 import { FuturisticOSWebExperienceDemoGemini } from '@/src/presentation/components/demos/FuturisticOSWebExperienceDemoGemini';
@@ -174,6 +175,7 @@ const LIVE_PREVIEW_COMPONENTS: Record<string, Partial<Record<AiModel, React.Comp
   'showcase-077': { 'gemini-3.1-pro': CyberpunkHackerTerminalDemoGemini },
   'showcase-078': { 'gemini-3.1-pro': AdvancedCyberpunkNeonDemoGemini },
   'showcase-079': { 'gemini-3.1-pro': CyberWarfareDashboardDemoGemini },
+  'showcase-080': { 'gemini-3.1-pro': FragmentedGlitchCyberpunkDemoGemini },
 };
 
 interface LivePreviewPageProps {
