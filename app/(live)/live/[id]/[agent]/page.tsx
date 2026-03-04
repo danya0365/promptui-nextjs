@@ -2,6 +2,7 @@
 import { AiModel } from '@/src/application/repositories/IShowcaseLivePreviewRepository';
 import { siteConfig } from '@/src/config/site.config';
 import { AcademicWebArchiveDemoGemini } from '@/src/presentation/components/demos/AcademicWebArchiveDemoGemini';
+import { AdvancedCyberpunkNeonDemoGemini } from '@/src/presentation/components/demos/AdvancedCyberpunkNeonDemoGemini';
 import { AIChatInterfaceDemoGemini } from '@/src/presentation/components/demos/AIChatInterfaceDemoGemini';
 import { AICommandCenterDemoGemini } from '@/src/presentation/components/demos/AICommandCenterDemoGemini';
 import { AIDeityAwakeningDemoGemini } from '@/src/presentation/components/demos/AIDeityAwakeningDemoGemini';
@@ -170,6 +171,7 @@ const LIVE_PREVIEW_COMPONENTS: Record<string, Partial<Record<AiModel, React.Comp
   'showcase-075': { 'gemini-3.1-pro': CinematicSpatialDemoGemini },
   'showcase-076': { 'gemini-3.1-pro': NextGenSpatialOSDemoGemini },
   'showcase-077': { 'gemini-3.1-pro': CyberpunkHackerTerminalDemoGemini },
+  'showcase-078': { 'gemini-3.1-pro': AdvancedCyberpunkNeonDemoGemini },
 };
 
 interface LivePreviewPageProps {

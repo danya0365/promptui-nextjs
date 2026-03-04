@@ -1120,6 +1120,20 @@ const SHOWCASE_ITEMS: ShowcaseItem[] = [
     createdAt: '2025-06-04T18:00:00.000Z',
     updatedAt: '2025-06-04T18:00:00.000Z',
   },
+  {
+    id: 'showcase-078',
+    title: 'Advanced Cyberpunk Neon Interface',
+    description: 'หลุดพ้นจากเมืองเก่าสู่โลกใต้ดินไซเบอร์พังก์! ใช้วัสดุแผงควบคุมลอยตัว (Floating Panels) โดดเด่นสดใสด้วยสีสันแสงนีออนแสบตา (Hot Pink & Cyan) ขอบการ์ดจะฉายแสงเมื่อเมาส์สัมผัส ตัวอักษรดั่งภาพโฮโลแกรม (Holographic Titles) ภายในมีเลเยอร์ซ้อนบอกสเตตัสแบบเครื่องจักร แถบแสง Glitch วูบวาบ แถมเมื่อคลิกปุ๊บ ฉากหลังทั้งหุบเขาซิลิคอนก็จะกะพริบตอบสนองรุนแรง (Background Flicker)',
+    category: 'innovative',
+    prompt: 'Design an advanced cyberpunk UI composed of glowing neon cards.\n\nConcept:\nFloating tactical data panels in a dystopian city network.\n\nVisual System:\n- Dark charcoal background\n- Neon cyan and hot pink accents\n- Soft glowing card borders\n- Animated glitch lines\n- Subtle noise texture\n\nCard Design:\n- Slight 6px corner radius\n- Gradient neon borders\n- Layered internal sub-panels\n- Holographic title bars\n- Metric blocks with animated numbers\n\nInteraction:\n- Hover adds neon glow pulse\n- Cards slide in with glitch transition\n- Expand reveals layered sub-cards\n- Background reacts with light flicker\n\nMood:\nHigh-tech city underworld.\nElectric and alive.',
+    thumbnailUrl: '/thumbnails/cyberpunk-neon.png',
+    tags: ['cyberpunk', 'neon', 'holographic', 'glitch', 'sci-fi', 'futuristic'],
+    difficulty: 'advanced',
+    isFeatured: true,
+    isActive: true,
+    createdAt: '2025-06-04T19:00:00.000Z',
+    updatedAt: '2025-06-04T19:00:00.000Z',
+  },
 ];
 
 export class StaticShowcaseItemRepository implements IShowcaseItemRepository {
