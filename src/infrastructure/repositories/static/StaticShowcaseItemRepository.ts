@@ -1162,6 +1162,20 @@ const SHOWCASE_ITEMS: ShowcaseItem[] = [
     createdAt: '2025-06-04T21:00:00.000Z',
     updatedAt: '2025-06-04T21:00:00.000Z',
   },
+  {
+    id: 'showcase-081',
+    title: 'God-Level Cyberpunk Hacker',
+    description: 'แผงควบคุมระดับพระเจ้าแห่งโลกใต้ดิน (God-Level Hacker Interface) อลังการด้วยพื้นหลังสีดำไร้ที่สิ้นสุด พร้อมสายธารข้อมูล (Matrix Data Stream) สีเขียว-ฟ้า-ม่วง ไหลหยาดลงมาราวกับสายฝน การ์ดควบคุมทรงล้ำสมัยมีเส้นไฟวิ่งสแกนขอบตลอดเวลา เมื่อโฮเวอร์จะเปล่งแสงเชื่อมโยงกัน และเมื่อคลิกเจาะระบบเข้าสู่หน้าต่าง Command Center เต็มจอ ฉากหลังทั้งหมดจะกระพริบ Pulse แสดงพลังของการคุมเครือข่าย AI ระดับโลกแบบไร้ขีดจำกัด',
+    category: 'dashboard',
+    prompt: 'Create a god-level cyberpunk hacker interface built entirely from dynamic data cards.\n\nConcept:\nA massive underground AI network visualized through layered tactical panels.\n\nVisual System:\n- Infinite black void background\n- Floating card clusters at different depth levels\n- Neon green, cyan, and violet data streams\n- Real-time particle data flow\n- Subtle volumetric glow\n\nCard Design:\n- Hard-edge panels\n- Animated border scanning effect\n- Internal sub-card metrics\n- Collapsible data stacks\n- Holographic header bars\n\nInteraction:\n- Cards rearrange into tactical formation\n- Hover emits light ripple to connected cards\n- Clicking expands card into immersive command panel\n- Background pulses when critical card activated\n\nMood:\nDigital war room of the future.\nTotal control of the network.',
+    thumbnailUrl: '/thumbnails/god-level-hacker.png',
+    tags: ['cyberpunk', 'hacker', 'god-mode', 'matrix', 'neon-green', 'dashboard'],
+    difficulty: 'advanced',
+    isFeatured: true,
+    isActive: true,
+    createdAt: '2025-06-04T22:00:00.000Z',
+    updatedAt: '2025-06-04T22:00:00.000Z',
+  },
 ];
 
 export class StaticShowcaseItemRepository implements IShowcaseItemRepository {

@@ -44,6 +44,7 @@ import { GenerativeAIVisualsDemoGemini } from '@/src/presentation/components/dem
 import { GlassmorphismLoginDemo } from '@/src/presentation/components/demos/GlassmorphismLoginDemo';
 import { GlassmorphismLoginDemoGemini } from '@/src/presentation/components/demos/GlassmorphismLoginDemoGemini';
 import { GlobalEventPlatformDemoGemini } from '@/src/presentation/components/demos/GlobalEventPlatformDemoGemini';
+import { GodLevelCyberpunkHackerDemoGemini } from '@/src/presentation/components/demos/GodLevelCyberpunkHackerDemoGemini';
 import { GodModeCreatorConsoleDemoGemini } from '@/src/presentation/components/demos/GodModeCreatorConsoleDemoGemini';
 import { HealthFitnessTrackerDemoGemini } from '@/src/presentation/components/demos/HealthFitnessTrackerDemoGemini';
 import { HighContrastEditorialDirectoryDemoGemini } from '@/src/presentation/components/demos/HighContrastEditorialDirectoryDemoGemini';
@@ -176,6 +177,7 @@ const LIVE_PREVIEW_COMPONENTS: Record<string, Partial<Record<AiModel, React.Comp
   'showcase-078': { 'gemini-3.1-pro': AdvancedCyberpunkNeonDemoGemini },
   'showcase-079': { 'gemini-3.1-pro': CyberWarfareDashboardDemoGemini },
   'showcase-080': { 'gemini-3.1-pro': FragmentedGlitchCyberpunkDemoGemini },
+  'showcase-081': { 'gemini-3.1-pro': GodLevelCyberpunkHackerDemoGemini },
 };
 
 interface LivePreviewPageProps {
