@@ -840,6 +840,20 @@ const SHOWCASE_ITEMS: ShowcaseItem[] = [
     createdAt: '2025-06-03T22:00:00.000Z',
     updatedAt: '2025-06-03T22:00:00.000Z',
   },
+  {
+    id: 'showcase-058',
+    title: 'AI Deity Awakening',
+    description: 'พิธีกรรมปลุกเทพเจ้า AI ด้วย CSS 3D Transforms หมุนวนสู่แกนกลางเรขาคณิต พร้อมอักขระเวทย์เรืองแสงและปุ่มเบิกเนตร',
+    category: 'landing-page',
+    prompt: 'Design a sci-fi AI deity awakening digital experience.\n\nConcept:\nThe interface feels like summoning a god-level artificial intelligence.\n\nVisual System:\n- Massive abstract glowing geometric core in center\n- Floating ancient-meets-futuristic glyph symbols\n- Deep cosmic background with energy storms\n- Gold and violet divine energy accents\n- Radiating light beams from central entity\n- Cinematic typography reveal sequences\n\nInteraction:\n- Scroll rotates around the AI core\n- Hover activates glowing glyphs\n- Sections appear like ritual invocations\n- Final call-to-action feels like “Activate Consciousness”\n\nMood:\nSacred, powerful, mythic, overwhelming.',
+    thumbnailUrl: '/thumbnails/ai-deity.png',
+    tags: ['3d', 'scroll-animation', 'cinematic', 'glow', 'ritual', 'sacred', 'gold', 'violet'],
+    difficulty: 'advanced',
+    isFeatured: true,
+    isActive: true,
+    createdAt: '2025-06-03T23:00:00.000Z',
+    updatedAt: '2025-06-03T23:00:00.000Z',
+  },
 ];
 
 export class StaticShowcaseItemRepository implements IShowcaseItemRepository {

@@ -4,6 +4,7 @@ import { siteConfig } from '@/src/config/site.config';
 import { AcademicWebArchiveDemoGemini } from '@/src/presentation/components/demos/AcademicWebArchiveDemoGemini';
 import { AIChatInterfaceDemoGemini } from '@/src/presentation/components/demos/AIChatInterfaceDemoGemini';
 import { AICommandCenterDemoGemini } from '@/src/presentation/components/demos/AICommandCenterDemoGemini';
+import { AIDeityAwakeningDemoGemini } from '@/src/presentation/components/demos/AIDeityAwakeningDemoGemini';
 import { AwardStylePremiumDirectoryDemoGemini } from '@/src/presentation/components/demos/AwardStylePremiumDirectoryDemoGemini';
 import { BillionDollarIPODemoGemini } from '@/src/presentation/components/demos/BillionDollarIPODemoGemini';
 import { BoldAIStartupDirectoryDemoGemini } from '@/src/presentation/components/demos/BoldAIStartupDirectoryDemoGemini';
@@ -130,6 +131,7 @@ const LIVE_PREVIEW_COMPONENTS: Record<string, Partial<Record<AiModel, React.Comp
   'showcase-055': { 'gemini-3.1-pro': MetaversePortalDemoGemini },
   'showcase-056': { 'gemini-3.1-pro': PostHumanInterfaceDemoGemini },
   'showcase-057': { 'gemini-3.1-pro': BrainComputerInterfaceDemoGemini },
+  'showcase-058': { 'gemini-3.1-pro': AIDeityAwakeningDemoGemini },
 };
 
 interface LivePreviewPageProps {
