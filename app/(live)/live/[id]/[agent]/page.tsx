@@ -16,6 +16,7 @@ import { CalmOrganicWebDirectoryDemoGemini } from '@/src/presentation/components
 import { ChromeInspiredWebDirectoryDemoGemini } from '@/src/presentation/components/demos/ChromeInspiredWebDirectoryDemoGemini';
 import { CinematicHollywoodTrailerDemoGemini } from '@/src/presentation/components/demos/CinematicHollywoodTrailerDemoGemini';
 import { CinematicProductLaunchDemoGemini } from '@/src/presentation/components/demos/CinematicProductLaunchDemoGemini';
+import { CinematicSpatialDemoGemini } from '@/src/presentation/components/demos/CinematicSpatialDemoGemini';
 import { CivilizationSimulationDemoGemini } from '@/src/presentation/components/demos/CivilizationSimulationDemoGemini';
 import { ClaymorphismDirectoryDemoGemini } from '@/src/presentation/components/demos/ClaymorphismDirectoryDemoGemini';
 import { CosmicInspiredWebDirectoryDemoGemini } from '@/src/presentation/components/demos/CosmicInspiredWebDirectoryDemoGemini';
@@ -164,6 +165,7 @@ const LIVE_PREVIEW_COMPONENTS: Record<string, Partial<Record<AiModel, React.Comp
   'showcase-072': { 'gemini-3.1-pro': SpatialComputingDemoGemini },
   'showcase-073': { 'gemini-3.1-pro': SpatialDepthUIDemoGemini },
   'showcase-074': { 'gemini-3.1-pro': MinimalSpatialDashboardDemoGemini },
+  'showcase-075': { 'gemini-3.1-pro': CinematicSpatialDemoGemini },
 };
 
 interface LivePreviewPageProps {

@@ -1078,6 +1078,20 @@ const SHOWCASE_ITEMS: ShowcaseItem[] = [
     createdAt: '2025-06-04T15:00:00.000Z',
     updatedAt: '2025-06-04T15:00:00.000Z',
   },
+  {
+    id: 'showcase-075',
+    title: 'Cinematic Spatial Reveal',
+    description: 'จำลองฉากพรีเซนต์ระดับ Keynote แบบ Apple Vision Pro! ห้องจัดแสดงมืดสลัว (Dim environment) มีสปอตไลท์สาดแสง ใช้วัสดุกระจกดาร์กทีโอดอร์ (Dark Glass) ตัดขอบแสงสะท้อน การ์ดเนื้อหาโชว์รูปภาพใหญ่แบบ Hero mask เมื่อ Scroll เมาส์ลง กล้องจะค่อยๆ ซูมก้าวทะลุเลเยอร์การ์ดเข้าไปอย่างยิ่งใหญ่ (Cinematic Parallax)',
+    category: 'innovative',
+    prompt: 'Create a cinematic spatial interface inspired by Apple Vision Pro keynote demos.\n\nConcept:\nCards float in a softly lit spatial environment with depth and atmosphere.\n\nVisual System:\n- Dim gradient background (soft blue-gray to charcoal)\n- Volumetric ambient lighting\n- Realistic soft shadows and reflections\n- Layered translucent panels\n- Smooth parallax depth\n\nCard Design:\n- 24px rounded corners\n- Glass material with subtle reflection\n- Edge highlight glow\n- Hero image cards with soft mask\n- Sub-panel layering\n\nInteraction:\n- Scroll shifts perspective depth\n- Cards animate in slow smooth motion\n- Focused card enlarges and centers elegantly\n\nMood:\nCinematic spatial computing reveal.\nPremium Apple product energy.',
+    thumbnailUrl: '/thumbnails/cinematic-spatial.png',
+    tags: ['cinematic', 'visionos', 'spatial', 'presentation', 'dark-glass', 'premium'],
+    difficulty: 'advanced',
+    isFeatured: true,
+    isActive: true,
+    createdAt: '2025-06-04T16:00:00.000Z',
+    updatedAt: '2025-06-04T16:00:00.000Z',
+  },
 ];
 
 export class StaticShowcaseItemRepository implements IShowcaseItemRepository {
