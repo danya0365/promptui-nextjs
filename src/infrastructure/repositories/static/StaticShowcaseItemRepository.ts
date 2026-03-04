@@ -826,6 +826,20 @@ const SHOWCASE_ITEMS: ShowcaseItem[] = [
     createdAt: '2025-06-03T21:00:00.000Z',
     updatedAt: '2025-06-03T21:00:00.000Z',
   },
+  {
+    id: 'showcase-057',
+    title: 'Brain-Computer Simulator',
+    description: 'จำลองการเชื่อมต่อสมองเข้าสู่เซิร์ฟเวอร์ (Neural Network) ใช้ Canvas วาดเส้นใยประสาทเกิดประกายช็อตไฟฟ้าเมื่อเมาส์สัมผัส',
+    category: 'landing-page',
+    prompt: 'Create a brain-computer interface simulation web experience.\n\nConcept:\nThe user feels like they are connected directly to a digital neural network.\n\nVisual System:\n- Dark infinite void background\n- Pulsing neural pathways forming constellations\n- Electric synapse flashes on interaction\n- Floating semi-transparent data panels\n- Dynamic brainwave waveform visuals\n- Soft volumetric neural glow\n\nInteraction:\n- Cursor creates electrical impulses\n- Scroll triggers neural synchronization animation\n- Sections unlock as if “access granted”\n- UI elements materialize from neural connections\n\nMood:\nIntimate, intelligent, futuristic, transcendent.\nFeels like merging with artificial intelligence.',
+    thumbnailUrl: '/thumbnails/brain-computer.png',
+    tags: ['canvas', 'particles', 'neural-network', 'bci', 'futuristic', 'simulation', 'interactive'],
+    difficulty: 'advanced',
+    isFeatured: true,
+    isActive: true,
+    createdAt: '2025-06-03T22:00:00.000Z',
+    updatedAt: '2025-06-03T22:00:00.000Z',
+  },
 ];
 
 export class StaticShowcaseItemRepository implements IShowcaseItemRepository {

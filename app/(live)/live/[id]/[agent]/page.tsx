@@ -8,6 +8,7 @@ import { AwardStylePremiumDirectoryDemoGemini } from '@/src/presentation/compone
 import { BillionDollarIPODemoGemini } from '@/src/presentation/components/demos/BillionDollarIPODemoGemini';
 import { BoldAIStartupDirectoryDemoGemini } from '@/src/presentation/components/demos/BoldAIStartupDirectoryDemoGemini';
 import { BoldStartupManifestoDemoGemini } from '@/src/presentation/components/demos/BoldStartupManifestoDemoGemini';
+import { BrainComputerInterfaceDemoGemini } from '@/src/presentation/components/demos/BrainComputerInterfaceDemoGemini';
 import { CalendarAppDemoGemini } from '@/src/presentation/components/demos/CalendarAppDemoGemini';
 import { CalmOrganicWebDirectoryDemoGemini } from '@/src/presentation/components/demos/CalmOrganicWebDirectoryDemoGemini';
 import { ChromeInspiredWebDirectoryDemoGemini } from '@/src/presentation/components/demos/ChromeInspiredWebDirectoryDemoGemini';
@@ -128,6 +129,7 @@ const LIVE_PREVIEW_COMPONENTS: Record<string, Partial<Record<AiModel, React.Comp
   'showcase-054': { 'gemini-3.1-pro': GlobalEventPlatformDemoGemini },
   'showcase-055': { 'gemini-3.1-pro': MetaversePortalDemoGemini },
   'showcase-056': { 'gemini-3.1-pro': PostHumanInterfaceDemoGemini },
+  'showcase-057': { 'gemini-3.1-pro': BrainComputerInterfaceDemoGemini },
 };
 
 interface LivePreviewPageProps {
