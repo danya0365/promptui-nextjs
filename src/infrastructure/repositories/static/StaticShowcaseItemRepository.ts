@@ -966,6 +966,20 @@ const SHOWCASE_ITEMS: ShowcaseItem[] = [
     createdAt: '2025-06-04T07:00:00.000Z',
     updatedAt: '2025-06-04T07:00:00.000Z',
   },
+  {
+    id: 'showcase-067',
+    title: 'Neural Network Interface',
+    description: 'ระบบโครงข่ายประสาทล้ำยุค (Futuristic Neural Network) การ์ดข้อมูลโปร่งแสงกระจกฝ้า (Glassmorphism) ลอยต่อกันเป็นกริดแม่เหล็ก มีเส้นพลังงานสีฟ้าเชื่อมต่อกัน เมื่อคลิก การ์ดจะขยายตัวทะลุมิติมาเต็มจอ',
+    category: 'dashboard',
+    prompt: 'Create a futuristic neural network interface built entirely from modular floating cards and panels.\n\nConcept:\nThe entire experience is constructed using layered glass panels that float in depth.\n\nVisual System:\n- Dark void background with subtle neural light lines\n- Floating semi-transparent glass cards\n- Multi-layer panel stacking with depth blur\n- Electric blue glow accents\n- Soft volumetric lighting between panels\n- Thin futuristic typography\n\nCard Design:\n- 16px rounded corners\n- Soft glass blur background\n- Inner glow border\n- Light elevation shadow\n- Animated hover pulse effect\n- Expandable panel animation (card unfolds in depth)\n\nInteraction:\n- Cards magnetically align into grid formations\n- Hover causes ripple energy through connected panels\n- Clicking expands card into immersive full-screen panel\n\nMood:\nIntelligent, modular, futuristic system architecture.',
+    thumbnailUrl: '/thumbnails/neural-network.png',
+    tags: ['dashboard', 'glassmorphism', 'neural-network', 'futuristic', 'modal-animation'],
+    difficulty: 'advanced',
+    isFeatured: true,
+    isActive: true,
+    createdAt: '2025-06-04T08:00:00.000Z',
+    updatedAt: '2025-06-04T08:00:00.000Z',
+  },
 ];
 
 export class StaticShowcaseItemRepository implements IShowcaseItemRepository {

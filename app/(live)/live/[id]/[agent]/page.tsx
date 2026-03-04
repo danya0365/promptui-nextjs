@@ -29,6 +29,7 @@ import { ExperimentalPhysicsUIDemoGemini } from '@/src/presentation/components/d
 import { FileManagerDemoGemini } from '@/src/presentation/components/demos/FileManagerDemoGemini';
 import { FinanceBankingDashboardDemoGemini } from '@/src/presentation/components/demos/FinanceBankingDashboardDemoGemini';
 import { FuturisticGlassmorphismDirectoryDemoGemini } from '@/src/presentation/components/demos/FuturisticGlassmorphismDirectoryDemoGemini';
+import { FuturisticNeuralNetworkDemoGemini } from '@/src/presentation/components/demos/FuturisticNeuralNetworkDemoGemini';
 import { FuturisticOSWebExperienceDemoGemini } from '@/src/presentation/components/demos/FuturisticOSWebExperienceDemoGemini';
 import { FuturisticSpacePlatformDemoGemini } from '@/src/presentation/components/demos/FuturisticSpacePlatformDemoGemini';
 import { GalacticLaunchSystemDemoGemini } from '@/src/presentation/components/demos/GalacticLaunchSystemDemoGemini';
@@ -148,6 +149,7 @@ const LIVE_PREVIEW_COMPONENTS: Record<string, Partial<Record<AiModel, React.Comp
   'showcase-064': { 'gemini-3.1-pro': PhysicsDrivenWebWorldDemoGemini },
   'showcase-065': { 'gemini-3.1-pro': SelfEvolvingInterfaceDemoGemini },
   'showcase-066': { 'gemini-3.1-pro': RealityFractureDemoGemini },
+  'showcase-067': { 'gemini-3.1-pro': FuturisticNeuralNetworkDemoGemini },
 };
 
 interface LivePreviewPageProps {
