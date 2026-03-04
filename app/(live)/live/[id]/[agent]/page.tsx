@@ -53,6 +53,7 @@ import { MultiStepRegisterDemoGemini } from '@/src/presentation/components/demos
 import { MusicPlayerDashboardDemoGemini } from '@/src/presentation/components/demos/MusicPlayerDashboardDemoGemini';
 import { NeoBrutalistPromptGalleryDemoGemini } from '@/src/presentation/components/demos/NeoBrutalistPromptGalleryDemoGemini';
 import { NeonDashboardWidgetsDemoGemini } from '@/src/presentation/components/demos/NeonDashboardWidgetsDemoGemini';
+import { PhysicsDrivenWebWorldDemoGemini } from '@/src/presentation/components/demos/PhysicsDrivenWebWorldDemoGemini';
 import { PostHumanInterfaceDemoGemini } from '@/src/presentation/components/demos/PostHumanInterfaceDemoGemini';
 import { PostHumanTranscendenceDemoGemini } from '@/src/presentation/components/demos/PostHumanTranscendenceDemoGemini';
 import { ProductCardGridDemoGemini } from '@/src/presentation/components/demos/ProductCardGridDemoGemini';
@@ -142,6 +143,7 @@ const LIVE_PREVIEW_COMPONENTS: Record<string, Partial<Record<AiModel, React.Comp
   'showcase-061': { 'gemini-3.1-pro': PostHumanTranscendenceDemoGemini },
   'showcase-062': { 'gemini-3.1-pro': LiveSimulationMatrixDemoGemini },
   'showcase-063': { 'gemini-3.1-pro': EvolvingAIPersonaDemoGemini },
+  'showcase-064': { 'gemini-3.1-pro': PhysicsDrivenWebWorldDemoGemini },
 };
 
 interface LivePreviewPageProps {

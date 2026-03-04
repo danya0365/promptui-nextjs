@@ -924,6 +924,20 @@ const SHOWCASE_ITEMS: ShowcaseItem[] = [
     createdAt: '2025-06-04T04:00:00.000Z',
     updatedAt: '2025-06-04T04:00:00.000Z',
   },
+  {
+    id: 'showcase-064',
+    title: 'Physics Driven Web World',
+    description: 'จำลองโลก 3 มิติราวกับเอนจินเกมระดับ AAA (AAA Game Engine) เลื่อนเพื่อบังคับกล้องพุ่งผ่านฉาก การ์ดข้อมูลตอบสนองต่อแรงผลัก เลนส์กล้องเบลอด้านหลัง (Depth of Field) มีหมอกปกคลุม แสงเงาสมจริง',
+    category: 'landing-page',
+    prompt: 'Create a physics-driven interactive web world experience.\n\nConcept:\nUI elements exist inside a simulated 3D physics environment.\n\nVisual System:\n- Real-time lighting and shadows\n- Floating 3D cards with mass and gravity\n- Soft environmental fog\n- Cinematic camera movement\n- Realistic depth of field\n\nInteraction:\n- UI panels slightly react to cursor force\n- Scroll moves camera through space\n- Clicking causes ripple or force-wave animation\n- Sections feel like moving through a game world\n\nMood:\nAAA game engine meets futuristic interface.\nImmersive and tactile.',
+    thumbnailUrl: '/thumbnails/physics-world.png',
+    tags: ['3d', 'physics', 'cinema', 'game-engine', 'scroll-animation', 'depth-of-field'],
+    difficulty: 'advanced',
+    isFeatured: true,
+    isActive: true,
+    createdAt: '2025-06-04T05:00:00.000Z',
+    updatedAt: '2025-06-04T05:00:00.000Z',
+  },
 ];
 
 export class StaticShowcaseItemRepository implements IShowcaseItemRepository {
