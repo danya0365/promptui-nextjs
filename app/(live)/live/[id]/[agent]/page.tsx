@@ -52,6 +52,7 @@ import { MusicPlayerDashboardDemoGemini } from '@/src/presentation/components/de
 import { NeoBrutalistPromptGalleryDemoGemini } from '@/src/presentation/components/demos/NeoBrutalistPromptGalleryDemoGemini';
 import { NeonDashboardWidgetsDemoGemini } from '@/src/presentation/components/demos/NeonDashboardWidgetsDemoGemini';
 import { PostHumanInterfaceDemoGemini } from '@/src/presentation/components/demos/PostHumanInterfaceDemoGemini';
+import { PostHumanTranscendenceDemoGemini } from '@/src/presentation/components/demos/PostHumanTranscendenceDemoGemini';
 import { ProductCardGridDemoGemini } from '@/src/presentation/components/demos/ProductCardGridDemoGemini';
 import { ProfileCardCollectionDemoGemini } from '@/src/presentation/components/demos/ProfileCardCollectionDemoGemini';
 import { RecipeCookingAppDemoGemini } from '@/src/presentation/components/demos/RecipeCookingAppDemoGemini';
@@ -136,6 +137,7 @@ const LIVE_PREVIEW_COMPONENTS: Record<string, Partial<Record<AiModel, React.Comp
   'showcase-058': { 'gemini-3.1-pro': AIDeityAwakeningDemoGemini },
   'showcase-059': { 'gemini-3.1-pro': CyberpunkCityPlatformDemoGemini },
   'showcase-060': { 'gemini-3.1-pro': BlackMirrorPsychologicalDemoGemini },
+  'showcase-061': { 'gemini-3.1-pro': PostHumanTranscendenceDemoGemini },
 };
 
 interface LivePreviewPageProps {

@@ -882,6 +882,20 @@ const SHOWCASE_ITEMS: ShowcaseItem[] = [
     createdAt: '2025-06-04T01:00:00.000Z',
     updatedAt: '2025-06-04T01:00:00.000Z',
   },
+  {
+    id: 'showcase-061',
+    title: 'Post-Human Transcendence',
+    description: 'ประตูมิติสู่การหลุดพ้นจากหน้าจอ เลื่อน Scroll ขึ้นสู่แสงสว่าง (Ascend) ผ่านเพลตแก้ว Glassmorphic ที่จะค่อยๆ ละลายหายไปทีละชั้น',
+    category: 'landing-page',
+    prompt: 'Create a post-human transcendence digital portal experience.\n\nConcept:\nThe user ascends through digital layers of consciousness.\n\nVisual System:\n- Infinite upward depth perspective\n- Floating translucent dimensional planes\n- Shifting gradient energy fields\n- Soft celestial particle flow\n- Ultra-thin futuristic typography\n- White, silver, and soft cyan palette\n\nInteraction:\n- Scroll creates vertical ascension effect\n- Layers peel away revealing deeper dimensions\n- UI fades instead of switches\n- Final section becomes pure light minimalism\n\nMood:\nSpiritual technology.\nAscension beyond physical interface.',
+    thumbnailUrl: '/thumbnails/transcendence.png',
+    tags: ['scroll-animation', '3d', 'glow', 'glassmorphism', 'minimalism', 'spiritual'],
+    difficulty: 'advanced',
+    isFeatured: true,
+    isActive: true,
+    createdAt: '2025-06-04T02:00:00.000Z',
+    updatedAt: '2025-06-04T02:00:00.000Z',
+  },
 ];
 
 export class StaticShowcaseItemRepository implements IShowcaseItemRepository {
