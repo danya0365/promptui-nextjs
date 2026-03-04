@@ -12,6 +12,7 @@ export interface GalleryPresenterState {
   error: string | null;
   searchTerm: string;
   activeCategory: string;
+  activeTag: string | null;
   activeDifficulty: string;
   activeAiModel: string;
   filteredItems: ShowcaseItem[];
@@ -29,6 +30,7 @@ export interface GalleryPresenterActions {
   loadData: () => Promise<void>;
   setSearchTerm: (term: string) => void;
   setActiveCategory: (category: string) => void;
+  setActiveTag: (tag: string | null) => void;
   setActiveDifficulty: (difficulty: string) => void;
   setActiveAiModel: (agent: string) => void;
   setClientPage: (page: number) => void;
@@ -66,6 +68,9 @@ export function useGalleryPresenter(
   const [activeCategory, setActiveCategoryState] = useState(
     initialViewModel?.activeCategory || 'all'
   );
+  const [activeTag, setActiveTagState] = useState<string | null>(
+    initialViewModel?.activeTag || null
+  );
   const [activeDifficulty, setActiveDifficultyState] = useState('all');
   const [activeAiModel, setActiveAiModelState] = useState('all');
   const [copiedId, setCopiedId] = useState<string | null>(null);
@@ -88,7 +93,7 @@ export function useGalleryPresenter(
     }).catch(console.error);
   }, [presenter, viewModel?.activeCategory]);
 
-  const isClientFilterActive = !(!searchTerm.trim() && activeDifficulty === 'all' && agentShowcaseIds === null && activeCategory === (viewModel?.activeCategory || 'all'));
+  const isClientFilterActive = !(!searchTerm.trim() && activeDifficulty === 'all' && agentShowcaseIds === null && activeCategory === (viewModel?.activeCategory || 'all') && activeTag === (viewModel?.activeTag || null));
 
   const filteredItems = useMemo(() => {
     // If no client-side filters are active, show the paginated items from server
@@ -112,12 +117,16 @@ export function useGalleryPresenter(
       result = result.filter((item) => item.difficulty === activeDifficulty);
     }
 
+    if (activeTag) {
+      result = result.filter((item) => item.tags.includes(activeTag));
+    }
+
     if (agentShowcaseIds !== null) {
       result = result.filter((item) => agentShowcaseIds.includes(item.id));
     }
 
     return result;
-  }, [isClientFilterActive, fullCategoryItems, viewModel?.items, searchTerm, activeDifficulty, agentShowcaseIds, activeCategory, viewModel?.activeCategory]);
+  }, [isClientFilterActive, fullCategoryItems, viewModel?.items, searchTerm, activeDifficulty, activeTag, agentShowcaseIds, activeCategory, viewModel?.activeCategory, viewModel?.activeTag]);
 
   const displayedItems = useMemo(() => {
     if (!isClientFilterActive) return filteredItems;
@@ -128,7 +137,7 @@ export function useGalleryPresenter(
   // Reset page when filters change
   useEffect(() => {
     setClientPage(1);
-  }, [searchTerm, activeDifficulty, agentShowcaseIds, activeCategory]);
+  }, [searchTerm, activeDifficulty, activeTag, agentShowcaseIds, activeCategory]);
 
   /**
    * Load initial data
@@ -183,6 +192,13 @@ export function useGalleryPresenter(
    */
   const setSearchTerm = useCallback((term: string) => {
     setSearchTermState(term);
+  }, []);
+
+  /**
+   * Tag filter (client-side)
+   */
+  const setActiveTag = useCallback((tag: string | null) => {
+    setActiveTagState(tag);
   }, []);
 
   /**
@@ -256,6 +272,7 @@ export function useGalleryPresenter(
       error,
       searchTerm,
       activeCategory,
+      activeTag,
       activeDifficulty,
       activeAiModel,
       filteredItems,
@@ -271,6 +288,7 @@ export function useGalleryPresenter(
       loadData,
       setSearchTerm,
       setActiveCategory,
+      setActiveTag,
       setActiveDifficulty,
       setActiveAiModel,
       setClientPage,

@@ -177,9 +177,11 @@ export function ShowcaseDetailView({
               {/* Tags */}
               <div className="flex flex-wrap gap-2 mt-5">
                 {item.tags.map((tag) => (
-                  <span key={tag} className="tag">
-                    #{tag}
-                  </span>
+                  <Link key={tag} href={`/gallery?tag=${encodeURIComponent(tag)}`}>
+                    <span className="tag hover:bg-primary/20 hover:text-primary transition-colors cursor-pointer">
+                      #{tag}
+                    </span>
+                  </Link>
                 ))}
               </div>
 

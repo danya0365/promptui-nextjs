@@ -15,6 +15,7 @@ interface GalleryPageProps {
   searchParams: Promise<{
     page?: string;
     category?: string;
+    tag?: string;
   }>;
 }
 
@@ -27,9 +28,10 @@ export default async function GalleryPage({ searchParams }: GalleryPageProps) {
   const resolvedParams = await searchParams;
   const page = Number(resolvedParams.page) || 1;
   const category = resolvedParams.category;
+  const tag = resolvedParams.tag;
 
   try {
-    const viewModel = await presenter.getViewModel(page, 12, category);
+    const viewModel = await presenter.getViewModel(page, 12, category, tag);
     return <GalleryView initialViewModel={viewModel} />;
   } catch (error) {
     console.error('Error fetching gallery data:', error);

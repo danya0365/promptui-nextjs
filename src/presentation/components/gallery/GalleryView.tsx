@@ -191,11 +191,28 @@ export function GalleryView({ initialViewModel }: GalleryViewProps) {
           </div>
         </ScrollReveal>
 
-        {/* ═══ Results Count ═══ */}
-        <div className="flex items-center justify-between mb-6">
+        {/* ═══ Results Count & Active Filters ═══ */}
+        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-6">
           <p className="text-sm text-muted">
             แสดง <span className="font-semibold text-foreground">{state.isClientFilterActive ? state.totalFilteredCount : state.viewModel?.totalCount || 0}</span> รายการ
           </p>
+
+          {/* Active Tag Pill */}
+          {state.activeTag && (
+            <div className="flex items-center gap-2">
+              <span className="text-xs text-muted">กรองด้วยแท็ก:</span>
+              <div className="inline-flex items-center gap-1.5 px-3 py-1 bg-primary/10 text-primary border border-primary/20 rounded-full text-xs font-medium">
+                <span>#{state.activeTag}</span>
+                <button
+                  onClick={() => actions.setActiveTag(null)}
+                  className="hover:bg-primary/20 rounded-full p-0.5 transition-colors cursor-pointer flex items-center justify-center w-4 h-4"
+                  aria-label="ลบตัวกรองแท็ก"
+                >
+                  ✕
+                </button>
+              </div>
+            </div>
+          )}
         </div>
 
         {/* ═══ Showcase Grid / List ═══ */}
@@ -208,6 +225,7 @@ export function GalleryView({ initialViewModel }: GalleryViewProps) {
                   onCopy={() => actions.copyPrompt(item)}
                   copied={state.copiedId === item.id}
                   livePreviews={state.livePreviewMap[item.id] || []}
+                  onTagClick={(tag) => actions.setActiveTag(tag)}
                 />
               </ScrollReveal>
             ))}
@@ -221,6 +239,7 @@ export function GalleryView({ initialViewModel }: GalleryViewProps) {
                   onCopy={() => actions.copyPrompt(item)}
                   copied={state.copiedId === item.id}
                   livePreviews={state.livePreviewMap[item.id] || []}
+                  onTagClick={(tag) => actions.setActiveTag(tag)}
                 />
               </ScrollReveal>
             ))}
@@ -242,6 +261,7 @@ export function GalleryView({ initialViewModel }: GalleryViewProps) {
                 actions.setActiveCategory('all');
                 actions.setActiveDifficulty('all');
                 actions.setActiveAiModel('all');
+                actions.setActiveTag(null);
               }}
             >
               ล้างตัวกรอง
@@ -425,6 +445,7 @@ function ShowcaseGridCard({
   onCopy,
   copied,
   livePreviews,
+  onTagClick,
 }: {
   item: {
     id: string;
@@ -437,6 +458,7 @@ function ShowcaseGridCard({
   onCopy: () => void;
   copied: boolean;
   livePreviews: ShowcaseLivePreview[];
+  onTagClick?: (tag: string) => void;
 }) {
   const diff = difficultyConfig[item.difficulty] || difficultyConfig.beginner;
 
@@ -498,9 +520,17 @@ function ShowcaseGridCard({
           </p>
           <div className="flex flex-wrap gap-1.5">
             {item.tags.slice(0, 3).map((tag) => (
-              <span key={tag} className="tag text-[11px]">
+              <button
+                key={tag}
+                onClick={(e) => {
+                  e.preventDefault();
+                  e.stopPropagation();
+                  onTagClick?.(tag);
+                }}
+                className="tag text-[11px] hover:bg-primary/20 hover:text-primary transition-colors cursor-pointer"
+              >
                 #{tag}
-              </span>
+              </button>
             ))}
           </div>
         </div>
@@ -514,6 +544,7 @@ function ShowcaseListCard({
   onCopy,
   copied,
   livePreviews,
+  onTagClick,
 }: {
   item: {
     id: string;
@@ -526,6 +557,7 @@ function ShowcaseListCard({
   onCopy: () => void;
   copied: boolean;
   livePreviews: ShowcaseLivePreview[];
+  onTagClick?: (tag: string) => void;
 }) {
   const diff = difficultyConfig[item.difficulty] || difficultyConfig.beginner;
 
@@ -580,9 +612,17 @@ function ShowcaseListCard({
           <div className="flex items-center justify-between">
             <div className="flex flex-wrap gap-1.5">
               {item.tags.slice(0, 4).map((tag) => (
-                <span key={tag} className="tag text-[11px]">
+                <button
+                  key={tag}
+                  onClick={(e) => {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    onTagClick?.(tag);
+                  }}
+                  className="tag text-[11px] hover:bg-primary/20 hover:text-primary transition-colors cursor-pointer"
+                >
                   #{tag}
-                </span>
+                </button>
               ))}
             </div>
             <button
