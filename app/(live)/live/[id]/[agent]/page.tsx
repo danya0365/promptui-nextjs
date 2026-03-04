@@ -47,6 +47,7 @@ import { ImmersiveAIConsciousnessDemoGemini } from '@/src/presentation/component
 import { IoTSmartHomeDashboardDemoGemini } from '@/src/presentation/components/demos/IoTSmartHomeDashboardDemoGemini';
 import { KanbanBoardDemoGemini } from '@/src/presentation/components/demos/KanbanBoardDemoGemini';
 import { LiveSimulationMatrixDemoGemini } from '@/src/presentation/components/demos/LiveSimulationMatrixDemoGemini';
+import { LivingAdaptiveCardsDemoGemini } from '@/src/presentation/components/demos/LivingAdaptiveCardsDemoGemini';
 import { LuxuryMinimalEditorialDirectoryDemoGemini } from '@/src/presentation/components/demos/LuxuryMinimalEditorialDirectoryDemoGemini';
 import { MetaversePortalDemoGemini } from '@/src/presentation/components/demos/MetaversePortalDemoGemini';
 import { MinimalBlogLandingDemoGemini } from '@/src/presentation/components/demos/MinimalBlogLandingDemoGemini';
@@ -154,6 +155,7 @@ const LIVE_PREVIEW_COMPONENTS: Record<string, Partial<Record<AiModel, React.Comp
   'showcase-067': { 'gemini-3.1-pro': FuturisticNeuralNetworkDemoGemini },
   'showcase-068': { 'gemini-3.1-pro': TacticalSimulationDemoGemini },
   'showcase-069': { 'gemini-3.1-pro': DigitalTilePhysicsDemoGemini },
+  'showcase-070': { 'gemini-3.1-pro': LivingAdaptiveCardsDemoGemini },
 };
 
 interface LivePreviewPageProps {

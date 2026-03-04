@@ -1008,6 +1008,20 @@ const SHOWCASE_ITEMS: ShowcaseItem[] = [
     createdAt: '2025-06-04T10:00:00.000Z',
     updatedAt: '2025-06-04T10:00:00.000Z',
   },
+  {
+    id: 'showcase-070',
+    title: 'Living Adaptive Ecosystem',
+    description: 'ระบบนิเวศดิจิทัลที่มีชีวิต! การ์ดข้อมูลเป็นกระจกฝ้าทรงมน (Soft Glassmorphism) ลอยวนอยู่บนฉากหลังสีน้ำเงินม่วงที่ไหลเป็นของเหลว เมื่อคลิกใช้งานบ่อย การ์ดจะ "เติบโต" (ขยายร่าง) และสลับตำแหน่งจัดลำดับความสำคัญตัวเองให้ขึ้นมาอยู่ด้านบน (Self-organizing)',
+    category: 'dashboard',
+    prompt: 'Create a living interface composed of self-organizing adaptive cards.\n\nConcept:\nCards evolve and rearrange themselves based on interaction.\n\nVisual System:\n- Soft gradient background (deep blue to violet)\n- Translucent floating panels\n- Dynamic glow intensity\n- Smooth motion transitions\n- Minimal UI chrome\n\nCard Design:\n- Rounded 18px corners\n- Soft glassmorphism surface\n- Gradient borders\n- Animated internal metrics\n- Expandable layered sub-panels\n\nInteraction:\n- Frequently used cards grow slightly\n- Panels reposition automatically\n- Hover creates light pulse through system\n- Cards expand with fluid morph animation\n\nMood:\nOrganic digital ecosystem.\nAdaptive and intelligent.',
+    thumbnailUrl: '/thumbnails/living-adaptive.png',
+    tags: ['adaptive', 'glassmorphism', 'organic', 'fluid', 'dynamic-layout'],
+    difficulty: 'advanced',
+    isFeatured: true,
+    isActive: true,
+    createdAt: '2025-06-04T11:00:00.000Z',
+    updatedAt: '2025-06-04T11:00:00.000Z',
+  },
 ];
 
 export class StaticShowcaseItemRepository implements IShowcaseItemRepository {
