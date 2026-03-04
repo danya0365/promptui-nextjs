@@ -1176,6 +1176,20 @@ const SHOWCASE_ITEMS: ShowcaseItem[] = [
     createdAt: '2025-06-04T22:00:00.000Z',
     updatedAt: '2025-06-04T22:00:00.000Z',
   },
+  {
+    id: 'showcase-082',
+    title: 'Minority Report Holographic Console',
+    description: 'จำลองหน้าจอโฮโลแกรมล้ำยุคสไตล์ภาพยนตร์ Minority Report เปลี่ยนการ์ดให้กลายเป็นแผ่นกระจกใส (Glassmorphism) เรืองแสงสีฟ้าอ่อน ลอยตัวอยู่ท่ามกลางฝุ่นแสง (Light Dust) ในห้องสีกรมท่าเข้ม ฟีเจอร์เด่นคือเมื่อคุณขยับเมาส์ กริดหน้าจอทั้งหมดจะเอียงและหมุน 3D (3D Rotation & Depth) หันตามทิศทางเมาส์ของคุณราวกับจับการเคลื่อนไหวของมือได้จริงๆ',
+    category: 'space',
+    prompt: 'Create a Minority Report-inspired holographic card interface.\n\nConcept:\nAll cards appear as floating transparent light panels.\n\nVisual System:\n- Dark navy background\n- Soft blue and white light glow\n- Semi-transparent glass-like panels\n- Thin luminous borders\n- Subtle particle light dust in background\n- Clean thin futuristic typography\n\nCard Design:\n- 20px rounded corners\n- Transparent glass surface\n- Glowing edge outlines\n- Minimal icons made of light lines\n- Layered depth stacking\n- Expandable holographic panel animation\n\nInteraction:\n- Cards softly rotate in 3D with cursor movement\n- Hover increases light intensity\n- Clicking expands card forward in space\n- Background blurs subtly during focus\n\nMood:\nFuturistic intelligence lab.\nClean, luminous, advanced.',
+    thumbnailUrl: '/thumbnails/minority-report.png',
+    tags: ['hologram', 'glassmorphism', 'minority-report', '3d-tracking', 'sci-fi', 'transparent'],
+    difficulty: 'advanced',
+    isFeatured: true,
+    isActive: true,
+    createdAt: '2025-06-04T23:00:00.000Z',
+    updatedAt: '2025-06-04T23:00:00.000Z',
+  },
 ];
 
 export class StaticShowcaseItemRepository implements IShowcaseItemRepository {

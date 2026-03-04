@@ -59,6 +59,7 @@ import { LuxuryMinimalEditorialDirectoryDemoGemini } from '@/src/presentation/co
 import { MetaversePortalDemoGemini } from '@/src/presentation/components/demos/MetaversePortalDemoGemini';
 import { MinimalBlogLandingDemoGemini } from '@/src/presentation/components/demos/MinimalBlogLandingDemoGemini';
 import { MinimalSpatialDashboardDemoGemini } from '@/src/presentation/components/demos/MinimalSpatialDashboardDemoGemini';
+import { MinorityReportHologramDemoGemini } from '@/src/presentation/components/demos/MinorityReportHologramDemoGemini';
 import { ModernDashboardDemoGemini } from '@/src/presentation/components/demos/ModernDashboardDemoGemini';
 import { MultiStepRegisterDemoGemini } from '@/src/presentation/components/demos/MultiStepRegisterDemoGemini';
 import { MusicPlayerDashboardDemoGemini } from '@/src/presentation/components/demos/MusicPlayerDashboardDemoGemini';
@@ -178,6 +179,7 @@ const LIVE_PREVIEW_COMPONENTS: Record<string, Partial<Record<AiModel, React.Comp
   'showcase-079': { 'gemini-3.1-pro': CyberWarfareDashboardDemoGemini },
   'showcase-080': { 'gemini-3.1-pro': FragmentedGlitchCyberpunkDemoGemini },
   'showcase-081': { 'gemini-3.1-pro': GodLevelCyberpunkHackerDemoGemini },
+  'showcase-082': { 'gemini-3.1-pro': MinorityReportHologramDemoGemini },
 };
 
 interface LivePreviewPageProps {
