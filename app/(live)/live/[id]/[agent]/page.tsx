@@ -35,6 +35,7 @@ import { FileManagerDemoGemini } from '@/src/presentation/components/demos/FileM
 import { FinanceBankingDashboardDemoGemini } from '@/src/presentation/components/demos/FinanceBankingDashboardDemoGemini';
 import { FragmentedGlitchCyberpunkDemoGemini } from '@/src/presentation/components/demos/FragmentedGlitchCyberpunkDemoGemini';
 import { FuturisticGlassmorphismDirectoryDemoGemini } from '@/src/presentation/components/demos/FuturisticGlassmorphismDirectoryDemoGemini';
+import { FuturisticHolographicWarRoomDemoGemini } from '@/src/presentation/components/demos/FuturisticHolographicWarRoomDemoGemini';
 import { FuturisticNeuralNetworkDemoGemini } from '@/src/presentation/components/demos/FuturisticNeuralNetworkDemoGemini';
 import { FuturisticOSWebExperienceDemoGemini } from '@/src/presentation/components/demos/FuturisticOSWebExperienceDemoGemini';
 import { FuturisticSpacePlatformDemoGemini } from '@/src/presentation/components/demos/FuturisticSpacePlatformDemoGemini';
@@ -184,6 +185,7 @@ const LIVE_PREVIEW_COMPONENTS: Record<string, Partial<Record<AiModel, React.Comp
   'showcase-082': { 'gemini-3.1-pro': MinorityReportHologramDemoGemini },
   'showcase-083': { 'gemini-3.1-pro': PredictiveAnalysisHologramDemoGemini },
   'showcase-084': { 'gemini-3.1-pro': GestureDrivenHolographicUIDemoGemini },
+  'showcase-085': { 'gemini-3.1-pro': FuturisticHolographicWarRoomDemoGemini },
 };
 
 interface LivePreviewPageProps {

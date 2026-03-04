@@ -1218,6 +1218,20 @@ const SHOWCASE_ITEMS: ShowcaseItem[] = [
     createdAt: '2025-06-05T01:00:00.000Z',
     updatedAt: '2025-06-05T01:00:00.000Z',
   },
+  {
+    id: 'showcase-085',
+    title: 'Holographic War Room',
+    description: 'ศูนย์บัญชาการโฮโลแกรมจำลอง (War Room Interface) สุดเคร่งขรึม มาในโทนสีกรมท่าอมเทาเข้ม (Steel-blue) และเส้นกริด 3 มิติ (Projection grid) ทอดยาวอยู่บนพื้น การ์ดแดชบอร์ดใช้ดีไซน์ขอบเหลี่ยมจัด (Hard-edge) ไร้ความโค้งมน พร้อมการประมวลผลแท่งกราฟเสียง (Waveform) หวิ่งขึ้นลงตลอดเวลา เมื่อคลิกขยายการ์ดเป็นแผงควบคุมเต็มจอ เส้นกริดพื้นหลังจะเปลี่ยนมาเต้นตุบๆ (Pulse) ตอบสนองต่อการสั่งการ',
+    category: 'dashboard',
+    prompt: 'Design a futuristic holographic war-room interface composed entirely of glowing panels.\n\nConcept:\nA tactical intelligence hub with floating holographic cards.\n\nVisual System:\n- Dark steel-blue environment\n- Bright cyan and white glowing accents\n- Light grid projection beneath panels\n- Animated waveform and data graphs\n- Subtle ambient particles\n\nCard Design:\n- Hard-edge hologram frames\n- Dynamic scanning border animation\n- Layered data sub-cards\n- Floating numeric indicators\n- Projection-style typography\n\nInteraction:\n- Cards snap into alignment like magnetic light projections\n- Hover reveals hidden analytic layers\n- Clicking expands card into full holographic dashboard\n- Background grid pulses during interaction\n\nMood:\nHigh-tech surveillance and analysis center.\nSerious and powerful.',
+    thumbnailUrl: '/thumbnails/war-room.png',
+    tags: ['hologram', 'tactical', 'military', 'dashboard', 'grid', 'cyberpunk'],
+    difficulty: 'advanced',
+    isFeatured: true,
+    isActive: true,
+    createdAt: '2025-06-05T02:00:00.000Z',
+    updatedAt: '2025-06-05T02:00:00.000Z',
+  },
 ];
 
 export class StaticShowcaseItemRepository implements IShowcaseItemRepository {
