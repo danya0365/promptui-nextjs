@@ -798,6 +798,20 @@ const SHOWCASE_ITEMS: ShowcaseItem[] = [
     createdAt: '2025-06-03T19:00:00.000Z',
     updatedAt: '2025-06-03T19:00:00.000Z',
   },
+  {
+    id: 'showcase-055',
+    title: 'Metaverse Portal Hub',
+    description: 'เว็บเข้าสู่โลก Metaverse ด้วยการใช้ Scroll ผูกกับแกน Z (TranslateZ) ทะลวงผ่านวงแหวนอวกาศ 3 มิติ',
+    category: 'landing-page',
+    prompt: 'Create a metaverse-style portal website.\n\nConcept:\nThe homepage is a gateway into floating digital realms.\n\nVisual System:\n- Infinite space background\n- Floating portals representing sections\n- Real-time depth and perspective\n- Neon rim lighting around objects\n- Soft glow and layered particle effects\n\nInteraction:\n- Scroll zooms between floating worlds\n- Clicking a portal transitions into a sub-dimension\n- 3D hover parallax effects\n- Interactive spatial audio simulation visuals\n\nMood:\nEntering a digital universe beyond traditional web.\nExploratory. Futuristic. Expansive.',
+    thumbnailUrl: '/thumbnails/metaverse-portal.png',
+    tags: ['3d', 'scroll-zoom', 'parallax', 'neon', 'space', 'portal', 'experimental'],
+    difficulty: 'advanced',
+    isFeatured: true,
+    isActive: true,
+    createdAt: '2025-06-03T20:00:00.000Z',
+    updatedAt: '2025-06-03T20:00:00.000Z',
+  },
 ];
 
 export class StaticShowcaseItemRepository implements IShowcaseItemRepository {
