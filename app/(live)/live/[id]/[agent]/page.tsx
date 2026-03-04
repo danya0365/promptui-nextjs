@@ -7,6 +7,7 @@ import { AICommandCenterDemoGemini } from '@/src/presentation/components/demos/A
 import { AIDeityAwakeningDemoGemini } from '@/src/presentation/components/demos/AIDeityAwakeningDemoGemini';
 import { AwardStylePremiumDirectoryDemoGemini } from '@/src/presentation/components/demos/AwardStylePremiumDirectoryDemoGemini';
 import { BillionDollarIPODemoGemini } from '@/src/presentation/components/demos/BillionDollarIPODemoGemini';
+import { BlackMirrorPsychologicalDemoGemini } from '@/src/presentation/components/demos/BlackMirrorPsychologicalDemoGemini';
 import { BoldAIStartupDirectoryDemoGemini } from '@/src/presentation/components/demos/BoldAIStartupDirectoryDemoGemini';
 import { BoldStartupManifestoDemoGemini } from '@/src/presentation/components/demos/BoldStartupManifestoDemoGemini';
 import { BrainComputerInterfaceDemoGemini } from '@/src/presentation/components/demos/BrainComputerInterfaceDemoGemini';
@@ -134,6 +135,7 @@ const LIVE_PREVIEW_COMPONENTS: Record<string, Partial<Record<AiModel, React.Comp
   'showcase-057': { 'gemini-3.1-pro': BrainComputerInterfaceDemoGemini },
   'showcase-058': { 'gemini-3.1-pro': AIDeityAwakeningDemoGemini },
   'showcase-059': { 'gemini-3.1-pro': CyberpunkCityPlatformDemoGemini },
+  'showcase-060': { 'gemini-3.1-pro': BlackMirrorPsychologicalDemoGemini },
 };
 
 interface LivePreviewPageProps {

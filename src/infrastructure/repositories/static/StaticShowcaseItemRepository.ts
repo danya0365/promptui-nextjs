@@ -868,6 +868,20 @@ const SHOWCASE_ITEMS: ShowcaseItem[] = [
     createdAt: '2025-06-04T00:00:00.000Z',
     updatedAt: '2025-06-04T00:00:00.000Z',
   },
+  {
+    id: 'showcase-060',
+    title: 'Psychological Mirror Interface',
+    description: 'หน้าจอสีโทน Monochrome แบบดิบตึง ผสมเอฟเฟค Glitch สัญญาณกวนรบกวนหน้าจอ สะท้อนมุมตลกร้ายของโลกเทคโนโลยีล้ำขอบเขต',
+    category: 'landing-page',
+    prompt: 'Design a Black Mirror-inspired psychological digital interface.\n\nConcept:\nThe interface subtly distorts reality.\n\nVisual System:\n- Minimal monochrome base\n- Subtle screen glitches and signal distortions\n- Micro flicker effects\n- Slight warping transitions\n- Clean brutal typography\n- Sudden inversion color moments\n\nInteraction:\n- Scroll causes slight perspective distortion\n- Text occasionally shifts subtly\n- Hover triggers signal interference effect\n- Sections load with glitch transition\n\nMood:\nUnsettling, intelligent, dystopian, hyper-modern.\nFeels like technology slightly beyond control.',
+    thumbnailUrl: '/thumbnails/psychological.png',
+    tags: ['monochrome', 'brutalism', 'glitch', 'psychological', 'dystopia', 'distortion'],
+    difficulty: 'advanced',
+    isFeatured: true,
+    isActive: true,
+    createdAt: '2025-06-04T01:00:00.000Z',
+    updatedAt: '2025-06-04T01:00:00.000Z',
+  },
 ];
 
 export class StaticShowcaseItemRepository implements IShowcaseItemRepository {
