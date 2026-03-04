@@ -742,6 +742,20 @@ const SHOWCASE_ITEMS: ShowcaseItem[] = [
     createdAt: '2025-06-03T15:00:00.000Z',
     updatedAt: '2025-06-03T15:00:00.000Z',
   },
+  {
+    id: 'showcase-051',
+    title: 'Galactic Launch System Interface',
+    description: 'จำลองแผงควบคุมภารกิจอวกาศสุดล้ำ สไตล์ Mission Control มีเรดาร์แทคติคอล ตัวเลขวิเคราะห์และนับถอยหลังสมจริง',
+    category: 'dashboard',
+    prompt: 'Design a web experience that feels like controlling a galactic launch system.\n\nConcept:\nThe user is inside a mission control room preparing for interstellar deployment.\n\nVisual System:\n- Dark metallic UI panels\n- Animated data streams and radar-like scans\n- Dynamic dashboards with glowing indicators\n- Cyan and red alert accents\n- Subtle screen flicker and scanline texture\n- Monospaced futuristic typography\n\nInteraction:\n- Hover reveals tactical overlays\n- Sections transition with mechanical sliding panels\n- Data visualizations animate in real time\n- Large countdown timer in hero section\n\nMood:\nHigh-stakes, powerful, mission-critical technology.',
+    thumbnailUrl: '/thumbnails/galactic-launch.png',
+    tags: ['dashboard', 'sci-fi', 'space', 'hud', 'data-viz', 'animated', 'tactical'],
+    difficulty: 'advanced',
+    isFeatured: true,
+    isActive: true,
+    createdAt: '2025-06-03T16:00:00.000Z',
+    updatedAt: '2025-06-03T16:00:00.000Z',
+  },
 ];
 
 export class StaticShowcaseItemRepository implements IShowcaseItemRepository {

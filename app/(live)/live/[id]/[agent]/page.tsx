@@ -26,6 +26,7 @@ import { FinanceBankingDashboardDemoGemini } from '@/src/presentation/components
 import { FuturisticGlassmorphismDirectoryDemoGemini } from '@/src/presentation/components/demos/FuturisticGlassmorphismDirectoryDemoGemini';
 import { FuturisticOSWebExperienceDemoGemini } from '@/src/presentation/components/demos/FuturisticOSWebExperienceDemoGemini';
 import { FuturisticSpacePlatformDemoGemini } from '@/src/presentation/components/demos/FuturisticSpacePlatformDemoGemini';
+import { GalacticLaunchSystemDemoGemini } from '@/src/presentation/components/demos/GalacticLaunchSystemDemoGemini';
 import { GamingPlatformDirectoryDemoGemini } from '@/src/presentation/components/demos/GamingPlatformDirectoryDemoGemini';
 import { GlassmorphismLoginDemo } from '@/src/presentation/components/demos/GlassmorphismLoginDemo';
 import { GlassmorphismLoginDemoGemini } from '@/src/presentation/components/demos/GlassmorphismLoginDemoGemini';
@@ -116,6 +117,7 @@ const LIVE_PREVIEW_COMPONENTS: Record<string, Partial<Record<AiModel, React.Comp
   'showcase-048': { 'gemini-3.1-pro': CivilizationSimulationDemoGemini },
   'showcase-049': { 'gemini-3.1-pro': CinematicHollywoodTrailerDemoGemini },
   'showcase-050': { 'gemini-3.1-pro': ExperimentalPhysicsUIDemoGemini },
+  'showcase-051': { 'gemini-3.1-pro': GalacticLaunchSystemDemoGemini },
 };
 
 interface LivePreviewPageProps {
