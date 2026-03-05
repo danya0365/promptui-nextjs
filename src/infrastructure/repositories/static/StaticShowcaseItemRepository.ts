@@ -1246,6 +1246,20 @@ const SHOWCASE_ITEMS: ShowcaseItem[] = [
     createdAt: '2025-06-05T03:00:00.000Z',
     updatedAt: '2025-06-05T03:00:00.000Z',
   },
+  {
+    id: 'showcase-087',
+    title: 'iOS 26 Liquid Glass UI Kit',
+    description: 'ชุด UI Kit ครบวงจรสไตล์ iOS 26 Liquid Glass — ดีไซน์กระจกฝ้าโปร่งแสง (Frosted Glass) บนพื้นหลังสว่างอบอุ่น ไม่ใช่ Sci-Fi มืดๆ แต่เป็นมหาวิหารกระจกสุดหรูลอยอยู่กลางแสง ครอบคลุมทุกคอมโพเนนต์: Dynamic Island, Nav Bar, Search, Metric Cards, AI Intelligence Panel, Buttons, Inputs, Toggles, Slider, Segmented Control, Badges, Bottom Sheet, Toast — ทุกชิ้นใช้ Spring Physics Animation แบบ Apple',
+    category: 'dashboard',
+    prompt: 'Design a complete iOS 26-inspired UI Kit — a holographic intelligence dashboard built entirely on Apple\'s Liquid Glass design language.',
+    thumbnailUrl: '/thumbnails/ios26-liquid-glass.png',
+    tags: ['ios', 'liquid-glass', 'apple', 'ui-kit', 'glassmorphism', 'light-theme', 'dashboard'],
+    difficulty: 'advanced',
+    isFeatured: true,
+    isActive: true,
+    createdAt: '2025-06-05T04:00:00.000Z',
+    updatedAt: '2025-06-05T04:00:00.000Z',
+  },
 ];
 
 export class StaticShowcaseItemRepository implements IShowcaseItemRepository {

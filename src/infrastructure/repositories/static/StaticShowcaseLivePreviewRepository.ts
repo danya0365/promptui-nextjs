@@ -1,8 +1,8 @@
 
 import {
-    AiModel,
-    IShowcaseLivePreviewRepository,
-    ShowcaseLivePreview,
+  AiModel,
+  IShowcaseLivePreviewRepository,
+  ShowcaseLivePreview,
 } from '@/src/application/repositories/IShowcaseLivePreviewRepository';
 
 const LIVE_PREVIEWS: ShowcaseLivePreview[] = [
@@ -614,6 +614,13 @@ const LIVE_PREVIEWS: ShowcaseLivePreview[] = [
     aiModel: 'gemini-3.1-pro',
     isActive: true,
     createdAt: '2025-06-21T18:00:00.000Z',
+  },
+  {
+    id: 'lp-088',
+    showcaseId: 'showcase-087',
+    aiModel: 'claude-4.6-opus',
+    isActive: true,
+    createdAt: '2025-06-21T19:00:00.000Z',
   },
 ];
 

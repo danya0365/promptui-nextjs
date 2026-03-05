@@ -14,6 +14,7 @@ export type AiModel =
   | 'gpt-4.1'
   | 'claude-3.7-sonnet'
   | 'claude-4-sonnet'
+  | 'claude-4.6-opus'
   | 'gemini-3-preview'
   | 'gemini-3-pro'
   | 'gemini-3.1-pro'

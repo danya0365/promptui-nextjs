@@ -54,6 +54,7 @@ import { HighContrastEditorialDirectoryDemoGemini } from '@/src/presentation/com
 import { HighEnergyTechDirectoryDemoGemini } from '@/src/presentation/components/demos/HighEnergyTechDirectoryDemoGemini';
 import { HypercarLuxuryPlatformDemoGemini } from '@/src/presentation/components/demos/HypercarLuxuryPlatformDemoGemini';
 import { ImmersiveAIConsciousnessDemoGemini } from '@/src/presentation/components/demos/ImmersiveAIConsciousnessDemoGemini';
+import { iOS26LiquidGlassDemoGemini } from '@/src/presentation/components/demos/iOS26LiquidGlassDemoGemini';
 import { IoTSmartHomeDashboardDemoGemini } from '@/src/presentation/components/demos/IoTSmartHomeDashboardDemoGemini';
 import { KanbanBoardDemoGemini } from '@/src/presentation/components/demos/KanbanBoardDemoGemini';
 import { LiveSimulationMatrixDemoGemini } from '@/src/presentation/components/demos/LiveSimulationMatrixDemoGemini';
@@ -188,6 +189,7 @@ const LIVE_PREVIEW_COMPONENTS: Record<string, Partial<Record<AiModel, React.Comp
   'showcase-084': { 'gemini-3.1-pro': GestureDrivenHolographicUIDemoGemini },
   'showcase-085': { 'gemini-3.1-pro': FuturisticHolographicWarRoomDemoGemini },
   'showcase-086': { 'gemini-3.1-pro': GodLevelHolographicIntelligenceDemoGemini },
+  'showcase-087': { 'claude-4.6-opus': iOS26LiquidGlassDemoGemini },
 };
 
 interface LivePreviewPageProps {
