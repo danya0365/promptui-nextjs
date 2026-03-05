@@ -1251,7 +1251,166 @@ const SHOWCASE_ITEMS: ShowcaseItem[] = [
     title: 'iOS 26 Liquid Glass UI Kit',
     description: 'ชุด UI Kit ครบวงจรสไตล์ iOS 26 Liquid Glass — ดีไซน์กระจกฝ้าโปร่งแสง (Frosted Glass) บนพื้นหลังสว่างอบอุ่น ไม่ใช่ Sci-Fi มืดๆ แต่เป็นมหาวิหารกระจกสุดหรูลอยอยู่กลางแสง ครอบคลุมทุกคอมโพเนนต์: Dynamic Island, Nav Bar, Search, Metric Cards, AI Intelligence Panel, Buttons, Inputs, Toggles, Slider, Segmented Control, Badges, Bottom Sheet, Toast — ทุกชิ้นใช้ Spring Physics Animation แบบ Apple',
     category: 'dashboard',
-    prompt: 'Design a complete iOS 26-inspired UI Kit — a holographic intelligence dashboard built entirely on Apple\'s Liquid Glass design language.',
+    prompt: `Design a complete iOS 26-inspired UI Kit — a holographic intelligence dashboard 
+built entirely on Apple's Liquid Glass design language.
+
+---
+
+CONCEPT:
+A next-generation AI intelligence interface using iOS 26's Liquid Glass aesthetic —
+where every surface is translucent, physically real, and alive with depth.
+Not a dark sci-fi void, but a luminous glass cathedral floating in soft light.
+
+---
+
+DESIGN SYSTEM — iOS 26 LIQUID GLASS:
+
+Material Language:
+- All panels use frosted glass with real-time specular highlights
+- Multi-layered translucency: background blur (backdrop-filter) at varying intensities
+- Glass surfaces refract and tint underlying content subtly
+- Every element has physical weight — thick glass vs thin membrane layers
+- Inner glow on edges, not outer glow (light comes through, not from behind)
+- Subtle caustic light patterns on glass surfaces
+
+Color Palette:
+- Base: ultra-white void with soft warm ambient light (#FAFAFA / #F2F2F7)
+- Glass tint: rgba(255,255,255,0.35) to rgba(255,255,255,0.65)
+- Accent 1: iOS Blue (#007AFF) — interactive highlights
+- Accent 2: Soft Indigo (#5E5CE6) — AI/intelligence indicators  
+- Accent 3: Liquid Teal (#30D5C8) — data flows and live metrics
+- Shadows: soft diffused, never hard — box-shadow with 40–60px blur radius
+- No pure black. Dark text is #1C1C1E at 90% opacity
+
+Typography:
+- Display: SF Pro Display (or "system-ui" fallback) — ultra-light 100–200 weight for hero numbers
+- Body: SF Pro Text — regular 400 for readability
+- Labels: SF Pro Rounded — for badges, chips, status indicators
+- Size scale: 11 / 13 / 15 / 17 / 20 / 28 / 34 / 48px (Apple's exact scale)
+- Letter-spacing: tight on display (-0.5px), normal on body
+
+---
+
+UI KIT COMPONENTS — COMPLETE SET:
+
+1. GLASS CARDS (3 variants)
+   - Standard: frosted panel, 20px radius, soft shadow, inner border 1px rgba(255,255,255,0.6)
+   - Elevated: thicker glass, deeper blur, subtle specular highlight on top edge
+   - Interactive: hover causes glass to lighten and specular shift (like tilting real glass)
+
+2. NAVIGATION BAR
+   - Floating pill-shaped nav — not edge-to-edge
+   - Glass surface with active tab showing deeper tint + blue indicator dot
+   - Smooth morphing transition between tabs (width interpolation)
+   - Home Indicator: thin white pill, centered
+
+3. STATUS BAR & DYNAMIC ISLAND
+   - Dynamic Island in resting, expanded, and notification states
+   - Live activity pill variants (music, timer, AI processing)
+   - Glass tint matches underlying card color
+
+4. BUTTONS (5 variants)
+   - Primary: solid iOS Blue, 14px radius, subtle inner highlight
+   - Secondary: glass pill, rgba white, bordered
+   - Ghost: transparent, text only, with underline ripple on tap
+   - Icon Button: circular glass, SF Symbols-style icons
+   - Destructive: red tinted glass
+
+5. INPUT FIELDS
+   - Recessed glass (darker tint inside = depth illusion)
+   - Floating label animation (label floats up on focus)
+   - Focus state: blue inner ring + slight glass brighten
+   - Search bar: pill shape, magnifier icon, clear button
+
+6. MODALS & SHEETS
+   - Bottom sheet: slides up from edge, rounded top corners (28px)
+   - Full sheet: glass background, soft dim on content below
+   - Alert dialog: centered glass card, blurred backdrop
+
+7. METRICS / DATA CARDS
+   - Large number display (SF Pro Display Ultralight)
+   - Sparkline chart in glass card
+   - Ring/radial progress — iOS Health style
+   - Live update pulse animation on changing values
+
+8. AI INTELLIGENCE PANEL (hero component)
+   - Multi-card matrix: 3×2 grid of glass panels at slight depth offset
+   - Animated data flow lines connecting cards (SVG paths, animated stroke-dashoffset)
+   - Real-time metrics with counter animations
+   - "AI Processing" status with breathing ambient light
+
+9. LISTS & TABLE ROWS
+   - Grouped table style (iOS Settings-inspired)
+   - Inset separator lines
+   - Disclosure chevron, right-detail, switch toggle variants
+   - Swipe-action ghost buttons
+
+10. TOGGLE & CONTROLS
+    - iOS-style switch: smooth physics spring animation
+    - Segmented control: glass background, sliding indicator
+    - Slider: glass track, circular thumb with depth shadow
+    - Stepper: paired glass buttons
+
+11. BADGES & CHIPS
+    - Notification badge: red pill, white number
+    - Status chip: glass pill + colored dot + label
+    - Tag chip: rounded, tinted glass
+
+12. NOTIFICATION / TOAST
+    - Floating glass pill (Dynamic Island expansion style)
+    - Icon + title + subtitle layout
+    - Auto-dismiss with slide-up exit
+
+---
+
+INTERACTION PRINCIPLES:
+
+Motion Language (iOS 26 Spring Physics):
+- All animations use spring curves, never linear or ease-in-out
+- Spring: stiffness 300, damping 30 (snappy but not bouncy)
+- Tap feedback: scale(0.96) + brightness +10% then spring back
+- Modal presentation: scale from 0.92 + fade, spring to 1.0
+- Transitions feel physical — objects have weight and momentum
+
+Glass Interaction:
+- Hover: glass lightens 8%, specular highlight shifts direction
+- Active/Press: glass compresses (scale 0.97), deeper tint
+- Focus: blue ring appears with spring scale 1.02
+- Cards at different z-depths react to scroll with parallax
+
+Ambient Intelligence:
+- Subtle breathing pulse on AI-active components (opacity 0.9 ↔ 1.0, 4s loop)
+- Data flow lines animate continuously at low opacity (20–30%)
+- Metric counters smoothly interpolate on new values
+
+---
+
+LAYOUT & COMPOSITION:
+
+- Canvas: iPhone 16 Pro viewport (393×852pt) AND iPad Pro (1024px wide)
+- Safe areas respected: 59px top, 34px bottom
+- Spacing system: 4pt base grid (4/8/12/16/20/24/32/44/48pt)
+- Cards have 16pt internal padding, 12pt gap between cards
+- Content hugs safe area edges, panels float 8pt from edges
+
+Visual Depth Stack:
+  Layer 0 — Background: gradient mesh (warm white → soft gray)
+  Layer 1 — Base cards: 40% opacity glass
+  Layer 2 — Elevated cards: 55% opacity, higher blur
+  Layer 3 — Modals/Sheets: 70% opacity, maximum blur
+  Layer 4 — Overlays (tooltips, popovers): near-opaque glass
+
+---
+
+MOOD & PHILOSOPHY:
+
+This is Apple's vision of AI made physical.
+Not a dark sci-fi dashboard — a luminous, optimistic intelligence.
+Glass that breathes. Data that flows like light through crystal.
+Every interaction feels inevitable, physical, and alive.
+
+Refined. Human. Extraordinary.
+The intelligence of tomorrow, with the clarity of now.`,
     thumbnailUrl: '/thumbnails/ios26-liquid-glass.png',
     tags: ['ios', 'liquid-glass', 'apple', 'ui-kit', 'glassmorphism', 'light-theme', 'dashboard'],
     difficulty: 'advanced',
