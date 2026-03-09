@@ -1732,6 +1732,44 @@ Royal, historical, majestic Islamic art.`,
     createdAt: '2025-06-05T12:00:00.000Z',
     updatedAt: '2025-06-05T12:00:00.000Z',
   },
+  {
+    id: 'showcase-096',
+    title: 'Islamic Golden Age Library',
+    description: 'อินเตอร์เฟซที่ได้รับแรงบันดาลใจจากห้องสมุดยุคทองของอิสลาม นำเสนอความรู้ในรูปแบบของต้นฉบับลายมือโบราณ (Manuscript) ที่ทรงคุณค่า',
+    category: 'card',
+    prompt: `Create an interface inspired by the Islamic Golden Age libraries.
+
+Concept:
+Cards represent knowledge modules like ancient manuscripts.
+
+Visual System:
+- Warm parchment background
+- Ink-style textures
+- Dark green and gold palette
+- Traditional manuscript decorations
+
+Card Design:
+- Manuscript-style cards
+- Decorative border frames
+- Calligraphy title blocks
+- Expandable commentary panels
+- Layered educational content
+
+Interaction:
+- Cards open like manuscript pages
+- Sections reveal deeper learning layers
+- Hover highlights important wisdom quotes
+
+Mood:
+Scholarly, wise, intellectual, historical.`,
+    thumbnailUrl: '/thumbnails/golden-age-library.png',
+    tags: ['islamic-golden-age', 'library', 'manuscript', 'education', 'scholarly'],
+    difficulty: 'intermediate',
+    isFeatured: true,
+    isActive: true,
+    createdAt: '2025-06-05T13:00:00.000Z',
+    updatedAt: '2025-06-05T13:00:00.000Z',
+  },
 ];
 
 export class StaticShowcaseItemRepository implements IShowcaseItemRepository {

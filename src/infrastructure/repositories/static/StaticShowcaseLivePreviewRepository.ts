@@ -685,7 +685,7 @@ const LIVE_PREVIEWS: ShowcaseLivePreview[] = [
     isActive: true,
     createdAt: '2025-06-22T16:00:00.000Z',
   },
-    {
+  {
     id: 'lp-098',
     showcaseId: 'showcase-095',
     aiModel: 'claude-4.6-sonnet',
@@ -698,6 +698,20 @@ const LIVE_PREVIEWS: ShowcaseLivePreview[] = [
     aiModel: 'gemini-3-flash',
     isActive: true,
     createdAt: '2025-06-22T17:00:00.000Z',
+  },
+  {
+    id: 'lp-100',
+    showcaseId: 'showcase-096',
+    aiModel: 'claude-4.6-sonnet',
+    isActive: true,
+    createdAt: '2025-06-22T18:00:00.000Z',
+  },
+  {
+    id: 'lp-101',
+    showcaseId: 'showcase-096',
+    aiModel: 'gemini-3-flash',
+    isActive: true,
+    createdAt: '2025-06-22T18:00:00.000Z',
   },
 ];
 

@@ -58,6 +58,8 @@ import { ImmersiveAIConsciousnessDemoGemini } from '@/src/presentation/component
 import { iOS26LiquidGlassDemoGemini } from '@/src/presentation/components/demos/iOS26LiquidGlassDemoGemini';
 import { IoTSmartHomeDashboardDemoGemini } from '@/src/presentation/components/demos/IoTSmartHomeDashboardDemoGemini';
 import { IslamicCardDemoGemini } from '@/src/presentation/components/demos/IslamicCardDemoGemini';
+import IslamicGoldenAgeLibraryDemoClaudeSonnet from '@/src/presentation/components/demos/IslamicGoldenAgeLibraryDemoClaudeSonnet';
+import { IslamicGoldenAgeLibraryDemoGemini } from '@/src/presentation/components/demos/IslamicGoldenAgeLibraryDemoGemini';
 import { IslamicKnowledgePlatformDemoGemini } from '@/src/presentation/components/demos/IslamicKnowledgePlatformDemoGemini';
 import { IslamicNightDemoGemini } from '@/src/presentation/components/demos/IslamicNightDemoGemini';
 import KaabaInspiredDemoClaudeSonnet from '@/src/presentation/components/demos/KaabaInspiredDemoClaudeSonnet';
@@ -217,6 +219,10 @@ const LIVE_PREVIEW_COMPONENTS: Record<string, Partial<Record<AiModel, React.Comp
   'showcase-095': { 
     'gemini-3-flash': OttomanPalaceDemoGemini,
     'claude-4.6-sonnet': OttomanPalaceDemoClaudeSonnet,
+  },
+  'showcase-096': { 
+    'gemini-3-flash': IslamicGoldenAgeLibraryDemoGemini,
+    'claude-4.6-sonnet': IslamicGoldenAgeLibraryDemoClaudeSonnet,
   },
 };
 
