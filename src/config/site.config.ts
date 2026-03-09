@@ -78,4 +78,5 @@ export type NavItem = (typeof siteConfig.navigation)[number];
 export type Category = (typeof siteConfig.categories)[number];
 export type Difficulty = (typeof siteConfig.difficulties)[number];
 export type AiModelConfig = (typeof siteConfig.aiModels)[number];
+export type AiModel = Exclude<(typeof siteConfig.aiModels)[number]['id'], 'all'>;
 

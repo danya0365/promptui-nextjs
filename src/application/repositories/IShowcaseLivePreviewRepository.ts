@@ -9,22 +9,9 @@
  * AI Model identifiers — the actual LLM that generated the demo
  * These are models, NOT editors/tools (e.g. Copilot, v0, Bolt are editors)
  */
-export type AiModel =
-  | 'gpt-4o'
-  | 'gpt-4.1'
-  | 'claude-3.7-sonnet'
-  | 'claude-4-sonnet'
-  | 'claude-4.6-opus'
-  | 'gemini-3-preview'
-  | 'gemini-3-pro'
-  | 'gemini-3-flash'
-  | 'gemini-3.1-pro'
-  | 'gemini-2.5-pro'
-  | 'gemini-2.5-flash'
-  | 'deepseek-v3'
-  | 'deepseek-r1'
-  | 'grok-3'
-  | 'llama-4';
+import { AiModel } from '@/src/config/site.config';
+
+export type { AiModel };
 
 /**
  * ShowcaseLivePreview — links a showcase to a specific AI model's demo
