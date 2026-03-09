@@ -1575,6 +1575,46 @@ Cultural, historical, artistic, majestic.`,
     createdAt: '2025-06-05T08:00:00.000Z',
     updatedAt: '2025-06-05T08:00:00.000Z',
   },
+  {
+    id: 'showcase-092',
+    title: 'Modern Islamic Dashboard',
+    description: 'แดชบอร์ดสไตล์โมเดิร์นที่ผสมผสานความเชื่อระดับจิตวิญญาณเข้ากับเทคโนโลยีสมัยใหม่ โทนสีเขียวเข้มตัดทอง',
+    category: 'dashboard',
+    prompt: `Create a modern Islamic digital dashboard built from structured cards.
+
+Concept:
+A platform that combines spirituality and technology.
+
+Visual System:
+- Dark green base
+- Gold highlight accents
+- Minimal Islamic geometric overlays
+- Clean modern layout
+- Subtle ambient lighting
+
+Card Design:
+- Modern minimal cards
+- Geometric decorative lines
+- Clear content hierarchy
+- Expandable panel sections
+- Elegant calligraphy section titles
+
+Interaction:
+- Cards align into structured grid
+- Hover reveals additional wisdom quotes
+- Expanded cards show deeper reflections
+
+Mood:
+Modern Islamic technology platform.
+Calm, intelligent, inspiring.`,
+    thumbnailUrl: '/thumbnails/modern-islamic-dashboard.png',
+    tags: ['dashboard', 'islamic', 'modern', 'minimalist', 'green-gold'],
+    difficulty: 'intermediate',
+    isFeatured: true,
+    isActive: true,
+    createdAt: '2025-06-05T09:00:00.000Z',
+    updatedAt: '2025-06-05T09:00:00.000Z',
+  },
 ];
 
 export class StaticShowcaseItemRepository implements IShowcaseItemRepository {

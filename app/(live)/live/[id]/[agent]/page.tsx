@@ -69,6 +69,7 @@ import { MinimalBlogLandingDemoGemini } from '@/src/presentation/components/demo
 import { MinimalSpatialDashboardDemoGemini } from '@/src/presentation/components/demos/MinimalSpatialDashboardDemoGemini';
 import { MinorityReportHologramDemoGemini } from '@/src/presentation/components/demos/MinorityReportHologramDemoGemini';
 import { ModernDashboardDemoGemini } from '@/src/presentation/components/demos/ModernDashboardDemoGemini';
+import { ModernIslamicDashboardDemoGemini } from '@/src/presentation/components/demos/ModernIslamicDashboardDemoGemini';
 import { MultiStepRegisterDemoGemini } from '@/src/presentation/components/demos/MultiStepRegisterDemoGemini';
 import { MusicPlayerDashboardDemoGemini } from '@/src/presentation/components/demos/MusicPlayerDashboardDemoGemini';
 import { NeoBrutalistPromptGalleryDemoGemini } from '@/src/presentation/components/demos/NeoBrutalistPromptGalleryDemoGemini';
@@ -198,6 +199,7 @@ const LIVE_PREVIEW_COMPONENTS: Record<string, Partial<Record<AiModel, React.Comp
   'showcase-089': { 'gemini-3-flash': IslamicKnowledgePlatformDemoGemini },
   'showcase-090': { 'gemini-3-flash': IslamicNightDemoGemini },
   'showcase-091': { 'gemini-3-flash': AndalusianDemoGemini },
+  'showcase-092': { 'gemini-3-flash': ModernIslamicDashboardDemoGemini },
 };
 
 interface LivePreviewPageProps {
