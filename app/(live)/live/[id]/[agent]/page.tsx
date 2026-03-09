@@ -57,6 +57,7 @@ import { ImmersiveAIConsciousnessDemoGemini } from '@/src/presentation/component
 import { iOS26LiquidGlassDemoGemini } from '@/src/presentation/components/demos/iOS26LiquidGlassDemoGemini';
 import { IoTSmartHomeDashboardDemoGemini } from '@/src/presentation/components/demos/IoTSmartHomeDashboardDemoGemini';
 import { IslamicCardDemoGemini } from '@/src/presentation/components/demos/IslamicCardDemoGemini';
+import { IslamicKnowledgePlatformDemoGemini } from '@/src/presentation/components/demos/IslamicKnowledgePlatformDemoGemini';
 import { KanbanBoardDemoGemini } from '@/src/presentation/components/demos/KanbanBoardDemoGemini';
 import { LiveSimulationMatrixDemoGemini } from '@/src/presentation/components/demos/LiveSimulationMatrixDemoGemini';
 import { LivingAdaptiveCardsDemoGemini } from '@/src/presentation/components/demos/LivingAdaptiveCardsDemoGemini';
@@ -192,6 +193,7 @@ const LIVE_PREVIEW_COMPONENTS: Record<string, Partial<Record<AiModel, React.Comp
   'showcase-086': { 'gemini-3.1-pro': GodLevelHolographicIntelligenceDemoGemini },
   'showcase-087': { 'claude-4.6-opus': iOS26LiquidGlassDemoGemini },
   'showcase-088': { 'gemini-3-flash': IslamicCardDemoGemini },
+  'showcase-089': { 'gemini-3-flash': IslamicKnowledgePlatformDemoGemini },
 };
 
 interface LivePreviewPageProps {

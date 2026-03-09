@@ -5,12 +5,12 @@
  */
 
 import {
-    CreateShowcaseItemData,
-    IShowcaseItemRepository,
-    PaginatedResult,
-    ShowcaseItem,
-    ShowcaseStats,
-    UpdateShowcaseItemData,
+  CreateShowcaseItemData,
+  IShowcaseItemRepository,
+  PaginatedResult,
+  ShowcaseItem,
+  ShowcaseStats,
+  UpdateShowcaseItemData,
 } from '@/src/application/repositories/IShowcaseItemRepository';
 
 const SHOWCASE_ITEMS: ShowcaseItem[] = [
@@ -1458,6 +1458,44 @@ Spiritual, elegant, peaceful, timeless.`,
     isActive: true,
     createdAt: '2025-06-05T05:00:00.000Z',
     updatedAt: '2025-06-05T05:00:00.000Z',
+  },
+  {
+    id: 'showcase-089',
+    title: 'Islamic Knowledge Platform',
+    description: 'แพลตฟอร์มการเรียนรู้พื้นหลังกระดาษ Parchment พร้อมเนื้อหาคัดกรองจากคัมภีร์และการตีความเชิงวิชาการ',
+    category: 'landing',
+    prompt: `Create an Islamic knowledge platform using beautiful card panels.
+
+Concept:
+Cards represent knowledge modules such as Quran verses, Hadith, and learning topics.
+
+Visual System:
+- Warm parchment background
+- Dark green and gold color palette
+- Subtle Islamic manuscript texture
+- Traditional Islamic decorative dividers
+
+Card Design:
+- Elegant framed cards
+- Quran verse highlight blocks
+- Arabic calligraphy titles
+- Decorative border corners
+- Expandable tafsir panels
+
+Interaction:
+- Cards reveal deeper learning layers
+- Smooth scroll storytelling
+- Hover highlights verse references
+
+Mood:
+Educational, sacred, respectful, scholarly.`,
+    thumbnailUrl: '/thumbnails/islamic-knowledge.png',
+    tags: ['education', 'islamic', 'manuscript', 'parchment', 'scholarly'],
+    difficulty: 'intermediate',
+    isFeatured: true,
+    isActive: true,
+    createdAt: '2025-06-05T06:00:00.000Z',
+    updatedAt: '2025-06-05T06:00:00.000Z',
   },
 ];
 
