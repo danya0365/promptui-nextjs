@@ -1654,6 +1654,45 @@ Sacred, powerful, minimalist, deeply spiritual.`,
     createdAt: '2025-06-05T10:00:00.000Z',
     updatedAt: '2025-06-05T10:00:00.000Z',
   },
+  {
+    id: 'showcase-094',
+    title: 'Ramadan Lantern Interface',
+    description: 'อินเตอร์เฟซธีมเดือนรอมฎอนที่ได้รับแรงบันดาลใจจากโคมไฟ (Fanous) ที่เรืองแสงท่ามกลางคืนที่เงียบสงบ',
+    category: 'card',
+    prompt: `Create a Ramadan-themed interface using glowing lantern-inspired cards.
+
+Concept:
+Cards resemble illuminated lantern panels floating in a peaceful Ramadan night.
+
+Visual System:
+- Deep night sky gradient
+- Soft golden lantern light
+- Floating light particles
+- Crescent moon highlights
+- Warm spiritual atmosphere
+
+Card Design:
+- Rounded glowing cards
+- Lantern-inspired frame edges
+- Soft gold illumination
+- Decorative Islamic pattern cutouts
+- Multi-layer information panels
+
+Interaction:
+- Cards gently glow on hover
+- Light particles flow between panels
+- Expanded cards emit warm light halo
+
+Mood:
+Warm, spiritual, peaceful Ramadan night.`,
+    thumbnailUrl: '/thumbnails/ramadan-lantern.png',
+    tags: ['ramadan', 'islamic', 'lantern', 'spiritual', 'night-theme'],
+    difficulty: 'intermediate',
+    isFeatured: true,
+    isActive: true,
+    createdAt: '2025-06-05T11:00:00.000Z',
+    updatedAt: '2025-06-05T11:00:00.000Z',
+  },
 ];
 
 export class StaticShowcaseItemRepository implements IShowcaseItemRepository {

@@ -83,6 +83,8 @@ import { PostHumanTranscendenceDemoGemini } from '@/src/presentation/components/
 import { PredictiveAnalysisHologramDemoGemini } from '@/src/presentation/components/demos/PredictiveAnalysisHologramDemoGemini';
 import { ProductCardGridDemoGemini } from '@/src/presentation/components/demos/ProductCardGridDemoGemini';
 import { ProfileCardCollectionDemoGemini } from '@/src/presentation/components/demos/ProfileCardCollectionDemoGemini';
+import RamadanLanternDemoClaudeSonnet from '@/src/presentation/components/demos/RamadanLanternDemoClaudeSonnet';
+import { RamadanLanternDemoGemini } from '@/src/presentation/components/demos/RamadanLanternDemoGemini';
 import { RealityFractureDemoGemini } from '@/src/presentation/components/demos/RealityFractureDemoGemini';
 import { RecipeCookingAppDemoGemini } from '@/src/presentation/components/demos/RecipeCookingAppDemoGemini';
 import { Retro90sTechMagazineDemoGemini } from '@/src/presentation/components/demos/Retro90sTechMagazineDemoGemini';
@@ -205,6 +207,10 @@ const LIVE_PREVIEW_COMPONENTS: Record<string, Partial<Record<AiModel, React.Comp
   'showcase-093': { 
     'gemini-3-flash': KaabaInspiredDemoGemini,
     'claude-4.6-sonnet': KaabaInspiredDemoClaudeSonnet,
+  },
+  'showcase-094': { 
+    'gemini-3-flash': RamadanLanternDemoGemini,
+    'claude-4.6-sonnet': RamadanLanternDemoClaudeSonnet,
   },
 };
 
