@@ -1536,6 +1536,45 @@ Peaceful, reflective, spiritual night experience.`,
     createdAt: '2025-06-05T07:00:00.000Z',
     updatedAt: '2025-06-05T07:00:00.000Z',
   },
+  {
+    id: 'showcase-091',
+    title: 'Andalusian Architecture',
+    description: 'อินเตอร์เฟซที่ได้รับแรงบันดาลใจจากสถาปัตยกรรมมุสลิมในสเปน (Andalusian) โทนสี Terracotta และลวดลายกระเบื้องโมเสกที่สวยงาม',
+    category: 'landing',
+    prompt: `Create a rich Islamic interface inspired by Andalusian architecture.
+
+Concept:
+Cards reflect classical Islamic art and palace architecture.
+
+Visual System:
+- Warm terracotta background
+- Turquoise and gold accents
+- Mosaic tile patterns
+- Decorative arch shapes
+- Rich cultural atmosphere
+
+Card Design:
+- Arch-shaped card headers
+- Decorative tile borders
+- Elegant pattern separators
+- Multi-layer information panels
+- Artistic typography hierarchy
+
+Interaction:
+- Card sections unfold vertically
+- Sub-panels appear like opening palace doors
+- Subtle ornament animations
+
+Mood:
+Cultural, historical, artistic, majestic.`,
+    thumbnailUrl: '/thumbnails/andalusian.png',
+    tags: ['andalusian', 'islamic', 'architecture', 'mosaic', 'terracotta'],
+    difficulty: 'advanced',
+    isFeatured: true,
+    isActive: true,
+    createdAt: '2025-06-05T08:00:00.000Z',
+    updatedAt: '2025-06-05T08:00:00.000Z',
+  },
 ];
 
 export class StaticShowcaseItemRepository implements IShowcaseItemRepository {

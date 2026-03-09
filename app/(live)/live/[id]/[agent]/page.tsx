@@ -6,6 +6,7 @@ import { AdvancedCyberpunkNeonDemoGemini } from '@/src/presentation/components/d
 import { AIChatInterfaceDemoGemini } from '@/src/presentation/components/demos/AIChatInterfaceDemoGemini';
 import { AICommandCenterDemoGemini } from '@/src/presentation/components/demos/AICommandCenterDemoGemini';
 import { AIDeityAwakeningDemoGemini } from '@/src/presentation/components/demos/AIDeityAwakeningDemoGemini';
+import { AndalusianDemoGemini } from '@/src/presentation/components/demos/AndalusianDemoGemini';
 import { AwardStylePremiumDirectoryDemoGemini } from '@/src/presentation/components/demos/AwardStylePremiumDirectoryDemoGemini';
 import { BillionDollarIPODemoGemini } from '@/src/presentation/components/demos/BillionDollarIPODemoGemini';
 import { BlackMirrorPsychologicalDemoGemini } from '@/src/presentation/components/demos/BlackMirrorPsychologicalDemoGemini';
@@ -196,6 +197,7 @@ const LIVE_PREVIEW_COMPONENTS: Record<string, Partial<Record<AiModel, React.Comp
   'showcase-088': { 'gemini-3-flash': IslamicCardDemoGemini },
   'showcase-089': { 'gemini-3-flash': IslamicKnowledgePlatformDemoGemini },
   'showcase-090': { 'gemini-3-flash': IslamicNightDemoGemini },
+  'showcase-091': { 'gemini-3-flash': AndalusianDemoGemini },
 };
 
 interface LivePreviewPageProps {
