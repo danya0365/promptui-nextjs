@@ -1770,6 +1770,45 @@ Scholarly, wise, intellectual, historical.`,
     createdAt: '2025-06-05T13:00:00.000Z',
     updatedAt: '2025-06-05T13:00:00.000Z',
   },
+  {
+    id: 'showcase-097',
+    title: 'Islamic Geometric Cosmology',
+    description: 'อินเตอร์เฟซแห่งอนาคตที่ได้รับแรงบันดาลใจจากจักรวาลวิทยาและเรขาคณิตอิสลาม นำเสนอความงามของความสมมาตรและแสงสว่างในห้วงอวกาศ',
+    category: 'card',
+    prompt: `Create a futuristic interface inspired by Islamic geometric cosmology.
+
+Concept:
+Cards float within a cosmic geometric pattern universe.
+
+Visual System:
+- Deep cosmic blue background
+- Glowing geometric star patterns
+- Gold and cyan light accents
+- Subtle cosmic particles
+- Radiating symmetry
+
+Card Design:
+- Floating geometric cards
+- Light-etched borders
+- Layered translucent panels
+- Expandable cosmic data panels
+- Elegant modern typography
+
+Interaction:
+- Cards connect through glowing geometry lines
+- Hover activates pattern illumination
+- Expanded cards reveal deeper knowledge layers
+
+Mood:
+Spiritual, cosmic, intelligent, futuristic.`,
+    thumbnailUrl: '/thumbnails/cosmology.png',
+    tags: ['islamic-cosmology', 'futuristic', 'geometry', 'cosmic', 'cyan-gold'],
+    difficulty: 'advanced',
+    isFeatured: true,
+    isActive: true,
+    createdAt: '2025-06-05T14:00:00.000Z',
+    updatedAt: '2025-06-05T14:00:00.000Z',
+  },
 ];
 
 export class StaticShowcaseItemRepository implements IShowcaseItemRepository {
