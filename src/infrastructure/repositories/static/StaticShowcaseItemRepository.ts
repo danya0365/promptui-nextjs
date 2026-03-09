@@ -1693,6 +1693,45 @@ Warm, spiritual, peaceful Ramadan night.`,
     createdAt: '2025-06-05T11:00:00.000Z',
     updatedAt: '2025-06-05T11:00:00.000Z',
   },
+  {
+    id: 'showcase-095',
+    title: 'Ottoman Palace Architecture',
+    description: 'อินเตอร์เฟซที่หรูหราได้รับแรงบันดาลใจจากสถาปัตยกรรมพระราชวังออตโตมัน ใช้โทนสีเขียวมรกตและทอง พร้อมรูปทรงซุ้มประตูโค้ง',
+    category: 'card',
+    prompt: `Create a rich interface inspired by Ottoman palace architecture.
+
+Concept:
+Cards resemble decorative palace panels with artistic frames.
+
+Visual System:
+- Deep emerald background
+- Rich gold ornament accents
+- Ottoman floral patterns
+- Elegant arch shapes
+- Luxurious lighting
+
+Card Design:
+- Arch-top panel cards
+- Decorative golden borders
+- Pattern separators
+- Multi-layer expandable panels
+- Elegant typography hierarchy
+
+Interaction:
+- Panels unfold like palace doors
+- Sub-cards slide out smoothly
+- Hover reveals ornamental glow
+
+Mood:
+Royal, historical, majestic Islamic art.`,
+    thumbnailUrl: '/thumbnails/ottoman-palace.png',
+    tags: ['ottoman', 'islamic', 'palace', 'luxury', 'emerald-gold'],
+    difficulty: 'advanced',
+    isFeatured: true,
+    isActive: true,
+    createdAt: '2025-06-05T12:00:00.000Z',
+    updatedAt: '2025-06-05T12:00:00.000Z',
+  },
 ];
 
 export class StaticShowcaseItemRepository implements IShowcaseItemRepository {

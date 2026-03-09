@@ -77,6 +77,8 @@ import { MusicPlayerDashboardDemoGemini } from '@/src/presentation/components/de
 import { NeoBrutalistPromptGalleryDemoGemini } from '@/src/presentation/components/demos/NeoBrutalistPromptGalleryDemoGemini';
 import { NeonDashboardWidgetsDemoGemini } from '@/src/presentation/components/demos/NeonDashboardWidgetsDemoGemini';
 import { NextGenSpatialOSDemoGemini } from '@/src/presentation/components/demos/NextGenSpatialOSDemoGemini';
+import OttomanPalaceDemoClaudeSonnet from '@/src/presentation/components/demos/OttomanPalaceDemoClaudeSonnet';
+import { OttomanPalaceDemoGemini } from '@/src/presentation/components/demos/OttomanPalaceDemoGemini';
 import { PhysicsDrivenWebWorldDemoGemini } from '@/src/presentation/components/demos/PhysicsDrivenWebWorldDemoGemini';
 import { PostHumanInterfaceDemoGemini } from '@/src/presentation/components/demos/PostHumanInterfaceDemoGemini';
 import { PostHumanTranscendenceDemoGemini } from '@/src/presentation/components/demos/PostHumanTranscendenceDemoGemini';
@@ -211,6 +213,10 @@ const LIVE_PREVIEW_COMPONENTS: Record<string, Partial<Record<AiModel, React.Comp
   'showcase-094': { 
     'gemini-3-flash': RamadanLanternDemoGemini,
     'claude-4.6-sonnet': RamadanLanternDemoClaudeSonnet,
+  },
+  'showcase-095': { 
+    'gemini-3-flash': OttomanPalaceDemoGemini,
+    'claude-4.6-sonnet': OttomanPalaceDemoClaudeSonnet,
   },
 };
 
