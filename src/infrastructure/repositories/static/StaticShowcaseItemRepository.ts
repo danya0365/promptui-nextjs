@@ -5,12 +5,12 @@
  */
 
 import {
-  CreateShowcaseItemData,
-  IShowcaseItemRepository,
-  PaginatedResult,
-  ShowcaseItem,
-  ShowcaseStats,
-  UpdateShowcaseItemData,
+    CreateShowcaseItemData,
+    IShowcaseItemRepository,
+    PaginatedResult,
+    ShowcaseItem,
+    ShowcaseStats,
+    UpdateShowcaseItemData,
 } from '@/src/application/repositories/IShowcaseItemRepository';
 
 const SHOWCASE_ITEMS: ShowcaseItem[] = [
@@ -1418,6 +1418,46 @@ The intelligence of tomorrow, with the clarity of now.`,
     isActive: true,
     createdAt: '2025-06-05T04:00:00.000Z',
     updatedAt: '2025-06-05T04:00:00.000Z',
+  },
+  {
+    id: 'showcase-088',
+    title: 'Islamic-Inspired Card Interface',
+    description: 'อินเตอร์เฟซการ์ดที่ได้รับแรงบันดาลใจจากศิลปะอิสลาม โทนสีเขียวมรกต ลวดลายเรขาคณิต และไฮไลท์สีทองหรูหรา',
+    category: 'card',
+    prompt: `Create a beautiful Islamic-inspired card interface.
+
+Concept:
+A calm spiritual interface inspired by mosque architecture and Islamic geometry.
+
+Visual System:
+- Deep emerald green background
+- Subtle Islamic geometric pattern texture
+- Soft gold accent lines
+- Elegant lighting gradients
+- Calm and balanced composition
+
+Card Design:
+- Rounded cards with elegant borders
+- Thin gold frames
+- Subtle shadow depth
+- Islamic geometric corner ornaments
+- Clean Arabic-inspired typography
+- Spacious internal layout
+
+Interaction:
+- Soft hover glow on card borders
+- Gentle fade-in transitions
+- Card expands into layered information panel
+
+Mood:
+Spiritual, elegant, peaceful, timeless.`,
+    thumbnailUrl: '/thumbnails/islamic-cards.png',
+    tags: ['islamic', 'geometric', 'emerald', 'gold', 'premium', 'animation'],
+    difficulty: 'advanced',
+    isFeatured: true,
+    isActive: true,
+    createdAt: '2025-06-05T05:00:00.000Z',
+    updatedAt: '2025-06-05T05:00:00.000Z',
   },
 ];
 
