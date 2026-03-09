@@ -657,6 +657,20 @@ const LIVE_PREVIEWS: ShowcaseLivePreview[] = [
     isActive: true,
     createdAt: '2025-06-22T14:00:00.000Z',
   },
+  {
+    id: 'lp-094',
+    showcaseId: 'showcase-093',
+    aiModel: 'claude-4.6-sonnet',
+    isActive: true,
+    createdAt: '2025-06-22T15:00:00.000Z',
+  },
+  {
+    id: 'lp-095',
+    showcaseId: 'showcase-093',
+    aiModel: 'gemini-3-flash',
+    isActive: true,
+    createdAt: '2025-06-22T15:00:00.000Z',
+  },
 ];
 
 export class StaticShowcaseLivePreviewRepository

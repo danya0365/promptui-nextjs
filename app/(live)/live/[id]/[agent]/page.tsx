@@ -60,6 +60,8 @@ import { IoTSmartHomeDashboardDemoGemini } from '@/src/presentation/components/d
 import { IslamicCardDemoGemini } from '@/src/presentation/components/demos/IslamicCardDemoGemini';
 import { IslamicKnowledgePlatformDemoGemini } from '@/src/presentation/components/demos/IslamicKnowledgePlatformDemoGemini';
 import { IslamicNightDemoGemini } from '@/src/presentation/components/demos/IslamicNightDemoGemini';
+import KaabaInspiredDemoClaudeSonnet from '@/src/presentation/components/demos/KaabaInspiredDemoClaudeSonnet';
+import { KaabaInspiredDemoGemini } from '@/src/presentation/components/demos/KaabaInspiredDemoGemini';
 import { KanbanBoardDemoGemini } from '@/src/presentation/components/demos/KanbanBoardDemoGemini';
 import { LiveSimulationMatrixDemoGemini } from '@/src/presentation/components/demos/LiveSimulationMatrixDemoGemini';
 import { LivingAdaptiveCardsDemoGemini } from '@/src/presentation/components/demos/LivingAdaptiveCardsDemoGemini';
@@ -200,6 +202,10 @@ const LIVE_PREVIEW_COMPONENTS: Record<string, Partial<Record<AiModel, React.Comp
   'showcase-090': { 'gemini-3-flash': IslamicNightDemoGemini },
   'showcase-091': { 'gemini-3-flash': AndalusianDemoGemini },
   'showcase-092': { 'gemini-3-flash': ModernIslamicDashboardDemoGemini },
+  'showcase-093': { 
+    'gemini-3-flash': KaabaInspiredDemoGemini,
+    'claude-4.6-sonnet': KaabaInspiredDemoClaudeSonnet,
+  },
 };
 
 interface LivePreviewPageProps {

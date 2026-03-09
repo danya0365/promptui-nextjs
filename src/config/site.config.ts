@@ -61,6 +61,7 @@ export const siteConfig = {
     { id: 'claude-3.7-sonnet',  label: 'Claude 3.7 Sonnet',  icon: '🟠', color: 'amber' },
     { id: 'claude-4-sonnet',    label: 'Claude 4 Sonnet',    icon: '🟠', color: 'orange' },
     { id: 'claude-4.6-opus',    label: 'Claude 4.6 Opus',    icon: '🟠', color: 'orange' },
+    { id: 'claude-4.6-sonnet',  label: 'Claude 4.6 Sonnet',  icon: '🟠', color: 'orange' },
     { id: 'gemini-3-preview',   label: 'Gemini 3 Preview',   icon: '✨', color: 'indigo' },
     { id: 'gemini-3-pro',       label: 'Gemini 3 Pro',       icon: '✨', color: 'indigo' },
     { id: 'gemini-3-flash',     label: 'Gemini 3 Flash',     icon: '✨', color: 'indigo' },

@@ -1615,6 +1615,45 @@ Calm, intelligent, inspiring.`,
     createdAt: '2025-06-05T09:00:00.000Z',
     updatedAt: '2025-06-05T09:00:00.000Z',
   },
+  {
+    id: 'showcase-093',
+    title: 'Kaaba-Inspired Sacred Geometry',
+    description: 'อินเตอร์เฟซที่ได้รับแรงบันดาลใจจากโครงสร้างและรูปทรงเรขาคณิตของกะอ์บะฮ์ มุ่งเน้นความเรียบง่าย ทรงพลัง และความสงบทางจิตวิญญาณ',
+    category: 'card',
+    prompt: `Create an Islamic interface inspired by the Kaaba and sacred geometry.
+
+Concept:
+Cards are arranged in a structured, symmetrical layout inspired by the geometry of the Kaaba courtyard.
+
+Visual System:
+- Deep black background
+- Elegant gold accents
+- Subtle marble texture
+- Soft ambient lighting
+- Minimal Islamic geometric patterns
+
+Card Design:
+- Rectangular cards with gold frame
+- Subtle glowing edges
+- Elegant Arabic calligraphy titles
+- Clean structured content sections
+- Expandable layered panels
+
+Interaction:
+- Cards align in symmetrical grid
+- Hover produces soft golden glow
+- Expanding card reveals deeper knowledge panel
+
+Mood:
+Sacred, powerful, minimalist, deeply spiritual.`,
+    thumbnailUrl: '/thumbnails/kaaba-inspired.png',
+    tags: ['kaaba', 'islamic', 'sacred-geometry', 'minimalist', 'black-gold'],
+    difficulty: 'advanced',
+    isFeatured: true,
+    isActive: true,
+    createdAt: '2025-06-05T10:00:00.000Z',
+    updatedAt: '2025-06-05T10:00:00.000Z',
+  },
 ];
 
 export class StaticShowcaseItemRepository implements IShowcaseItemRepository {
