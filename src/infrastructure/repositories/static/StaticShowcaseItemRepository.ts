@@ -1497,6 +1497,45 @@ Educational, sacred, respectful, scholarly.`,
     createdAt: '2025-06-05T06:00:00.000Z',
     updatedAt: '2025-06-05T06:00:00.000Z',
   },
+  {
+    id: 'showcase-090',
+    title: 'Islamic Serene Night',
+    description: 'อินเตอร์เฟซธีมกลางคืนที่เงียบสงบ ได้รับแรงบันดาลใจจากลานมัสยิดใต้แสงจันทร์และดวงดาว',
+    category: 'card',
+    prompt: `Create a night-themed Islamic interface inspired by mosque courtyards.
+
+Concept:
+Cards float in a calm nighttime spiritual environment.
+
+Visual System:
+- Deep midnight blue background
+- Soft moonlight glow
+- Subtle star particles
+- Mosque silhouette horizon
+- Silver and light blue highlights
+
+Card Design:
+- Soft glowing card frames
+- Rounded elegant panels
+- Minimal icons
+- Light calligraphy headers
+- Gentle glass-like surface
+
+Interaction:
+- Hover produces subtle light ripple
+- Cards gently elevate
+- Expanded cards reveal more reflections and glow
+
+Mood:
+Peaceful, reflective, spiritual night experience.`,
+    thumbnailUrl: '/thumbnails/islamic-night.png',
+    tags: ['night', 'islamic', 'serene', 'moonlight', 'spiritual', 'glassmorphism'],
+    difficulty: 'advanced',
+    isFeatured: true,
+    isActive: true,
+    createdAt: '2025-06-05T07:00:00.000Z',
+    updatedAt: '2025-06-05T07:00:00.000Z',
+  },
 ];
 
 export class StaticShowcaseItemRepository implements IShowcaseItemRepository {
