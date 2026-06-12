@@ -2280,6 +2280,31 @@ Spiritual, cosmic, intelligent, futuristic.`,
     createdAt: "2025-06-12T21:00:00.000Z",
     updatedAt: "2025-06-12T21:00:00.000Z",
   },
+  {
+    id: "showcase-101",
+    title: "Mosque Architecture Spatial",
+    description:
+      "A spatial Islamic interface inspired by futuristic mosque architecture — users navigate knowledge through floating mosque-inspired holographic structures with white marble and gold lighting",
+    category: "dashboard",
+    prompt:
+      "Create a spatial Islamic interface inspired by futuristic mosque architecture.\n\nConcept:\nUsers navigate knowledge through floating mosque-inspired structures.\n\nVisual System:\n- Massive architectural holograms\n- White marble and gold lighting\n- Transparent floating panels\n- Soft atmospheric depth\n- Elegant spatial composition\n\nCard Design:\n- Arch-inspired holographic cards\n- Multi-level panel hierarchy\n- Floating navigation clusters\n- Dynamic contextual cards\n\nInteraction:\n- Scroll moves through architectural space\n- Cards emerge from geometric structures\n- Knowledge panels unfold like mosque courtyards\n\nMood:\nMajestic.\nPeaceful.\nTimeless.",
+    thumbnailUrl: "/thumbnails/mosque-architecture-spatial.webp",
+    tags: [
+      "islamic",
+      "mosque",
+      "architecture",
+      "spatial",
+      "holographic",
+      "gold",
+      "marble",
+      "futuristic",
+    ],
+    difficulty: "advanced",
+    isFeatured: true,
+    isActive: true,
+    createdAt: "2025-06-12T21:15:00.000Z",
+    updatedAt: "2025-06-12T21:15:00.000Z",
+  },
 ];
 
 export class StaticShowcaseItemRepository implements IShowcaseItemRepository {

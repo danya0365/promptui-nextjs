@@ -747,6 +747,13 @@ const LIVE_PREVIEWS: ShowcaseLivePreview[] = [
     isActive: true,
     createdAt: "2025-06-12T21:00:00.000Z",
   },
+  {
+    id: "lp-107",
+    showcaseId: "showcase-101",
+    aiModel: "kimi-k2.6",
+    isActive: true,
+    createdAt: "2025-06-12T21:15:00.000Z",
+  },
 ];
 
 export class StaticShowcaseLivePreviewRepository implements IShowcaseLivePreviewRepository {

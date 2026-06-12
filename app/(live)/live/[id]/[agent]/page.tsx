@@ -76,6 +76,7 @@ import { MinimalSpatialDashboardDemoGemini } from "@/src/presentation/components
 import { MinorityReportHologramDemoGemini } from "@/src/presentation/components/demos/MinorityReportHologramDemoGemini";
 import { ModernDashboardDemoGemini } from "@/src/presentation/components/demos/ModernDashboardDemoGemini";
 import { ModernIslamicDashboardDemoGemini } from "@/src/presentation/components/demos/ModernIslamicDashboardDemoGemini";
+import { MosqueArchitectureSpatialDemoKimi } from "@/src/presentation/components/demos/MosqueArchitectureSpatialDemoKimi";
 import { MultiStepRegisterDemoGemini } from "@/src/presentation/components/demos/MultiStepRegisterDemoGemini";
 import { MusicPlayerDashboardDemoGemini } from "@/src/presentation/components/demos/MusicPlayerDashboardDemoGemini";
 import { NeoBrutalistPromptGalleryDemoGemini } from "@/src/presentation/components/demos/NeoBrutalistPromptGalleryDemoGemini";
@@ -248,6 +249,7 @@ const LIVE_PREVIEW_COMPONENTS: Record<
   "showcase-098": { "kimi-k2.6": IslamicSpatialIntelligenceDemoKimi },
   "showcase-099": { "kimi-k2.6": SpatialPrayerCompanionDemoKimi },
   "showcase-100": { "kimi-k2.6": QuranKnowledgeNetworkDemoKimi },
+  "showcase-101": { "kimi-k2.6": MosqueArchitectureSpatialDemoKimi },
 };
 
 interface LivePreviewPageProps {
