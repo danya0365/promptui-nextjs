@@ -2330,6 +2330,31 @@ Spiritual, cosmic, intelligent, futuristic.`,
     createdAt: "2025-06-12T21:25:00.000Z",
     updatedAt: "2025-06-12T21:25:00.000Z",
   },
+  {
+    id: "showcase-103",
+    title: "Preserved Tablet Interface",
+    description:
+      "A sacred futuristic interface inspired by the concept of the Preserved Tablet — infinite knowledge visualized through floating layers of light, golden sacred geometry, and ethereal volumetric illumination",
+    category: "dashboard",
+    prompt:
+      "Create a sacred futuristic interface inspired by the concept of the Preserved Tablet.\n\nConcept:\nInfinite knowledge visualized through floating layers of light.\n\nVisual System:\n- Endless luminous white void\n- Golden sacred geometry\n- Floating translucent panels\n- Subtle celestial particles\n- Ethereal volumetric lighting\n\nCard Design:\n- Weightless holographic cards\n- Soft glowing borders\n- Layered revelation panels\n- Elegant Arabic calligraphy accents\n\nInteraction:\n- Cards emerge from light\n- Knowledge unfolds progressively\n- Spatial depth increases with exploration\n\nMood:\nTranscendent.\nSacred.\nBeyond time.",
+    thumbnailUrl: "/thumbnails/preserved-tablet-interface.webp",
+    tags: [
+      "islamic",
+      "sacred",
+      "tablet",
+      "revelation",
+      "luminous",
+      "gold",
+      "white",
+      "spiritual",
+    ],
+    difficulty: "advanced",
+    isFeatured: true,
+    isActive: true,
+    createdAt: "2025-06-12T21:30:00.000Z",
+    updatedAt: "2025-06-12T21:30:00.000Z",
+  },
 ];
 
 export class StaticShowcaseItemRepository implements IShowcaseItemRepository {

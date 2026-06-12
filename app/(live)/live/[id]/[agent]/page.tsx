@@ -89,6 +89,7 @@ import { PhysicsDrivenWebWorldDemoGemini } from "@/src/presentation/components/d
 import { PostHumanInterfaceDemoGemini } from "@/src/presentation/components/demos/PostHumanInterfaceDemoGemini";
 import { PostHumanTranscendenceDemoGemini } from "@/src/presentation/components/demos/PostHumanTranscendenceDemoGemini";
 import { PredictiveAnalysisHologramDemoGemini } from "@/src/presentation/components/demos/PredictiveAnalysisHologramDemoGemini";
+import { PreservedTabletInterfaceDemoKimi } from "@/src/presentation/components/demos/PreservedTabletInterfaceDemoKimi";
 import { ProductCardGridDemoGemini } from "@/src/presentation/components/demos/ProductCardGridDemoGemini";
 import { ProfileCardCollectionDemoGemini } from "@/src/presentation/components/demos/ProfileCardCollectionDemoGemini";
 import { QuranKnowledgeNetworkDemoKimi } from "@/src/presentation/components/demos/QuranKnowledgeNetworkDemoKimi";
@@ -252,6 +253,7 @@ const LIVE_PREVIEW_COMPONENTS: Record<
   "showcase-100": { "kimi-k2.6": QuranKnowledgeNetworkDemoKimi },
   "showcase-101": { "kimi-k2.6": MosqueArchitectureSpatialDemoKimi },
   "showcase-102": { "kimi-k2.6": IslamicCivilization2200DemoKimi },
+  "showcase-103": { "kimi-k2.6": PreservedTabletInterfaceDemoKimi },
 };
 
 interface LivePreviewPageProps {
