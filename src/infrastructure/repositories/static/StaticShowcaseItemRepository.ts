@@ -2255,6 +2255,31 @@ Spiritual, cosmic, intelligent, futuristic.`,
     createdAt: "2025-06-12T20:00:00.000Z",
     updatedAt: "2025-06-12T20:00:00.000Z",
   },
+  {
+    id: "showcase-100",
+    title: "Quran Knowledge Network",
+    description:
+      "A futuristic Quran knowledge system visualized as a holographic intelligence network — every verse is a living knowledge node connected by gold and cyan light",
+    category: "dashboard",
+    prompt:
+      "Create a futuristic Quran knowledge system visualized as a holographic intelligence network.\n\nConcept:\nEvery verse is represented as a living knowledge node.\n\nVisual System:\n- Infinite dark void\n- Floating luminous data clusters\n- Gold and cyan holographic connections\n- Sacred geometry woven into network structure\n- Soft atmospheric glow\n\nCard Design:\n- Transparent floating verse cards\n- Expandable tafsir panels\n- Multi-layer knowledge architecture\n- Dynamic relationship visualization\n\nInteraction:\n- Cards connect to related verses\n- Hover reveals contextual knowledge layers\n- Expanding a card reveals an immersive holographic explanation\n\nMood:\nAncient wisdom meets future technology.",
+    thumbnailUrl: "/thumbnails/quran-knowledge-network.webp",
+    tags: [
+      "islamic",
+      "quran",
+      "holographic",
+      "network",
+      "knowledge",
+      "gold-cyan",
+      "futuristic",
+      "sacred-geometry",
+    ],
+    difficulty: "advanced",
+    isFeatured: true,
+    isActive: true,
+    createdAt: "2025-06-12T21:00:00.000Z",
+    updatedAt: "2025-06-12T21:00:00.000Z",
+  },
 ];
 
 export class StaticShowcaseItemRepository implements IShowcaseItemRepository {

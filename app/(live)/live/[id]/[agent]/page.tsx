@@ -89,6 +89,7 @@ import { PostHumanTranscendenceDemoGemini } from "@/src/presentation/components/
 import { PredictiveAnalysisHologramDemoGemini } from "@/src/presentation/components/demos/PredictiveAnalysisHologramDemoGemini";
 import { ProductCardGridDemoGemini } from "@/src/presentation/components/demos/ProductCardGridDemoGemini";
 import { ProfileCardCollectionDemoGemini } from "@/src/presentation/components/demos/ProfileCardCollectionDemoGemini";
+import { QuranKnowledgeNetworkDemoKimi } from "@/src/presentation/components/demos/QuranKnowledgeNetworkDemoKimi";
 import RamadanLanternDemoClaudeSonnet from "@/src/presentation/components/demos/RamadanLanternDemoClaudeSonnet";
 import { RamadanLanternDemoGemini } from "@/src/presentation/components/demos/RamadanLanternDemoGemini";
 import { RealityFractureDemoGemini } from "@/src/presentation/components/demos/RealityFractureDemoGemini";
@@ -246,6 +247,7 @@ const LIVE_PREVIEW_COMPONENTS: Record<
   },
   "showcase-098": { "kimi-k2.6": IslamicSpatialIntelligenceDemoKimi },
   "showcase-099": { "kimi-k2.6": SpatialPrayerCompanionDemoKimi },
+  "showcase-100": { "kimi-k2.6": QuranKnowledgeNetworkDemoKimi },
 };
 
 interface LivePreviewPageProps {
