@@ -2305,6 +2305,31 @@ Spiritual, cosmic, intelligent, futuristic.`,
     createdAt: "2025-06-12T21:15:00.000Z",
     updatedAt: "2025-06-12T21:15:00.000Z",
   },
+  {
+    id: "showcase-102",
+    title: "Islamic Civilization 2200",
+    description:
+      "A futuristic civilization dashboard for the Islamic world in the year 2200 — planetary intelligence network visualized through holographic city cards connected by golden data streams",
+    category: "dashboard",
+    prompt:
+      "Create a futuristic civilization dashboard for the Islamic world in the year 2200.\n\nConcept:\nA planetary intelligence network visualized through holographic cards.\n\nVisual System:\n- Planet Earth floating in the background\n- Golden data streams connecting cities\n- Vision Pro-inspired spatial depth\n- Minority Report holographic overlays\n- Soft ambient cosmic lighting\n\nCard Design:\n- Floating glass dashboards\n- Dynamic data cards\n- Expandable civilization panels\n- Multi-depth spatial layers\n\nInteraction:\n- Cards cluster by region\n- Expanding a card reveals city-level intelligence\n- Holographic maps emerge from panels\n\nMood:\nAdvanced civilization.\nGlobal intelligence.\nSpiritual progress.",
+    thumbnailUrl: "/thumbnails/islamic-civilization-2200.webp",
+    tags: [
+      "islamic",
+      "civilization",
+      "futuristic",
+      "planetary",
+      "holographic",
+      "gold",
+      "spatial",
+      "dashboard",
+    ],
+    difficulty: "advanced",
+    isFeatured: true,
+    isActive: true,
+    createdAt: "2025-06-12T21:25:00.000Z",
+    updatedAt: "2025-06-12T21:25:00.000Z",
+  },
 ];
 
 export class StaticShowcaseItemRepository implements IShowcaseItemRepository {
