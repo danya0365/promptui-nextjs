@@ -99,6 +99,7 @@ import { SelfEvolvingInterfaceDemoGemini } from "@/src/presentation/components/d
 import { SocialMediaAnalyticsDemoGemini } from "@/src/presentation/components/demos/SocialMediaAnalyticsDemoGemini";
 import { SpatialComputingDemoGemini } from "@/src/presentation/components/demos/SpatialComputingDemoGemini";
 import { SpatialDepthUIDemoGemini } from "@/src/presentation/components/demos/SpatialDepthUIDemoGemini";
+import { SpatialPrayerCompanionDemoKimi } from "@/src/presentation/components/demos/SpatialPrayerCompanionDemoKimi";
 import { SuperintelligenceLaunchDemoGemini } from "@/src/presentation/components/demos/SuperintelligenceLaunchDemoGemini";
 import { SwissInspiredModernDirectoryDemoGemini } from "@/src/presentation/components/demos/SwissInspiredModernDirectoryDemoGemini";
 import { TacticalSimulationDemoGemini } from "@/src/presentation/components/demos/TacticalSimulationDemoGemini";
@@ -244,6 +245,7 @@ const LIVE_PREVIEW_COMPONENTS: Record<
     "claude-4.6-sonnet": IslamicCosmologyDemoClaudeSonnet,
   },
   "showcase-098": { "kimi-k2.6": IslamicSpatialIntelligenceDemoKimi },
+  "showcase-099": { "kimi-k2.6": SpatialPrayerCompanionDemoKimi },
 };
 
 interface LivePreviewPageProps {

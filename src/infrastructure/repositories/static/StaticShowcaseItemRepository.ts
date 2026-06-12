@@ -2230,6 +2230,31 @@ Spiritual, cosmic, intelligent, futuristic.`,
     createdAt: "2025-06-12T00:00:00.000Z",
     updatedAt: "2025-06-12T00:00:00.000Z",
   },
+  {
+    id: "showcase-099",
+    title: "Spatial Prayer Companion 2050",
+    description:
+      "A personal spiritual operating system for the year 2050 — floating translucent prayer cards, soft moonlight illumination, and a holographic daily worship timeline with Vision Pro aesthetic",
+    category: "dashboard",
+    prompt:
+      "Design a spatial prayer companion interface for the year 2050.\n\nConcept:\nA personal spiritual operating system.\n\nVisual System:\n- Floating translucent cards\n- Soft moonlight illumination\n- White, silver, and emerald color palette\n- Ambient particle effects\n- Dynamic prayer-time celestial visualization\n\nCard Design:\n- Rounded glass cards\n- Soft internal glow\n- Layered information panels\n- Floating prayer widgets\n- Elegant Arabic-inspired typography\n\nInteraction:\n- Cards reposition themselves based on priority\n- Prayer cards expand into immersive spiritual scenes\n- Holographic timeline of daily worship\n\nMood:\nCalm.\nPersonal.\nDeeply spiritual.\nVision Pro aesthetic.",
+    thumbnailUrl: "/thumbnails/spatial-prayer-companion.webp",
+    tags: [
+      "islamic",
+      "prayer",
+      "spatial",
+      "vision-pro",
+      "glassmorphism",
+      "spiritual",
+      "emerald",
+      "futuristic",
+    ],
+    difficulty: "advanced",
+    isFeatured: true,
+    isActive: true,
+    createdAt: "2025-06-12T20:00:00.000Z",
+    updatedAt: "2025-06-12T20:00:00.000Z",
+  },
 ];
 
 export class StaticShowcaseItemRepository implements IShowcaseItemRepository {
