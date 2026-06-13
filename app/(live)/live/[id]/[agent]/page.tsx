@@ -95,6 +95,7 @@ import { NoirDetectiveDeskDemoClaudeOpus } from "@/src/presentation/components/d
 import OttomanPalaceDemoClaudeSonnet from "@/src/presentation/components/demos/OttomanPalaceDemoClaudeSonnet";
 import { OttomanPalaceDemoGemini } from "@/src/presentation/components/demos/OttomanPalaceDemoGemini";
 import { PhysicsDrivenWebWorldDemoGemini } from "@/src/presentation/components/demos/PhysicsDrivenWebWorldDemoGemini";
+import { PixelQuestDemoClaudeOpus } from "@/src/presentation/components/demos/PixelQuestDemoClaudeOpus";
 import { PostHumanInterfaceDemoGemini } from "@/src/presentation/components/demos/PostHumanInterfaceDemoGemini";
 import { PostHumanTranscendenceDemoGemini } from "@/src/presentation/components/demos/PostHumanTranscendenceDemoGemini";
 import { PredictiveAnalysisHologramDemoGemini } from "@/src/presentation/components/demos/PredictiveAnalysisHologramDemoGemini";
@@ -284,6 +285,7 @@ const LIVE_PREVIEW_COMPONENTS: Record<
   "showcase-116": { "claude-4.8-opus": ClayCrittersDemoClaudeOpus },
   "showcase-117": { "claude-4.8-opus": BlueprintDraftingDemoClaudeOpus },
   "showcase-118": { "claude-4.8-opus": StainedGlassDemoClaudeOpus },
+  "showcase-119": { "claude-4.8-opus": PixelQuestDemoClaudeOpus },
 };
 
 interface LivePreviewPageProps {

@@ -2730,6 +2730,31 @@ Spiritual, cosmic, intelligent, futuristic.`,
     createdAt: "2026-06-13T02:10:00.000Z",
     updatedAt: "2026-06-13T02:10:00.000Z",
   },
+  {
+    id: "showcase-119",
+    title: "Pixel Quest Adventurer's Log",
+    description:
+      "An 8-bit retro RPG status screen — chunky pixel hero sprite that bobs, blocky HP/MP bars, an inventory grid, a quest log, a classic dialog box and an ITEM/MAGIC/EQUIP/SAVE command bar, all in hard-edged pixels with a scanline hint. Playful, nostalgic, pixel-crisp",
+    category: "dashboard",
+    prompt:
+      "Design an 8-bit retro RPG status screen.\n\nConcept:\nA cosy pixel-art adventurer's menu — stats, inventory and a quest log.\n\nLayout / Structure:\n- Classic RPG menu windows with chunky pixel borders\n- Left: a pixel hero sprite, name and level\n- Centre: stats with blocky HP/MP bars and equipment\n- Right: an inventory grid and a quest log\n- A bottom command bar (ITEM / MAGIC / EQUIP / SAVE) and a dialog box\n\nVisual System:\n- Limited retro palette on deep indigo, hard-edged pixels (no anti-aliasing), dithering\n- Chunky pixel display font, double-line menu frames, blocky bars, a scanline hint\n- Nostalgic 8-bit — NO smooth gradients, NO glow-blur, NO glass, NO rounded corners\n\nInteraction:\n- Selecting an inventory item prints its description in the dialog box\n- Using a potion refills the HP bar block by block\n- Switching command tabs changes the panel\n\nMood:\nPlayful.\nNostalgic.\nPixel-crisp.\n8-bit adventure.",
+    thumbnailUrl: "/thumbnails/pixel-quest-log.webp",
+    tags: [
+      "pixel-art",
+      "8-bit",
+      "retro-gaming",
+      "rpg",
+      "nostalgic",
+      "chiptune",
+      "sprite",
+      "playful",
+    ],
+    difficulty: "advanced",
+    isFeatured: true,
+    isActive: true,
+    createdAt: "2026-06-13T02:20:00.000Z",
+    updatedAt: "2026-06-13T02:20:00.000Z",
+  },
 ];
 
 export class StaticShowcaseItemRepository implements IShowcaseItemRepository {
