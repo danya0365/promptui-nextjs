@@ -116,6 +116,7 @@ import { TacticalSimulationDemoGemini } from "@/src/presentation/components/demo
 import { TravelBookingAppDemoGemini } from "@/src/presentation/components/demos/TravelBookingAppDemoGemini";
 import { UnrealEngineCinematicDemoGemini } from "@/src/presentation/components/demos/UnrealEngineCinematicDemoGemini";
 import { UnsentLettersDeskDemoClaudeOpus } from "@/src/presentation/components/demos/UnsentLettersDeskDemoClaudeOpus";
+import { ZenGardenDemoClaudeOpus } from "@/src/presentation/components/demos/ZenGardenDemoClaudeOpus";
 import type { Metadata } from "next";
 
 /**
@@ -268,6 +269,7 @@ const LIVE_PREVIEW_COMPONENTS: Record<
   "showcase-108": { "claude-4.8-opus": RetroSpaceConsoleDemoClaudeOpus },
   "showcase-109": { "claude-4.8-opus": EnchantedGrimoireDemoClaudeOpus },
   "showcase-110": { "claude-4.8-opus": BrutalistConcreteTerminalDemoClaudeOpus },
+  "showcase-111": { "claude-4.8-opus": ZenGardenDemoClaudeOpus },
 };
 
 interface LivePreviewPageProps {

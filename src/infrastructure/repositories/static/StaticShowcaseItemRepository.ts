@@ -2530,6 +2530,31 @@ Spiritual, cosmic, intelligent, futuristic.`,
     createdAt: "2026-06-13T00:50:00.000Z",
     updatedAt: "2026-06-13T00:50:00.000Z",
   },
+  {
+    id: "showcase-111",
+    title: "Karesansui Stillness Garden",
+    description:
+      "A digital Zen dry-rock garden for slow breathing and stillness — warm washi and raked-sand neutrals, generous negative space, a breathing ring to follow, and sand you touch to set stones with rippling rake lines. Serene, still, and quietly meditative",
+    category: "dashboard",
+    prompt:
+      "Design a digital Zen rock garden for slow breathing and stillness.\n\nConcept:\nA karesansui (dry garden) you tend quietly to settle the mind.\n\nLayout / Structure:\n- Calm and spacious — generous negative space (ma), nothing crowded\n- Center: a raked-sand garden with a few resting stones\n- A slow breathing ring to follow\n- Side: a short list of sessions and the day's intention\n- Top: a minimal title and the season\n\nVisual System:\n- Warm natural neutrals: washi cream, raked-sand beige, stone grey-green, ink charcoal\n- A single restrained accent (soft moss or faded indigo)\n- Raked concentric sand lines, thin hairlines, soft low shadows\n- Quiet serif and brush accents — NO glow, NO neon, NO glass, NO dark void, NO clutter\n\nInteraction:\n- Touching the sand sets a stone; rake lines ripple outward in slow rings\n- The breathing ring rises and falls; follow it in and out\n- Choosing a session settles a new intention into the space\n\nMood:\nSerene.\nStill.\nGrounded.\nQuietly meditative.",
+    thumbnailUrl: "/thumbnails/karesansui-stillness-garden.webp",
+    tags: [
+      "zen",
+      "meditation",
+      "japanese",
+      "karesansui",
+      "minimal",
+      "calm",
+      "mindfulness",
+      "stillness",
+    ],
+    difficulty: "advanced",
+    isFeatured: true,
+    isActive: true,
+    createdAt: "2026-06-13T01:00:00.000Z",
+    updatedAt: "2026-06-13T01:00:00.000Z",
+  },
 ];
 
 export class StaticShowcaseItemRepository implements IShowcaseItemRepository {
