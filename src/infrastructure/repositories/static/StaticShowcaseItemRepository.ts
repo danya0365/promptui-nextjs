@@ -2505,6 +2505,31 @@ Spiritual, cosmic, intelligent, futuristic.`,
     createdAt: "2026-06-13T00:40:00.000Z",
     updatedAt: "2026-06-13T00:40:00.000Z",
   },
+  {
+    id: "showcase-110",
+    title: "BÉTON Concrete Terminal",
+    description:
+      "A brutalist civic data terminal cast entirely in raw concrete — monolithic grey slabs, hard 90° edges, heavy offset shadows, enormous condensed grotesque type, and a single restrained safety-orange accent. Austere, monumental, unapologetically concrete",
+    category: "dashboard",
+    prompt:
+      "Design a brutalist concrete civic data terminal.\n\nConcept:\nA monolithic public records terminal cast entirely in raw concrete.\n\nLayout / Structure:\n- Heavy, blocky, grid-locked — usable but austere\n- Top: a massive slab header with an oversized title and a stark clock\n- Left: a column of monolithic section blocks (navigation)\n- Center: a list of records in raw concrete panels with huge numerals\n- A single oversized action switch\n\nVisual System:\n- Monochrome concrete: greys from charcoal to pale ash, raw poured-concrete texture\n- Hard 90-degree edges, exposed structural grid, heavy offset drop-shadows\n- One restrained signal accent (safety orange) used sparingly\n- Enormous condensed grotesque type, all caps — NO rounded corners, NO gradients, NO glow, NO color washes\n\nInteraction:\n- Selecting a section block swaps the records with a hard, instant cut\n- Rows invert to solid black on hover — no easing, just weight\n- The action switch thunks between states\n\nMood:\nAustere.\nMonumental.\nHeavy and raw.\nUnapologetically concrete.",
+    thumbnailUrl: "/thumbnails/beton-concrete-terminal.webp",
+    tags: [
+      "brutalist",
+      "concrete",
+      "monochrome",
+      "austere",
+      "civic",
+      "monolithic",
+      "grotesque",
+      "raw",
+    ],
+    difficulty: "advanced",
+    isFeatured: true,
+    isActive: true,
+    createdAt: "2026-06-13T00:50:00.000Z",
+    updatedAt: "2026-06-13T00:50:00.000Z",
+  },
 ];
 
 export class StaticShowcaseItemRepository implements IShowcaseItemRepository {

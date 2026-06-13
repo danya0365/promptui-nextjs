@@ -12,6 +12,7 @@ import { BlackMirrorPsychologicalDemoGemini } from "@/src/presentation/component
 import { BoldAIStartupDirectoryDemoGemini } from "@/src/presentation/components/demos/BoldAIStartupDirectoryDemoGemini";
 import { BoldStartupManifestoDemoGemini } from "@/src/presentation/components/demos/BoldStartupManifestoDemoGemini";
 import { BrainComputerInterfaceDemoGemini } from "@/src/presentation/components/demos/BrainComputerInterfaceDemoGemini";
+import { BrutalistConcreteTerminalDemoClaudeOpus } from "@/src/presentation/components/demos/BrutalistConcreteTerminalDemoClaudeOpus";
 import { CalendarAppDemoGemini } from "@/src/presentation/components/demos/CalendarAppDemoGemini";
 import { CalmOrganicWebDirectoryDemoGemini } from "@/src/presentation/components/demos/CalmOrganicWebDirectoryDemoGemini";
 import { ChromeInspiredWebDirectoryDemoGemini } from "@/src/presentation/components/demos/ChromeInspiredWebDirectoryDemoGemini";
@@ -266,6 +267,7 @@ const LIVE_PREVIEW_COMPONENTS: Record<
   "showcase-107": { "claude-4.8-opus": UnsentLettersDeskDemoClaudeOpus },
   "showcase-108": { "claude-4.8-opus": RetroSpaceConsoleDemoClaudeOpus },
   "showcase-109": { "claude-4.8-opus": EnchantedGrimoireDemoClaudeOpus },
+  "showcase-110": { "claude-4.8-opus": BrutalistConcreteTerminalDemoClaudeOpus },
 };
 
 interface LivePreviewPageProps {
