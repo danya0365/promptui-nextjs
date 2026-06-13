@@ -2680,6 +2680,31 @@ Spiritual, cosmic, intelligent, futuristic.`,
     createdAt: "2026-06-13T01:50:00.000Z",
     updatedAt: "2026-06-13T01:50:00.000Z",
   },
+  {
+    id: "showcase-117",
+    title: "The Automaton Teasmith Blueprint",
+    description:
+      "An engineer's cyanotype blueprint drafting table — prussian-blue ground with a fine grid, crisp white technical linework of a whimsical patented contraption, dimension lines, numbered callouts, toggleable drawing layers, a title block and bill of materials. Precise, technical, methodical",
+    category: "dashboard",
+    prompt:
+      "Design an engineer's blueprint drafting table.\n\nConcept:\nA drafting sheet for a whimsical patented contraption, drawn in cyanotype.\n\nLayout / Structure:\n- A technical drawing sheet — precise and legible\n- Center: the schematic with dimension lines and numbered callouts\n- Left: layer toggles (frame, mechanism, dimensions, annotations)\n- A title block with patent number, scale, and drafter\n- A bill of materials listing the numbered parts\n\nVisual System:\n- Cyanotype blueprint: prussian-blue ground with a fine grid, white and pale-cyan linework\n- Thin technical strokes, dimension arrows, leader lines, a stencilled title block\n- Monospace/drafting type — NO fills, NO color beyond blue/white/cyan, NO glow, NO gradients\n\nInteraction:\n- Toggling a layer reveals or hides that set of lines\n- Selecting a part from the bill highlights its callout on the drawing\n- A drafting stamp marks the sheet APPROVED\n\nMood:\nPrecise.\nTechnical.\nMethodical.\nDrafting-room calm.",
+    thumbnailUrl: "/thumbnails/automaton-teasmith-blueprint.webp",
+    tags: [
+      "blueprint",
+      "cyanotype",
+      "technical",
+      "drafting",
+      "schematic",
+      "engineering",
+      "precise",
+      "patent",
+    ],
+    difficulty: "advanced",
+    isFeatured: true,
+    isActive: true,
+    createdAt: "2026-06-13T02:00:00.000Z",
+    updatedAt: "2026-06-13T02:00:00.000Z",
+  },
 ];
 
 export class StaticShowcaseItemRepository implements IShowcaseItemRepository {

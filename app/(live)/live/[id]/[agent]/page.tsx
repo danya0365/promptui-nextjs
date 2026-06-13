@@ -10,6 +10,7 @@ import { ArtDecoSpeakeasyDemoClaudeOpus } from "@/src/presentation/components/de
 import { AwardStylePremiumDirectoryDemoGemini } from "@/src/presentation/components/demos/AwardStylePremiumDirectoryDemoGemini";
 import { BillionDollarIPODemoGemini } from "@/src/presentation/components/demos/BillionDollarIPODemoGemini";
 import { BlackMirrorPsychologicalDemoGemini } from "@/src/presentation/components/demos/BlackMirrorPsychologicalDemoGemini";
+import { BlueprintDraftingDemoClaudeOpus } from "@/src/presentation/components/demos/BlueprintDraftingDemoClaudeOpus";
 import { BoldAIStartupDirectoryDemoGemini } from "@/src/presentation/components/demos/BoldAIStartupDirectoryDemoGemini";
 import { BoldStartupManifestoDemoGemini } from "@/src/presentation/components/demos/BoldStartupManifestoDemoGemini";
 import { BrainComputerInterfaceDemoGemini } from "@/src/presentation/components/demos/BrainComputerInterfaceDemoGemini";
@@ -280,6 +281,7 @@ const LIVE_PREVIEW_COMPONENTS: Record<
   "showcase-114": { "claude-4.8-opus": ArtDecoSpeakeasyDemoClaudeOpus },
   "showcase-115": { "claude-4.8-opus": LivingRainforestDemoClaudeOpus },
   "showcase-116": { "claude-4.8-opus": ClayCrittersDemoClaudeOpus },
+  "showcase-117": { "claude-4.8-opus": BlueprintDraftingDemoClaudeOpus },
 };
 
 interface LivePreviewPageProps {
