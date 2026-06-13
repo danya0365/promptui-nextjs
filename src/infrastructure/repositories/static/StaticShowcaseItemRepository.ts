@@ -2430,6 +2430,31 @@ Spiritual, cosmic, intelligent, futuristic.`,
     createdAt: "2026-06-13T00:10:00.000Z",
     updatedAt: "2026-06-13T00:10:00.000Z",
   },
+  {
+    id: "showcase-107",
+    title: "Letters Never Sent",
+    description:
+      "A quiet, melancholic writing desk for letters you keep instead of send — muted autumn paper, faded ink, rain on a far window, and a wax seal that only ever means 'kept'. Wistful, bittersweet, and slow",
+    category: "dashboard",
+    prompt:
+      "Design a quiet desk for letters that will never be sent.\n\nConcept:\nA slow, melancholic writing space for words you keep instead of send.\n\nLayout / Structure:\n- A calm, usable three-column desk — clear and unhurried\n- Left: a stack of past unsent letters (a dated list)\n- Center: an open sheet of aged paper you write on\n- Right: a small panel — today's weather, ink level, a wax seal\n- Top bar: the date and a soft section title\n\nVisual System:\n- Muted, desaturated autumn palette: dusty rose, burnt sienna, faded sepia, oat, ash-brown\n- Aged paper grain, soft vignette, a faint rain-streaked window behind\n- Serif and handwritten type, slightly faded ink — NO neon, NO dark void, NO glow, NO bright saturation\n- Everything soft-edged, low-contrast, gentle\n\nInteraction:\n- Clicking a letter in the stack opens it with a slow, tender fade\n- 'Seal & keep' presses a wax seal onto the page (it is never sent)\n- Rain drifts slowly down the window; the room stays still\n\nMood:\nWistful.\nBittersweet.\nQuiet.\nTender and slow.",
+    thumbnailUrl: "/thumbnails/letters-never-sent.webp",
+    tags: [
+      "letters",
+      "melancholic",
+      "autumn",
+      "journaling",
+      "correspondence",
+      "wistful",
+      "slow",
+      "sepia",
+    ],
+    difficulty: "advanced",
+    isFeatured: true,
+    isActive: true,
+    createdAt: "2026-06-13T00:20:00.000Z",
+    updatedAt: "2026-06-13T00:20:00.000Z",
+  },
 ];
 
 export class StaticShowcaseItemRepository implements IShowcaseItemRepository {

@@ -112,6 +112,7 @@ import { SwissInspiredModernDirectoryDemoGemini } from "@/src/presentation/compo
 import { TacticalSimulationDemoGemini } from "@/src/presentation/components/demos/TacticalSimulationDemoGemini";
 import { TravelBookingAppDemoGemini } from "@/src/presentation/components/demos/TravelBookingAppDemoGemini";
 import { UnrealEngineCinematicDemoGemini } from "@/src/presentation/components/demos/UnrealEngineCinematicDemoGemini";
+import { UnsentLettersDeskDemoClaudeOpus } from "@/src/presentation/components/demos/UnsentLettersDeskDemoClaudeOpus";
 import type { Metadata } from "next";
 
 /**
@@ -260,6 +261,7 @@ const LIVE_PREVIEW_COMPONENTS: Record<
   "showcase-104": { "kimi-k2.6": IslamicCosmicCivilizationDemoKimi },
   "showcase-105": { "claude-4.8-opus": DeepOceanExplorationDemoClaudeOpus },
   "showcase-106": { "claude-4.8-opus": RisographZineStudioDemoClaudeOpus },
+  "showcase-107": { "claude-4.8-opus": UnsentLettersDeskDemoClaudeOpus },
 };
 
 interface LivePreviewPageProps {
