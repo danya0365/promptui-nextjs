@@ -126,6 +126,7 @@ import { TropicalBeachClubDemoClaudeOpus } from "@/src/presentation/components/d
 import { UkiyoeWoodblockDemoClaudeOpus } from "@/src/presentation/components/demos/UkiyoeWoodblockDemoClaudeOpus";
 import { UnrealEngineCinematicDemoGemini } from "@/src/presentation/components/demos/UnrealEngineCinematicDemoGemini";
 import { UnsentLettersDeskDemoClaudeOpus } from "@/src/presentation/components/demos/UnsentLettersDeskDemoClaudeOpus";
+import { VintageCircusDemoClaudeOpus } from "@/src/presentation/components/demos/VintageCircusDemoClaudeOpus";
 import { ZenGardenDemoClaudeOpus } from "@/src/presentation/components/demos/ZenGardenDemoClaudeOpus";
 import type { Metadata } from "next";
 
@@ -290,6 +291,7 @@ const LIVE_PREVIEW_COMPONENTS: Record<
   "showcase-119": { "claude-4.8-opus": PixelQuestDemoClaudeOpus },
   "showcase-120": { "claude-4.8-opus": HerbariumDemoClaudeOpus },
   "showcase-121": { "claude-4.8-opus": UkiyoeWoodblockDemoClaudeOpus },
+  "showcase-122": { "claude-4.8-opus": VintageCircusDemoClaudeOpus },
 };
 
 interface LivePreviewPageProps {

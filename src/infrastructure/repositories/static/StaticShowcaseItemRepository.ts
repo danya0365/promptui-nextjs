@@ -2805,6 +2805,31 @@ Spiritual, cosmic, intelligent, futuristic.`,
     createdAt: "2026-06-13T02:40:00.000Z",
     updatedAt: "2026-06-13T02:40:00.000Z",
   },
+  {
+    id: "showcase-122",
+    title: "The Grand Spectacular Showbill",
+    description:
+      "A Victorian travelling-circus showbill and box office — aged cream poster with ticket-red, ink-black and antique gold, a sunburst masthead, woodtype headlines, ribbon banners, pointing-hand dingbats and a perforated ticket stub. Pick tonight's act and book a seat. Theatrical, flamboyant, step right up",
+    category: "dashboard",
+    prompt:
+      "Design a vintage traveling-circus showbill and box office.\n\nConcept:\nA Victorian circus poster where you pick tonight's seats.\n\nLayout / Structure:\n- A grand ornate showbill — masthead, program, and box office\n- A sunburst masthead with a ribbon banner and woodtype title\n- Tonight's program: a numbered list of acts\n- A box office with ticket tiers and a printable ticket stub\n- Decorative borders framing the bill\n\nVisual System:\n- Aged cream poster, ticket-red, ink-black and antique gold; letterpress texture\n- Mixed vintage display type — fat woodtype headlines, ornamental rules, pointing-hand dingbats, starbursts\n- Ribbon banners and a perforated ticket stub — NO neon, NO glow, NO glass, NO digital flatness\n- Exuberant, busy, but balanced and symmetrical\n\nInteraction:\n- Choosing an act spotlights it with the barker's announcement\n- Picking a ticket tier updates the stub's seat and price\n- Booking stamps the stub ADMIT ONE\n\nMood:\nTheatrical.\nFlamboyant.\nGrand and nostalgic.\nStep right up.",
+    thumbnailUrl: "/thumbnails/grand-spectacular-showbill.webp",
+    tags: [
+      "circus",
+      "vintage-poster",
+      "showbill",
+      "victorian",
+      "letterpress",
+      "theatrical",
+      "ornate",
+      "woodtype",
+    ],
+    difficulty: "advanced",
+    isFeatured: true,
+    isActive: true,
+    createdAt: "2026-06-13T02:50:00.000Z",
+    updatedAt: "2026-06-13T02:50:00.000Z",
+  },
 ];
 
 export class StaticShowcaseItemRepository implements IShowcaseItemRepository {
