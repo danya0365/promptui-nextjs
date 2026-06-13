@@ -2580,6 +2580,31 @@ Spiritual, cosmic, intelligent, futuristic.`,
     createdAt: "2026-06-13T01:10:00.000Z",
     updatedAt: "2026-06-13T01:10:00.000Z",
   },
+  {
+    id: "showcase-113",
+    title: "Marlowe & Co. Case Files",
+    description:
+      "A 1940s film-noir private-detective desk — high-contrast black & white lit by a single tungsten lamp, venetian-blind shadows, film grain, typewriter dossiers, and a corkboard where you pin clues with red string. Mysterious, dramatic, hardboiled noir",
+    category: "dashboard",
+    prompt:
+      "Design a 1940s film-noir private-detective case desk.\n\nConcept:\nA hardboiled investigator's desk where you work an open case by lamplight.\n\nLayout / Structure:\n- A moody desk workspace — clear but cinematic\n- Left: a stack of open case files to choose from\n- Center: the selected dossier — suspect, evidence, scrawled notes\n- Right: a corkboard of pinned clues linked by red string\n- Top: the agency name and a date stamp; a desk lamp lights the scene\n\nVisual System:\n- High-contrast black & white with warm tungsten amber from a single desk lamp\n- Venetian-blind shadow stripes, drifting smoke, film grain, heavy vignette\n- Typewriter serif and stencilled stamp type\n- ONE spot of colour: the red string and a SOLVED stamp — NO neon, NO bright palette, NO glass\n\nInteraction:\n- Opening a case file types the dossier onto the page\n- Tapping a clue pins it and draws red string between connections\n- A CLOSE CASE stamp thunks 'SOLVED' across the file in red\n\nMood:\nMysterious.\nDramatic.\nSmoky and shadowed.\nHardboiled noir.",
+    thumbnailUrl: "/thumbnails/marlowe-case-files.webp",
+    tags: [
+      "noir",
+      "detective",
+      "film-noir",
+      "monochrome",
+      "1940s",
+      "cinematic",
+      "mystery",
+      "dramatic",
+    ],
+    difficulty: "advanced",
+    isFeatured: true,
+    isActive: true,
+    createdAt: "2026-06-13T01:20:00.000Z",
+    updatedAt: "2026-06-13T01:20:00.000Z",
+  },
 ];
 
 export class StaticShowcaseItemRepository implements IShowcaseItemRepository {

@@ -87,6 +87,7 @@ import { MusicPlayerDashboardDemoGemini } from "@/src/presentation/components/de
 import { NeoBrutalistPromptGalleryDemoGemini } from "@/src/presentation/components/demos/NeoBrutalistPromptGalleryDemoGemini";
 import { NeonDashboardWidgetsDemoGemini } from "@/src/presentation/components/demos/NeonDashboardWidgetsDemoGemini";
 import { NextGenSpatialOSDemoGemini } from "@/src/presentation/components/demos/NextGenSpatialOSDemoGemini";
+import { NoirDetectiveDeskDemoClaudeOpus } from "@/src/presentation/components/demos/NoirDetectiveDeskDemoClaudeOpus";
 import OttomanPalaceDemoClaudeSonnet from "@/src/presentation/components/demos/OttomanPalaceDemoClaudeSonnet";
 import { OttomanPalaceDemoGemini } from "@/src/presentation/components/demos/OttomanPalaceDemoGemini";
 import { PhysicsDrivenWebWorldDemoGemini } from "@/src/presentation/components/demos/PhysicsDrivenWebWorldDemoGemini";
@@ -272,6 +273,7 @@ const LIVE_PREVIEW_COMPONENTS: Record<
   "showcase-110": { "claude-4.8-opus": BrutalistConcreteTerminalDemoClaudeOpus },
   "showcase-111": { "claude-4.8-opus": ZenGardenDemoClaudeOpus },
   "showcase-112": { "claude-4.8-opus": TropicalBeachClubDemoClaudeOpus },
+  "showcase-113": { "claude-4.8-opus": NoirDetectiveDeskDemoClaudeOpus },
 };
 
 interface LivePreviewPageProps {
