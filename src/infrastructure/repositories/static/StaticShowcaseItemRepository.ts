@@ -2630,6 +2630,31 @@ Spiritual, cosmic, intelligent, futuristic.`,
     createdAt: "2026-06-13T01:30:00.000Z",
     updatedAt: "2026-06-13T01:30:00.000Z",
   },
+  {
+    id: "showcase-115",
+    title: "Canopy Living Conservatory",
+    description:
+      "A biophilic living-rainforest dashboard — lush verdant greens with dappled sunlight, gently swaying leaves and humid haze, terrarium vitals you mist, canopy strata teeming with species, and a sprout you water to unfurl new leaves. Alive, verdant, quietly growing",
+    category: "dashboard",
+    prompt:
+      "Design a biophilic living-rainforest conservatory dashboard.\n\nConcept:\nA breathing terrarium companion where the interface grows like the forest.\n\nLayout / Structure:\n- A layered jungle scene — usable, with depth from canopy to floor\n- Dappled light filtering through overlapping leaves\n- Cards: terrarium vitals, the canopy strata, recent species sightings\n- A little sprout you tend that grows new leaves\n\nVisual System:\n- Lush verdant greens, moss, fern and earth-brown, with one orchid-bright accent\n- Soft dappled sunlight gobos, humid haze, organic rounded shapes, gently swaying leaves\n- Warm friendly organic type — NO dark void, NO neon, NO glass-tech, NO hard geometry\n\nInteraction:\n- Misting the terrarium lifts the humidity and dews the leaves\n- Choosing a canopy stratum reveals the life that lives there\n- Tending the sprout unfurls another leaf each time\n\nMood:\nAlive.\nVerdant.\nLush and breathing.\nQuietly growing.",
+    thumbnailUrl: "/thumbnails/canopy-living-conservatory.webp",
+    tags: [
+      "biophilic",
+      "rainforest",
+      "nature",
+      "terrarium",
+      "lush",
+      "organic",
+      "green",
+      "living",
+    ],
+    difficulty: "advanced",
+    isFeatured: true,
+    isActive: true,
+    createdAt: "2026-06-13T01:40:00.000Z",
+    updatedAt: "2026-06-13T01:40:00.000Z",
+  },
 ];
 
 export class StaticShowcaseItemRepository implements IShowcaseItemRepository {

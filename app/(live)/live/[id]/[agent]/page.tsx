@@ -75,6 +75,7 @@ import { KaabaInspiredDemoGemini } from "@/src/presentation/components/demos/Kaa
 import { KanbanBoardDemoGemini } from "@/src/presentation/components/demos/KanbanBoardDemoGemini";
 import { LiveSimulationMatrixDemoGemini } from "@/src/presentation/components/demos/LiveSimulationMatrixDemoGemini";
 import { LivingAdaptiveCardsDemoGemini } from "@/src/presentation/components/demos/LivingAdaptiveCardsDemoGemini";
+import { LivingRainforestDemoClaudeOpus } from "@/src/presentation/components/demos/LivingRainforestDemoClaudeOpus";
 import { LuxuryMinimalEditorialDirectoryDemoGemini } from "@/src/presentation/components/demos/LuxuryMinimalEditorialDirectoryDemoGemini";
 import { MetaversePortalDemoGemini } from "@/src/presentation/components/demos/MetaversePortalDemoGemini";
 import { MinimalBlogLandingDemoGemini } from "@/src/presentation/components/demos/MinimalBlogLandingDemoGemini";
@@ -276,6 +277,7 @@ const LIVE_PREVIEW_COMPONENTS: Record<
   "showcase-112": { "claude-4.8-opus": TropicalBeachClubDemoClaudeOpus },
   "showcase-113": { "claude-4.8-opus": NoirDetectiveDeskDemoClaudeOpus },
   "showcase-114": { "claude-4.8-opus": ArtDecoSpeakeasyDemoClaudeOpus },
+  "showcase-115": { "claude-4.8-opus": LivingRainforestDemoClaudeOpus },
 };
 
 interface LivePreviewPageProps {
