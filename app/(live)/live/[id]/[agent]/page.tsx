@@ -58,6 +58,7 @@ import { iOS26LiquidGlassDemoGemini } from "@/src/presentation/components/demos/
 import { IoTSmartHomeDashboardDemoGemini } from "@/src/presentation/components/demos/IoTSmartHomeDashboardDemoGemini";
 import { IslamicCardDemoGemini } from "@/src/presentation/components/demos/IslamicCardDemoGemini";
 import { IslamicCivilization2200DemoKimi } from "@/src/presentation/components/demos/IslamicCivilization2200DemoKimi";
+import { IslamicCosmicCivilizationDemoKimi } from "@/src/presentation/components/demos/IslamicCosmicCivilizationDemoKimi";
 import IslamicCosmologyDemoClaudeSonnet from "@/src/presentation/components/demos/IslamicCosmologyDemoClaudeSonnet";
 import { IslamicCosmologyDemoGemini } from "@/src/presentation/components/demos/IslamicCosmologyDemoGemini";
 import IslamicGoldenAgeLibraryDemoClaudeSonnet from "@/src/presentation/components/demos/IslamicGoldenAgeLibraryDemoClaudeSonnet";
@@ -254,6 +255,7 @@ const LIVE_PREVIEW_COMPONENTS: Record<
   "showcase-101": { "kimi-k2.6": MosqueArchitectureSpatialDemoKimi },
   "showcase-102": { "kimi-k2.6": IslamicCivilization2200DemoKimi },
   "showcase-103": { "kimi-k2.6": PreservedTabletInterfaceDemoKimi },
+  "showcase-104": { "kimi-k2.6": IslamicCosmicCivilizationDemoKimi },
 };
 
 interface LivePreviewPageProps {

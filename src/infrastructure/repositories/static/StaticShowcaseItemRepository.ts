@@ -2355,6 +2355,31 @@ Spiritual, cosmic, intelligent, futuristic.`,
     createdAt: "2025-06-12T21:30:00.000Z",
     updatedAt: "2025-06-12T21:30:00.000Z",
   },
+  {
+    id: "showcase-104",
+    title: "Islamic Cosmic Civilization",
+    description:
+      "A spatial operating system for an Islamic civilization living among the stars — deep cosmic environment with nebula backgrounds, gold and emerald holographic interfaces, and orbiting celestial knowledge hubs",
+    category: "dashboard",
+    prompt:
+      "Create a spatial operating system for an Islamic civilization living among the stars.\n\nConcept:\nA future Muslim civilization exploring galaxies while preserving faith, knowledge, and worship.\n\nVisual System:\n- Deep cosmic environment\n- Massive nebula backgrounds\n- Gold and emerald holographic interfaces\n- Floating celestial geometry\n- Dynamic starlight illumination\n\nCard Design:\n- Floating spatial cards\n- Transparent holographic surfaces\n- Gold edge lighting\n- Expandable knowledge panels\n- Multi-layer civilization dashboards\n\nInteraction:\n- Cards orbit around central knowledge hubs\n- Spatial navigation between information galaxies\n- Holographic maps emerge from card clusters\n\nMood:\nHopeful.\nVisionary.\nCivilizational.\nEpic.",
+    thumbnailUrl: "/thumbnails/islamic-cosmic-civilization.webp",
+    tags: [
+      "islamic",
+      "cosmic",
+      "space",
+      "civilization",
+      "nebula",
+      "gold-emerald",
+      "holographic",
+      "spatial",
+    ],
+    difficulty: "advanced",
+    isFeatured: true,
+    isActive: true,
+    createdAt: "2025-06-12T21:40:00.000Z",
+    updatedAt: "2025-06-12T21:40:00.000Z",
+  },
 ];
 
 export class StaticShowcaseItemRepository implements IShowcaseItemRepository {
