@@ -122,6 +122,7 @@ export const siteConfig = {
     { id: "grok-3", label: "Grok 3", icon: "⚡", color: "zinc" },
     { id: "llama-4", label: "Llama 4", icon: "🦙", color: "cyan" },
     { id: "kimi-k2.6", label: "Kimi K2.6", icon: "🌙", color: "violet" },
+    { id: "claude-4.8-opus", label: "Claude 4.8 Opus", icon: "🟠", color: "orange" },
   ] as const,
 } as const;
 

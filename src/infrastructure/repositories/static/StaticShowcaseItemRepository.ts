@@ -2380,6 +2380,31 @@ Spiritual, cosmic, intelligent, futuristic.`,
     createdAt: "2025-06-12T21:40:00.000Z",
     updatedAt: "2025-06-12T21:40:00.000Z",
   },
+  {
+    id: "showcase-105",
+    title: "Deep Ocean Exploration",
+    description:
+      "A deep-ocean exploration companion for the year 2050 — a bioluminescent abyssal environment with fluid bubble-glass specimen cards drifting on the current, live creature scans, sonar pulse visualization, and a descending depth map",
+    category: "dashboard",
+    prompt:
+      "Design a deep-ocean exploration companion interface for the year 2050.\n\nConcept:\nA living research vessel that thinks with you in the abyss.\n\nVisual System:\n- Bioluminescent underwater environment\n- Soft drifting current illumination\n- Abyssal-blue, jellyfish-cyan, and pearl palette\n- Floating plankton-light particles\n- Dynamic sonar pulse visualization\n\nCard Design:\n- Fluid bubble-glass cards\n- Gentle phosphorescent inner glow\n- Layered specimen data panels\n- Floating depth and pressure widgets\n- Organic flowing typography\n\nInteraction:\n- Cards drift and reposition with the ocean current\n- Specimen cards expand into immersive 3D creature scans\n- Holographic depth map descending in real time\n\nMood:\nMysterious.\nSerene.\nOtherworldly.\nVision Pro aesthetic.",
+    thumbnailUrl: "/thumbnails/deep-ocean-exploration.webp",
+    tags: [
+      "ocean",
+      "deep-sea",
+      "bioluminescent",
+      "exploration",
+      "abyssal",
+      "spatial",
+      "research",
+      "vision-pro",
+    ],
+    difficulty: "advanced",
+    isFeatured: true,
+    isActive: true,
+    createdAt: "2026-06-13T00:00:00.000Z",
+    updatedAt: "2026-06-13T00:00:00.000Z",
+  },
 ];
 
 export class StaticShowcaseItemRepository implements IShowcaseItemRepository {

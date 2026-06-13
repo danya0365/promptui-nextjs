@@ -25,6 +25,7 @@ import { CyberpunkCityPlatformDemoGemini } from "@/src/presentation/components/d
 import { CyberpunkDarkWebInterfaceDemoGemini } from "@/src/presentation/components/demos/CyberpunkDarkWebInterfaceDemoGemini";
 import { CyberpunkHackerTerminalDemoGemini } from "@/src/presentation/components/demos/CyberpunkHackerTerminalDemoGemini";
 import { CyberWarfareDashboardDemoGemini } from "@/src/presentation/components/demos/CyberWarfareDashboardDemoGemini";
+import { DeepOceanExplorationDemoClaudeOpus } from "@/src/presentation/components/demos/DeepOceanExplorationDemoClaudeOpus";
 import { DigitalTilePhysicsDemoGemini } from "@/src/presentation/components/demos/DigitalTilePhysicsDemoGemini";
 import { DramaticFuturisticTechDirectoryDemoGemini } from "@/src/presentation/components/demos/DramaticFuturisticTechDirectoryDemoGemini";
 import { ECommerceAdminPanelDemoGemini } from "@/src/presentation/components/demos/ECommerceAdminPanelDemoGemini";
@@ -256,6 +257,7 @@ const LIVE_PREVIEW_COMPONENTS: Record<
   "showcase-102": { "kimi-k2.6": IslamicCivilization2200DemoKimi },
   "showcase-103": { "kimi-k2.6": PreservedTabletInterfaceDemoKimi },
   "showcase-104": { "kimi-k2.6": IslamicCosmicCivilizationDemoKimi },
+  "showcase-105": { "claude-4.8-opus": DeepOceanExplorationDemoClaudeOpus },
 };
 
 interface LivePreviewPageProps {
