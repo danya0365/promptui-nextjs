@@ -100,6 +100,7 @@ import { RamadanLanternDemoGemini } from "@/src/presentation/components/demos/Ra
 import { RealityFractureDemoGemini } from "@/src/presentation/components/demos/RealityFractureDemoGemini";
 import { RecipeCookingAppDemoGemini } from "@/src/presentation/components/demos/RecipeCookingAppDemoGemini";
 import { Retro90sTechMagazineDemoGemini } from "@/src/presentation/components/demos/Retro90sTechMagazineDemoGemini";
+import { RetroSpaceConsoleDemoClaudeOpus } from "@/src/presentation/components/demos/RetroSpaceConsoleDemoClaudeOpus";
 import { RisographZineStudioDemoClaudeOpus } from "@/src/presentation/components/demos/RisographZineStudioDemoClaudeOpus";
 import { SaaSLandingPageDemoGemini } from "@/src/presentation/components/demos/SaaSLandingPageDemoGemini";
 import { SelfEvolvingInterfaceDemoGemini } from "@/src/presentation/components/demos/SelfEvolvingInterfaceDemoGemini";
@@ -262,6 +263,7 @@ const LIVE_PREVIEW_COMPONENTS: Record<
   "showcase-105": { "claude-4.8-opus": DeepOceanExplorationDemoClaudeOpus },
   "showcase-106": { "claude-4.8-opus": RisographZineStudioDemoClaudeOpus },
   "showcase-107": { "claude-4.8-opus": UnsentLettersDeskDemoClaudeOpus },
+  "showcase-108": { "claude-4.8-opus": RetroSpaceConsoleDemoClaudeOpus },
 };
 
 interface LivePreviewPageProps {

@@ -2455,6 +2455,31 @@ Spiritual, cosmic, intelligent, futuristic.`,
     createdAt: "2026-06-13T00:20:00.000Z",
     updatedAt: "2026-06-13T00:20:00.000Z",
   },
+  {
+    id: "showcase-108",
+    title: "Backyard Moon Program",
+    description:
+      "A warm retro-future control console as imagined in 1986 — cream beveled plastic, amber CRT oscilloscope, chunky toggle switches and a big push-button, monitoring a cheerful backyard moon-greenhouse. Optimistic, nostalgic, analog-warm",
+    category: "dashboard",
+    prompt:
+      "Design a warm retro-future control console, as imagined in 1986.\n\nConcept:\nA cheerful mission desk for a tiny backyard moon-greenhouse program.\n\nLayout / Structure:\n- A chunky hardware console — usable, clearly grouped\n- Top: two CRT screens — a live amber oscilloscope and a subsystem status grid\n- Right: a large segmented-LED day counter\n- Bottom: a panel of labeled toggle switches, rocker buttons, and a knob\n- A big INITIATE button with its own indicator lamp\n\nVisual System:\n- WARM, optimistic palette — cream/tan beveled plastic, amber phosphor, teal accents\n- Amber CRT glow on dark-brown screens, soft scanlines, gentle screen curvature\n- Chunky 3D plastic with bevels and inset shadows, monospace readouts\n- Analog and hopeful — NOT dark cyberpunk, NO neon-on-black, NO glassmorphism\n\nInteraction:\n- Flipping a subsystem switch updates the status grid and the readout live\n- The oscilloscope sweeps a warm amber waveform continuously\n- INITIATE arms the launch sequence and the lamps come alive\n\nMood:\nOptimistic.\nNostalgic.\nAnalog-warm.\nA hopeful tomorrow.",
+    thumbnailUrl: "/thumbnails/backyard-moon-program.webp",
+    tags: [
+      "retro-future",
+      "atompunk",
+      "crt",
+      "analog",
+      "console",
+      "1986",
+      "optimistic",
+      "hardware",
+    ],
+    difficulty: "advanced",
+    isFeatured: true,
+    isActive: true,
+    createdAt: "2026-06-13T00:30:00.000Z",
+    updatedAt: "2026-06-13T00:30:00.000Z",
+  },
 ];
 
 export class StaticShowcaseItemRepository implements IShowcaseItemRepository {
