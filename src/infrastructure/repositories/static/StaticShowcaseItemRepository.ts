@@ -2405,6 +2405,31 @@ Spiritual, cosmic, intelligent, futuristic.`,
     createdAt: "2026-06-13T00:00:00.000Z",
     updatedAt: "2026-06-13T00:00:00.000Z",
   },
+  {
+    id: "showcase-106",
+    title: "Risograph Zine Studio",
+    description:
+      "A maximalist Risograph zine-making studio — bright newsprint paper, fluoro spot inks that overprint and mis-register, halftone textures, tape, and slappable collage stickers. Loud, playful, and joyfully handmade",
+    category: "dashboard",
+    prompt:
+      "Design a maximalist Risograph zine-making studio for indie creators.\n\nConcept:\nA loud, hands-on print studio where layered spot inks and paper collage become a zine.\n\nLayout / Structure:\n- A usable studio dashboard — clear flow, not chaotic to navigate\n- Left rail: ink-channel switches (Pink / Blue / Yellow) + stamp tools\n- Center: a live two-page zine spread on textured paper\n- Right rail: sticker/element tray and layer list\n- Top bar: studio name + a chunky PRINT button\n\nVisual System:\n- BRIGHT newsprint-cream background, NOT dark mode\n- Risograph spot colors: fluoro pink, riso blue, sun yellow, fern green\n- Overprint (multiply) where colors overlap, with visible mis-registration offset\n- Heavy halftone dots, paper grain, torn-edge collage, tape and sticker badges\n- Chunky display type mixed with marker scribbles — NO glow, NO glass, NO particles\n\nInteraction:\n- Toggling an ink channel shifts the headline's color registration live\n- Clicking a sticker pops and rotates it onto the spread\n- Hover peels tape corners and nudges collage pieces\n\nMood:\nLoud.\nPlayful.\nScrappy.\nJoyfully handmade.",
+    thumbnailUrl: "/thumbnails/risograph-zine-studio.webp",
+    tags: [
+      "risograph",
+      "zine",
+      "print",
+      "maximalist",
+      "collage",
+      "halftone",
+      "indie",
+      "handmade",
+    ],
+    difficulty: "advanced",
+    isFeatured: true,
+    isActive: true,
+    createdAt: "2026-06-13T00:10:00.000Z",
+    updatedAt: "2026-06-13T00:10:00.000Z",
+  },
 ];
 
 export class StaticShowcaseItemRepository implements IShowcaseItemRepository {
