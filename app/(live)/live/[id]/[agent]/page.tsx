@@ -8,6 +8,7 @@ import { AIDeityAwakeningDemoGemini } from "@/src/presentation/components/demos/
 import { AndalusianDemoGemini } from "@/src/presentation/components/demos/AndalusianDemoGemini";
 import { ArtDecoSpeakeasyDemoClaudeOpus } from "@/src/presentation/components/demos/ArtDecoSpeakeasyDemoClaudeOpus";
 import { AwardStylePremiumDirectoryDemoGemini } from "@/src/presentation/components/demos/AwardStylePremiumDirectoryDemoGemini";
+import { BauhausWerkstattDemoClaudeOpus } from "@/src/presentation/components/demos/BauhausWerkstattDemoClaudeOpus";
 import { BillionDollarIPODemoGemini } from "@/src/presentation/components/demos/BillionDollarIPODemoGemini";
 import { BlackMirrorPsychologicalDemoGemini } from "@/src/presentation/components/demos/BlackMirrorPsychologicalDemoGemini";
 import { BlueprintDraftingDemoClaudeOpus } from "@/src/presentation/components/demos/BlueprintDraftingDemoClaudeOpus";
@@ -292,6 +293,7 @@ const LIVE_PREVIEW_COMPONENTS: Record<
   "showcase-120": { "claude-4.8-opus": HerbariumDemoClaudeOpus },
   "showcase-121": { "claude-4.8-opus": UkiyoeWoodblockDemoClaudeOpus },
   "showcase-122": { "claude-4.8-opus": VintageCircusDemoClaudeOpus },
+  "showcase-123": { "claude-4.8-opus": BauhausWerkstattDemoClaudeOpus },
 };
 
 interface LivePreviewPageProps {

@@ -2830,6 +2830,31 @@ Spiritual, cosmic, intelligent, futuristic.`,
     createdAt: "2026-06-13T02:50:00.000Z",
     updatedAt: "2026-06-13T02:50:00.000Z",
   },
+  {
+    id: "showcase-123",
+    title: "Bauhaus Werkstatt Programm",
+    description:
+      "A Bauhaus workshop enrolment board — newsprint-cream paper with a faint grid, pure primary red, yellow and blue plus ink-black, and a composition stage of circles, triangles and squares that rebuilds for each workshop. Pick a Werkstatt, read its Formmeister, and enrol. Rational, bold, optimistic, form follows function",
+    category: "dashboard",
+    prompt:
+      "Design a Bauhaus design-school workshop enrolment board.\n\nConcept:\nA modernist program where each craft workshop is a geometric composition you can join.\n\nLayout / Structure:\n- A usable enrolment dashboard built on a strict grid\n- A black masthead bar with the school name, a stacked primary-colour mark and the year\n- Left rail: a numbered list of workshops (Weaving, Metal, Pottery, Typography, Stage)\n- Center: a composition stage that rebuilds with circles, triangles and squares per workshop\n- Right rail: master, room, days, seats and an enrol button\n\nVisual System:\n- Newsprint-cream paper with a faint construction grid, NOT dark mode\n- Pure primary palette only: red, yellow, blue and ink-black — no gradients on the shapes\n- Heavy sans display type, lowercase, asymmetric grid, thick black rules\n- Circle, triangle, square as the only vocabulary — NO glow, NO glass, NO ornament, NO photos\n\nInteraction:\n- Selecting a workshop snaps a new geometric composition into place\n- Each workshop swaps its master, schedule and accent colour live\n- Enrolling fills a seat and stamps the button\n\nMood:\nRational.\nBold.\nOptimistic.\nForm follows function.",
+    thumbnailUrl: "/thumbnails/bauhaus-werkstatt-programm.webp",
+    tags: [
+      "bauhaus",
+      "geometric",
+      "primary-colors",
+      "modernist",
+      "grid",
+      "constructivist",
+      "minimal",
+      "poster",
+    ],
+    difficulty: "advanced",
+    isFeatured: true,
+    isActive: true,
+    createdAt: "2026-06-13T03:00:00.000Z",
+    updatedAt: "2026-06-13T03:00:00.000Z",
+  },
 ];
 
 export class StaticShowcaseItemRepository implements IShowcaseItemRepository {
