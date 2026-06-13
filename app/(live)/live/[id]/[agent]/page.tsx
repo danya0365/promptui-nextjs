@@ -26,6 +26,7 @@ import { CivilizationSimulationDemoGemini } from "@/src/presentation/components/
 import { ClayCrittersDemoClaudeOpus } from "@/src/presentation/components/demos/ClayCrittersDemoClaudeOpus";
 import { ClaymorphismDirectoryDemoGemini } from "@/src/presentation/components/demos/ClaymorphismDirectoryDemoGemini";
 import { CosmicInspiredWebDirectoryDemoGemini } from "@/src/presentation/components/demos/CosmicInspiredWebDirectoryDemoGemini";
+import { CottageKitchenDemoClaudeOpus } from "@/src/presentation/components/demos/CottageKitchenDemoClaudeOpus";
 import { CyberpunkCityPlatformDemoGemini } from "@/src/presentation/components/demos/CyberpunkCityPlatformDemoGemini";
 import { CyberpunkDarkWebInterfaceDemoGemini } from "@/src/presentation/components/demos/CyberpunkDarkWebInterfaceDemoGemini";
 import { CyberpunkHackerTerminalDemoGemini } from "@/src/presentation/components/demos/CyberpunkHackerTerminalDemoGemini";
@@ -294,6 +295,7 @@ const LIVE_PREVIEW_COMPONENTS: Record<
   "showcase-121": { "claude-4.8-opus": UkiyoeWoodblockDemoClaudeOpus },
   "showcase-122": { "claude-4.8-opus": VintageCircusDemoClaudeOpus },
   "showcase-123": { "claude-4.8-opus": BauhausWerkstattDemoClaudeOpus },
+  "showcase-124": { "claude-4.8-opus": CottageKitchenDemoClaudeOpus },
 };
 
 interface LivePreviewPageProps {

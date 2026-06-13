@@ -2855,6 +2855,31 @@ Spiritual, cosmic, intelligent, futuristic.`,
     createdAt: "2026-06-13T03:00:00.000Z",
     updatedAt: "2026-06-13T03:00:00.000Z",
   },
+  {
+    id: "showcase-124",
+    title: "The Cottage Pantry",
+    description:
+      "A handwritten little book of preserves — warm cream paper, gingham banner, scalloped edges and hand-stitched dashed borders in sage, dusty rose and butter. Pick a jar from the pantry shelf, read its seasonal recipe, then seal it with a wax stamp and gingham cloth. Cosy, pastoral, hand-made, unhurried",
+    category: "dashboard",
+    prompt:
+      "Design a cosy cottagecore preserves recipe journal.\n\nConcept:\nA handwritten little book of jams and pickles you make jar by jar through the seasons.\n\nLayout / Structure:\n- A warm, usable recipe dashboard\n- A gingham banner title with a scalloped lower edge\n- Left: a pantry shelf of clickable jars\n- Center: an open recipe card on faintly lined paper — ingredients and numbered method\n- Right: a jar illustration with a label, a yield note and a seal button\n\nVisual System:\n- Warm newsprint-cream paper, NOT dark mode\n- Soft pastoral palette: sage green, dusty rose, butter yellow, soft brown ink\n- Gingham checks, scalloped edges, hand-stitched dashed borders, tiny botanical marks\n- Handwriting display type beside a gentle serif — NO glow, NO glass, NO neon, NO hard chrome\n\nInteraction:\n- Choosing a jar swaps the recipe, illustration and seasonal note\n- The jar fill colour changes per preserve\n- Sealing drops a gingham cloth over the lid and presses a wax stamp\n\nMood:\nCosy.\nPastoral.\nHand-made.\nUnhurried and warm.",
+    thumbnailUrl: "/thumbnails/the-cottage-pantry.webp",
+    tags: [
+      "cottagecore",
+      "recipe",
+      "preserves",
+      "gingham",
+      "handwritten",
+      "pastoral",
+      "cosy",
+      "warm",
+    ],
+    difficulty: "advanced",
+    isFeatured: true,
+    isActive: true,
+    createdAt: "2026-06-13T03:10:00.000Z",
+    updatedAt: "2026-06-13T03:10:00.000Z",
+  },
 ];
 
 export class StaticShowcaseItemRepository implements IShowcaseItemRepository {
