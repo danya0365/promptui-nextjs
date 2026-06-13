@@ -21,6 +21,7 @@ import { CinematicHollywoodTrailerDemoGemini } from "@/src/presentation/componen
 import { CinematicProductLaunchDemoGemini } from "@/src/presentation/components/demos/CinematicProductLaunchDemoGemini";
 import { CinematicSpatialDemoGemini } from "@/src/presentation/components/demos/CinematicSpatialDemoGemini";
 import { CivilizationSimulationDemoGemini } from "@/src/presentation/components/demos/CivilizationSimulationDemoGemini";
+import { ClayCrittersDemoClaudeOpus } from "@/src/presentation/components/demos/ClayCrittersDemoClaudeOpus";
 import { ClaymorphismDirectoryDemoGemini } from "@/src/presentation/components/demos/ClaymorphismDirectoryDemoGemini";
 import { CosmicInspiredWebDirectoryDemoGemini } from "@/src/presentation/components/demos/CosmicInspiredWebDirectoryDemoGemini";
 import { CyberpunkCityPlatformDemoGemini } from "@/src/presentation/components/demos/CyberpunkCityPlatformDemoGemini";
@@ -278,6 +279,7 @@ const LIVE_PREVIEW_COMPONENTS: Record<
   "showcase-113": { "claude-4.8-opus": NoirDetectiveDeskDemoClaudeOpus },
   "showcase-114": { "claude-4.8-opus": ArtDecoSpeakeasyDemoClaudeOpus },
   "showcase-115": { "claude-4.8-opus": LivingRainforestDemoClaudeOpus },
+  "showcase-116": { "claude-4.8-opus": ClayCrittersDemoClaudeOpus },
 };
 
 interface LivePreviewPageProps {

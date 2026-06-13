@@ -2655,6 +2655,31 @@ Spiritual, cosmic, intelligent, futuristic.`,
     createdAt: "2026-06-13T01:40:00.000Z",
     updatedAt: "2026-06-13T01:40:00.000Z",
   },
+  {
+    id: "showcase-116",
+    title: "Clay Critters Companion",
+    description:
+      "A handmade plasticine daily companion — matte pastel claymorphism with thumb-press dents and soft sculpted shadows, a big clay creature you poke until it squishes and wobbles, mood faces that reshape it, and habit pebbles you press in. Tactile, squishy, playful and cute",
+    category: "dashboard",
+    prompt:
+      "Design a handmade plasticine \"clay critters\" daily companion.\n\nConcept:\nA squishy stop-motion world where your moods and habits are little clay creatures.\n\nLayout / Structure:\n- A soft, playful scene — friendly and uncluttered\n- A big clay mood-creature you can poke\n- A row of mood faces to choose from\n- Habit pebbles you press to complete\n- Top: a hand-lettered title\n\nVisual System:\n- Matte pastel clay: putty pink, sky-clay blue, mint, butter, terracotta on a soft clay mat\n- Claymorphism — sculpted rounded forms with soft inset + drop shadows, thumb-press dents, matte finish\n- Chunky rounded friendly type\n- Moldable and tactile — NO gloss, NO glass, NO neon, NO flat material, NO hard edges\n\nInteraction:\n- Poking a creature makes it squish and wobble back\n- Choosing a mood reshapes the big creature's face and tints the scene\n- Pressing a habit pebble sinks it in and stamps a clay checkmark\n\nMood:\nTactile.\nSquishy.\nPlayful and cute.\nHandmade by thumb.",
+    thumbnailUrl: "/thumbnails/clay-critters-companion.webp",
+    tags: [
+      "claymation",
+      "plasticine",
+      "clay",
+      "tactile",
+      "cute",
+      "playful",
+      "stop-motion",
+      "handmade",
+    ],
+    difficulty: "advanced",
+    isFeatured: true,
+    isActive: true,
+    createdAt: "2026-06-13T01:50:00.000Z",
+    updatedAt: "2026-06-13T01:50:00.000Z",
+  },
 ];
 
 export class StaticShowcaseItemRepository implements IShowcaseItemRepository {
