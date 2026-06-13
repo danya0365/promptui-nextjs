@@ -2555,6 +2555,31 @@ Spiritual, cosmic, intelligent, futuristic.`,
     createdAt: "2026-06-13T01:00:00.000Z",
     updatedAt: "2026-06-13T01:00:00.000Z",
   },
+  {
+    id: "showcase-112",
+    title: "Sunset Beach Club",
+    description:
+      "A sunny tropical beach-club companion — a bright sunset-gradient sky with a bobbing sun and palms, rounded breezy cards for surf & tide, a tappable juice bar with a running tab, and a summer-mix equalizer. Carefree, vibrant, endless-summer joy",
+    category: "dashboard",
+    prompt:
+      "Design a sunny tropical beach-club companion for a summer day.\n\nConcept:\nA carefree island day-planner that runs on sunshine and good playlists.\n\nLayout / Structure:\n- A bright, friendly dashboard — rounded and breezy\n- A hero sunset scene with the sun, palms, and a countdown to sundown\n- Cards: today's surf & tide, a juice-bar menu, a summer playlist\n- A running tab of what you've ordered\n\nVisual System:\n- Warm bright sunset gradient: peach, coral, turquoise, sun-yellow\n- Big soft rounded shapes, wavy dividers, palm-leaf silhouettes\n- Friendly rounded display type with a script accent\n- Sunny and airy — NO dark mode, NO neon, NO glass, NO glow, NO clutter\n\nInteraction:\n- Tapping a juice pops it onto your tab with a little bounce\n- A 'play the summer mix' toggle sets an equalizer dancing\n- The sun bobs gently and the sundown countdown ticks the mood\n\nMood:\nSunny.\nCarefree.\nVibrant.\nEndless-summer joy.",
+    thumbnailUrl: "/thumbnails/sunset-beach-club.webp",
+    tags: [
+      "tropical",
+      "summer",
+      "beach",
+      "vibrant",
+      "sunset",
+      "playful",
+      "resort",
+      "sunshine",
+    ],
+    difficulty: "advanced",
+    isFeatured: true,
+    isActive: true,
+    createdAt: "2026-06-13T01:10:00.000Z",
+    updatedAt: "2026-06-13T01:10:00.000Z",
+  },
 ];
 
 export class StaticShowcaseItemRepository implements IShowcaseItemRepository {

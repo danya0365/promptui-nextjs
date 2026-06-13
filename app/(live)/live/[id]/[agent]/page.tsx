@@ -114,6 +114,7 @@ import { SuperintelligenceLaunchDemoGemini } from "@/src/presentation/components
 import { SwissInspiredModernDirectoryDemoGemini } from "@/src/presentation/components/demos/SwissInspiredModernDirectoryDemoGemini";
 import { TacticalSimulationDemoGemini } from "@/src/presentation/components/demos/TacticalSimulationDemoGemini";
 import { TravelBookingAppDemoGemini } from "@/src/presentation/components/demos/TravelBookingAppDemoGemini";
+import { TropicalBeachClubDemoClaudeOpus } from "@/src/presentation/components/demos/TropicalBeachClubDemoClaudeOpus";
 import { UnrealEngineCinematicDemoGemini } from "@/src/presentation/components/demos/UnrealEngineCinematicDemoGemini";
 import { UnsentLettersDeskDemoClaudeOpus } from "@/src/presentation/components/demos/UnsentLettersDeskDemoClaudeOpus";
 import { ZenGardenDemoClaudeOpus } from "@/src/presentation/components/demos/ZenGardenDemoClaudeOpus";
@@ -270,6 +271,7 @@ const LIVE_PREVIEW_COMPONENTS: Record<
   "showcase-109": { "claude-4.8-opus": EnchantedGrimoireDemoClaudeOpus },
   "showcase-110": { "claude-4.8-opus": BrutalistConcreteTerminalDemoClaudeOpus },
   "showcase-111": { "claude-4.8-opus": ZenGardenDemoClaudeOpus },
+  "showcase-112": { "claude-4.8-opus": TropicalBeachClubDemoClaudeOpus },
 };
 
 interface LivePreviewPageProps {
