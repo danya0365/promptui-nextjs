@@ -6,6 +6,7 @@ import { AIChatInterfaceDemoGemini } from "@/src/presentation/components/demos/A
 import { AICommandCenterDemoGemini } from "@/src/presentation/components/demos/AICommandCenterDemoGemini";
 import { AIDeityAwakeningDemoGemini } from "@/src/presentation/components/demos/AIDeityAwakeningDemoGemini";
 import { AndalusianDemoGemini } from "@/src/presentation/components/demos/AndalusianDemoGemini";
+import { ArtDecoSpeakeasyDemoClaudeOpus } from "@/src/presentation/components/demos/ArtDecoSpeakeasyDemoClaudeOpus";
 import { AwardStylePremiumDirectoryDemoGemini } from "@/src/presentation/components/demos/AwardStylePremiumDirectoryDemoGemini";
 import { BillionDollarIPODemoGemini } from "@/src/presentation/components/demos/BillionDollarIPODemoGemini";
 import { BlackMirrorPsychologicalDemoGemini } from "@/src/presentation/components/demos/BlackMirrorPsychologicalDemoGemini";
@@ -274,6 +275,7 @@ const LIVE_PREVIEW_COMPONENTS: Record<
   "showcase-111": { "claude-4.8-opus": ZenGardenDemoClaudeOpus },
   "showcase-112": { "claude-4.8-opus": TropicalBeachClubDemoClaudeOpus },
   "showcase-113": { "claude-4.8-opus": NoirDetectiveDeskDemoClaudeOpus },
+  "showcase-114": { "claude-4.8-opus": ArtDecoSpeakeasyDemoClaudeOpus },
 };
 
 interface LivePreviewPageProps {

@@ -2605,6 +2605,31 @@ Spiritual, cosmic, intelligent, futuristic.`,
     createdAt: "2026-06-13T01:20:00.000Z",
     updatedAt: "2026-06-13T01:20:00.000Z",
   },
+  {
+    id: "showcase-114",
+    title: "The Gilded Room",
+    description:
+      "An Art Deco speakeasy concierge from 1923 — black and midnight-emerald with champagne-gold linework, sunburst rays, stepped ziggurat frames and chevrons, where you reserve tables that gild to gold and choose tonight's jazz program. Opulent, glamorous, jazz-age decadence",
+    category: "dashboard",
+    prompt:
+      "Design an Art Deco speakeasy concierge for a 1920s jazz club.\n\nConcept:\nA gilded jazz-age lounge where you reserve the evening.\n\nLayout / Structure:\n- Grand and symmetrical — a centred deco composition\n- A sunburst header with the club name in a stepped frame\n- Tonight's program (acts with showtimes)\n- A reservation grid of tables to claim\n- An elegant cocktail list\n\nVisual System:\n- Deep black and midnight emerald with champagne-gold linework\n- Art Deco motifs: sunburst rays, chevrons, stepped ziggurat frames, fans, strict symmetry\n- Geometric deco display caps with a refined body face, thin gold rules\n- Opulent and precise — NO neon, NO glass blur, NO clutter, restrained gold (not garish)\n\nInteraction:\n- Claiming a table gilds it gold and marks it RESERVED\n- Choosing an act updates tonight's featured spotlight\n- A reserve-the-evening button shimmers with a gold sweep\n\nMood:\nOpulent.\nGlamorous.\nElegant.\nJazz-age decadence.",
+    thumbnailUrl: "/thumbnails/the-gilded-room.webp",
+    tags: [
+      "art-deco",
+      "gatsby",
+      "1920s",
+      "glamour",
+      "gold",
+      "geometric",
+      "speakeasy",
+      "elegant",
+    ],
+    difficulty: "advanced",
+    isFeatured: true,
+    isActive: true,
+    createdAt: "2026-06-13T01:30:00.000Z",
+    updatedAt: "2026-06-13T01:30:00.000Z",
+  },
 ];
 
 export class StaticShowcaseItemRepository implements IShowcaseItemRepository {
