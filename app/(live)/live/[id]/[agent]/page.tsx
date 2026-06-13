@@ -123,6 +123,7 @@ import { SwissInspiredModernDirectoryDemoGemini } from "@/src/presentation/compo
 import { TacticalSimulationDemoGemini } from "@/src/presentation/components/demos/TacticalSimulationDemoGemini";
 import { TravelBookingAppDemoGemini } from "@/src/presentation/components/demos/TravelBookingAppDemoGemini";
 import { TropicalBeachClubDemoClaudeOpus } from "@/src/presentation/components/demos/TropicalBeachClubDemoClaudeOpus";
+import { UkiyoeWoodblockDemoClaudeOpus } from "@/src/presentation/components/demos/UkiyoeWoodblockDemoClaudeOpus";
 import { UnrealEngineCinematicDemoGemini } from "@/src/presentation/components/demos/UnrealEngineCinematicDemoGemini";
 import { UnsentLettersDeskDemoClaudeOpus } from "@/src/presentation/components/demos/UnsentLettersDeskDemoClaudeOpus";
 import { ZenGardenDemoClaudeOpus } from "@/src/presentation/components/demos/ZenGardenDemoClaudeOpus";
@@ -288,6 +289,7 @@ const LIVE_PREVIEW_COMPONENTS: Record<
   "showcase-118": { "claude-4.8-opus": StainedGlassDemoClaudeOpus },
   "showcase-119": { "claude-4.8-opus": PixelQuestDemoClaudeOpus },
   "showcase-120": { "claude-4.8-opus": HerbariumDemoClaudeOpus },
+  "showcase-121": { "claude-4.8-opus": UkiyoeWoodblockDemoClaudeOpus },
 };
 
 interface LivePreviewPageProps {

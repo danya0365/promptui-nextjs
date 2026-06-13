@@ -2780,6 +2780,31 @@ Spiritual, cosmic, intelligent, futuristic.`,
     createdAt: "2026-06-13T02:30:00.000Z",
     updatedAt: "2026-06-13T02:30:00.000Z",
   },
+  {
+    id: "showcase-121",
+    title: "Scenes of the Floating World",
+    description:
+      "An ukiyo-e Japanese woodblock print viewer — flat colour planes in Prussian indigo, washi cream and mulberry with bold dark outlines, a vermilion hanko seal and a vertical kanji title cartouche. Leaf through a series of hand-drawn prints: the Great Wave, Red Fuji, cranes at dusk, plum-blossom moon. Serene yet dynamic, classical, artful",
+    category: "dashboard",
+    prompt:
+      "Design an ukiyo-e Japanese woodblock print viewer.\n\nConcept:\nA gallery of \"floating world\" prints — flat woodblock scenes you leaf through.\n\nLayout / Structure:\n- A framed print, centred, in the woodblock manner\n- Left: the series index of prints to browse\n- Right: a vertical kanji title cartouche and a carved red seal\n- Top: the collection title\n\nVisual System:\n- Flat woodblock colour planes — Prussian indigo, washi cream, mulberry, terracotta, sage\n- Bold dark outlines, stepped bokashi bands instead of smooth gradients, faint paper/woodgrain texture\n- A vermilion hanko seal and vertical Japanese title — NO smooth gradients, NO neon, NO glow, NO glass\n- Calm composition with strong negative space\n\nInteraction:\n- Choosing a print swaps the central scene with a quiet settle\n- The sea drifts in slow, stepped woodblock motion\n- The title cartouche and seal change with each print\n\nMood:\nSerene yet dynamic.\nClassical.\nArtful.\nThe floating world.",
+    thumbnailUrl: "/thumbnails/floating-world-ukiyoe.webp",
+    tags: [
+      "ukiyo-e",
+      "woodblock",
+      "japanese",
+      "hokusai",
+      "flat-color",
+      "traditional",
+      "print",
+      "artful",
+    ],
+    difficulty: "advanced",
+    isFeatured: true,
+    isActive: true,
+    createdAt: "2026-06-13T02:40:00.000Z",
+    updatedAt: "2026-06-13T02:40:00.000Z",
+  },
 ];
 
 export class StaticShowcaseItemRepository implements IShowcaseItemRepository {
