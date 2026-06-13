@@ -2480,6 +2480,31 @@ Spiritual, cosmic, intelligent, futuristic.`,
     createdAt: "2026-06-13T00:30:00.000Z",
     updatedAt: "2026-06-13T00:30:00.000Z",
   },
+  {
+    id: "showcase-109",
+    title: "The Enchanted Grimoire",
+    description:
+      "An illustrated storybook spellbook — an open two-page grimoire on aged parchment with ornate borders, drop-caps, and hand-drawn ingredients you tap into a bubbling cauldron to brew small, kindly potions. Whimsical, magical, and cozy by candlelight",
+    category: "dashboard",
+    prompt:
+      "Design an illustrated spellbook interface from a storybook world.\n\nConcept:\nA cozy enchanted grimoire where you brew little potions by candlelight.\n\nLayout / Structure:\n- An open two-page book — usable and clearly read left-to-right\n- Left page: an index of spells & potions (a hand-written list)\n- Right page: the chosen recipe with illustrated ingredients\n- A small cauldron panel that fills as you add ingredients\n- Ornate hand-drawn border framing the whole spread\n\nVisual System:\n- Warm aged parchment, deep ink-brown, mossy green, plum, antique gold\n- Soft watercolor washes and hand-drawn doodle illustrations\n- Storybook serif with a calligraphic display title, ornate drop-caps\n- Painterly and warm — NO neon, NO dark-tech void, NO glass, NO flat material UI\n\nInteraction:\n- Turning to a spell reveals it with a gentle page-settle\n- Tapping an ingredient drops it into the cauldron, which bubbles\n- A 'brew' flourish sparkles when the recipe is complete\n\nMood:\nWhimsical.\nMagical.\nCozy and enchanted.\nStorybook wonder.",
+    thumbnailUrl: "/thumbnails/enchanted-grimoire.webp",
+    tags: [
+      "fantasy",
+      "storybook",
+      "grimoire",
+      "whimsical",
+      "illustrated",
+      "magic",
+      "parchment",
+      "cozy",
+    ],
+    difficulty: "advanced",
+    isFeatured: true,
+    isActive: true,
+    createdAt: "2026-06-13T00:40:00.000Z",
+    updatedAt: "2026-06-13T00:40:00.000Z",
+  },
 ];
 
 export class StaticShowcaseItemRepository implements IShowcaseItemRepository {

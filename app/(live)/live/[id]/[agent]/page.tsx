@@ -30,6 +30,7 @@ import { DigitalTilePhysicsDemoGemini } from "@/src/presentation/components/demo
 import { DramaticFuturisticTechDirectoryDemoGemini } from "@/src/presentation/components/demos/DramaticFuturisticTechDirectoryDemoGemini";
 import { ECommerceAdminPanelDemoGemini } from "@/src/presentation/components/demos/ECommerceAdminPanelDemoGemini";
 import { EliteTechFoundersDirectoryDemoGemini } from "@/src/presentation/components/demos/EliteTechFoundersDirectoryDemoGemini";
+import { EnchantedGrimoireDemoClaudeOpus } from "@/src/presentation/components/demos/EnchantedGrimoireDemoClaudeOpus";
 import { EvolvingAIPersonaDemoGemini } from "@/src/presentation/components/demos/EvolvingAIPersonaDemoGemini";
 import { ExperimentalPhysicsUIDemoGemini } from "@/src/presentation/components/demos/ExperimentalPhysicsUIDemoGemini";
 import { FileManagerDemoGemini } from "@/src/presentation/components/demos/FileManagerDemoGemini";
@@ -264,6 +265,7 @@ const LIVE_PREVIEW_COMPONENTS: Record<
   "showcase-106": { "claude-4.8-opus": RisographZineStudioDemoClaudeOpus },
   "showcase-107": { "claude-4.8-opus": UnsentLettersDeskDemoClaudeOpus },
   "showcase-108": { "claude-4.8-opus": RetroSpaceConsoleDemoClaudeOpus },
+  "showcase-109": { "claude-4.8-opus": EnchantedGrimoireDemoClaudeOpus },
 };
 
 interface LivePreviewPageProps {
