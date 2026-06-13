@@ -56,6 +56,7 @@ import { GodLevelCyberpunkHackerDemoGemini } from "@/src/presentation/components
 import { GodLevelHolographicIntelligenceDemoGemini } from "@/src/presentation/components/demos/GodLevelHolographicIntelligenceDemoGemini";
 import { GodModeCreatorConsoleDemoGemini } from "@/src/presentation/components/demos/GodModeCreatorConsoleDemoGemini";
 import { HealthFitnessTrackerDemoGemini } from "@/src/presentation/components/demos/HealthFitnessTrackerDemoGemini";
+import { HerbariumDemoClaudeOpus } from "@/src/presentation/components/demos/HerbariumDemoClaudeOpus";
 import { HighContrastEditorialDirectoryDemoGemini } from "@/src/presentation/components/demos/HighContrastEditorialDirectoryDemoGemini";
 import { HighEnergyTechDirectoryDemoGemini } from "@/src/presentation/components/demos/HighEnergyTechDirectoryDemoGemini";
 import { HypercarLuxuryPlatformDemoGemini } from "@/src/presentation/components/demos/HypercarLuxuryPlatformDemoGemini";
@@ -286,6 +287,7 @@ const LIVE_PREVIEW_COMPONENTS: Record<
   "showcase-117": { "claude-4.8-opus": BlueprintDraftingDemoClaudeOpus },
   "showcase-118": { "claude-4.8-opus": StainedGlassDemoClaudeOpus },
   "showcase-119": { "claude-4.8-opus": PixelQuestDemoClaudeOpus },
+  "showcase-120": { "claude-4.8-opus": HerbariumDemoClaudeOpus },
 };
 
 interface LivePreviewPageProps {

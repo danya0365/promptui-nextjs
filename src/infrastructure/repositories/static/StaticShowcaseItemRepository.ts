@@ -2755,6 +2755,31 @@ Spiritual, cosmic, intelligent, futuristic.`,
     createdAt: "2026-06-13T02:20:00.000Z",
     updatedAt: "2026-06-13T02:20:00.000Z",
   },
+  {
+    id: "showcase-120",
+    title: "Thornwood Herbarium Catalogue",
+    description:
+      "A Victorian naturalist's herbarium — pressed-plant specimens hand-drawn in engraving-style line art, mounted with paper tape corners on aged ivory sheets with foxing, typed taxonomy labels and handwritten field notes. Browse the index and study each under a lens. Scholarly, delicate, vintage botanical",
+    category: "dashboard",
+    prompt:
+      "Design a Victorian naturalist's herbarium specimen catalogue.\n\nConcept:\nA pressed-plant archive you browse, each specimen mounted and labelled by hand.\n\nLayout / Structure:\n- A calm scholarly archive — legible and unhurried\n- Left: an index of specimens by Latin name and accession number\n- Centre: the mounted specimen sheet — a pressed-plant line drawing with tape corners and a herbarium label\n- Right: the collector's field notes\n- Top: the institution name and accession\n\nVisual System:\n- Aged ivory paper with faint foxing, sepia ink, muted botanical green and pressed-flower ochre\n- Delicate engraving-style line art, paper tape corners, a typed taxonomy label box, handwritten notes\n- Refined serif with italic Latin and a handwritten note face — NO neon, NO dark mode, NO glow, NO digital flatness\n\nInteraction:\n- Choosing a specimen mounts a new pressed plant with its label, settling onto the sheet\n- A lens toggle magnifies the specimen's detail\n- The field notes update with each specimen\n\nMood:\nScholarly.\nDelicate.\nVintage and botanical.\nQuietly studious.",
+    thumbnailUrl: "/thumbnails/thornwood-herbarium.webp",
+    tags: [
+      "herbarium",
+      "botanical",
+      "vintage",
+      "naturalist",
+      "pressed-flowers",
+      "scientific",
+      "sepia",
+      "delicate",
+    ],
+    difficulty: "advanced",
+    isFeatured: true,
+    isActive: true,
+    createdAt: "2026-06-13T02:30:00.000Z",
+    updatedAt: "2026-06-13T02:30:00.000Z",
+  },
 ];
 
 export class StaticShowcaseItemRepository implements IShowcaseItemRepository {
