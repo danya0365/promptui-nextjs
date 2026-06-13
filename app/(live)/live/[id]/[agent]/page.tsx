@@ -115,6 +115,7 @@ import { SocialMediaAnalyticsDemoGemini } from "@/src/presentation/components/de
 import { SpatialComputingDemoGemini } from "@/src/presentation/components/demos/SpatialComputingDemoGemini";
 import { SpatialDepthUIDemoGemini } from "@/src/presentation/components/demos/SpatialDepthUIDemoGemini";
 import { SpatialPrayerCompanionDemoKimi } from "@/src/presentation/components/demos/SpatialPrayerCompanionDemoKimi";
+import { StainedGlassDemoClaudeOpus } from "@/src/presentation/components/demos/StainedGlassDemoClaudeOpus";
 import { SuperintelligenceLaunchDemoGemini } from "@/src/presentation/components/demos/SuperintelligenceLaunchDemoGemini";
 import { SwissInspiredModernDirectoryDemoGemini } from "@/src/presentation/components/demos/SwissInspiredModernDirectoryDemoGemini";
 import { TacticalSimulationDemoGemini } from "@/src/presentation/components/demos/TacticalSimulationDemoGemini";
@@ -282,6 +283,7 @@ const LIVE_PREVIEW_COMPONENTS: Record<
   "showcase-115": { "claude-4.8-opus": LivingRainforestDemoClaudeOpus },
   "showcase-116": { "claude-4.8-opus": ClayCrittersDemoClaudeOpus },
   "showcase-117": { "claude-4.8-opus": BlueprintDraftingDemoClaudeOpus },
+  "showcase-118": { "claude-4.8-opus": StainedGlassDemoClaudeOpus },
 };
 
 interface LivePreviewPageProps {

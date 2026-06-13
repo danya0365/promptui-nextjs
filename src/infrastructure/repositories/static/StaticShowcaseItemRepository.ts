@@ -2705,6 +2705,31 @@ Spiritual, cosmic, intelligent, futuristic.`,
     createdAt: "2026-06-13T02:00:00.000Z",
     updatedAt: "2026-06-13T02:00:00.000Z",
   },
+  {
+    id: "showcase-118",
+    title: "Vitral Stained Glass Atelier",
+    description:
+      "A luminous stained-glass rose window — deep jewel tones leaded in thick black came over a glowing backlight that shifts warm to cool with the hour, with a mottled glass texture and an ornate arched frame. Tap any pane to repaint it. Radiant, jewel-bright, reverent",
+    category: "dashboard",
+    prompt:
+      "Design a luminous stained-glass atelier window.\n\nConcept:\nA rose-window panel you illuminate and recolour, lit as if by real daylight.\n\nLayout / Structure:\n- A grand arched stained-glass window, centred\n- Left: a light control for the time of day\n- A jewel-colour palette to repaint any pane\n- Top: an atelier title\n\nVisual System:\n- Deep jewel tones — ruby, cobalt, emerald, amber, violet — leaded in thick black came\n- A glowing backlight that shifts warm to cool with the hour; faint mottled glass texture\n- An ornate arched frame and a symmetrical rose pattern\n- Radiant and reverent — the glow is light through glass, NOT neon; NO flat UI, NO glass-blur panels\n\nInteraction:\n- Choosing a time of day re-lights the whole window, warm to cool\n- Tapping a pane selects it; a palette swatch repaints it\n- The glass glows softly where the light pours through\n\nMood:\nLuminous.\nRadiant.\nJewel-bright.\nReverent and still.",
+    thumbnailUrl: "/thumbnails/vitral-stained-glass.webp",
+    tags: [
+      "stained-glass",
+      "vitral",
+      "rose-window",
+      "jewel-tones",
+      "luminous",
+      "leaded",
+      "ornate",
+      "radiant",
+    ],
+    difficulty: "advanced",
+    isFeatured: true,
+    isActive: true,
+    createdAt: "2026-06-13T02:10:00.000Z",
+    updatedAt: "2026-06-13T02:10:00.000Z",
+  },
 ];
 
 export class StaticShowcaseItemRepository implements IShowcaseItemRepository {
